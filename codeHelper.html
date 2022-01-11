@@ -95,6 +95,10 @@
                 <label class="textBox" style="display:none;" id="bf">Bios File:
                     <input type="file" id="biosFile">
                 </label>
+                <br>
+                <label class="textBox" id="ss">Save state (to be loaded on start)
+                    <input type="file" id="stateOnLoad">
+                </label>
                 <div id="errors"></div>
             </ul>
             <a class="blockB" id="generateFile" style="float:right;margin:20px;">Generate Out File</a>
@@ -135,6 +139,7 @@
             document.getElementById('offline').addEventListener('change', function(e) {
                 document.getElementById('pathToData').style = (document.getElementById('offline').checked ? 'display:none;' : 'display:block');
                 document.getElementById('bf').style = (document.getElementById('offline').checked ? 'display:none;' : 'display:block');
+                document.getElementById('ss').style = (document.getElementById('offline').checked ? 'display:none;' : 'display:block');
             })
             document.getElementById('systemSelected').addEventListener('click', function(e) {
                 var q = false;
@@ -181,6 +186,7 @@
                 var path2Data = document.getElementById('path2Data')
                 var biosFile = document.getElementById('biosFile')
                 var offline = document.getElementById('offline')
+                var stateOnLoad = document.getElementById('stateOnLoad')
                 if (ejsColor.value && ejsColor.value.trim() !== '') {
                     if (!/^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/.test(ejsColor.value)) {
                         errors.innerHTML = '<p><span style="color:red;font-size:25px;">An error occured When Generating</span></p><ul><li>Color theme is not hex value</li></ul>'
@@ -224,6 +230,10 @@
                     data['EJS_pathtodata'] = 'https://rawcdn.githack.com/ethanaobrien/emulatorjs/main/data/';
                 }
                 if (! offline) {
+                    if (stateOnLoad.files[0]) {
+                        data['EJS_loadStateURL'] = stateOnLoad.files[0].name;
+                        zip.file(stateOnLoad.files[0].name, new Blob([stateOnLoad.files[0]]));
+                    }
                     data['EJS_gameUrl'] = file.name;
                     zip.file(file.name, new Blob([file]));
                     if (biosFile.files[0]) {
