@@ -229,7 +229,7 @@
                 } else {
                     data['EJS_pathtodata'] = 'https://rawcdn.githack.com/ethanaobrien/emulatorjs/main/data/';
                 }
-                if (! offline) {
+                if (! offline.checked) {
                     if (stateOnLoad.files[0]) {
                         data['EJS_loadStateURL'] = stateOnLoad.files[0].name;
                         zip.file(stateOnLoad.files[0].name, new Blob([stateOnLoad.files[0]]));
