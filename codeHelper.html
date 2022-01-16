@@ -69,6 +69,10 @@
                     <input type="checkbox" id="offline">
                     <span class="checkmark2"></span>
                 </label>
+                <label class="container">Pack into single file
+                    <input type="checkbox" id="offlinePack">
+                    <span class="checkmark2"></span>
+                </label>
                 <div id="pathToData">
                     <label class="container">Use Local path to Data
                         <input type="checkbox" id="p2d">
@@ -135,6 +139,9 @@
             })
             document.getElementById('netplay').addEventListener('change', function(e) {
                 document.getElementById('npgid').style = (document.getElementById('netplay').checked ? 'display:block;' : 'display:none');
+            })
+            document.getElementById('offline').addEventListener('change', function(e) {
+                document.getElementById('offlinePack').style = (document.getElementById('offline').checked ? 'display:block;' : 'display:none');
             })
             document.getElementById('offline').addEventListener('change', function(e) {
                 document.getElementById('pathToData').style = (document.getElementById('offline').checked ? 'display:none;' : 'display:block');
@@ -244,6 +251,21 @@
                     var fileData = '<html>\n    <head>\n        <!--HTML file auto generated using emulatorjs codehelper-->\n    </head>\n    <body>\n        <div style="width:640px;height:480px;max-width:100%">\n            <div id="game"></div>\n        </div>\n        <script>\n';
                     for (var k in data) {
                         if (k === true || k === false) {
+                            fileData += (spaces + k + ' = ' + data[k] + ';\n');
+                        } else {
+                            fileData += (spaces + k + ' = "' + data[k] + '";\n');
+                        }
+                    }
+                    fileData += '        </scr'+'ipt>\n        <script src="'+data['EJS_pathtodata']+'loader.js"></scr'+'ipt>\n    </body>\n</html>'
+                } else if (document.getElementById('offlinePack').checked) {
+                    data['EJS_gameUrl'] = 'URL.createObjectURL(new Blob([Uint8Array.from(window.gameData)]))';
+                    var b = JSON.stringify(Array.from(new Uint8Array(await (new Blob([file])).arrayBuffer())));
+                    var a = 'window.gameData = '+b+';\n';
+                    var spaces = '            ';
+                    var fileData = '<html>\n    <head>\n        <!--HTML file auto generated using emulatorjs codehelper-->\n    </head>\n    <body>\n        <div style="width:640px;height:480px;max-width:100%">\n            <div id="game"></div>\n        </div>\n        <script src="gameData.js"></scr'+'ipt>\n        <script>\n';
+                    fileData += a;
+                    for (var k in data) {
+                        if (data[k] === true || data[k] === false || k === 'EJS_gameUrl') {
                             fileData += (spaces + k + ' = ' + data[k] + ';\n');
                         } else {
                             fileData += (spaces + k + ' = "' + data[k] + '";\n');
