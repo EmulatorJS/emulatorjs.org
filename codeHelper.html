@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" href="/main.css">
+        <link rel="stylesheet" href="main.css">
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-R87E52EEFR"></script>
         <script>
@@ -110,6 +110,7 @@
                 <label class="textBox" style="display:none;" id="bf">Bios File:
                     <input type="file" id="biosFile">
                 </label>
+                <br>
                 <label class="textBox" id="ss">Save state (to be loaded on start)
                     <input type="file" id="stateOnLoad">
                 </label>
@@ -126,8 +127,8 @@
         <ul id="downloadScreen" style="display:none;">
             <p>FINISHED: <a id="outLink">Click to download.</a></p>
         </ul>
-        <script src="/systems.js"></script>
-        <script src="/jszip.js"></script>
+        <script src="systems.js"></script>
+        <script src="jszip.js"></script>
         <script>
             window.addEventListener('load', function() {
                 var radioContainer = document.getElementById('radioContainer')
