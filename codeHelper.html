@@ -69,7 +69,7 @@
                     <input type="checkbox" id="offline">
                     <span class="checkmark2"></span>
                 </label>
-                <label class="container">Pack into single file
+                <label class="container" style="op">Pack into single file
                     <input type="checkbox" id="offlinePack">
                     <span class="checkmark2"></span>
                 </label>
@@ -141,15 +141,13 @@
                 document.getElementById('npgid').style = (document.getElementById('netplay').checked ? 'display:block;' : 'display:none');
             })
             document.getElementById('offline').addEventListener('change', function(e) {
-                document.getElementById('offlinePack').style = (document.getElementById('offline').checked ? 'display:block;' : 'display:none');
-            })
-            document.getElementById('offline').addEventListener('change', function(e) {
                 document.getElementById('pathToData').style = (document.getElementById('offline').checked ? 'display:none;' : 'display:block');
+                document.getElementById('op').style = (document.getElementById('offline').checked ? 'display:none;' : 'display:block');
                 document.getElementById('bf').style = (document.getElementById('offline').checked ? 'display:none;' : 'display:block');
                 document.getElementById('ss').style = (document.getElementById('offline').checked ? 'display:none;' : 'display:block');
             })
             document.getElementById('systemSelected').addEventListener('click', function(e) {
-                var q = false;
+                var q = null;
                 var radios = document.getElementsByName('systemSelect');
                 for (var i=0; i<radios.length; i++) {
                     if (radios[i].checked) {
@@ -157,7 +155,7 @@
                         break;
                     };
                 };
-                if (! q) {return};
+                if (q === null) {return};
                 for (var i=0; i<systems.length; i++) {
                     if (systems[i].core === q) {
                         q = systems[i]
@@ -180,6 +178,7 @@
                     document.getElementById('smt').style = "display:block;"
                 }
                 window.selectedCoreData = q;
+                window.scrollTo(0, 0);
                 systemSelect.style = "display:none;"
                 select2.style = "display:block;"
             })
@@ -229,7 +228,7 @@
                     data['EJS_gameID'] = npGameId.value;
                 }
                 if (document.getElementById('p2d').checked && path2Data.value && path2Data.value.trim() !== '') {
-                    data['EJS_pathtodata'] = npGameId.value;
+                    data['EJS_pathtodata'] = path2Data.value;
                     if (! data['EJS_pathtodata'].endsWith('/')) {
                         data['EJS_pathtodata'] += '/'
                     }
@@ -250,7 +249,7 @@
                     var spaces = '            ';
                     var fileData = '<html>\n    <head>\n        <!--HTML file auto generated using emulatorjs codehelper-->\n    </head>\n    <body>\n        <div style="width:640px;height:480px;max-width:100%">\n            <div id="game"></div>\n        </div>\n        <script>\n';
                     for (var k in data) {
-                        if (k === true || k === false) {
+                        if (data[k] === true || data[k] === false) {
                             fileData += (spaces + k + ' = ' + data[k] + ';\n');
                         } else {
                             fileData += (spaces + k + ' = "' + data[k] + '";\n');
@@ -260,9 +259,9 @@
                 } else if (document.getElementById('offlinePack').checked) {
                     data['EJS_gameUrl'] = 'URL.createObjectURL(new Blob([Uint8Array.from(window.gameData)]))';
                     var b = JSON.stringify(Array.from(new Uint8Array(await (new Blob([file])).arrayBuffer())));
-                    var a = 'window.gameData = '+b+';\n';
                     var spaces = '            ';
-                    var fileData = '<html>\n    <head>\n        <!--HTML file auto generated using emulatorjs codehelper-->\n    </head>\n    <body>\n        <div style="width:640px;height:480px;max-width:100%">\n            <div id="game"></div>\n        </div>\n        <script src="gameData.js"></scr'+'ipt>\n        <script>\n';
+                    var a = spaces + 'window.gameData = '+b+';\n';
+                    var fileData = '<html>\n    <head>\n        <!--HTML file auto generated using emulatorjs codehelper-->\n    </head>\n    <body>\n        <div style="width:640px;height:480px;max-width:100%">\n            <div id="game"></div>\n        </div>\n        <script>\n';
                     fileData += a;
                     for (var k in data) {
                         if (data[k] === true || data[k] === false || k === 'EJS_gameUrl') {
