@@ -60,38 +60,49 @@
                         <input type="checkbox" id="netplay">
                         <span class="checkmark2"></span>
                     </label>
-                    <br>
-                    <label class="textBox" style="display:none;" id="npgid">Game Id
-                        <input type="number" id="npGameId">
-                    </label>
+                    <ul>
+                        <label class="textBox" style="display:none;" id="npgid">Game Id
+                            <input type="number" id="npGameId">
+                        </label>
+                        <label class="container" style="display:none;" id="nps">Use Custom Netplay Server
+                            <input type="checkbox" id="netplayServer">
+                            <span class="checkmark2"></span>
+                        </label>
+                        <ul>
+                            <label class="textBox" style="display:none;" id="npurl">Enter server URL
+                                <input type="text" id="npServerURL">
+                            </label>
+                        </ul>
+                    </ul>
                 </div>
-                <label class="container">Make it work offline (no web server required) not recommended
+                <label class="container">Make it work without web server (not recommended)
                     <input type="checkbox" id="offline">
                     <span class="checkmark2"></span>
                 </label>
-                <label class="container" id="op" style="display:none;>Pack into single file
-                    <input type="checkbox" id="offlinePack">
-                    <span class="checkmark2"></span>
-                </label>
+                <ul>
+                    <label class="container" id="singleFile" style="display:none;">Pack into single file
+                        <input type="checkbox" id="offlinePack">
+                        <span class="checkmark2"></span>
+                    </label>
+                </ul>
                 <div id="pathToData">
                     <label class="container">Use Local path to Data
                         <input type="checkbox" id="p2d">
                         <span class="checkmark2"></span>
                     </label>
-                    <br>
-                    <label class="textBox" style="display:none;" id="ptwod">Path To Data Folder (on your server)
-                        <input type="text" id="path2Data">
-                    </label>
+                    <ul>
+                        <label class="textBox" style="display:none;" id="ptwod">Path To Data Folder (on your server)
+                            <input type="text" id="path2Data">
+                        </label>
+                    </ul>
                 </div>
                 <br>
                 <label class="textBox">Name Of Game (for save files)
                     <input type="text" id="nameOfGame">
                 </label>
-                <br>
                 <label class="textBox">Ad Url
                     <input type="text" id="adUrl">
                 </label>
-                <br>
                 <label class="textBox">Hex Color theme
                     <input type="text" id="ejsColor">
                 </label>
@@ -99,7 +110,6 @@
                 <label class="textBox" style="display:none;" id="bf">Bios File:
                     <input type="file" id="biosFile">
                 </label>
-                <br>
                 <label class="textBox" id="ss">Save state (to be loaded on start)
                     <input type="file" id="stateOnLoad">
                 </label>
@@ -116,8 +126,8 @@
         <ul id="downloadScreen" style="display:none;">
             <p>FINISHED: <a id="outLink">Click to download.</a></p>
         </ul>
-        <script src="systems.js"></script>
-        <script src="jszip.js"></script>
+        <script src="/systems.js"></script>
+        <script src="/jszip.js"></script>
         <script>
             window.addEventListener('load', function() {
                 var radioContainer = document.getElementById('radioContainer')
@@ -137,12 +147,17 @@
             document.getElementById('p2d').addEventListener('change', function(e) {
                 document.getElementById('ptwod').style = (document.getElementById('p2d').checked ? 'display:block;' : 'display:none');
             })
+            document.getElementById('netplayServer').addEventListener('change', function(e) {
+                document.getElementById('npurl').style = (document.getElementById('netplayServer').checked ? 'display:block;' : 'display:none');
+            })
             document.getElementById('netplay').addEventListener('change', function(e) {
                 document.getElementById('npgid').style = (document.getElementById('netplay').checked ? 'display:block;' : 'display:none');
+                document.getElementById('nps').style = (document.getElementById('netplay').checked ? 'display:block;' : 'display:none');
+                document.getElementById('npurl').style = (document.getElementById('netplay').checked ? (document.getElementById('netplayServer').checked ? 'display:block;' : 'display:none') : 'display:none');
             })
             document.getElementById('offline').addEventListener('change', function(e) {
                 document.getElementById('pathToData').style = (document.getElementById('offline').checked ? 'display:none;' : 'display:block');
-                document.getElementById('op').style = (document.getElementById('offline').checked ? 'display:none;' : 'display:block');
+                document.getElementById('singleFile').style = (document.getElementById('offline').checked ? 'display:block;' : 'display:none');
                 document.getElementById('bf').style = (document.getElementById('offline').checked ? 'display:none;' : 'display:block');
                 document.getElementById('ss').style = (document.getElementById('offline').checked ? 'display:none;' : 'display:block');
             })
@@ -230,11 +245,15 @@
                 if (document.getElementById('p2d').checked && path2Data.value && path2Data.value.trim() !== '') {
                     data['EJS_pathtodata'] = path2Data.value;
                     if (! data['EJS_pathtodata'].endsWith('/')) {
-                        data['EJS_pathtodata'] += '/'
+                        data['EJS_pathtodata'] += '/';
                     }
                 } else {
                     data['EJS_pathtodata'] = 'https://rawcdn.githack.com/ethanaobrien/emulatorjs/main/data/';
                 }
+                if (document.getElementById('netplay').checked && document.getElementById('netplayServer').checked && document.getElementById('npServerURL').value && document.getElementById('npServerURL').value.trim() !== '') {
+                    data['EJS_netplayUrl'] = document.getElementById('npServerURL').value;
+                }
+                var zipOut = true;
                 if (! offline.checked) {
                     if (stateOnLoad.files[0]) {
                         data['EJS_loadStateURL'] = stateOnLoad.files[0].name;
@@ -255,7 +274,7 @@
                             fileData += (spaces + k + ' = "' + data[k] + '";\n');
                         }
                     }
-                    fileData += '        </scr'+'ipt>\n        <script src="'+data['EJS_pathtodata']+'loader.js"></scr'+'ipt>\n    </body>\n</html>'
+                    fileData += '        </scr'+'ipt>\n        <script src="'+data['EJS_pathtodata']+'loader.js"></scr'+'ipt>\n    </body>\n</html>';
                 } else if (document.getElementById('offlinePack').checked) {
                     data['EJS_gameUrl'] = 'URL.createObjectURL(new Blob([Uint8Array.from(window.gameData)]))';
                     var b = JSON.stringify(Array.from(new Uint8Array(await (new Blob([file])).arrayBuffer())));
@@ -270,7 +289,8 @@
                             fileData += (spaces + k + ' = "' + data[k] + '";\n');
                         }
                     }
-                    fileData += '        </scr'+'ipt>\n        <script src="'+data['EJS_pathtodata']+'loader.js"></scr'+'ipt>\n    </body>\n</html>'
+                    fileData += '        </scr'+'ipt>\n        <script src="'+data['EJS_pathtodata']+'loader.js"></scr'+'ipt>\n    </body>\n</html>';
+                    zipOut = false;
                 } else {
                     data['EJS_gameUrl'] = 'URL.createObjectURL(new Blob([Uint8Array.from(window.gameData)]))';
                     var b = JSON.stringify(Array.from(new Uint8Array(await (new Blob([file])).arrayBuffer())));
@@ -284,8 +304,15 @@
                             fileData += (spaces + k + ' = "' + data[k] + '";\n');
                         }
                     }
-                    fileData += '        </scr'+'ipt>\n        <script src="'+data['EJS_pathtodata']+'loader.js"></scr'+'ipt>\n    </body>\n</html>'
+                    fileData += '        </scr'+'ipt>\n        <script src="'+data['EJS_pathtodata']+'loader.js"></scr'+'ipt>\n    </body>\n</html>';
                     
+                }
+                if (zipOut === false) {
+                    document.getElementById('select2').style = "display:none;";
+                    document.getElementById('outLink').href = URL.createObjectURL(new Blob([fileData]));
+                    document.getElementById('outLink').download = file.name.split('.')[0]+'.html';
+                    document.getElementById('downloadScreen').style = "display:block;";
+                    return
                 }
                 zip.file('index.html', new Blob([fileData]))
                 document.getElementById('select2').style = "display:none;";
