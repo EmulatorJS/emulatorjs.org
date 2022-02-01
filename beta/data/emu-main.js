@@ -5075,6 +5075,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 }
             },
             'setLoadState': function(_0x526828, _0x2ce330) {
+                
                 _0x526828.appendChild(_0x7f9f36.createButton.call(this, 'load-state', {
                     'aria-haspopup': true,
                     'aria-expanded': !0x1
@@ -5097,12 +5098,14 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 if (! window.MediaRecorder) {
                     return;
                 };
+                
                 var _0x2c1832 = _0x7f9f36.createButton.call(this, 'screen-record', {
                     'aria-haspopup': true,
                     'aria-expanded': !0x1,
                     'style': 'margin-right:auto;'
                 });
                 _0x4c3fdd.appendChild(_0x2c1832);
+                
                 var _0x13c0e4 = _0x428003('div', {
                         'class': _0x449eac({
                             'ejs__dialog': true,
@@ -5118,6 +5121,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 this.elements.dialogs.screenRecord = _0x13c0e4;
             },
             'setGamepad': function(_0x4c3fdd, _0x289259) {
+                
                 var _0x2c1832 = _0x7f9f36.createButton.call(this, 'gamepad', {
                     'aria-haspopup': true,
                     'aria-expanded': !0x1,
@@ -5340,7 +5344,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                     'ejs__dialogs': true
                 }))).appendChild(_0x3c66db);
                 this.elements.dialogs.loading = _0x3c66db;
-                _0x17edbf.appendChild(_0x7f9f36.createButton.call(this, 'restart'));
+                _0x17edbf.appendChild(_0x7f9f36.createButton.call(this, 'restart'));/*
                 _0x17edbf.appendChild(_0x7f9f36.createButton.call(this, 'play'));
                 _0x17edbf.appendChild(_0x7f9f36.createButton.call(this, 'save-state', {
                     'aria-expanded': !0x1
@@ -5349,11 +5353,11 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 _0x7f9f36.setScreenRecord.call(this, _0x17edbf, _0x42e40d);
                 _0x7f9f36.supportNetPlay.call(this, _0x17edbf) && parseInt(this.config.gameId, 0xa) > 0x0 && _0x7f9f36.setNetplay.call(this, _0x17edbf, _0x42e40d);
                 _0x7f9f36.setGamepad.call(this, _0x17edbf, _0x42e40d);
+                _0x7f9f36.setCheat.call(this, _0x17edbf, _0x42e40d);*/
                 _0x7f9f36.setStateInfoBarWidget.call(this, _0x17edbf, _0x42e40d);
-                _0x7f9f36.setCheat.call(this, _0x17edbf, _0x42e40d);
                 _0x17edbf.appendChild(_0x428003('span', {
                     'style': 'flex:1'
-                }));
+                }));/*
                 var _0xd299b = _0x428003('div', {
                     'class': _0x449eac({
                         'ejs__volume': true
@@ -5365,16 +5369,16 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                     'step': 0.01,
                     'value': this.config.volume
                 };
-                _0xd299b.appendChild(_0x7f9f36.createRange.call(this, 'volume', _0x5dc0c0(_0x4bbcd0, {}))), this.elements.volume = _0xd299b, _0x17edbf.appendChild(_0xd299b);
+                _0xd299b.appendChild(_0x7f9f36.createRange.call(this, 'volume', _0x5dc0c0(_0x4bbcd0, {}))), this.elements.volume = _0xd299b, _0x17edbf.appendChild(_0xd299b);*/
                 var _0x2746ab = _0x428003('div', {
                     'class': _0x449eac({
                         'ejs__menu': true
                     })
-                });
+                });/*
                 _0x2746ab.appendChild(_0x7f9f36.createButton.call(this, 'settings', {
                     'aria-haspopup': true,
                     'aria-expanded': !0x1
-                }));
+                }));*/
                 var _0x262fb8 = _0x428003('div', {
                         'class': _0x449eac({
                             'ejs__menu__container': true
@@ -5391,9 +5395,9 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 _0x174c46.appendChild(_0x17f3cb)
                 _0x3f3385.appendChild(_0x174c46)
                 this.elements.settings.panels.home = _0x174c46
-                _0x262fb8.appendChild(_0x3f3385)
+                _0x262fb8.appendChild(_0x3f3385)/*
                 _0x2746ab.appendChild(_0x262fb8)
-                _0x17edbf.appendChild(_0x2746ab)
+                _0x17edbf.appendChild(_0x2746ab)*/
                 this.elements.settings.popup = _0x262fb8
                 this.elements.settings.menu = _0x2746ab
                 _0x17edbf.appendChild(_0x7f9f36.createButton.call(this, 'fullscreen'))
