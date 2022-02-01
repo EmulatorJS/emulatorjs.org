@@ -1,0 +1,58 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="/main.css">
+        <!-- Global site tag (gtag.js) - Google Analytics 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-R87E52EEFR"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-R87E52EEFR');
+        </script>-->
+    </head>
+    <body>
+        <nav class="navMenu"> <!-- Navigation bar -->
+            <a href="/" class="blockA">Home</a>
+            <a href="/download.html" class="blockA">Download</a>
+            <a href="/codeHelper.html" class="blockA">Code Creater</a>
+            <a href="https://github.com/ethanaobrien/emulatorjs" class="blockA">View on github</a>
+            <div class="dropdown">
+                <button class="dropbtn">Systems</button>
+                <div class="dropdown-content">
+                    <!-- to do -->
+                </div>
+            </div>
+        </nav>
+        <br>
+        <script>
+            window.addEventListener('load', function() {
+                document.getElementById('file').onchange = function(e) {
+                    var gameUrl = URL.createObjectURL(new Blob([e.target.files[0]]))
+                    var extension = e.target.files[0].name.split('.').pop()
+                    var gameName = e.target.files[0].name.replaceAll("'", "\\'")
+                    var gameName = gameName.substr(0, gameName.length - extension.length - 1)
+                    document.getElementById('stuff').remove()
+                    var core = 'nes';
+                    var a = document.createElement('div');
+                    a.style = "width:100%;height:80%;max-width:100%";
+                    var b = document.createElement('div');
+                    b.id = 'game';
+                    a.appendChild(b);
+                    document.body.appendChild(a);
+                    var script = document.createElement('script');
+                    script.innerHTML = "EJS_player = '#game'; EJS_gameName = '" + gameName + "'; EJS_biosUrl = ''; EJS_gameUrl = '" + gameUrl + "'; EJS_core = '" + core + "'; EJS_pathtodata = 'data/'; ";
+                    document.body.appendChild(script);
+                    var script = document.createElement('script');
+                    script.src = 'data/loader.js';
+                    document.body.appendChild(script);
+                }
+            })
+        </script>
+        <div id="stuff">
+            <p>ONLY NES GAMES CURRENTLY SUPPORTED!!</p>
+            Select Game Rom: <input type="file" id="file">
+        </div>
+    </body>
+</html>
