@@ -1978,7 +1978,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                             _0x28ee7f = _0x578a2b.data[_0x2c1832.system],
                                             _0x124167 = _0x28ee7f.version ? _0x28ee7f.version : 0x1,
                                             _0x254bc2 = Boolean(_0x28ee7f.netplay),
-                                            _0x5b1dcd = Boolean(_0x28ee7f.state),
+                                            _0x5b1dcd = false,
                                             _0x9a1f1 = Boolean(_0x28ee7f.asmjs),
                                             _0x1b4c7 = Boolean(_0x28ee7f.V2),
                                             _0x3e4345 = Boolean(_0x28ee7f.wasm);
@@ -2052,8 +2052,17 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                                 } else _0x3641d6(_0x2458d5, _0x124167);
                                             }) : _0x3641d6(_0x2458d5, _0x124167);
                                         }
-                                        _0x254bc2 || _0x1e2c68.element(_0x2c1832.elements.buttons.netplay) && _0x132da7(_0x2c1832.elements.buttons.netplay, true), _0x1e2c68.element(_0x2c1832.elements.buttons.saveState) && _0x132da7(_0x2c1832.elements.buttons.saveState, !_0x5b1dcd), _0x1e2c68.element(_0x2c1832.elements.buttons.loadState) && _0x132da7(_0x2c1832.elements.buttons.loadState, !_0x5b1dcd), _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(0x2), !_0x5b1dcd), _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(0x3), !_0x5b1dcd);
-                                        _0xc6823.setStatesSupported(_0x5b1dcd);
+                                        _0x1e2c68.element(_0x2c1832.elements.buttons.netplay) && _0x132da7(_0x2c1832.elements.buttons.netplay, true);
+                                        _0x1e2c68.element(_0x2c1832.elements.buttons.saveState) && _0x132da7(_0x2c1832.elements.buttons.saveState, !_0x5b1dcd);
+                                        _0x1e2c68.element(_0x2c1832.elements.buttons.loadState) && _0x132da7(_0x2c1832.elements.buttons.loadState, !_0x5b1dcd);
+                                        _0x1e2c68.element(_0x2c1832.elements.inputs.volume) && _0x132da7(_0x2c1832.elements.inputs.volume, !_0x5b1dcd);
+                                        _0x1e2c68.element(_0x2c1832.elements.buttons.cheat) && _0x132da7(_0x2c1832.elements.buttons.cheat, !_0x5b1dcd);
+                                        _0x1e2c68.element(_0x2c1832.elements.buttons.gamepad) && _0x132da7(_0x2c1832.elements.buttons.gamepad, !_0x5b1dcd);
+                                        _0x1e2c68.element(_0x2c1832.elements.buttons.settings) && _0x132da7(_0x2c1832.elements.buttons.settings, !_0x5b1dcd);
+                                        _0x1e2c68.element(_0x2c1832.elements.buttons.mute) && _0x132da7(_0x2c1832.elements.buttons.mute, !_0x5b1dcd);
+                                        _0x1e2c68.element(_0x2c1832.elements.buttons.play) && _0x132da7(_0x2c1832.elements.buttons.play, !_0x5b1dcd);
+                                        _0x1e2c68.element(_0x2c1832.elements.buttons.pause) && _0x132da7(_0x2c1832.elements.buttons.pause, !_0x5b1dcd);
+                                        _0xc6823.setStatesSupported(false);
                                     }).catch(function(_0x2d06a9) {
                                         _0x3787ba.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">Network Error</strong>';
                                     }), clearInterval(_0x1c9c57), _0x4d7024.romdb = _0x4e171c;
@@ -5262,7 +5271,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                     } else {
                         contextHtml.splice(i, 0, '<li><a href="#" onclick="return false">'+title+'</a></li>')
                     }
-                }
+                }/*
                 addContextHtml('Take Screenshot', false, function(_0x20faaa) {
                     var _0x4e898a = _0x378b5c.getScreenData();
                     _0x4e4ca6()(new Blob([_0x4e898a]), 'game.png');
@@ -5312,7 +5321,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 addContextHtml('Quick Load (F4)', false, function(_0x124f69) {
                     _0x378b5c.quickLoadState();
                     _0x2593da.contextMenu.style.display = 'none';
-                })
+                })*/
                 
                 
                 _0x7f9f36.contextMenu.innerHTML = contextHtml.join('')
@@ -5344,7 +5353,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                     'ejs__dialogs': true
                 }))).appendChild(_0x3c66db);
                 this.elements.dialogs.loading = _0x3c66db;
-                _0x17edbf.appendChild(_0x7f9f36.createButton.call(this, 'restart'));/*
+                _0x17edbf.appendChild(_0x7f9f36.createButton.call(this, 'restart'));
                 _0x17edbf.appendChild(_0x7f9f36.createButton.call(this, 'play'));
                 _0x17edbf.appendChild(_0x7f9f36.createButton.call(this, 'save-state', {
                     'aria-expanded': !0x1
@@ -5353,11 +5362,11 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 _0x7f9f36.setScreenRecord.call(this, _0x17edbf, _0x42e40d);
                 _0x7f9f36.supportNetPlay.call(this, _0x17edbf) && parseInt(this.config.gameId, 0xa) > 0x0 && _0x7f9f36.setNetplay.call(this, _0x17edbf, _0x42e40d);
                 _0x7f9f36.setGamepad.call(this, _0x17edbf, _0x42e40d);
-                _0x7f9f36.setCheat.call(this, _0x17edbf, _0x42e40d);*/
+                _0x7f9f36.setCheat.call(this, _0x17edbf, _0x42e40d);
                 _0x7f9f36.setStateInfoBarWidget.call(this, _0x17edbf, _0x42e40d);
                 _0x17edbf.appendChild(_0x428003('span', {
                     'style': 'flex:1'
-                }));/*
+                }));
                 var _0xd299b = _0x428003('div', {
                     'class': _0x449eac({
                         'ejs__volume': true
@@ -5369,16 +5378,16 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                     'step': 0.01,
                     'value': this.config.volume
                 };
-                _0xd299b.appendChild(_0x7f9f36.createRange.call(this, 'volume', _0x5dc0c0(_0x4bbcd0, {}))), this.elements.volume = _0xd299b, _0x17edbf.appendChild(_0xd299b);*/
+                _0xd299b.appendChild(_0x7f9f36.createRange.call(this, 'volume', _0x5dc0c0(_0x4bbcd0, {}))), this.elements.volume = _0xd299b, _0x17edbf.appendChild(_0xd299b);
                 var _0x2746ab = _0x428003('div', {
                     'class': _0x449eac({
                         'ejs__menu': true
                     })
-                });/*
+                });
                 _0x2746ab.appendChild(_0x7f9f36.createButton.call(this, 'settings', {
                     'aria-haspopup': true,
                     'aria-expanded': !0x1
-                }));*/
+                }));
                 var _0x262fb8 = _0x428003('div', {
                         'class': _0x449eac({
                             'ejs__menu__container': true
@@ -5395,9 +5404,9 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 _0x174c46.appendChild(_0x17f3cb)
                 _0x3f3385.appendChild(_0x174c46)
                 this.elements.settings.panels.home = _0x174c46
-                _0x262fb8.appendChild(_0x3f3385)/*
+                _0x262fb8.appendChild(_0x3f3385)
                 _0x2746ab.appendChild(_0x262fb8)
-                _0x17edbf.appendChild(_0x2746ab)*/
+                _0x17edbf.appendChild(_0x2746ab)
                 this.elements.settings.popup = _0x262fb8
                 this.elements.settings.menu = _0x2746ab
                 _0x17edbf.appendChild(_0x7f9f36.createButton.call(this, 'fullscreen'))
