@@ -2002,7 +2002,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                             }
                                             var _0x3787ba = data.split('|');
                                             _0x4d7024.coreFileName = '' .concat(_0x2c1832.system, '-').concat(_0x3787ba[0x0]), _0x5b1dcd = '1' === _0x3787ba[0x1], _0x1e2c68.element(_0x2c1832.elements.buttons.saveState) && _0x132da7(_0x2c1832.elements.buttons.saveState, !_0x5b1dcd), _0x1e2c68.element(_0x2c1832.elements.buttons.loadState) && _0x132da7(_0x2c1832.elements.buttons.loadState, !_0x5b1dcd), _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(0x2), !_0x5b1dcd), _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(0x3), !_0x5b1dcd), _0x3787ba[0x0] ? (_0x2d904a.wasm && _0x3e4345 ? (_0x2458d5 = '' .concat(_0x2c1832.system, '-').concat(_0x3787ba[0x0], '-wasm.data'), _0x31a5b3 = true) : (_0x3787ba.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">Webassembly support is not detected in this browser</strong>', _0x2458d5 = ''), _0x2458d5 && (_0x24de8d.db ? _0x24de8d.get(_0x2458d5, function(_0x655c87) {
-                                                if (_0x655c87 && _0x655c87.version === _0x124167) {
+                                                if (_0x655c87 && _0x655c87.version === _0x124167 ) {
                                                     if (_0xc6823.coreVer === 2) {
                                                         _0x4f0fcc(_0x655c87.data);
                                                     } else {
@@ -2013,7 +2013,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                                 } else _0x3641d6(_0x2458d5, _0x124167);
                                             }) : _0x3641d6(_0x2458d5, _0x124167))) : _0x3787ba.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">Unsupported Game</strong>';
                                         } else _0x2d904a.wasm && _0x3e4345 ? (_0x2458d5 = '' .concat(_0x5d075f, '-wasm.data'), 'n64' !== _0x2c1832.system || _0x2eb141 || (_0x2458d5 = '' .concat(_0x5d075f, '-legacy-wasm.data')), _0x31a5b3 = true) : _0x9a1f1 && (_0x2458d5 = '' .concat(_0x5d075f, '-asmjs.data'), 'n64' !== _0x2c1832.system || _0x2eb141 || (_0x2458d5 = '' .concat(_0x5d075f, '-legacy-asmjs.data'))), 'undefined' != typeof EJS_CUSTOM_COREFILE && (_0x2458d5 = EJS_CUSTOM_COREFILE), _0x2458d5 ? _0x24de8d.db ? _0x24de8d.get(_0x2458d5, function(_0x47a6fd) {
-                                            if (_0x47a6fd && _0x47a6fd.version === _0x124167) {
+                                            if (_0x47a6fd && _0x47a6fd.version === _0x124167 && false) {
                                                 if (_0xc6823.coreVer === 2) {
                                                     _0x4f0fcc(_0x47a6fd.data);
                                                 } else {
