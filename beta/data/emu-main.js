@@ -4,7 +4,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
     _0x2c1832(0xa2), _0x2c1832(0x16c), _0x2c1832(0x16d);
     var _0x39ca5e = {
             'volume': 0.5,
-            'muted': !0x1,
+            'muted': false,
             'i18n': {
                 'restart': 'Restart',
                 'play': 'Play',
@@ -1478,7 +1478,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                     if (0x4 === _0x52e6f3.data.t && _0x52e6f3.data.total > 0x0) {
                                         var _0x163fc4 = Math.floor(_0x52e6f3.data.current / _0x52e6f3.data.total * 0x64),
                                             _0x5448a3 = _0x52e6f3.data.name || '';
-                                        _0x163fc4 <= 0x64 && _0x163fc4 > 0x0 && (_0x1cfda7.innerHTML = 'Decompress Game Data ' .concat(_0x5448a3, ' ').concat(_0x163fc4, '%'));
+                                        _0x163fc4 <= 0x64 && _0x163fc4 > 0x0 && (_0x1cfda7.innerHTML = _0xa88a13.localization('Decompress Game Data')+' ' .concat(_0x5448a3, ' ').concat(_0x163fc4, '%'));
                                     }
                                 }
                             },
@@ -1530,7 +1530,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                             _0x139f1c = _0x154dc5[_0x154dc5.length - 0x1];
                         _0x139f1c.indexOf('?') > -0x1 && (_0x139f1c = _0x139f1c.substr(0x0, _0x139f1c.indexOf('?')));
                         _0x139f1c.split('.').pop();
-                        _0x2c1832.innerHTML = 'Download Game Data', ['arcade', 'mame', 'mame2003', 'fba0.2.97.29'].includes(_0x17edbf.system) && _0x17edbf.config.gameParentUrl && (_0x2c1832.innerHTML += ' (2/2)'), _0x17edbf.config.gamePatchUrl && (_0x2c1832.innerHTML += ' (2/2)');
+                        _0x2c1832.innerHTML = _0xa88a13.localization('Download Game Data'), ['arcade', 'mame', 'mame2003', 'fba0.2.97.29'].includes(_0x17edbf.system) && _0x17edbf.config.gameParentUrl && (_0x2c1832.innerHTML += ' (2/2)'), _0x17edbf.config.gamePatchUrl && (_0x2c1832.innerHTML += ' (2/2)');
                         new Promise(async function(resolve, reject) {
                             if (! _0x3cf3cf.startsWith('blob:')) {
                                 resolve(await _0x550f17.a.head(_0x3cf3cf, {}))
@@ -1547,7 +1547,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                     _0x550f17.a.get(_0x3cf3cf, {
                                         'onDownloadProgress': function(_0x4e7133) {
                                             var _0x13b999 = _0x4e7133.total ? '' .concat(Math.floor(_0x4e7133.loaded / _0x4e7133.total * 0x64), '%') : '';
-                                            ['arcade', 'mame', 'mame2003', 'fba0.2.97.29'].includes(_0x17edbf.system) && _0x17edbf.config.gameParentUrl ? _0x2c1832.innerHTML = 'Download Game Data (2/2) ' .concat(_0x13b999) : _0x17edbf.config.gamePatchUrl ? _0x2c1832.innerHTML = 'Download Game Data (2/2) ' .concat(_0x13b999) : _0x2c1832.innerHTML = 'Download Game Data ' .concat(_0x13b999);
+                                            ['arcade', 'mame', 'mame2003', 'fba0.2.97.29'].includes(_0x17edbf.system) && _0x17edbf.config.gameParentUrl ? _0x2c1832.innerHTML = _0xa88a13.localization('Download Game Data')+' (2/2) ' .concat(_0x13b999) : _0x17edbf.config.gamePatchUrl ? _0x2c1832.innerHTML = _0xa88a13.localization('Download Game Data')+' (2/2) ' .concat(_0x13b999) : _0x2c1832.innerHTML = _0xa88a13.localization('Download Game Data')+' ' .concat(_0x13b999);
                                         },
                                         'responseType': 'arraybuffer'
                                     }).then(function(_0x22a1f4) {
@@ -1587,7 +1587,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                                 });
                                         _0x3512e9(_0x139f1c, _0x17edbf);
                                     }).catch(function(_0x2e4d62) {
-                                        console.log(_0x2e4d62), _0x2c1832.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">Network Error</strong>';
+                                        console.log(_0x2e4d62), _0x2c1832.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">'+_0xa88a13.localization('Network Error')+'</strong>';
                                     });
                                 };
                             _0x1ffb98.db ? _0x1ffb98.get(_0x107e8a, function(_0x5afc4a) {
@@ -1611,7 +1611,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                 else _0x43a689();
                             }) : _0x43a689();
                         }).catch(function(_0x5ec6be) {
-                            _0x2c1832.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">Network Error</strong>';
+                            _0x2c1832.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">'+_0xa88a13.localization('Network Error')+'</strong>';
                         });
                     },
                     _0x139f68 = function() {
@@ -1622,9 +1622,9 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                 _0x179b43 = _0x227b23[_0x227b23.length - 0x1];
                             _0x179b43.indexOf('?') > -0x1 && (_0x179b43 = _0x179b43.substr(0x0, _0x179b43.indexOf('?')));
                             _0x179b43.split('.').pop();
-                            _0x2591d9.innerHTML = 'Download Game Data (1/2)', _0x550f17.a.get(_0x5c896f, {
+                            _0x2591d9.innerHTML = _0xa88a13.localization('Download Game Data')+' (1/2)', _0x550f17.a.get(_0x5c896f, {
                                 'onDownloadProgress': function(_0x3da9ab) {
-                                    _0x2591d9.innerHTML = 'Download Game Data (1/2) ';
+                                    _0x2591d9.innerHTML = _0xa88a13.localization('Download Game Data')+' (1/2) ';
                                     var _0x17edbf = _0x3da9ab.total ? '' .concat(Math.floor(_0x3da9ab.loaded / _0x3da9ab.total * 0x64), '%') : '';
                                     _0x2591d9.innerHTML += _0x17edbf;
                                 },
@@ -1644,7 +1644,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                                 if (0x4 === _0x36004e.data.t && _0x36004e.data.total > 0x0) {
                                                     var _0x1097ca = Math.floor(_0x36004e.data.current / _0x36004e.data.total * 0x64),
                                                         _0x95ac83 = _0x36004e.data.name || '';
-                                                    _0x1097ca <= 0x64 && _0x1097ca > 0x0 && (_0xf6806b.innerHTML = 'Decompress Game Patch ' .concat(_0x95ac83, ' ').concat(_0x1097ca, '%'));
+                                                    _0x1097ca <= 0x64 && _0x1097ca > 0x0 && (_0xf6806b.innerHTML = _0xa88a13.localization('Decompress Game Patch')+' ' .concat(_0x95ac83, ' ').concat(_0x1097ca, '%'));
                                                 }
                                             }
                                         }),
@@ -1660,7 +1660,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                     }), _0x4c332a = true), _0x4c332a || (_0x468801 += _0x1097ca.length, _0x4d7024.gamePatch = '/' .concat(_0xe531f0), _0x4d7024._FS.createDataFile('/', _0xe531f0, _0x1097ca, true, !0x1), _0x5048db());
                                 }(_0x179b43, _0x39a81f);
                             }).catch(function(_0x314293) {
-                                console.log(_0x314293), _0x2591d9.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">Network Error</strong>';
+                                console.log(_0x314293), _0x2591d9.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">'+_0xa88a13.localization('Network Error')+'</strong>';
                             });
                         } else _0x5048db();
                     },
@@ -1673,7 +1673,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                 _0xa1889f = _0x71bb4d[_0x71bb4d.length - 0x1];
                             _0xa1889f.indexOf('?') > -0x1 && (_0xa1889f = _0xa1889f.substr(0x0, _0xa1889f.indexOf('?')));
                             _0xa1889f.split('.').pop();
-                            _0x2c1832.innerHTML = 'Download Game Data (1/2)', _0x17edbf.config.gamePatchUrl && (_0x2c1832.innerHTML = 'Download Game Data (1/3)'), _0x550f17.a.head(_0x5a21f7, {}).then(function(_0x35c23a) {
+                            _0x2c1832.innerHTML = _0xa88a13.localization('Download Game Data')+' (1/2)', _0x17edbf.config.gamePatchUrl && (_0x2c1832.innerHTML = _0xa88a13.localization('Download Game Data')+' (1/3)'), _0x550f17.a.head(_0x5a21f7, {}).then(function(_0x35c23a) {
                                 var _0x17edbf = _0x35c23a.headers['content-length'],
                                     _0x500ba1 = _0x35c23a.headers['content-type'],
                                     _0x316472 = (_0x35c23a.headers['last-modified'], '' .concat(_0x1143c5, '-').concat(_0xa1889f)),
@@ -1681,7 +1681,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                         _0x550f17.a.get(_0x5a21f7, {
                                             'onDownloadProgress': function(_0x5e449f) {
                                                 var _0x17edbf = _0x5e449f.total ? '' .concat(Math.floor(_0x5e449f.loaded / _0x5e449f.total * 0x64), '%') : '';
-                                                _0x2c1832.innerHTML = 'Download Game Data (1/2) ' .concat(_0x17edbf);
+                                                _0x2c1832.innerHTML = _0xa88a13.localization('Download Game Data')+' (1/2) ' .concat(_0x17edbf);
                                             },
                                             'responseType': 'arraybuffer'
                                         }).then(function(_0x191007) {
@@ -1725,7 +1725,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                                 console.log(_0x125736);
                                             }
                                         }).catch(function(_0x516cc3) {
-                                            console.log(_0x516cc3), _0x2c1832.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">Network Error</strong>';
+                                            console.log(_0x516cc3), _0x2c1832.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">'+_0xa88a13.localization('Network Error')+'</strong>';
                                         });
                                     };
                                 _0x1ffb98.db ? _0x1ffb98.get(_0x316472, function(_0x3e612b) {
@@ -1745,7 +1745,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                     else _0x31f098();
                                 }) : _0x31f098();
                             }).catch(function(_0x20f2e3) {
-                                _0x2c1832.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">Network Error</strong>';
+                                _0x2c1832.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">'+_0xa88a13.localization('Network Error')+'</strong>';
                             });
                         } else _0x139f68();
                     },
@@ -1831,14 +1831,14 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                                 'data': _0x17edbf
                                             }), _0x57d85d(_0x103241, _0x17edbf);
                                         }).catch(function(_0x58e374) {
-                                            _0x1f8424.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">Network Error</strong>';
+                                            _0x1f8424.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">'+_0xa88a13.localization('Network Error')+'</strong>';
                                         });
                                     };
                                 _0xa884ea.db ? _0xa884ea.get(_0x51bfef, function(_0x5cac21) {
                                     _0x5cac21 && _0x5cac21.filename === _0x103241 && _0x5cac21.filesize - _0x8e30bf == 0x0 && _0x5cac21.filetype === _0x14309b ? _0x57d85d(_0x5cac21.filename, _0x5cac21.data) : _0x574747();
                                 }) : _0x574747();
                             }).catch(function(_0x4f39c1) {
-                                _0x1f8424.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">Network Error</strong>';
+                                _0x1f8424.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">'+_0xa88a13.localization('Network Error')+'</strong>';
                             });
                         } else _0x452592();
                     },
@@ -1887,7 +1887,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                         _0x58b5a7 = _0x17edbf.split('.').pop();
                                     _0x4d7024.coreFileData[_0x17edbf] = _0x3f49ec.data.data, 'js' !== _0x58b5a7 || _0x17edbf.includes('.worker.js') || (_0x247459 = _0x3f49ec.data.data), 'mem' === _0x58b5a7 && (_0x4d7024.memData = _0x3f49ec.data.data), 'wasm' === _0x58b5a7 && (_0x4d7024.wasmData = _0x3f49ec.data.data);
                                 }
-                                0x4 === _0x3f49ec.data.t && _0x3f49ec.data.total > 0x0 && (_0x2c1832.innerHTML = 'Decompress Game Core ' .concat(Math.floor(_0x3f49ec.data.current / _0x3f49ec.data.total * 0x64), '%'));
+                                0x4 === _0x3f49ec.data.t && _0x3f49ec.data.total > 0x0 && (_0x2c1832.innerHTML = _0xa88a13.localization('Decompress Game Core')+' ' .concat(Math.floor(_0x3f49ec.data.current / _0x3f49ec.data.total * 0x64), '%'));
                             }
                         };
                         _0xa24f60(_0x17edbf).then(function(_0x48c633) {
@@ -1899,7 +1899,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         function() {
                             var _0x3787ba = _0x4d7024.loading.querySelector('.' .concat(_0x4fce24.p1)),
                                 _0x2c1832 = _0xa88a13;
-                            _0x3787ba.innerHTML = 'Loading...';
+                            _0x3787ba.innerHTML = _0x2c1832.localization('Loading')+'...';
                             var _0x1c9c57 = setInterval(function() {
                                 if (true === _0x528f2b && true === _0x547484 && true === _0x5e24fa) {
                                     window.Module = {
@@ -1951,7 +1951,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                         _0x550f17.a.get(path, {
                                             'onDownloadProgress': function(_0x117e6b) {
                                                 var _0x55a075 = _0x117e6b.total ? '' .concat(Math.floor(_0x117e6b.loaded / _0x117e6b.total * 0x64), '%') : '';
-                                                _0x3787ba.innerHTML = 'Download Game Core ' .concat(_0x55a075);
+                                                _0x3787ba.innerHTML = _0x2c1832.localization('Download Game Core')+' ' .concat(_0x55a075);
                                             },
                                             'responseType': 'arraybuffer'
                                         }).then(function(_0x5eb80b) {
@@ -1970,7 +1970,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                             }
                                             
                                         }).catch(function(_0x2e06c8) {
-                                            _0x3787ba.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">Network Error</strong>';
+                                            _0x3787ba.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">'+_0x2c1832.localization('Network Error')+'</strong>';
                                         });
                                     };
                                     _0x550f17.a.get(_0xa88a13, {}).then(function(_0x578a2b) {
@@ -1978,9 +1978,8 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                             _0x28ee7f = _0x578a2b.data[_0x2c1832.system],
                                             _0x124167 = _0x28ee7f.version ? _0x28ee7f.version : 0x1,
                                             _0x254bc2 = Boolean(_0x28ee7f.netplay),
-                                            _0x5b1dcd = false,
+                                            _0x5b1dcd = Boolean(_0x28ee7f.state),
                                             _0x9a1f1 = Boolean(_0x28ee7f.asmjs),
-                                            _0x1b4c7 = Boolean(_0x28ee7f.V2),
                                             _0x3e4345 = Boolean(_0x28ee7f.wasm);
                                         if ('nds' == _0x2c1832.system && ! _0x2d904a.wasm) {
                                             _0x5b1dcd = !0x1;
@@ -1997,12 +1996,23 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                         if ('mame' == _0x2c1832.system) {
                                             var data = _0x2c1832.mameCore;
                                             if (! data || data === null || data.split('|').length !== 2) {
-                                                _0x3787ba.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">Missing mame config</strong>';
+                                                _0x3787ba.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">'+_0x2c1832.localization('Missing mame config')+'</strong>';
                                                 return;
                                             }
                                             var _0x3787ba = data.split('|');
-                                            _0x4d7024.coreFileName = '' .concat(_0x2c1832.system, '-').concat(_0x3787ba[0x0]), _0x5b1dcd = '1' === _0x3787ba[0x1], _0x1e2c68.element(_0x2c1832.elements.buttons.saveState) && _0x132da7(_0x2c1832.elements.buttons.saveState, !_0x5b1dcd), _0x1e2c68.element(_0x2c1832.elements.buttons.loadState) && _0x132da7(_0x2c1832.elements.buttons.loadState, !_0x5b1dcd), _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(0x2), !_0x5b1dcd), _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(0x3), !_0x5b1dcd), _0x3787ba[0x0] ? (_0x2d904a.wasm && _0x3e4345 ? (_0x2458d5 = '' .concat(_0x2c1832.system, '-').concat(_0x3787ba[0x0], '-wasm.data'), _0x31a5b3 = true) : (_0x3787ba.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">Webassembly support is not detected in this browser</strong>', _0x2458d5 = ''), _0x2458d5 && (_0x24de8d.db ? _0x24de8d.get(_0x2458d5, function(_0x655c87) {
-                                                if (_0x655c87 && _0x655c87.version === _0x124167 && false) {
+                                            _0x4d7024.coreFileName = ''.concat(_0x2c1832.system, '-').concat(_0x3787ba[0x0]);
+                                            _0x5b1dcd = '1' === _0x3787ba[0x1];
+                                            _0x1e2c68.element(_0x2c1832.elements.buttons.saveState) && _0x132da7(_0x2c1832.elements.buttons.saveState, !_0x5b1dcd);
+                                            _0x1e2c68.element(_0x2c1832.elements.buttons.loadState) && _0x132da7(_0x2c1832.elements.buttons.loadState, !_0x5b1dcd);
+                                            _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(0x2), !_0x5b1dcd);
+                                            _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(0x3), !_0x5b1dcd);
+                                            if (_0x2c1832.coreVer === 2) {
+                                                _0x2458d5 = '';
+                                            } else {
+                                                _0x2458d5 = _0x2c1832.system.concat('-old-').concat(_0x3787ba[0], '-wasm.data');
+                                            }
+                                            _0x3787ba[0x0] ? (_0x2d904a.wasm && _0x3e4345 ? (_0x31a5b3 = true) : (_0x3787ba.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">'+_0x2c1832.localization('Webassembly support is not detected in this browser')+'</strong>', _0x2458d5 = ''), _0x2458d5 && (_0x24de8d.db ? _0x24de8d.get(_0x2458d5, function(_0x655c87) {
+                                                if (_0x655c87 && _0x655c87.version === _0x124167) {
                                                     if (_0xc6823.coreVer === 2) {
                                                         _0x4f0fcc(_0x655c87.data);
                                                     } else {
@@ -2011,7 +2021,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                                         _0x4f0fcc(_0x3787ba);
                                                     }
                                                 } else _0x3641d6(_0x2458d5, _0x124167);
-                                            }) : _0x3641d6(_0x2458d5, _0x124167))) : _0x3787ba.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">Unsupported Game</strong>';
+                                            }) : _0x3641d6(_0x2458d5, _0x124167))) : _0x3787ba.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">'+_0x2c1832.localization('Unsupported Game')+'</strong>';
                                         } else {
                                             _0x2458d5 = false;
                                             var type;
@@ -2031,7 +2041,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                             }
                                             'undefined' != typeof EJS_CUSTOM_COREFILE && (_0x2458d5 = EJS_CUSTOM_COREFILE);
                                             if (_0x2458d5 !== true) {
-                                                _0x3787ba.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">Please upgrade your browser to the latest version</strong>';
+                                                _0x3787ba.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">'+_0x2c1832.localization('Please upgrade your browser to the latest version')+'</strong>';
                                                 return;
                                             }
                                             if (_0x2c1832.coreVer === 2) {
@@ -2053,18 +2063,21 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                             }) : _0x3641d6(_0x2458d5, _0x124167);
                                         }
                                         _0x1e2c68.element(_0x2c1832.elements.buttons.netplay) && _0x132da7(_0x2c1832.elements.buttons.netplay, true);
-                                        _0x1e2c68.element(_0x2c1832.elements.buttons.saveState) && _0x132da7(_0x2c1832.elements.buttons.saveState, !_0x5b1dcd);
-                                        _0x1e2c68.element(_0x2c1832.elements.buttons.loadState) && _0x132da7(_0x2c1832.elements.buttons.loadState, !_0x5b1dcd);
-                                        _0x1e2c68.element(_0x2c1832.elements.inputs.volume) && _0x132da7(_0x2c1832.elements.inputs.volume, !_0x5b1dcd);
-                                        _0x1e2c68.element(_0x2c1832.elements.buttons.cheat) && _0x132da7(_0x2c1832.elements.buttons.cheat, !_0x5b1dcd);
-                                        _0x1e2c68.element(_0x2c1832.elements.buttons.gamepad) && _0x132da7(_0x2c1832.elements.buttons.gamepad, !_0x5b1dcd);
-                                        _0x1e2c68.element(_0x2c1832.elements.buttons.settings) && _0x132da7(_0x2c1832.elements.buttons.settings, !_0x5b1dcd);
-                                        _0x1e2c68.element(_0x2c1832.elements.buttons.mute) && _0x132da7(_0x2c1832.elements.buttons.mute, !_0x5b1dcd);
-                                        _0x1e2c68.element(_0x2c1832.elements.buttons.play) && _0x132da7(_0x2c1832.elements.buttons.play, !_0x5b1dcd);
-                                        _0x1e2c68.element(_0x2c1832.elements.buttons.pause) && _0x132da7(_0x2c1832.elements.buttons.pause, !_0x5b1dcd);
-                                        _0xc6823.setStatesSupported(false);
+                                        _0x1e2c68.element(_0x2c1832.elements.buttons.cheat) && _0x132da7(_0x2c1832.elements.buttons.cheat, true);
+                                        _0x1e2c68.element(_0x2c1832.elements.buttons.gamepad) && _0x132da7(_0x2c1832.elements.buttons.gamepad, true);
+                                        _0x1e2c68.element(_0x2c1832.elements.buttons.mute) && _0x132da7(_0x2c1832.elements.buttons.mute, true);
+                                        _0x1e2c68.element(_0x2c1832.elements.inputs.volume) && _0x132da7(_0x2c1832.elements.inputs.volume, true);
+                                        if (Array.isArray(_0x2c1832.elements.buttons.play)) {
+                                            for (var i=0; i<_0x2c1832.elements.buttons.play.length; i++) {
+                                                _0x1e2c68.element(_0x2c1832.elements.buttons.play[i]) && _0x132da7(_0x2c1832.elements.buttons.play[i], true);
+                                            }
+                                        } else {
+                                            _0x1e2c68.element(_0x2c1832.elements.buttons.play) && _0x132da7(_0x2c1832.elements.buttons.play, true);
+                                        }
+                                        _0x1e2c68.element(_0x2c1832.elements.buttons.saveState) && _0x132da7(_0x2c1832.elements.buttons.saveState, !_0x5b1dcd), _0x1e2c68.element(_0x2c1832.elements.buttons.loadState) && _0x132da7(_0x2c1832.elements.buttons.loadState, !_0x5b1dcd), _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(0x2), !_0x5b1dcd), _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(0x3), !_0x5b1dcd);
+                                        _0xc6823.setStatesSupported(_0x5b1dcd);
                                     }).catch(function(_0x2d06a9) {
-                                        _0x3787ba.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">Network Error</strong>';
+                                        _0x3787ba.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">'+_0x2c1832.localization('Network Error')+'</strong>';
                                     }), clearInterval(_0x1c9c57), _0x4d7024.romdb = _0x4e171c;
                                 }
                             }, 0x1f4);
@@ -2497,9 +2510,15 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         }
                         if (type === 'save') {
                             try {
-                                var data = _0x378b5c.saveState();
+                                if (this.coreVer === 2) {
+                                    _0x378b5c.saveState().then(function(data) {
+                                        _0x378b5c.saveLoaddbDB.put(key, data);
+                                    })
+                                } else {
+                                    var data = _0x378b5c.saveState();
+                                    _0x378b5c.saveLoaddbDB.put(key, data);
+                                }
                             } catch(e) {return false;};
-                            _0x378b5c.saveLoaddbDB.put(key, data);
                         } else {
                             _0x378b5c.saveLoaddbDB.get(key).then(function(data) {
                                 EJS_loadState(data);
@@ -2698,10 +2717,10 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
             },
             'setGamepadDialog': function() {
                 var _0xa88a13 = this;
-                _0xa88a13.elements.dialogs.gamepad.innerHTML = '\n        <div class="' + _0x378b5c.classNames['dialog-container'] + '">\n            <div class="' + _0x378b5c.classNames['dialog-title'] + '">\n                <h4>Control Settings</h4>\n            </div>\n            \n            <ul class="' + _0x378b5c.classNames.tabs + '" id="controls-tabs">\n                <li class="tabs-title" role="presentation"><a href="#" onclick="return false" role="tab" aria-controls="controls-0" aria-selected="false" id="controls-0-label">Player 1</a></li>\n                <li class="tabs-title" role="presentation"><a href="#" onclick="return false" role="tab" aria-controls="controls-1" aria-selected="false" id="controls-1-label">Player 2</a></li>\n                <li class="tabs-title" role="presentation"><a href="#" onclick="return false" role="tab" aria-controls="controls-2" aria-selected="false" id="controls-2-label">Player 3</a></li>\n                <li class="tabs-title" role="presentation"><a href="#" onclick="return false" role="tab" aria-controls="controls-3" aria-selected="false" id="controls-3-label">Player 4</a></li>\n            </ul>\n            <div class="' + _0x378b5c.classNames['dialog-content'] + '">\n            <div class="' + _0x378b5c.classNames['tabs-content'] + ' controls">\n                \n            </div>\n            </div>\n            <div class="' + _0x378b5c.classNames['dialog-buttons'] + '">\n                <a href="#" onclick="return false" class="' + _0x378b5c.classNames['btn-submit'] + '">Update</a>\n                <a href="#" onclick="return false" class="' + _0x378b5c.classNames['btn-reset'] + '">Reset</a>\n                <a href="#" onclick="return false" class="' + _0x378b5c.classNames['btn-clear'] + '">Clear</a>\n                <a href="#" onclick="return false" class="' + _0x378b5c.classNames['btn-cancel'] + '">Cancel</a>\n            </div>\n            <div class="' + _0x378b5c.classNames.overlay + '" hidden>\n                <div class="' + _0x378b5c.classNames['key-setting-popup'] + '">\n                    <span>[Select]</span><br />\n                    <div style="color:#fff !important">Press keyboard or gamepad</div>\n                </div>\n            </div>\n        </div>\n        '
+                _0xa88a13.elements.dialogs.gamepad.innerHTML = '\n        <div class="' + _0x378b5c.classNames['dialog-container'] + '">\n            <div class="' + _0x378b5c.classNames['dialog-title'] + '">\n                <h4>'+_0xa88a13.localization('Control Settings')+'</h4>\n            </div>\n            \n            <ul class="' + _0x378b5c.classNames.tabs + '" id="controls-tabs">\n                <li class="tabs-title" role="presentation"><a href="#" onclick="return false" role="tab" aria-controls="controls-0" aria-selected="false" id="controls-0-label">'+_0xa88a13.localization('Player 1')+'</a></li>\n                <li class="tabs-title" role="presentation"><a href="#" onclick="return false" role="tab" aria-controls="controls-1" aria-selected="false" id="controls-1-label">'+_0xa88a13.localization('Player 2')+'</a></li>\n                <li class="tabs-title" role="presentation"><a href="#" onclick="return false" role="tab" aria-controls="controls-2" aria-selected="false" id="controls-2-label">'+_0xa88a13.localization('Player 3')+'</a></li>\n                <li class="tabs-title" role="presentation"><a href="#" onclick="return false" role="tab" aria-controls="controls-3" aria-selected="false" id="controls-3-label">'+_0xa88a13.localization('Player 4')+'</a></li>\n            </ul>\n            <div class="' + _0x378b5c.classNames['dialog-content'] + '">\n            <div class="' + _0x378b5c.classNames['tabs-content'] + ' controls">\n                \n            </div>\n            </div>\n            <div class="' + _0x378b5c.classNames['dialog-buttons'] + '">\n                <a href="#" onclick="return false" class="' + _0x378b5c.classNames['btn-submit'] + '">'+_0xa88a13.localization('Update')+'</a>\n                <a href="#" onclick="return false" class="' + _0x378b5c.classNames['btn-reset'] + '">'+_0xa88a13.localization('Reset')+'</a>\n                <a href="#" onclick="return false" class="' + _0x378b5c.classNames['btn-clear'] + '">'+_0xa88a13.localization('Clear')+'</a>\n                <a href="#" onclick="return false" class="' + _0x378b5c.classNames['btn-cancel'] + '">'+_0xa88a13.localization('Cancel')+'</a>\n            </div>\n            <div class="' + _0x378b5c.classNames.overlay + '" hidden>\n                <div class="' + _0x378b5c.classNames['key-setting-popup'] + '">\n                    <span>[Select]</span><br />\n                    <div style="color:#fff !important">'+_0xa88a13.localization('Press keyboard or gamepad')+'</div>\n                </div>\n            </div>\n        </div>\n        '
                 
-                var _0x17edbf = '\n        <div class="' .concat(_0x378b5c.classNames['tabs-panel'], '" id="controls-{index}" hidden>\n            <div>\n                <div style="">\n                    <div class="gamepad" style="font-size:12px">Connected gamepad: <span class="gamepad-name">n/a</span></div>\n                </div>\n                <div style="width:25%;float:left">&nbsp;</div>\n                <div style="font-size:12px;width:50%;float:left">\n                    <div class="row">\n                        <div style="text-align:center;width:50%;float:left">Gamepad</div>\n                        <div style="text-align:center;width:50%;float:left">Keyboard</div>\n                    </div>\n                </div>\n                <div style="clear:both"></div>\n            </div>\n        </div>'),
-                    _0x2c1832 = '\n        <div class="' .concat(_0x378b5c.classNames['button-container'], '" data-id="{id}" data-index="{index}" data-label="{label}" style="margin-bottom:10px">\n            <div style="width:25%;float:left;font-size:12px">\n                <label>{label}:</label>\n            </div>\n            <div style="width:50%;float:left">\n                <div>\n                    <div style="width:50%;float:left;padding: 0 5px;">\n                        <input style="text-align:center;height:25px;width: 100%;" type="text" data-id="{id}" data-value="" data-type="2" data-index="{index}" readonly="" placeholder="">\n                    </div>\n                    <div style="width:50%;float:left;padding: 0 5px;">\n                        <input style="text-align:center;height:25px;width: 100%;" type="text" data-id="{id}" data-value="" data-type="1" data-index="{index}" readonly="" placeholder="">\n                    </div>\n                    <div style="clear:both"></div>\n                </div>\n            </div>\n            <div style="width:25%;float:left">\n                <a class="').concat(_0x378b5c.classNames.set, '" href="#" onclick="return false">Set</a>\n            </div>\n            <div style="clear:both"></div>\n        </div>')
+                var _0x17edbf = '\n        <div class="' .concat(_0x378b5c.classNames['tabs-panel'], '" id="controls-{index}" hidden>\n            <div>\n                <div style="">\n                    <div class="gamepad" style="font-size:12px">Connected gamepad: <span class="gamepad-name">n/a</span></div>\n                </div>\n                <div style="width:25%;float:left">&nbsp;</div>\n                <div style="font-size:12px;width:50%;float:left">\n                    <div class="row">\n                        <div style="text-align:center;width:50%;float:left">'+_0xa88a13.localization('Gamepad')+'</div>\n                        <div style="text-align:center;width:50%;float:left">'+_0xa88a13.localization('Keyboard')+'</div>\n                    </div>\n                </div>\n                <div style="clear:both"></div>\n            </div>\n        </div>'),
+                    _0x2c1832 = '\n        <div class="' .concat(_0x378b5c.classNames['button-container'], '" data-id="{id}" data-index="{index}" data-label="{label}" style="margin-bottom:10px">\n            <div style="width:25%;float:left;font-size:12px">\n                <label>{label}:</label>\n            </div>\n            <div style="width:50%;float:left">\n                <div>\n                    <div style="width:50%;float:left;padding: 0 5px;">\n                        <input style="text-align:center;height:25px;width: 100%;" type="text" data-id="{id}" data-value="" data-type="2" data-index="{index}" readonly="" placeholder="">\n                    </div>\n                    <div style="width:50%;float:left;padding: 0 5px;">\n                        <input style="text-align:center;height:25px;width: 100%;" type="text" data-id="{id}" data-value="" data-type="1" data-index="{index}" readonly="" placeholder="">\n                    </div>\n                    <div style="clear:both"></div>\n                </div>\n            </div>\n            <div style="width:25%;float:left">\n                <a class="').concat(_0x378b5c.classNames.set, '" href="#" onclick="return false">'+_0xa88a13.localization('Set')+'</a>\n            </div>\n            <div style="clear:both"></div>\n        </div>')
                 if ('nes' === _0xa88a13.system) {
                     var _0x48ee51 = {
                         0: 'B',
@@ -2712,9 +2731,9 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         6: 'LEFT',
                         7: 'RIGHT',
                         8: 'A',
-                        24: 'QUICK SAVE STATE',
-                        25: 'QUICK LOAD STATE',
-                        26: 'CHANGE STATE SLOT'
+                        24: _0xa88a13.localization('QUICK SAVE STATE'),
+                        25: _0xa88a13.localization('QUICK LOAD STATE'),
+                        26: _0xa88a13.localization('CHANGE STATE SLOT')
                     }
                 } else if ('snes' === _0xa88a13.system) {
                     var _0x48ee51 = {
@@ -2730,9 +2749,9 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         9: 'X',
                         10: 'L',
                         11: 'R',
-                        24: 'QUICK SAVE STATE',
-                        25: 'QUICK LOAD STATE',
-                        26: 'CHANGE STATE SLOT'
+                        24: _0xa88a13.localization('QUICK SAVE STATE'),
+                        25: _0xa88a13.localization('QUICK LOAD STATE'),
+                        26: _0xa88a13.localization('CHANGE STATE SLOT')
                     };
                 } else if ('n64' === _0xa88a13.system) {
                     var _0x48ee51 = {
@@ -2754,9 +2773,9 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         22: 'R STICK DOWN',
                         21: 'R STICK LEFT',
                         20: 'R STICK RIGHT',
-                        24: 'QUICK SAVE STATE',
-                        25: 'QUICK LOAD STATE',
-                        26: 'CHANGE STATE SLOT'
+                        24: _0xa88a13.localization('QUICK SAVE STATE'),
+                        25: _0xa88a13.localization('QUICK LOAD STATE'),
+                        26: _0xa88a13.localization('CHANGE STATE SLOT')
                     };
                 } else if ('nds' === _0xa88a13.system) {
                     var _0x48ee51 = {
@@ -2773,9 +2792,9 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         10: 'L',
                         11: 'R',
                         14: 'Microphone',
-                        24: 'QUICK SAVE STATE',
-                        25: 'QUICK LOAD STATE',
-                        26: 'CHANGE STATE SLOT'
+                        24: _0xa88a13.localization('QUICK SAVE STATE'),
+                        25: _0xa88a13.localization('QUICK LOAD STATE'),
+                        26: _0xa88a13.localization('CHANGE STATE SLOT')
                     };
                 } else {
                     var _0x48ee51 = {
@@ -2803,13 +2822,13 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         22: 'R STICK DOWN',
                         21: 'R STICK LEFT',
                         20: 'R STICK RIGHT',
-                        24: 'QUICK SAVE STATE',
-                        25: 'QUICK LOAD STATE',
-                        26: 'CHANGE STATE SLOT'
+                        24: _0xa88a13.localization('QUICK SAVE STATE'),
+                        25: _0xa88a13.localization('QUICK LOAD STATE'),
+                        26: _0xa88a13.localization('CHANGE STATE SLOT')
                     };
                 }
                 if (['arcade', 'mame'].includes(_0xa88a13.system)) {
-                    _0x48ee51[2] = 'INSERT COIN'
+                    _0x48ee51[2] = _0xa88a13.localization('INSERT COIN');
                 }
                 if (_0xa88a13.statesSupported === false) {
                     delete _0x48ee51[24];
@@ -2904,16 +2923,16 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                             _0x4a6f6f = _0x2c1832.getAttribute('data-label');
                         _0x132da7(_0x11b11a, !0x1), _0x11b11a.setAttribute('data-id', _0x4e649c), _0x11b11a.setAttribute('data-index', _0x431719);
                         var _0x179623 = '[ ' .concat(_0x4a6f6f, ' ]');
-                        _0x378b5c.gamepad.gamepads[_0x431719] && _0x4e649c < 0x10 ? _0x179623 += '<br /><span style="font-size:12px">Gamepad:' .concat(_0x378b5c.gamepad.gamepads[_0x431719].id, '</span><br />Press keyboard or gamepad<br/>Press escape (esc) to clear') : _0x179623 += '<br />Press keyboard<br/>Press escape (esc) to clear', _0x11b11a.querySelector('.' .concat(_0x378b5c.classNames['key-setting-popup'])).innerHTML = _0x179623, _0x1e1d79.stopPropagation();
+                        _0x378b5c.gamepad.gamepads[_0x431719] && _0x4e649c < 0x10 ? _0x179623 += '<br /><span style="font-size:12px">Gamepad:' .concat(_0x378b5c.gamepad.gamepads[_0x431719].id, '</span><br />'+_0xa88a13.localization('Press keyboard or gamepad')+'<br/>'+_0xa88a13.localization('Press escape (esc) to clear')) : _0x179623 += '<br />Press keyboard<br/>'+_0xa88a13.localization('Press escape (esc) to clear'), _0x11b11a.querySelector('.' .concat(_0x378b5c.classNames['key-setting-popup'])).innerHTML = _0x179623, _0x1e1d79.stopPropagation();
                     });
                 });
             },
             'setCacheDialog': function() {
                 var _0xa88a13 = this;
-                _0xa88a13.elements.dialogs.cache.innerHTML = '\n        <div class="' .concat(_0x378b5c.classNames['dialog-container'], '">\n            <div class="').concat(_0x378b5c.classNames['dialog-title'], '">\n                <h4>Cache Manager</h4>\n            </div>\n            <div class="').concat(_0x378b5c.classNames['dialog-content'], '">\n\n            </div>\n            <div class="').concat(_0x378b5c.classNames['dialog-buttons'], '">\n                <a href="#" onclick="return false" class="').concat(_0x378b5c.classNames['btn-cancel'], '">Close</a>\n            </div>\n        </div>\n        '), _0x1093f4.call(this, _0xa88a13.elements.dialogs.cache.querySelector('.' .concat(_0x378b5c.classNames['btn-cancel'])), 'click', function(_0x5d6721) {
+                _0xa88a13.elements.dialogs.cache.innerHTML = '\n        <div class="' .concat(_0x378b5c.classNames['dialog-container'], '">\n            <div class="').concat(_0x378b5c.classNames['dialog-title'], '">\n                <h4>'+_0xa88a13.localization('Cache Manager')+'</h4>\n            </div>\n            <div class="').concat(_0x378b5c.classNames['dialog-content'], '">\n\n            </div>\n            <div class="').concat(_0x378b5c.classNames['dialog-buttons'], '">\n                <a href="#" onclick="return false" class="').concat(_0x378b5c.classNames['btn-cancel'], '">'+_0xa88a13.localization('Close')+'</a>\n            </div>\n        </div>\n        '), _0x1093f4.call(this, _0xa88a13.elements.dialogs.cache.querySelector('.' .concat(_0x378b5c.classNames['btn-cancel'])), 'click', function(_0x5d6721) {
                     return _0x132da7(_0xa88a13.elements.dialogs.cache, true), _0xa88a13.elements.container.focus(), _0x5d6721.stopPropagation(), !0x1;
                 }), _0x1093f4.call(this, _0xa88a13.elements.dialogs.cache.querySelector('.' .concat(_0x378b5c.classNames['dialog-title'], ' a')), 'click', function(_0x46992d) {
-                    return _0x27f4c4.romdb && (_0x27f4c4.romdb.clear(), _0xa88a13.elements.dialogs.cache.querySelector('.' .concat(_0x378b5c.classNames['dialog-content'])).innerHTML = '<div style="text-align:center">Empty</div>'), _0x46992d.stopPropagation(), !0x1;
+                    return _0x27f4c4.romdb && (_0x27f4c4.romdb.clear(), _0xa88a13.elements.dialogs.cache.querySelector('.' .concat(_0x378b5c.classNames['dialog-content'])).innerHTML = '<div style="text-align:center">'+_0xa88a13.localization('Empty')+'</div>'), _0x46992d.stopPropagation(), !0x1;
                 });
             },
             'showLoading': function(_0x108b55) {
@@ -2925,12 +2944,12 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 _0x4d8495.close(), _0x132da7(this.elements.dialogs.loading, true);
             },
             'setLoadingDialog': function() {
-                this.elements.dialogs.loading && (this.elements.dialogs.loading.innerHTML = '\n            <div class="' .concat(_0x378b5c.classNames.modal, ' ').concat(_0x378b5c.classNames['micromodal-slide'], '" id="modal-6ed698f3d04061f5" aria-hidden="true">\n                <div class="').concat(_0x378b5c.classNames.modal__overlay, '" tabindex="-1">\n                <div class="').concat(_0x378b5c.classNames.modal__container, '" role="dialog" aria-modal="true" aria-labelledby="modal-6ed698f3d04061f5-title">\n                Loading...\n                </div>\n                </div>\n            </div>'));
+                this.elements.dialogs.loading && (this.elements.dialogs.loading.innerHTML = '\n            <div class="' .concat(_0x378b5c.classNames.modal, ' ').concat(_0x378b5c.classNames['micromodal-slide'], '" id="modal-6ed698f3d04061f5" aria-hidden="true">\n                <div class="').concat(_0x378b5c.classNames.modal__overlay, '" tabindex="-1">\n                <div class="').concat(_0x378b5c.classNames.modal__container, '" role="dialog" aria-modal="true" aria-labelledby="modal-6ed698f3d04061f5-title">\n                '+this.localization('Loading')+'...\n                </div>\n                </div>\n            </div>'));
             },
             'setCheatDialog': function() {
                 var _0xa88a13 = this;
                 if (_0xa88a13.elements.dialogs.cheat) {
-                    _0xa88a13.elements.dialogs.cheat.innerHTML = '\n            <div class="' .concat(_0x378b5c.classNames['dialog-container'], '">\n                <div class="').concat(_0x378b5c.classNames['dialog-title'], '">\n                    <h4>Cheats</h4>\n                </div>\n                <div class="').concat(_0x378b5c.classNames['dialog-content'], '">\n                    <div class="').concat(_0x378b5c.classNames['cheats-list'], '">\n                        \n                    </div>\n                </div>\n                <div class="').concat(_0x378b5c.classNames['dialog-buttons'], '">\n                    <a href="#" onclick="return false" class="').concat(_0x378b5c.classNames['cheats-add'], '">Add Cheat</a>\n                    <a href="#" onclick="return false" class="').concat(_0x378b5c.classNames['btn-submit'], '">OK</a>\n                    <a href="#" onclick="return false" class="').concat(_0x378b5c.classNames['btn-cancel'], '">Close</a>\n                </div>\n            </div>\n\n            \n\n            <div class="').concat(_0x378b5c.classNames.modal, ' ').concat(_0x378b5c.classNames['micromodal-slide'], '" id="modal-85cd7a1c543a484b" aria-hidden="true">\n                <div class="').concat(_0x378b5c.classNames.modal__overlay, '" tabindex="-1" data-modal-close>\n                <div class="').concat(_0x378b5c.classNames.modal__container, '" style="width:100%" role="dialog" aria-modal="true" aria-labelledby="modal-85cd7a1c543a484b-title">\n                    <div class="').concat(_0x378b5c.classNames.modal__header, '">\n                    <h2 class="').concat(_0x378b5c.classNames.modal__title, '" id="modal-85cd7a1c543a484b-title">\n                    Add Cheat Code\n                    </h2>\n                    <button class="').concat(_0x378b5c.classNames.modal__close, '" aria-label="Close modal" data-modal-close></button>\n                    </div>\n                    <main class="').concat(_0x378b5c.classNames.modal__content, '" id="modal-85cd7a1c543a484b-content">\n\n                        <div class="').concat(_0x378b5c.classNames.modal__errmsg, '"></div>\n                        <strong>Code</strong><br />\n                        <textarea style="width:100%;height:80px;" class="').concat(_0x378b5c.classNames['cheat-code-input'], '"></textarea><br />\n                        <strong>Description</strong><br />\n                        <input type="text" class="').concat(_0x378b5c.classNames['cheat-name-input'], '" /><br />\n\n                    </main>\n                    <footer class="').concat(_0x378b5c.classNames.modal__footer, '">\n                    <button class="').concat(_0x378b5c.classNames.modal__btn, ' ').concat(_0x378b5c.classNames['modal__btn-primary'], '">Submit</button>\n                    <button class="').concat(_0x378b5c.classNames.modal__btn, '" data-modal-close aria-label="Close">Close</button>\n                    </footer>\n                </div>\n                </div>\n            </div>\n            ');
+                    _0xa88a13.elements.dialogs.cheat.innerHTML = '\n            <div class="' .concat(_0x378b5c.classNames['dialog-container'], '">\n                <div class="').concat(_0x378b5c.classNames['dialog-title'], '">\n                    <h4>Cheats</h4>\n                </div>\n                <div class="').concat(_0x378b5c.classNames['dialog-content'], '">\n                    <div class="').concat(_0x378b5c.classNames['cheats-list'], '">\n                        \n                    </div>\n                </div>\n                <div class="').concat(_0x378b5c.classNames['dialog-buttons'], '">\n                    <a href="#" onclick="return false" class="').concat(_0x378b5c.classNames['cheats-add'], '">'+_0xa88a13.localization('Add Cheat')+'</a>\n                    <a href="#" onclick="return false" class="').concat(_0x378b5c.classNames['btn-submit'], '">'+_0xa88a13.localization('OK')+'</a>\n                    <a href="#" onclick="return false" class="').concat(_0x378b5c.classNames['btn-cancel'], '">Close</a>\n                </div>\n            </div>\n\n            \n\n            <div class="').concat(_0x378b5c.classNames.modal, ' ').concat(_0x378b5c.classNames['micromodal-slide'], '" id="modal-85cd7a1c543a484b" aria-hidden="true">\n                <div class="').concat(_0x378b5c.classNames.modal__overlay, '" tabindex="-1" data-modal-close>\n                <div class="').concat(_0x378b5c.classNames.modal__container, '" style="width:100%" role="dialog" aria-modal="true" aria-labelledby="modal-85cd7a1c543a484b-title">\n                    <div class="').concat(_0x378b5c.classNames.modal__header, '">\n                    <h2 class="').concat(_0x378b5c.classNames.modal__title, '" id="modal-85cd7a1c543a484b-title">\n                    '+_0xa88a13.localization('Add Cheat Code')+'\n                    </h2>\n                    <button class="').concat(_0x378b5c.classNames.modal__close, '" aria-label="Close modal" data-modal-close></button>\n                    </div>\n                    <main class="').concat(_0x378b5c.classNames.modal__content, '" id="modal-85cd7a1c543a484b-content">\n\n                        <div class="').concat(_0x378b5c.classNames.modal__errmsg, '"></div>\n                        <strong>'+_0xa88a13.localization('Code')+'</strong><br />\n                        <textarea style="width:100%;height:80px;" class="').concat(_0x378b5c.classNames['cheat-code-input'], '"></textarea><br />\n                        <strong>'+_0xa88a13.localization('Description')+'</strong><br />\n                        <input type="text" class="').concat(_0x378b5c.classNames['cheat-name-input'], '" /><br />\n\n                    </main>\n                    <footer class="').concat(_0x378b5c.classNames.modal__footer, '">\n                    <button class="').concat(_0x378b5c.classNames.modal__btn, ' ').concat(_0x378b5c.classNames['modal__btn-primary'], '">'+_0xa88a13.localization('Submit')+'</button>\n                    <button class="').concat(_0x378b5c.classNames.modal__btn, '" data-modal-close aria-label="Close">'+_0xa88a13.localization('Close')+'</button>\n                    </footer>\n                </div>\n                </div>\n            </div>\n            ');
                     var _0x17edbf = _0xa88a13.elements.dialogs.cheat.querySelector('#modal-85cd7a1c543a484b');
                     _0x1093f4.call(this, _0xa88a13.elements.dialogs.cheat.querySelector('.' .concat(_0x378b5c.classNames['cheats-add'])), 'click', function(_0x2a74b5) {
                         return _0x4d8495.show('modal-85cd7a1c543a484b', {
@@ -2993,7 +3012,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 var _0xa88a13 = this,
                     _0x17edbf = this;
                 if (_0x17edbf.elements.dialogs.netplay) {
-                    _0x17edbf.elements.dialogs.netplay.innerHTML = '\n            <div class="' .concat(_0x378b5c.classNames['dialog-container'], '">\n                <div class="').concat(_0x378b5c.classNames['dialog-title'], '">\n                    <h4>Netplay</h4>\n                </div>\n                <div class="').concat(_0x378b5c.classNames['dialog-content'], '">\n                    <div class="').concat(_0x378b5c.classNames['netplay-roomlist'], '" hidden>\n                        <strong>Rooms</strong>\n                        <table style="width:100%" cellspacing=0>\n                            <thead>\n                                <tr>\n                                    <td>Room Name</td>\n                                    <td>Players</td>\n                                    <td></td>\n                                </tr>\n                            </thead>\n                            <tbody>\n                                <tr>\n                                    <td></td>\n                                    <td></td>\n                                    <td></td>\n                                </tr>\n                            </tbody>\n                        </table>\n                    </div>\n\n                    <div class="').concat(_0x378b5c.classNames['netplay-room'], '" hidden>\n                        <strong>Room Name</strong>\n                        <div data-room-password>Password: <span></span></div>\n                        <table style="width:100%" cellspacing="0">\n                            <thead>\n                            <tr>\n                                <td>Player</td>\n                                <td>Name</td>\n                                <td></td>\n                            </tr>\n                            </thead>\n                            <tbody>\n                            <tr>\n                                <td>1</td>\n                                <td>Name 1</td>\n                                <td></td>\n                            </tr>\n                            <tr>\n                                <td>2</td>\n                                <td>Name 2</td>\n                                <td></td>\n                            </tr>\n                            <tr>\n                                <td>3</td>\n                                <td>Name 3</td>\n                                <td></td>\n                            </tr>\n                            <tr>\n                                <td>4</td>\n                                <td>Name 4</td>\n                                <td></td>\n                            </tr>\n                            </tbody>\n                        </table>\n                    </div>\n                </div>\n                <div class="').concat(_0x378b5c.classNames['dialog-buttons'], '">\n                    <a href="#" onclick="return false" class="').concat(_0x378b5c.classNames['btn-quit'], '">Quit Room</a>\n                    <a href="#" onclick="return false" class="').concat(_0x378b5c.classNames['btn-create-room'], '">Create a Room</a>\n                    <a href="#" onclick="return false" class="').concat(_0x378b5c.classNames['btn-cancel'], '">Close</a>\n                </div>\n            </div>\n\n            \n            <div class="').concat(_0x378b5c.classNames.modal, ' ').concat(_0x378b5c.classNames['micromodal-slide'], '" id="modal-9de6c4e9ce2b9361" aria-hidden="true">\n                <div class="').concat(_0x378b5c.classNames.modal__overlay, '" tabindex="-1">\n                <div class="').concat(_0x378b5c.classNames.modal__container, '" role="dialog" aria-modal="true" aria-labelledby="modal-9de6c4e9ce2b9361-title">\n                    <div class="').concat(_0x378b5c.classNames.modal__header, '">\n                    <h2 class="').concat(_0x378b5c.classNames.modal__title, '" id="modal-9de6c4e9ce2b9361-title">\n                        Set Player Name\n                    </h2>\n                    </div>\n                    <main class="').concat(_0x378b5c.classNames.modal__content, '" id="modal-9de6c4e9ce2b9361-content">\n\n                        <div class="').concat(_0x378b5c.classNames.modal__errmsg, '"></div>\n                        <strong>Player Name</strong><br />\n                        <input type="text" maxlength="10" class="').concat(_0x378b5c.classNames['netplay-player-name'], '" /><br />\n\n                    </main>\n                    <footer class="').concat(_0x378b5c.classNames.modal__footer, '">\n                    <button class="').concat(_0x378b5c.classNames.modal__btn, ' ').concat(_0x378b5c.classNames['modal__btn-primary'], '">Submit</button>\n                    </footer>\n                </div>\n                </div>\n            </div>\n            \n            <div class="').concat(_0x378b5c.classNames.modal, ' ').concat(_0x378b5c.classNames['micromodal-slide'], '" id="modal-85cd7a1c543a484a" aria-hidden="true">\n                <div class="').concat(_0x378b5c.classNames.modal__overlay, '" tabindex="-1" data-modal-close>\n                <div class="').concat(_0x378b5c.classNames.modal__container, '" role="dialog" aria-modal="true" aria-labelledby="modal-85cd7a1c543a484a-title">\n                    <div class="').concat(_0x378b5c.classNames.modal__header, '">\n                    <h2 class="').concat(_0x378b5c.classNames.modal__title, '" id="modal-85cd7a1c543a484a-title">\n                    Create a Room\n                    </h2>\n                    <button class="').concat(_0x378b5c.classNames.modal__close, '" aria-label="Close modal" data-modal-close></button>\n                    </div>\n                    <main class="').concat(_0x378b5c.classNames.modal__content, '" id="modal-85cd7a1c543a484a-content">\n\n                        <div class="').concat(_0x378b5c.classNames.modal__errmsg, '"></div>\n                        <strong>Room Name</strong><br />\n                        <input type="text" maxlength="10" class="').concat(_0x378b5c.classNames['netplay-room-name-input'], '" /><br />\n                        <strong>Max Players</strong><br />\n                        <select data-max-players>\n                            <option value="2">2</option>\n                            <option value="3">3</option>\n                            <option value="4">4</option>\n                        </select>\n                        <br />\n                        <strong>Password (Optional)</strong><br />\n                        <input type="text" maxlength="10" class="').concat(_0x378b5c.classNames['netplay-room-password-input'], '" /><br />\n\n                    </main>\n                    <footer class="').concat(_0x378b5c.classNames.modal__footer, '">\n                    <button class="').concat(_0x378b5c.classNames.modal__btn, ' ').concat(_0x378b5c.classNames['modal__btn-primary'], '">Submit</button>\n                    <button class="').concat(_0x378b5c.classNames.modal__btn, '" data-modal-close aria-label="Close">Close</button>\n                    </footer>\n                </div>\n                </div>\n            </div>\n            \n            <div class="').concat(_0x378b5c.classNames.modal, ' ').concat(_0x378b5c.classNames['micromodal-slide'], '" id="modal-5aa765d61d8327de" aria-hidden="true">\n                <div class="').concat(_0x378b5c.classNames.modal__overlay, '" tabindex="-1" data-modal-close>\n                <div class="').concat(_0x378b5c.classNames.modal__container, '" role="dialog" aria-modal="true" aria-labelledby="modal-5aa765d61d8327de-title">\n                    <div class="').concat(_0x378b5c.classNames.modal__header, '">\n                    <h2 class="').concat(_0x378b5c.classNames.modal__title, '" id="modal-5aa765d61d8327de-title">\n                        Password\n                    </h2>\n                    <button class="').concat(_0x378b5c.classNames.modal__close, '" aria-label="Close modal" data-modal-close></button>\n                    </div>\n                    <main class="').concat(_0x378b5c.classNames.modal__content, '" id="modal-5aa765d61d8327de-content">\n\n                        <div class="').concat(_0x378b5c.classNames.modal__errmsg, '"></div>\n                        <input type="text" maxlength="10" class="').concat(_0x378b5c.classNames['netplay-room-password-input'], '" /><br />\n\n                    </main>\n                    <footer class="').concat(_0x378b5c.classNames.modal__footer, '">\n                    <button class="').concat(_0x378b5c.classNames.modal__btn, ' ').concat(_0x378b5c.classNames['modal__btn-primary'], '">Submit</button>\n                    <button class="').concat(_0x378b5c.classNames.modal__btn, '" data-modal-close aria-label="Close">Close</button>\n                    </footer>\n                </div>\n                </div>\n            </div>\n            \n            \n            <div class="').concat(_0x378b5c.classNames.modal, ' ').concat(_0x378b5c.classNames['micromodal-slide'], '" id="modal-7d8fd50ed642340b" aria-hidden="true">\n                <div class="').concat(_0x378b5c.classNames.modal__overlay, '" tabindex="-1" data-modal-close>\n                <div class="').concat(_0x378b5c.classNames.modal__container, '" role="dialog" aria-modal="true" aria-labelledby="modal-7d8fd50ed642340b-title">\n                    <div class="').concat(_0x378b5c.classNames.modal__header, '">\n                    <h2 class="').concat(_0x378b5c.classNames.modal__title, '" id="modal-7d8fd50ed642340b-title"></h2>\n                    <button class="').concat(_0x378b5c.classNames.modal__close, '" aria-label="Close modal" data-modal-close></button>\n                    </div>\n                    <main class="').concat(_0x378b5c.classNames.modal__content, '" id="modal-7d8fd50ed642340b-content">\n                        \n                    </main>\n                    <footer class="').concat(_0x378b5c.classNames.modal__footer, '">\n                    <button class="').concat(_0x378b5c.classNames.modal__btn, ' ').concat(_0x378b5c.classNames['modal__btn-primary'], '" data-modal-close>OK</button>\n                    </footer>\n                </div>\n                </div>\n            </div>\n            \n            '), _0x1093f4.call(this, _0x17edbf.elements.dialogs.netplay.querySelector('.' .concat(_0x378b5c.classNames['btn-cancel'])), 'click', function(_0x3d4554) {
+                    _0x17edbf.elements.dialogs.netplay.innerHTML = '\n            <div class="' .concat(_0x378b5c.classNames['dialog-container'], '">\n                <div class="').concat(_0x378b5c.classNames['dialog-title'], '">\n                    <h4>'+_0x17edbf.localization('Netplay')+'</h4>\n                </div>\n                <div class="').concat(_0x378b5c.classNames['dialog-content'], '">\n                    <div class="').concat(_0x378b5c.classNames['netplay-roomlist'], '" hidden>\n                        <strong>'+_0x17edbf.localization('Rooms')+'</strong>\n                        <table style="width:100%" cellspacing=0>\n                            <thead>\n                                <tr>\n                                    <td>'+_0x17edbf.localization('Room Name')+'</td>\n                                    <td>'+_0x17edbf.localization('Players')+'</td>\n                                    <td></td>\n                                </tr>\n                            </thead>\n                            <tbody>\n                                <tr>\n                                    <td></td>\n                                    <td></td>\n                                    <td></td>\n                                </tr>\n                            </tbody>\n                        </table>\n                    </div>\n\n                    <div class="').concat(_0x378b5c.classNames['netplay-room'], '" hidden>\n                        <strong>'+_0x17edbf.localization('Room Name')+'</strong>\n                        <div data-room-password>'+_0x17edbf.localization('Password')+': <span></span></div>\n                        <table style="width:100%" cellspacing="0">\n                            <thead>\n                            <tr>\n                                <td>'+_0x17edbf.localization('Player')+'</td>\n                                <td>'+_0x17edbf.localization('Name')+'</td>\n                                <td></td>\n                            </tr>\n                            </thead>\n                            <tbody>\n                            <tr>\n                                <td>1</td>\n                                <td>'+_0x17edbf.localization('Name')+' 1</td>\n                                <td></td>\n                            </tr>\n                            <tr>\n                                <td>2</td>\n                                <td>'+_0x17edbf.localization('Name')+' 2</td>\n                                <td></td>\n                            </tr>\n                            <tr>\n                                <td>3</td>\n                                <td>'+_0x17edbf.localization('Name')+' 3</td>\n                                <td></td>\n                            </tr>\n                            <tr>\n                                <td>4</td>\n                                <td>'+_0x17edbf.localization('Name')+' 4</td>\n                                <td></td>\n                            </tr>\n                            </tbody>\n                        </table>\n                    </div>\n                </div>\n                <div class="').concat(_0x378b5c.classNames['dialog-buttons'], '">\n                    <a href="#" onclick="return false" class="').concat(_0x378b5c.classNames['btn-quit'], '">'+_0x17edbf.localization('Quit Room')+'</a>\n                    <a href="#" onclick="return false" class="').concat(_0x378b5c.classNames['btn-create-room'], '">'+_0x17edbf.localization('Create a Room')+'</a>\n                    <a href="#" onclick="return false" class="').concat(_0x378b5c.classNames['btn-cancel'], '">'+_0x17edbf.localization('Close')+'</a>\n                </div>\n            </div>\n\n            \n            <div class="').concat(_0x378b5c.classNames.modal, ' ').concat(_0x378b5c.classNames['micromodal-slide'], '" id="modal-9de6c4e9ce2b9361" aria-hidden="true">\n                <div class="').concat(_0x378b5c.classNames.modal__overlay, '" tabindex="-1">\n                <div class="').concat(_0x378b5c.classNames.modal__container, '" role="dialog" aria-modal="true" aria-labelledby="modal-9de6c4e9ce2b9361-title">\n                    <div class="').concat(_0x378b5c.classNames.modal__header, '">\n                    <h2 class="').concat(_0x378b5c.classNames.modal__title, '" id="modal-9de6c4e9ce2b9361-title">\n                        '+_0x17edbf.localization('Set Player Name')+'\n                    </h2>\n                    </div>\n                    <main class="').concat(_0x378b5c.classNames.modal__content, '" id="modal-9de6c4e9ce2b9361-content">\n\n                        <div class="').concat(_0x378b5c.classNames.modal__errmsg, '"></div>\n                        <strong>'+_0x17edbf.localization('Player Name')+'</strong><br />\n                        <input type="text" maxlength="10" class="').concat(_0x378b5c.classNames['netplay-player-name'], '" /><br />\n\n                    </main>\n                    <footer class="').concat(_0x378b5c.classNames.modal__footer, '">\n                    <button class="').concat(_0x378b5c.classNames.modal__btn, ' ').concat(_0x378b5c.classNames['modal__btn-primary'], '">'+_0x17edbf.localization('Submit')+'</button>\n                    </footer>\n                </div>\n                </div>\n            </div>\n            \n            <div class="').concat(_0x378b5c.classNames.modal, ' ').concat(_0x378b5c.classNames['micromodal-slide'], '" id="modal-85cd7a1c543a484a" aria-hidden="true">\n                <div class="').concat(_0x378b5c.classNames.modal__overlay, '" tabindex="-1" data-modal-close>\n                <div class="').concat(_0x378b5c.classNames.modal__container, '" role="dialog" aria-modal="true" aria-labelledby="modal-85cd7a1c543a484a-title">\n                    <div class="').concat(_0x378b5c.classNames.modal__header, '">\n                    <h2 class="').concat(_0x378b5c.classNames.modal__title, '" id="modal-85cd7a1c543a484a-title">\n                    '+_0x17edbf.localization('Create a Room')+'\n                    </h2>\n                    <button class="').concat(_0x378b5c.classNames.modal__close, '" aria-label="Close modal" data-modal-close></button>\n                    </div>\n                    <main class="').concat(_0x378b5c.classNames.modal__content, '" id="modal-85cd7a1c543a484a-content">\n\n                        <div class="').concat(_0x378b5c.classNames.modal__errmsg, '"></div>\n                        <strong>'+_0x17edbf.localization('Room Name')+'</strong><br />\n                        <input type="text" maxlength="10" class="').concat(_0x378b5c.classNames['netplay-room-name-input'], '" /><br />\n                        <strong>Max Players</strong><br />\n                        <select data-max-players>\n                            <option value="2">2</option>\n                            <option value="3">3</option>\n                            <option value="4">4</option>\n                        </select>\n                        <br />\n                        <strong>'+_0x17edbf.localization('Password (optional)')+'</strong><br />\n                        <input type="text" maxlength="10" class="').concat(_0x378b5c.classNames['netplay-room-password-input'], '" /><br />\n\n                    </main>\n                    <footer class="').concat(_0x378b5c.classNames.modal__footer, '">\n                    <button class="').concat(_0x378b5c.classNames.modal__btn, ' ').concat(_0x378b5c.classNames['modal__btn-primary'], '">'+_0x17edbf.localization('Submit')+'</button>\n                    <button class="').concat(_0x378b5c.classNames.modal__btn, '" data-modal-close aria-label="Close">'+_0x17edbf.localization('Close')+'</button>\n                    </footer>\n                </div>\n                </div>\n            </div>\n            \n            <div class="').concat(_0x378b5c.classNames.modal, ' ').concat(_0x378b5c.classNames['micromodal-slide'], '" id="modal-5aa765d61d8327de" aria-hidden="true">\n                <div class="').concat(_0x378b5c.classNames.modal__overlay, '" tabindex="-1" data-modal-close>\n                <div class="').concat(_0x378b5c.classNames.modal__container, '" role="dialog" aria-modal="true" aria-labelledby="modal-5aa765d61d8327de-title">\n                    <div class="').concat(_0x378b5c.classNames.modal__header, '">\n                    <h2 class="').concat(_0x378b5c.classNames.modal__title, '" id="modal-5aa765d61d8327de-title">\n                        '+_0x17edbf.localization('Password')+'\n                    </h2>\n                    <button class="').concat(_0x378b5c.classNames.modal__close, '" aria-label="Close modal" data-modal-close></button>\n                    </div>\n                    <main class="').concat(_0x378b5c.classNames.modal__content, '" id="modal-5aa765d61d8327de-content">\n\n                        <div class="').concat(_0x378b5c.classNames.modal__errmsg, '"></div>\n                        <input type="text" maxlength="10" class="').concat(_0x378b5c.classNames['netplay-room-password-input'], '" /><br />\n\n                    </main>\n                    <footer class="').concat(_0x378b5c.classNames.modal__footer, '">\n                    <button class="').concat(_0x378b5c.classNames.modal__btn, ' ').concat(_0x378b5c.classNames['modal__btn-primary'], '">'+_0x17edbf.localization('Submit')+'</button>\n                    <button class="').concat(_0x378b5c.classNames.modal__btn, '" data-modal-close aria-label="Close">'+_0x17edbf.localization('Close')+'</button>\n                    </footer>\n                </div>\n                </div>\n            </div>\n            \n            \n            <div class="').concat(_0x378b5c.classNames.modal, ' ').concat(_0x378b5c.classNames['micromodal-slide'], '" id="modal-7d8fd50ed642340b" aria-hidden="true">\n                <div class="').concat(_0x378b5c.classNames.modal__overlay, '" tabindex="-1" data-modal-close>\n                <div class="').concat(_0x378b5c.classNames.modal__container, '" role="dialog" aria-modal="true" aria-labelledby="modal-7d8fd50ed642340b-title">\n                    <div class="').concat(_0x378b5c.classNames.modal__header, '">\n                    <h2 class="').concat(_0x378b5c.classNames.modal__title, '" id="modal-7d8fd50ed642340b-title"></h2>\n                    <button class="').concat(_0x378b5c.classNames.modal__close, '" aria-label="Close modal" data-modal-close></button>\n                    </div>\n                    <main class="').concat(_0x378b5c.classNames.modal__content, '" id="modal-7d8fd50ed642340b-content">\n                        \n                    </main>\n                    <footer class="').concat(_0x378b5c.classNames.modal__footer, '">\n                    <button class="').concat(_0x378b5c.classNames.modal__btn, ' ').concat(_0x378b5c.classNames['modal__btn-primary'], '" data-modal-close>OK</button>\n                    </footer>\n                </div>\n                </div>\n            </div>\n            \n            '), _0x1093f4.call(this, _0x17edbf.elements.dialogs.netplay.querySelector('.' .concat(_0x378b5c.classNames['btn-cancel'])), 'click', function(_0x3d4554) {
                         return _0x132da7(_0x17edbf.elements.dialogs.netplay, true), _0x378b5c.disableControl(!0x1), _0x378b5c.stopLoadRooms(), _0x3d4554.stopPropagation(), _0x17edbf.elements.container.focus(), !0x1;
                     }), window.setInterval(function() {
                         var _0xa88a13 = '<ul>';
@@ -3660,13 +3679,13 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                     }), '">\n            <div class="').concat(_0x449eac({
                         'buttons': true,
                         'b_select': true
-                    }), '">SELECT</div>\n            <div class="').concat(_0x449eac({
+                    }), '">'+_0xa88a13.localization('Select')+'</div>\n            <div class="').concat(_0x449eac({
                         'buttons': true,
                         'b_start': true
-                    }), '">START</div>\n            <div class="').concat(_0x449eac({
+                    }), '">'+_0xa88a13.localization('Start')+'</div>\n            <div class="').concat(_0x449eac({
                         'buttons': true,
                         'b_c': true
-                    }), '">MENU</div>\n            </div>\n            <div class="').concat(_0x449eac({
+                    }), '">'+_0xa88a13.localization('Menu')+'</div>\n            </div>\n            <div class="').concat(_0x449eac({
                         'right': true
                     }), '">\n            <div class="').concat(_0x449eac({
                         'buttons': true,
@@ -3853,7 +3872,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         _0xa88a13.recordData = {started:false, data:[], stopped: false}
                     }
                     if (! _0xa88a13.recordData.started) { //start recording
-                        _0xa88a13.elements.buttons.screenRecord.getElementsByClassName('ejs--74c6d4176d27e37a19d2e9e61de8f4')[0].innerHTML = 'Stop Screen Recording';
+                        _0xa88a13.elements.buttons.screenRecord.getElementsByClassName('ejs--74c6d4176d27e37a19d2e9e61de8f4')[0].innerHTML = _0xa88a13.localization('Stop Screen Recording');
                         if (MediaRecorder.isTypeSupported('video/webm; codecs=h264')) {
                             var options = {mimeType: 'video/webm; codecs=h264'}; // video/webm; codecs=h264,opus
                         } else if (MediaRecorder.isTypeSupported('video/webm; codecs=H264')) {
@@ -3885,7 +3904,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                 a.click()
                                 window.URL.revokeObjectURL(a.href)
                                 delete _0xa88a13.recordData
-                                _0xa88a13.elements.buttons.screenRecord.getElementsByClassName('ejs--74c6d4176d27e37a19d2e9e61de8f4')[0].innerHTML = 'Start Screen Recording';
+                                _0xa88a13.elements.buttons.screenRecord.getElementsByClassName('ejs--74c6d4176d27e37a19d2e9e61de8f4')[0].innerHTML = _0xa88a13.localization('Start Screen Recording');
                             }
                         }
                         _0xa88a13.recordData.recorder.start()
@@ -4017,30 +4036,88 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 var _0x762355 = _0x27f4c4.Module.cwrap('shader_enable', 'null', ['number']);
                 _0x378b5c.toggleShader = function(_0x433182) {
                     return _0x762355(_0x433182);
-                }, _0x378b5c.getStateInfo = _0x27f4c4.Module.cwrap('get_state_info', 'string', []), _0x378b5c.saveState = function() {
-                    var _0xa88a13, _0x17edbf = _0x378b5c.getStateInfo().split('|'),
-                        _0x2c1832 = _0x17edbf[0x0] >> 0x0;
-                    if (_0x2c1832 > 0x0) {
-                        _0xa88a13 = new Uint8Array(_0x2c1832);
-                        for (var _0x2ef6be = _0x17edbf[0x1] >> 0x0, _0x3cc34b = 0x0; _0x3cc34b < _0x2c1832; _0x3cc34b++) _0xa88a13[_0x3cc34b] = _0x27f4c4.Module.getValue(_0x2ef6be + _0x3cc34b);
+                }
+                _0x378b5c.getStateInfo = _0x27f4c4.Module.cwrap('get_state_info', 'string', []);
+                _0x378b5c.saveStateToFile = _0x27f4c4.Module.cwrap('cmd_save_state', 'null', []);
+                _0x378b5c.saveState = function() {
+                    if (_0xa88a13.coreVer === 2) {
+                        _0x378b5c.saveStateToFile();
+                        return new Promise(function(resolve, reject) {
+                            var a = setInterval(function() {
+                                try {
+                                    var data = _0x27f4c4.FS.readFile('save.state');
+                                } catch(e) {return;}
+                                clearInterval(a);
+                                _0x27f4c4.FS.unlink('save.state');
+                                resolve(data);
+                            }, 100)
+                            })
+                    } else {
+                        var _0xa88a14, _0x17edbf = _0x378b5c.getStateInfo().split('|'),
+                            _0x2c1832 = _0x17edbf[0x0] >> 0x0;
+                        if (_0x2c1832 > 0x0) {
+                            _0xa88a14 = new Uint8Array(_0x2c1832);
+                            for (var _0x2ef6be = _0x17edbf[0x1] >> 0x0, _0x3cc34b = 0x0; _0x3cc34b < _0x2c1832; _0x3cc34b++) _0xa88a14[_0x3cc34b] = _0x27f4c4.Module.getValue(_0x2ef6be + _0x3cc34b);
+                        }
+                        return _0xa88a14;
                     }
-                    return _0xa88a13;
                 };
                 var _0x25a7a2 = _0x27f4c4.Module.cwrap('load_state', 'number', ['string', 'number']);
                 _0x378b5c.loadState = function(_0x4389ae, _0x1d4918) {
                     var _0x91cd69;
-                    if (_0x91cd69 = _0x4389ae, _0x27f4c4._FS.createDataFile('/', 'game.state', _0x91cd69, true, true), null === _0x1d4918 && (_0x1d4918 = 0x0), _0x25a7a2('game.state', _0x1d4918), 'arcade' === _0x17edbf ? setTimeout(function() {
-                            _0x378b5c.getStateInfo(), _0x25a7a2('game.state', _0x1d4918), _0x27f4c4.FS.unlink('game.state');
-                        }, 0xa) : _0x27f4c4.FS.unlink('game.state'), _0x378b5c.connected && _0x378b5c.connection.isInitiator) {
-                        for (var _0x54607c = _0x378b5c.getStateInfo().split('|'), _0x1ab9c9 = _0x54607c[0x0] >> 0x0, _0xce58ec = (_0x54607c[0x2], new Uint8Array(_0x1ab9c9)), _0x4aff4f = _0x54607c[0x1] >> 0x0, _0x3bfae0 = 0x0; _0x3bfae0 < _0x1ab9c9; _0x3bfae0 += 0x1) _0xce58ec[_0x3bfae0] = _0x27f4c4.Module.getValue(_0x4aff4f + _0x3bfae0);
-                        var _0x227419 = new File([_0xce58ec], '0-game.state', {
-                            'type': '',
-                            'lastModified': new Date()
-                        });
-                        _0x378b5c.connection.shareFile(_0x227419), _0x378b5c.inputsData = {}, _0x378b5c.wait = true, _0x378b5c.systemPause(0x1), _0x27f4c4.Module.pauseMainLoop(), _0x378b5c.disableControl(true);
+                    _0x91cd69 = _0x4389ae;
+                    _0x27f4c4._FS.createDataFile('/', 'game.state', _0x91cd69, true, true);
+                    null === _0x1d4918 && (_0x1d4918 = 0);
+                    if ('arcade' === _0x17edbf && _0xa88a13.coreVer !== 2) {
+                        setTimeout(function() {
+                            _0x378b5c.getStateInfo();
+                            _0x25a7a2('game.state', _0x1d4918);
+                            _0x27f4c4.FS.unlink('game.state');
+                        }, 0xa)
+                    } else if (_0xa88a13.coreVer === 2) {
+                        setTimeout(function() {
+                            _0x25a7a2('game.state', _0x1d4918);
+                            setTimeout(function() {
+                                _0x27f4c4.FS.unlink('game.state');
+                            }, 100)
+                        }, 10)
+                    } else {
+                        _0x25a7a2('game.state', _0x1d4918);
+                        _0x27f4c4.FS.unlink('game.state');
+                    }
+                    if (_0xa88a13.coreVer === 2) {
+                        if (_0x378b5c.connected && _0x378b5c.connection.isInitiator) {
+                            var _0x227419 = new File([_0x91cd69], '0-game.state', {
+                                'type': '',
+                                'lastModified': new Date()
+                            });
+                            _0x378b5c.connection.shareFile(_0x227419);
+                            _0x378b5c.inputsData = {};
+                            _0x378b5c.wait = true;
+                            _0x378b5c.systemPause(0x1);
+                            _0x27f4c4.Module.pauseMainLoop();
+                            _0x378b5c.disableControl(true);
+                        }
+                    } else {
+                        if (_0x378b5c.connected && _0x378b5c.connection.isInitiator) {
+                            for (var _0x54607c = _0x378b5c.getStateInfo().split('|'), _0x1ab9c9 = _0x54607c[0x0] >> 0x0, _0xce58ec = (_0x54607c[0x2], new Uint8Array(_0x1ab9c9)), _0x4aff4f = _0x54607c[0x1] >> 0x0, _0x3bfae0 = 0x0; _0x3bfae0 < _0x1ab9c9; _0x3bfae0 += 0x1) _0xce58ec[_0x3bfae0] = _0x27f4c4.Module.getValue(_0x4aff4f + _0x3bfae0);
+                            var _0x227419 = new File([_0xce58ec], '0-game.state', {
+                                'type': '',
+                                'lastModified': new Date()
+                            });
+                            _0x378b5c.connection.shareFile(_0x227419);
+                            _0x378b5c.inputsData = {};
+                            _0x378b5c.wait = true;
+                            _0x378b5c.systemPause(0x1);
+                            _0x27f4c4.Module.pauseMainLoop();
+                            _0x378b5c.disableControl(true);
+                        }
                     }
                     _0xa88a13.elements.container.focus();
-                }, _0x27f4c4.Module._set_cheat && (_0x378b5c.setCheat = _0x27f4c4.Module.cwrap('set_cheat', 'number', ['number', 'number', 'string'])), _0x27f4c4.Module._reset_cheat && (_0x378b5c.resetCheat = _0x27f4c4.Module._reset_cheat), _0x378b5c.quickSaveState = function() {
+                };
+                _0x27f4c4.Module._set_cheat && (_0x378b5c.setCheat = _0x27f4c4.Module.cwrap('set_cheat', 'number', ['number', 'number', 'string']));
+                _0x27f4c4.Module._reset_cheat && (_0x378b5c.resetCheat = _0x27f4c4.Module._reset_cheat);
+                _0x378b5c.quickSaveState = function() {
                     if (_0xa88a13.started && !_0x378b5c.connected) {
                         if (_0xa88a13.statesSupported === false) {
                             _0xa88a13.elements.widgets.stateInfoDiv.innerHTML = 'CANNOT CURRENTLY SAVE STATE';
@@ -4064,8 +4141,14 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         } catch (_0x4b4d4c) {}
                         var success = true;
                         try {
-                            var _0x17edbf = _0x378b5c.saveState();
-                            _0x27f4c4._FS.createDataFile('/', name, _0x17edbf, true, true);
+                            if (_0xa88a13.coreVer === 2) {
+                                _0x378b5c.saveState().then(function(data) {
+                                    _0x27f4c4._FS.createDataFile('/', name, data, true, true);
+                                });
+                            } else {
+                                var _0x17edbf = _0x378b5c.saveState();
+                                _0x27f4c4._FS.createDataFile('/', name, _0x17edbf, true, true);
+                            }
                         } catch(e) {
                             success = false;
                         }
@@ -4079,7 +4162,9 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                             _0xa88a13.elements.widgets.stateInfoDiv.innerHTML = '';
                         }, 1500)
                     }
-                }, _0x378b5c.saveMsgTransitions = null, _0x378b5c.quickLoadState = function() {
+                };
+                _0x378b5c.saveMsgTransitions = null;
+                _0x378b5c.quickLoadState = function() {
                     if (_0xa88a13.started && !_0x378b5c.connected) {
                         if (_0xa88a13.statesSupported === false) {
                             _0xa88a13.elements.widgets.stateInfoDiv.innerHTML = 'CANNOT CURRENTLY LOAD STATE';
@@ -4100,9 +4185,24 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         var name = slot + '-quick.state';
                         var success = true;
                         try {
-                            _0x25a7a2(name, 0x0), 'arcade' === _0x17edbf && setTimeout(function() {
-                                _0x378b5c.getStateInfo(), _0x25a7a2(name, 0x0);
-                            }, 0xa);
+                            if (_0xa88a13.coreVer === 2) {
+                                var data = _0x27f4c4.FS.readFile(name);
+                                _0x27f4c4.FS.writeFile('/game.state', data);
+                                setTimeout(function() {
+                                    _0x25a7a2(name, 0);
+                                    setTimeout(function() {
+                                        _0x27f4c4.FS.unlink('game.state');
+                                    }, 100)
+                                }, 10)
+                            } else {
+                                _0x25a7a2(name, 0);
+                            }
+                            if ('arcade' === _0x17edbf && _0xa88a13.coreVer !== 2) {
+                                setTimeout(function() {
+                                    _0x378b5c.getStateInfo();
+                                    _0x25a7a2(name, 0x0);
+                                }, 0xa);
+                            }
                         } catch (_0x4ee386) {
                             success = false;
                         }
@@ -4141,7 +4241,8 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         _0xa88a13.elements.widgets.stateInfoDiv.innerHTML = '';
                     }, 1500)
                 }, window.EJS_loadState = function(_0x4dd6a5) {
-                    _0x378b5c.loadState(_0x4dd6a5, 0x0), setTimeout(function() {
+                    _0x378b5c.loadState(_0x4dd6a5, 0x0);
+                    setTimeout(function() {
                         if (_0x378b5c.connected) {
                             var _0x17edbf = new File([_0x4dd6a5], '0-game.state', {
                                 'type': '',
@@ -4197,18 +4298,6 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
             'coreOptionsValues': {},
             'contextMenu': null,
             'normalOptions': {
-                'shader': {
-                    'label': 'Shader',
-                    'options': {
-                        'disabled': 'Disabled',
-                        '2xScaleHQ.glslp': '2xScaleHQ',
-                        '4xScaleHQ.glslp': '4xScaleHQ',
-                        'crt-easymode.glslp': 'CRT easymode',
-                        'crt-aperture.glslp': 'CRT aperture',
-                        'crt-geom.glslp': 'CRT geom'
-                    },
-                    'default': 'disabled'
-                },
                 'virtual-gamepad': {
                     'label': 'Virtual Gamepad',
                     'options': {
@@ -4247,393 +4336,9 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
             },
             'getCoreOptions': function() {
                 var _0xa88a13 = {};
-                switch (this.system) {
-                    case 'nes':
-                        _0xa88a13.fceumm_palette = {
-                            'label': 'Color Palette',
-                            'options': {
-                                'default': 'Default',
-                                'asqrealc': 'asqrealc',
-                                'nintendo-vc': 'nintendo-vc',
-                                'rgb': 'rgb',
-                                'yuv-v3': 'yuv-v3',
-                                'unsaturated-final': 'unsaturated-final',
-                                'sony-cxa2025as-us': 'sony-cxa2025as-us',
-                                'pal': 'pal',
-                                'bmf-final2': 'bmf-final2',
-                                'bmf-final3': 'bmf-final3',
-                                'smooth-fbx': 'smooth-fbx',
-                                'composite-direct-fbx': 'composite-direct-fbx',
-                                'pvm-style-d93-fbx': 'pvm-style-d93-fbx',
-                                'nescap': 'nescap',
-                                'ntsc-hardware-fbx': 'ntsc-hardware-fbx',
-                                'nes-classic-fbx-fs': 'nes-classic-fbx-fs',
-                                'wavebeam': 'wavebeam'
-                            },
-                            'default': 'default'
-                        }, _0xa88a13.fceumm_nospritelimit = {
-                            'label': 'No Sprite Limit',
-                            'options': {
-                                'enabled': 'Enabled',
-                                'disabled': 'Disabled'
-                            },
-                            'default': 'disabled'
-                        }, _0xa88a13.fceumm_sndquality = {
-                            'label': 'Sound Quality',
-                            'options': {
-                                'Low': 'Low',
-                                'High': 'High',
-                                'Very High': 'Very High'
-                            },
-                            'default': 'Low'
-                        }, this.lightgun || (_0xa88a13.system_type = {
-                            'label': '4 Players Support',
-                            'options': {
-                                'nes': 'NES',
-                                'famicom': 'Famicom'
-                            },
-                            'default': 'nes',
-                            'netplay': true
-                        }), _0xa88a13.fceumm_turbo_enable = {
-                            'label': 'Turbo Enable',
-                            'options': ['None', 'Player 1', 'Player 2', 'Both'],
-                            'default': 'None',
-                            'netplay': true
-                        }, _0xa88a13.fceumm_region = {
-                            'label': 'Region',
-                            'options': ['Auto', 'NTSC', 'PAL', 'Dendy'],
-                            'default': 'Auto',
-                            'netplay': true
-                        };
-                        break;
-                    case 'snes':
-                        _0xa88a13 = {
-                            'snes9x_next_overclock': {
-                                'label': 'SuperFX Overclock',
-                                'options': {
-                                    'disabled': 'Disabled(10MHz)',
-                                    '40MHz': '40MHz',
-                                    '60MHz': '60MHz',
-                                    '80MHz': '80MHz',
-                                    '100MHz': '100MHz'
-                                },
-                                'default': 'disabled',
-                                'netplay': true
-                            }
-                        };
-                        break;
-                    case 'snes2002':
-                    case 'snes2005':
-                    case 'snes2010':
-                        _0xa88a13 = {};
-                        break;
-                    case 'gb':
-                        _0xa88a13 = {
-                            'gambatte_gb_colorization': {
-                                'label': 'GB Colorization',
-                                'options': {
-                                    'disabled': 'Disabled',
-                                    'auto': 'auto',
-                                    'internal': 'internal'
-                                },
-                                'default': 'disabled'
-                            },
-                            'gambatte_gb_internal_palette': {
-                                'label': 'Internal Palette',
-                                'options': {
-                                    'GBC - Blue': 'GBC - Blue',
-                                    'GBC - Brown': 'GBC - Brown',
-                                    'GBC - Dark Blue': 'GBC - Dark Blue',
-                                    'GBC - Dark Brown': 'GBC - Dark Brown',
-                                    'GBC - Dark Green': 'GBC - Dark Green',
-                                    'GBC - Grayscale': 'GBC - Grayscale',
-                                    'GBC - Green': 'GBC - Green',
-                                    'GBC - Inverted': 'GBC - Inverted',
-                                    'GBC - Orange': 'GBC - Orange',
-                                    'GBC - Pastel Mix': 'GBC - Pastel Mix',
-                                    'GBC - Red': 'GBC - Red',
-                                    'GBC - Yellow': 'GBC - Yellow'
-                                },
-                                'default': 'GBC - Blue'
-                            }
-                        };
-                        break;
-                    case 'gba':
-                        _0xa88a13 = {
-                            'mgba_solar_sensor_level': {
-                                'label': 'Solar sensor level',
-                                'options': ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
-                                'default': '0'
-                            },
-                            'mgba_frameskip': {
-                                'label': 'Frameskip',
-                                'options': ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
-                                'default': '0'
-                            }
-                        };
-                        break;
-                    case 'vbanext':
-                        _0xa88a13 = {
-                            'vbanext_turboenable': {
-                                'label': 'Enable Turbo Buttons',
-                                'options': ['disabled', 'enabled'],
-                                'default': 'disabled'
-                            },
-                            'vbanext_turbodelay': {
-                                'label': 'Turbo Delay in frames',
-                                'options': ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15'],
-                                'default': '2'
-                            }
-                        };
-                        break;
-                    case 'n64':
-                        _0xa88a13 = {
-                            'glupen64-aspect': {
-                                'label': 'Aspect Ratio (Need to refresh page)',
-                                'options': ['4:3', '16:9'],
-                                'default': '4:3'
-                            },
-                            'glupen64-43screensize': {
-                                'label': '4:3 Resolution',
-                                'options': ['320x240', '640x480', '960x720', '1280x960'],
-                                'default': '320x240'
-                            },
-                            'glupen64-169screensize': {
-                                'label': '16:9 Resolution',
-                                'options': ['640x360', '960x540', '1280x720'],
-                                'default': '640x360'
-                            },
-                            'glupen64-pak1': {
-                                'label': 'Player 1 Pak',
-                                'options': ['none', 'memory', 'rumble'],
-                                'default': 'none',
-                                'netplay': true
-                            },
-                            'glupen64-pak2': {
-                                'label': 'Player 2 Pak',
-                                'options': ['none', 'memory', 'rumble'],
-                                'default': 'none',
-                                'netplay': true
-                            },
-                            'glupen64-pak3': {
-                                'label': 'Player 3 Pak',
-                                'options': ['none', 'memory', 'rumble'],
-                                'default': 'none',
-                                'netplay': true
-                            },
-                            'glupen64-pak4': {
-                                'label': 'Player 4 Pak',
-                                'options': ['none', 'memory', 'rumble'],
-                                'default': 'none',
-                                'netplay': true
-                            }
-                        };
-                        break;
-                    case 'nds':
-                        _0xa88a13 = {
-                            'desmume_screens_layout': {
-                                'label': 'Screen layout',
-                                'options': ['top/bottom', 'bottom/top', 'left/right', 'right/left', 'top only', 'bottom only', 'quick switch', 'hybrid/top', 'hybrid/bottom'],
-                                'default': 'top/bottom'
-                            },
-                            'screen_rotation': {
-                                'label': 'Screen Rotation',
-                                'options': {
-                                    0: '0°',
-                                    90: '90°',
-                                    180: '180°',
-                                    270: '270°'
-                                },
-                                'default': 0x0
-                            },
-                            'desmume_frameskip': {
-                                'label': 'Frameskip',
-                                'options': ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
-                                'default': '0'
-                            }
-                        }, _0x2d904a.wasm || delete _0xa88a13.screen_rotation;
-                        break;
-                    case 'vb':
-                    case 'pce':
-                        _0xa88a13 = {};
-                        break;
-                    case 'segaMS':
-                    case 'segaGG':
-                    case 'segaMD':
-                    case 'segaCD':
-                        _0xa88a13 = {
-                            'genesis_plus_gx_no_sprite_limit': {
-                                'label': 'No Sprite Limit',
-                                'options': ['disabled', 'enabled'],
-                                'default': 'disabled'
-                            },
-                            'genesis_plus_gx_overclock': {
-                                'label': 'CPU speed',
-                                'options': ['100%', '125%', '150%', '175%', '200%'],
-                                'default': '100%',
-                                'netplay': true
-                            },
-                            'genesis_plus_gx_sound_output': {
-                                'label': 'Sound output',
-                                'options': ['stereo', 'mono'],
-                                'default': 'stereo'
-                            }
-                        };
-                        break;
-                    case 'sega32x':
-                        _0xa88a13 = {
-                            'picodrive_sprlim': {
-                                'label': 'No sprite limit',
-                                'options': ['disabled', 'enabled'],
-                                'default': 'disabled'
-                            }
-                        };
-                        break;
-                    case 'segaSaturn':
-                        _0xa88a13 = {
-                            'yabause_frameskip': {
-                                'label': 'Frameskip',
-                                'options': ['disabled', 'enabled'],
-                                'default': 'disabled'
-                            }
-                        };
-                        break;
-                    case 'msx':
-                        _0xa88a13 = {
-                            'bluemsx_nospritelimits': {
-                                'label': 'No Sprite Limit',
-                                'options': ['OFF', 'ON'],
-                                'default': 'OFF'
-                            }
-                        };
-                        break;
-                    case 'ws':
-                    case 'ngp':
-                        _0xa88a13 = {};
-                        break;
-                    case 'jaguar':
-                        _0xa88a13 = {
-                            'virtualjaguar_usefastblitter': {
-                                'label': 'Fast Blitter',
-                                'options': ['disabled', 'enabled'],
-                                'default': 'disabled'
-                            },
-                            'virtualjaguar_bios': {
-                                'label': 'Bios',
-                                'options': ['disabled', 'enabled'],
-                                'default': 'disabled'
-                            }
-                        };
-                        break;
-                    case 'psx':
-                        _0xa88a13 = {
-                            'pcsx_rearmed_frameskip': {
-                                'label': 'Frameskip',
-                                'options': [0x0, 0x1, 0x2, 0x3],
-                                'default': 0x0,
-                                'netplay': true
-                            },
-                            'pcsx_rearmed_memcard2': {
-                                'label': 'Enable second memory card',
-                                'options': ['enabled', 'disabled'],
-                                'default': 'enabled',
-                                'netplay': true
-                            },
-                            'pcsx_rearmed_pad1type': {
-                                'label': 'Pad 1 Type',
-                                'options': ['default', 'none', 'standard', 'analog', 'negcon'],
-                                'default': 'default',
-                                'netplay': true
-                            },
-                            'pcsx_rearmed_pad2type': {
-                                'label': 'Pad 2 Type',
-                                'options': ['default', 'none', 'standard', 'analog', 'negcon'],
-                                'default': 'default',
-                                'netplay': true
-                            },
-                            'pcsx_rearmed_pad3type': {
-                                'label': 'Pad 3 Type',
-                                'options': ['default', 'none', 'standard', 'analog', 'negcon'],
-                                'default': 'default',
-                                'netplay': true
-                            },
-                            'pcsx_rearmed_pad4type': {
-                                'label': 'Pad 4 Type',
-                                'options': ['default', 'none', 'standard', 'analog', 'negcon'],
-                                'default': 'default',
-                                'netplay': true
-                            },
-                            'pcsx_rearmed_vibration': {
-                                'label': 'Enable Vibration',
-                                'options': ['enabled', 'disabled'],
-                                'default': 'enabled',
-                                'netplay': true
-                            },
-                            'pcsx_rearmed_neon_interlace_enable': {
-                                'label': 'Enable interlacing mode(s)',
-                                'options': ['enabled', 'disabled'],
-                                'default': 'disabled',
-                                'netplay': true
-                            },
-                            'pcsx_rearmed_neon_enhancement_enable': {
-                                'label': 'Enhanced resolution (slow)',
-                                'options': ['enabled', 'disabled'],
-                                'default': 'disabled',
-                                'netplay': true
-                            },
-                            'pcsx_rearmed_neon_enhancement_no_main': {
-                                'label': 'Enhanced resolution speed hack',
-                                'options': ['enabled', 'disabled'],
-                                'default': 'disabled',
-                                'netplay': true
-                            }
-                        };
-                        break;
-                    case 'arcade':
-                    case 'fba0.2.97.29':
-                        _0xa88a13 = {
-                            'fba-aspect': {
-                                'label': 'Aspect ratio',
-                                'options': ['DAR', 'PAR'],
-                                'default': 'DAR'
-                            },
-                            'fba-frameskip': {
-                                'label': 'Frameskip',
-                                'options': ['0', '1', '2', '3', '4', '5'],
-                                'default': '0',
-                                'netplay': true
-                            },
-                            'fba-cpu-speed-adjust': {
-                                'label': 'CPU overclock',
-                                'options': ['100', '110', '120', '130', '140', '150', '160', '170', '180', '190', '200'],
-                                'default': '100',
-                                'netplay': true
-                            },
-                            'fba-diagnostic-input': {
-                                'label': 'Diagnostic Input',
-                                'options': ['None', 'Hold Start', 'Start + A + B', 'Hold Start + A + B', 'Start + L + R', 'Hold Start + L + R', 'Hold Select', 'Select + A + B', 'Hold Select + A + B', 'Select + L + R', 'Hold Select + L + R'],
-                                'default': 'None',
-                                'netplay': true
-                            },
-                            'fba-neogeo-mode': {
-                                'label': 'Force Neo Geo mode',
-                                'options': ['MVS', 'AES', 'UNIBIOS', 'DIPSWITCH'],
-                                'default': 'MVS',
-                                'netplay': true
-                            }
-                        };
-                        break;
-                    case 'mame2003':
-                    case 'mame2010':
-                    case 'mame':
-                        _0xa88a13 = {};
-                        break;
-                    default:
-                        _0xa88a13 = {}, console.warn('Unsupported emulator');
-                }
                 if (this.statesSupported === true) {
                     _0xa88a13['save-state-slot'] = {
-                        'label': 'Save State Slot',
+                        'label': this.localization('Save State Slot'),
                         'options': [1, 2, 3, 4, 5, 6, 7, 8, 9],
                         'default': 1
                     }
@@ -4641,8 +4346,11 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 if (this.statesSupported === true && window.indexedDB &&
                     (typeof this.gameName == 'string' || !this.config.gameUrl.startsWith('blob:'))) {
                     _0xa88a13['save-state-location'] = {
-                        'label': 'Save State Location',
-                        'options': ['download', 'keep in browser'],
+                        'label': this.localization('Save State Location'),
+                        'options': {
+                            'download': this.localization('download'),
+                            'keep in browser': this.localization('keep in browser')
+                        },
                         'default': 'download'
                     }
                 }
@@ -5084,7 +4792,6 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 }
             },
             'setLoadState': function(_0x526828, _0x2ce330) {
-                
                 _0x526828.appendChild(_0x7f9f36.createButton.call(this, 'load-state', {
                     'aria-haspopup': true,
                     'aria-expanded': !0x1
@@ -5107,14 +4814,12 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 if (! window.MediaRecorder) {
                     return;
                 };
-                
                 var _0x2c1832 = _0x7f9f36.createButton.call(this, 'screen-record', {
                     'aria-haspopup': true,
                     'aria-expanded': !0x1,
                     'style': 'margin-right:auto;'
                 });
                 _0x4c3fdd.appendChild(_0x2c1832);
-                
                 var _0x13c0e4 = _0x428003('div', {
                         'class': _0x449eac({
                             'ejs__dialog': true,
@@ -5130,7 +4835,6 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 this.elements.dialogs.screenRecord = _0x13c0e4;
             },
             'setGamepad': function(_0x4c3fdd, _0x289259) {
-                
                 var _0x2c1832 = _0x7f9f36.createButton.call(this, 'gamepad', {
                     'aria-haspopup': true,
                     'aria-expanded': !0x1,
@@ -5239,7 +4943,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                 var _0x14264d = _0x428003('li', {});
                                 _0x14264d.appendChild(_0x428003('a', {
                                     'target': '_blank',
-                                    'href': 'https://github.com/ethanaobrien/emulatorjs'
+                                    'href': 'https://github.com/ethanaobrien/emulatorjs/pull/109'
                                 }, 'EmulatorJS v' .concat(this.version))), _0x2a1dda.appendChild(_0x14264d), _0x2a1dda.setAttribute('menu', '');
                             }
                             _0x2c1832 && clearTimeout(_0x2c1832), _0x2c1832 = setTimeout(function() {}, 0xfa0), _0x7f9f36.contextMenu.timer = _0x2c1832;
@@ -5271,17 +4975,17 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                     } else {
                         contextHtml.splice(i, 0, '<li><a href="#" onclick="return false">'+title+'</a></li>')
                     }
-                }/*
-                addContextHtml('Take Screenshot', false, function(_0x20faaa) {
+                }
+                addContextHtml(_0xa88a13.localization('Take Screenshot'), false, function(_0x20faaa) {
                     var _0x4e898a = _0x378b5c.getScreenData();
                     _0x4e4ca6()(new Blob([_0x4e898a]), 'game.png');
                     return false;
                 })
-                addContextHtml('Cache Manage', true, function(_0x275730) {
+                addContextHtml(_0xa88a13.localization('Cache Manage'), true, function(_0x275730) {
                     if (_0x27f4c4.romdb) {
                         _0x132da7(_0xa88a13.elements.dialogs.cache, !0x1);
                         var _0x3360eb = _0xa88a13.elements.dialogs.cache.querySelector('.' .concat(_0x378b5c.classNames['dialog-content']));
-                        _0x3360eb.innerHTML = '<div>Loading</div>', _0x27f4c4.romdb.getAll(function(_0x43586d) {
+                        _0x3360eb.innerHTML = '<div>'+_0xa88a13.localization('Loading')+'</div>', _0x27f4c4.romdb.getAll(function(_0x43586d) {
                             if (_0x43586d) {
                                 var _0x275730 = _0x428003('table', {
                                     'style': 'width:100%;padding-left:10px;text-align:left'
@@ -5308,20 +5012,20 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                             return _0x16f22a.stopPropagation(), !0x1;
                                         };
                                     }
-                                }), _0x275730.appendChild(_0x1ab9e9), _0x3360eb.appendChild(_0x275730)) : _0x3360eb.innerHTML = '<div style="text-align:center">Empty</div>';
-                            } else _0x3360eb.innerHTML = '<div style="text-align:center">Empty</div>';
+                                }), _0x275730.appendChild(_0x1ab9e9), _0x3360eb.appendChild(_0x275730)) : _0x3360eb.innerHTML = '<div style="text-align:center">'+_0xa88a13.localization('Empty')+'</div>';
+                            } else _0x3360eb.innerHTML = '<div style="text-align:center">'+_0xa88a13.localization('Empty')+'</div>';
                         }, function() {});
                     }
                     return false;
                 })
-                addContextHtml('Quick Save (F2)', false, function(_0x395c73) {
+                addContextHtml(_0xa88a13.localization('Quick Save')+' (F2)', false, function(_0x395c73) {
                     _0x378b5c.quickSaveState();
                     _0x2593da.contextMenu.style.display = 'none';
                 })
-                addContextHtml('Quick Load (F4)', false, function(_0x124f69) {
+                addContextHtml(_0xa88a13.localization('Quick Load')+' (F4)', false, function(_0x124f69) {
                     _0x378b5c.quickLoadState();
                     _0x2593da.contextMenu.style.display = 'none';
-                })*/
+                })
                 
                 
                 _0x7f9f36.contextMenu.innerHTML = contextHtml.join('')
@@ -5362,8 +5066,8 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 _0x7f9f36.setScreenRecord.call(this, _0x17edbf, _0x42e40d);
                 _0x7f9f36.supportNetPlay.call(this, _0x17edbf) && parseInt(this.config.gameId, 0xa) > 0x0 && _0x7f9f36.setNetplay.call(this, _0x17edbf, _0x42e40d);
                 _0x7f9f36.setGamepad.call(this, _0x17edbf, _0x42e40d);
-                _0x7f9f36.setCheat.call(this, _0x17edbf, _0x42e40d);
                 _0x7f9f36.setStateInfoBarWidget.call(this, _0x17edbf, _0x42e40d);
+                _0x7f9f36.setCheat.call(this, _0x17edbf, _0x42e40d);
                 _0x17edbf.appendChild(_0x428003('span', {
                     'style': 'flex:1'
                 }));
@@ -5787,11 +5491,12 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         _0x5ab74d.toggleControls.call(_0x17edbf, !0x1), _0x132da7(_0x2c1832.dialogs.gamepad, !0x1);
                     }, 'mute'), this.bind(_0x2c1832.buttons.saveState, 'click', function() {
                         _0xbae705.call(_0x17edbf, _0x17edbf.elements.container, 'savestate-start', !0x1, {});
-                        var _0x31e271 = _0xdcec2a.saveState(),
-                            _0x2c1832 = _0xdcec2a.getScreenData();
-                        _0xbae705.call(_0x17edbf, _0x17edbf.elements.container, 'savestate', !0x1, {
-                            'state': _0x31e271,
-                            'screenshot': _0x2c1832
+                        _0xdcec2a.saveState().then(function(_0x31e271) {
+                            var _0x2c1832 = _0xdcec2a.getScreenData();
+                            _0xbae705.call(_0x17edbf, _0x17edbf.elements.container, 'savestate', !0x1, {
+                                'state': _0x31e271,
+                                'screenshot': _0x2c1832
+                            });
                         });
                     }, 'mute'), this.bind(_0x2c1832.buttons.loadState, 'click', function() {
                         _0xbae705.call(_0x17edbf, _0x17edbf.elements.container, 'loadstate', !0x1, {});
@@ -5919,81 +5624,108 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 }
                 return path
             }
-            if (function(_0x154660, _0x15626f) {
-                    if (!(_0x154660 instanceof _0x15626f)) throw new TypeError('Cannot call a class as a function');
-                }(this, _0x6954aa), 
-                this.version = _0x3d61f9.a,
-                this.system = '',
-                this.adUrl = null,
-                this.gameName = null,
-                this.loadStateOnStart = false,
-                this.statesSupported = true,
-                this.listUrl = 'https://ws.emulatorjs.com/',
-                this.socketUrl = 'wss://ws.emulatorjs.com/',
-                this.coreVer = 2, // 2 = beta cores, 1 = old cores
-                this.mameCore = null,
-                this.startOnLoad = false,
-                this.dataPath = '',
-                this.customPaths = null,
-                this.hash = '',
-                this.lightgun = false,
-                this.mouse = false,
-                this.multitap = false,
-                this.ready = false,
-                this.paused = true,
-                this.started = !0x1,
-                this.touch = _0x2d904a.touch,
-                this.game = _0x28cce1,
-                _0x1e2c68.string(this.game) && (this.game = document.querySelectorAll(this.game)),
-                (window.jQuery && this.game instanceof jQuery || _0x1e2c68.nodeList(this.game) || _0x1e2c68.array(this.game)) && (this.game = this.game[0x0]),
-                this.game = this.game,
-                this.game.innerHTML = '',
-                this.config = _0x5dc0c0({}, _0x39ca5e, _0x6954aa.defaults, _0x2ba0e6 || {}),
-                this.lightgun = this.config.lightgun,
-                this.loadStateOnStart = this.config.loadStateOnStart || false,
-                this.adUrl = this.config.adUrl || null,
-                this.gameName = this.config.gameName || null,
-                this.mouse = this.config.mouse,
-                this.multitap = this.config.multitap,
-                this.cheats = this.config.cheats,
-                this.cheats || (this.cheats = []),
-                this.listUrl = this.config.netplayUrl || 'https://ws.emulatorjs.com/',
-                this.socketUrl = this.config.netplayUrl || 'wss://ws.emulatorjs.com/',
-                this.mameCore = this.config.mameCore || null,
-                this.color = this.config.color,
-                this.startOnLoad = this.config.startOnLoad || false,
-                this.statesSupported = this.config.statesSupported || true,
-                this.customPaths = function(paths) {
-                    if (! paths) return null;
-                    var newPaths = {};
-                    for (var k in paths) {
-                        if (typeof paths[k] == 'string') {
-                            newPaths[k] = _0x2136bc(paths[k]);
-                        }
+            var a = function(_0x154660, _0x15626f) {
+                if (!(_0x154660 instanceof _0x15626f)) throw new TypeError('Cannot call a class as a function');
+            }(this, _0x6954aa);
+            this.version = '1.0-beta';
+            this.system = '';
+            this.adUrl = null;
+            this.gameName = null;
+            this.loadStateOnStart = false;
+            this.statesSupported = true;
+            this.listUrl = 'https://ws.emulatorjs.com/';
+            this.socketUrl = 'wss://ws.emulatorjs.com/';
+            this.mameCore = null;
+            this.startOnLoad = false;
+            this.dataPath = '';
+            this.customPaths = null;
+            this.hash = '';
+            this.lightgun = false;
+            this.mouse = false;
+            this.multitap = false;
+            this.ready = false;
+            this.paused = true;
+            this.started = false;
+            this.touch = _0x2d904a.touch;
+            this.game = _0x28cce1;
+            _0x1e2c68.string(this.game) && (this.game = document.querySelectorAll(this.game));
+            (window.jQuery && this.game instanceof jQuery || _0x1e2c68.nodeList(this.game) || _0x1e2c68.array(this.game)) && (this.game = this.game[0x0]);
+            this.game = this.game;
+            this.game.innerHTML = '';
+            this.config = _0x5dc0c0({}, _0x39ca5e, _0x6954aa.defaults, _0x2ba0e6 || {});
+            this.coreVer = function(core) {
+                if (false) {
+                    return 2;
+                }
+                var supportedCores = ['nes'];
+                return supportedCores.includes(core) ? 2 : 1;
+            }(this.config.system); // 2 = beta cores, 1 = old cores
+            this.lightgun = this.config.lightgun;
+            this.loadStateOnStart = this.config.loadStateOnStart || false;
+            this.adUrl = this.config.adUrl || null;
+            this.gameName = this.config.gameName || null;
+            this.mouse = this.config.mouse;
+            this.multitap = this.config.multitap;
+            this.cheats = this.config.cheats;
+            this.cheats || (this.cheats = []);
+            this.listUrl = this.config.netplayUrl || 'https://ws.emulatorjs.com/';
+            this.socketUrl = this.config.netplayUrl || 'wss://ws.emulatorjs.com/';
+            this.mameCore = this.config.mameCore || null;
+            this.color = this.config.color;
+            this.startOnLoad = this.config.startOnLoad || false;
+            this.statesSupported = this.config.statesSupported || true;
+            this.customPaths = function(paths) {
+                if (! paths) return {};
+                var newPaths = {};
+                for (var k in paths) {
+                    if (typeof paths[k] == 'string') {
+                        newPaths[k] = _0x2136bc(paths[k]);
                     }
-                    return newPaths;
-                }(this.config.paths),
-                this.dataPath = function(path) {
-                    if (typeof path != 'string') {
-                        return function(origpath) {
-                            var fullrequestpath = origpath
-                            var finpath = fullrequestpath.split('/').pop()
-                            var finalpath = fullrequestpath.substring(0, fullrequestpath.length - finpath.length)
-                            if (origpath == '/') {
-                                return window.location.protocol + '//' + window.location.host + '/';
-                            } else {
-                                if (finalpath.startsWith('/')) {
-                                    finalpath = window.location.protocol + '//' + window.location.host + finalpath;
-                                }
-                                if (! finalpath.endsWith('/')) {
-                                    finalpath = finalpath + '/';
-                                }
-                                return finalpath
+                }
+                return newPaths;
+            }(this.config.paths);
+            this.dataPath = function(path) {
+                if (typeof path != 'string') {
+                    return function(origpath) {
+                        var fullrequestpath = origpath
+                        var finpath = fullrequestpath.split('/').pop()
+                        var finalpath = fullrequestpath.substring(0, fullrequestpath.length - finpath.length)
+                        if (origpath == '/') {
+                            return window.location.protocol + '//' + window.location.host + '/';
+                        } else {
+                            if (finalpath.startsWith('/')) {
+                                finalpath = window.location.protocol + '//' + window.location.host + finalpath;
                             }
-                        }(window.location.href);
+                            if (! finalpath.endsWith('/')) {
+                                finalpath = finalpath + '/';
+                            }
+                            return finalpath
+                        }
+                    }(window.location.href);
+                }
+                return _0x2136bc(path, true);
+            }(this.config.dataPath);
+            (async function(dataPath, customPath, lang) {
+                var localJson = {};
+                if (lang && typeof lang == 'string' && lang !== 'en-US') {
+                    var url = (customPath && typeof customPath[lang+'.json'] == 'string') ? customPath[lang+'.json'] : dataPath+'localization/'+lang+'.json';
+                    try {
+                        var res = await fetch(url);
+                        var text = await res.text();
+                        var localJson = JSON.parse(text);
+                        _0x39ca5e.i18n = localJson.i18n;
+                        _0x7f9f36.normalOptions = localJson.normalOptions;
+                    } catch(e) {
+                        console.error(e);
+                        console.warn('error setting localization');
                     }
-                    return _0x2136bc(path, true);
-                }(this.config.dataPath),
+                }
+                return function(engText) {
+                    return (typeof localJson[engText] == 'string') ? localJson[engText] : engText;
+                }
+            }(this.dataPath, this.customPaths, this.config.lang)).then(function(a) {
+                this.localization = a;
+                this.config = _0x5dc0c0({}, _0x39ca5e, _0x6954aa.defaults, _0x2ba0e6 || {});
                 Object.keys(this.config.classNames).forEach(function(_0x1d6b41) {
                     var _0x28cce1 = _0x5938bc;
                     if (_0x1e2c68.object(_0x28cce1.config.classNames[_0x1d6b41])) Object.keys(_0x28cce1.config.classNames[_0x1d6b41]).forEach(function(_0x42f7f2) {
@@ -6004,11 +5736,15 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         var _0x2ba0e6 = {};
                         _0x2ba0e6[_0x5938bc.config.classNames[_0x1d6b41]] = true, _0x5938bc.config.classNames[_0x1d6b41] = _0x449eac(_0x2ba0e6);
                     }
-                }), this.config.selectors.controls.wrapper = '.' .concat(_0x449eac({
+                });
+                this.config.selectors.controls.wrapper = '.' .concat(_0x449eac({
                     'ejs__controls': true
-                })), this.config.selectors.container = '.' .concat(_0x449eac({
+                }));
+                this.config.selectors.container = '.' .concat(_0x449eac({
                     'ejs': true
-                })), this.system = this.config.system, this.elements = {
+                }));
+                this.system = this.config.system;
+                this.elements = {
                     'container': null,
                     'buttons': {},
                     'display': {},
@@ -6025,27 +5761,42 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         'netplay': null
                     },
                     'widgets': {}
-                }, this.fullscreen = {
+                };
+                this.fullscreen = {
                     'active': false
-                }, this.game.emulator) console.warn('Target already setup');
-            else {
-                this.config.mute = true, this.eventListeners = [], this.listeners = new _0x37093c(this), this.storage = new _0x2f61ba(this, 'ejs_settings'), this.game.emulator = this, _0x1e2c68.element(this.elements.container) || (this.elements.container = _0x428003('div'), _0x580edd(this.game, this.elements.container));
-                var _0x5e63f0 = _0x428003('div', {
-                    'class': _0x449eac({
-                        'ejs__widgets': true
-                    })
-                });
-                this.elements.container.appendChild(_0x5e63f0);
-                var _0x32c8af = _0x428003('div', {
-                    'class': _0x449eac({
-                        'ejs__dialogs': true
-                    })
-                });
-                this.elements.container.appendChild(_0x32c8af), _0x5ab74d.addStyleHook.call(this), _0xdcec2a.setup.call(this), _0x5ab74d.build.call(this), this.listeners.container(), this.listeners.global(), this.fullscreen = new _0x335854(this), _0x27f4c4.create.call(this);
-                var _0x446e06 = document.createElement('script');
-                _0x446e06.src = (this.customPaths && typeof this.customPaths['webrtc-adapter.js'] == 'string') ? this.customPaths['webrtc-adapter.js'] : (this.dataPath + 'webrtc-adapter.js');
-                document.body.appendChild(_0x446e06);
-            }
+                }
+                if (this.game.emulator) console.warn('Target already setup');
+                else {
+                    this.config.mute = true;
+                    this.eventListeners = [];
+                    this.listeners = new _0x37093c(this);
+                    this.storage = new _0x2f61ba(this, 'ejs_settings');
+                    this.game.emulator = this;
+                    _0x1e2c68.element(this.elements.container) || (this.elements.container = _0x428003('div'), _0x580edd(this.game, this.elements.container));
+                    var _0x5e63f0 = _0x428003('div', {
+                        'class': _0x449eac({
+                            'ejs__widgets': true
+                        })
+                    });
+                    this.elements.container.appendChild(_0x5e63f0);
+                    var _0x32c8af = _0x428003('div', {
+                        'class': _0x449eac({
+                            'ejs__dialogs': true
+                        })
+                    });
+                    this.elements.container.appendChild(_0x32c8af);
+                    _0x5ab74d.addStyleHook.call(this);
+                    _0xdcec2a.setup.call(this);
+                    _0x5ab74d.build.call(this);
+                    this.listeners.container();
+                    this.listeners.global();
+                    this.fullscreen = new _0x335854(this);
+                    _0x27f4c4.create.call(this);
+                    var _0x446e06 = document.createElement('script');
+                    _0x446e06.src = (this.customPaths && typeof this.customPaths['webrtc-adapter.js'] == 'string') ? this.customPaths['webrtc-adapter.js'] : (this.dataPath + 'webrtc-adapter.js');
+                    document.body.appendChild(_0x446e06);
+                }
+            }.bind(this))
         }
         var _0x17edbf, _0x2c1832, _0x423c42;
         _0x17edbf = _0x6954aa, _0x423c42 = [{
