@@ -40,7 +40,6 @@
                         var core = 'snes';
                     } else {
                         var core = await new Promise(function(resolve, reject) {
-                            try {
                             var cores = {"NES / Nintendo Entertainment System / Famicon": "nes",
                                          "SNES / Super Nintendo Entertainment System": "snes"};
                             var a = document.createElement('div');
@@ -83,7 +82,6 @@
                             };
                             a.appendChild(submit);
                             document.body.appendChild(a);
-                            }catch(e){alert(e.message)}
                         });
                     };
                     var a = document.createElement('div');
