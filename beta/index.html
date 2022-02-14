@@ -40,29 +40,30 @@
                         var core = 'snes';
                     } else {
                         var core = await new Promise(function(resolve, reject) {
+                            try {
                             var cores = {"NES / Nintendo Entertainment System / Famicon": "nes",
                                          "SNES / Super Nintendo Entertainment System": "snes"};
-                            var a = ce('div');
+                            var a = document.createElement('div');
                             a.style = 'padding: 50px;';
-                            var p = ce('h2');
+                            var p = document.createElement('h2');
                             p.innerHTML = 'Unable to auto-detect core. Please select the desired system.';
                             a.appendChild(p);
-                            br(a);
+                            a.appendChild(document.createElement('br'));
                             for (var k in cores) {
-                                var input = ce('input');
+                                var input = document.createElement('input');
                                 input.type = 'radio';
                                 input.id = 'game-' + cores[k];
                                 input.name = 'game';
                                 input.value = cores[k];
                                 a.appendChild(input);
-                                var label = ce('label');
+                                var label = document.createElement('label');
                                 label.for = 'game-' + cores[k];
                                 label.innerHTML = k;
                                 a.appendChild(label);
-                                br(a);
+                                a.appendChild(document.createElement('br'));
                             };
-                            br(a);
-                            var submit = ce('input');
+                            a.appendChild(document.createElement('br'));
+                            var submit = document.createElement('input');
                             submit.type = 'submit';
                             submit.value = 'Load Game';
                             submit.onclick = function(e) {
@@ -82,6 +83,7 @@
                             };
                             a.appendChild(submit);
                             document.body.appendChild(a);
+                            }catch(e){alert(e.message)}
                         });
                     };
                     var a = document.createElement('div');
