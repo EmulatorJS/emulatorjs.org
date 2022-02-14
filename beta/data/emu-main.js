@@ -1,5 +1,9 @@
 window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
     'use strict';
+    window.EJS_RESET_VARS = [];
+    for (var k in window) {
+        window.EJS_RESET_VARS.push(k);
+    }
     _0x2c1832.r(_0x17edbf);
     _0x2c1832(0xa2), _0x2c1832(0x16c), _0x2c1832(0x16d);
     var _0x39ca5e = {
@@ -1443,14 +1447,41 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                         })
                                     })
                                 }
-                            },
-                            _0x99321 = function(_0x52e6f3) {
+                            };
+                        window.EJS_terminate = function() {
+                            _0x4d7024.Module.pauseMainLoop();
+                            if (_0x55627a && _0x55627a.eventListeners) {
+                                for (var k in _0x55627a) {
+                                    for (var i=0; i<_0x55627a.eventListeners.length; i++) {
+                                        var a = _0x55627a.eventListeners[i];
+                                        a.element.removeEventListener(a.type, a.callback, a.capture);
+                                    }
+                                }
+                            }
+                            if (window.EJS_RESET_VARS) {
+                                var a = [];
+                                var b = [];
+                                for (var k in window) {
+                                    a.push(k);
+                                }
+                                for (var i=0; i<a.length; i++) {
+                                    if (! window.EJS_RESET_VARS.includes(a[i])) {
+                                        b.push(a[i]);
+                                    }
+                                }
+                                for (var i=0; i<b.length; i++) {
+                                    if (window[b[i]]) {
+                                        delete window[b[i]];
+                                    }
+                                }
+                            }
+                        }
+                        var _0x99321 = function(_0x52e6f3) {
                                 if (_0x52e6f3.data) {
                                     if (0x1 === _0x52e6f3.data.t) {
                                         _0x1cfda7.innerHTML = 'Game Data ready', _0x52e6f3.target.terminate();
                                         try {
                                             _0x4bd781(), _0x5f3757(_0x55627a), _0x16cf3e();
-                                            var _0x17edbf = 'callMain';
                                             !_0x55627a.startName && _0x567713 && (_0x55627a.startName = _0x567713);
                                             var _0x2c1832 = [_0x55627a.startName,
                                                 [_0x4d7024.hash, _0x4d7024.hash2, _0x4d7024.hash3].join('')
@@ -3662,44 +3693,82 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                             'ejs-virtual-gamepad': true
                         }),
                         'hidden': ''
-                    }), this.elements.container.appendChild(_0x378b5c.virtualGamepadContainer), _0x378b5c.virtualGamepadContainer.innerHTML = '\n            <div class="' .concat(_0x449eac({
-                        'virtual-gamepad': true
-                    }), '" style="display: block;">\n            <div class="').concat(_0x449eac({
-                        'top': true
-                    }), '">\n            <div class="').concat(_0x449eac({
-                        'buttons': true,
-                        'b_l': true
-                    }), '">L</div>\n            <div class="').concat(_0x449eac({
-                        'buttons': true,
-                        'b_r': true
-                    }), '">R</div>\n            </div>\n            <div class="').concat(_0x449eac({
-                        'left': true
-                    }), '"></div>\n            <div class="').concat(_0x449eac({
-                        'center': true
-                    }), '">\n            <div class="').concat(_0x449eac({
-                        'buttons': true,
-                        'b_select': true
-                    }), '">'+_0xa88a13.localization('Select')+'</div>\n            <div class="').concat(_0x449eac({
-                        'buttons': true,
-                        'b_start': true
-                    }), '">'+_0xa88a13.localization('Start')+'</div>\n            <div class="').concat(_0x449eac({
-                        'buttons': true,
-                        'b_c': true
-                    }), '">'+_0xa88a13.localization('Menu')+'</div>\n            </div>\n            <div class="').concat(_0x449eac({
-                        'right': true
-                    }), '">\n            <div class="').concat(_0x449eac({
-                        'buttons': true,
-                        'b_a': true
-                    }), '">A</div>\n            <div class="').concat(_0x449eac({
-                        'buttons': true,
-                        'b_b': true
-                    }), '">B</div>\n            <div class="').concat(_0x449eac({
-                        'buttons': true,
-                        'b_x': true
-                    }), '">X</div>\n            <div class="').concat(_0x449eac({
-                        'buttons': true,
-                        'b_y': true
-                    }), '">Y</div>\n            </div>\n            </div>'), _0x132da7(_0x378b5c.virtualGamepadContainer, !_0x1ed80b);
+                    });
+                    this.elements.container.appendChild(_0x378b5c.virtualGamepadContainer);
+                    var blockCSS = 'height:31px;text-align:center;border:1px solid #ccc;border-radius:5px;line-height:31px;';
+                    var html = '';
+                    if (['snes', 'nds'].includes(_0xa88a13.system)) {
+                        var elements = {
+                            order: ['X','Y','A','B'],
+                            orderCSS: ['left:40px;', 'top:40px;', 'left:81px;top:40px;', 'left:40px;top:80px;'],
+                            LandR: true
+                        }
+                    } else if (['gba', 'gb', 'vb', 'nes'].includes(_0xa88a13.system)) {
+                        var elements = {
+                            order: ['B','A'],
+                            orderCSS: ['left:-10px;top:70px;', 'left:60px;top:70px;'],
+                            LandR: (_0xa88a13.system === 'gba')
+                        }
+                    } else if (['n64'].includes(_0xa88a13.system)) {
+                        var elements = {
+                            order: ['B','A'],
+                            orderCSS: ['left:-10px;top:95px;', 'left:40px;top:150px;'],
+                            LandR: true
+                        }
+                    } else {
+                        var elements = {
+                            order: ['Y','X','B','A'],
+                            orderCSS: ['left:40px;', 'top:40px;', 'left:81px;top:40px;', 'left:40px;top:80px;'],
+                            LandR: true
+                        }
+                    }
+                    html += '<div class="'+_0x449eac({'virtual-gamepad': true})+'" style="display: block;">';
+                    
+                    html += '<div class="'+_0x449eac({'top': true})+'">';
+                    if (elements.LandR === true) {
+                        if (_0xa88a13.system === 'n64') {
+                            html += '<div class="'+_0x449eac({'buttons': true,'b_l': true})+'" style="left:10px;top:-40px;'+blockCSS+'">L</div>';
+                            html += '<div class="'+_0x449eac({'buttons': true,'b_z': true})+'" style="left:10px;'+blockCSS+'">Z</div>';
+                            html += '<div class="'+_0x449eac({'buttons': true,'b_r': true})+'" style="right:10px;top:-40px;'+blockCSS+'">R</div>';
+                        } else {
+                            html += '<div class="'+_0x449eac({'buttons': true,'b_l': true})+'" style="left:10px;'+blockCSS+'">L</div>';
+                            html += '<div class="'+_0x449eac({'buttons': true,'b_r': true})+'" style="right:10px;'+blockCSS+'">R</div>';
+                        }
+                    }
+                    html += '</div>';
+                    
+                    html += '<div class="'+_0x449eac({'left': true})+'"></div>';
+                    
+                    html += '<div class="'+_0x449eac({'center': true})+'">';
+                    if (_0xa88a13.system === 'n64') {
+                        html += '<div class="'+_0x449eac({'buttons': true,'b_c': true})+'" style="left:65px;">'+_0xa88a13.localization('Menu')+'</div>';
+                        html += '<div class="'+_0x449eac({'buttons': true,'b_start': true})+'" style="left:0px;">'+_0xa88a13.localization('Start')+'</div>';
+                    } else {
+                        html += '<div class="'+_0x449eac({'buttons': true,'b_start': true})+'" style="left:30px;">'+_0xa88a13.localization('Start')+'</div>';
+                        html += '<div class="'+_0x449eac({'buttons': true,'b_c': true})+'" style="left:95px;">'+_0xa88a13.localization('Menu')+'</div>';
+                        html += '<div class="'+_0x449eac({'buttons': true,'b_select': true})+'" style="left:-35px;">'+_0xa88a13.localization('Select')+'</div>';
+                    }
+                    html += '</div>';
+                    
+                    html += '<div class="'+_0x449eac({'right': true})+'">';
+                    
+                    if (_0xa88a13.system === 'n64') {
+                        html += '<div class="'+_0x449eac({'buttons': true, 'b_cu': true})+'" style="left:25px;top:-65px;"></div>';
+                        html += '<div class="'+_0x449eac({'buttons': true, 'b_cd': true})+'" style="left:25px;top:15px;"></div>';
+                        html += '<div class="'+_0x449eac({'buttons': true, 'b_cl': true})+'" style="left:-15px;top:-25px;"></div>';
+                        html += '<div class="'+_0x449eac({'buttons': true, 'b_cr': true})+'" style="left:65px;top:-25px;"></div>';
+                    }
+                    
+                    for (var i=0; i<elements.order.length; i++) {
+                        var opts = {'buttons': true};
+                        opts['b_'+elements.order[i].toLowerCase()] = true;
+                        html += '<div class="'+_0x449eac(opts)+'" style="'+elements.orderCSS[i]+'">'+elements.order[i]+'</div>';
+                    }
+                    
+                    html += '</div></div>';
+                    
+                    _0x378b5c.virtualGamepadContainer.innerHTML = html;
+                    _0x132da7(_0x378b5c.virtualGamepadContainer, !_0x1ed80b);
                     var _0x17edbf = _0x3a58c8.a.create({
                         'zone': _0x530042.call(this, '.' .concat(_0x449eac({
                             'ejs-virtual-gamepad': true
@@ -3713,19 +3782,58 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         },
                         'color': 'red'
                     });
+                    function inputs() {
+                        if (_0xa88a13.system === 'n64') {
+                            var inputLocation;
+                            if (_0x2593da && typeof _0x2593da.getCoreOptionsValues == 'function') {
+                                inputLocation = _0x2593da.getCoreOptionsValues()['joystick-input'];
+                            }
+                            if (inputLocation === 'd-pad') {
+                                return {
+                                    downVal: 1,
+                                    4: 4,
+                                    5: 5,
+                                    6: 6,
+                                    7: 7
+                                }
+                            } else {
+                                return {
+                                    downVal: 0x7fff,
+                                    4: 19,
+                                    5: 18,
+                                    6: 17,
+                                    7: 16
+                                }
+                            }
+                        } else {
+                            return {
+                                downVal: 1,
+                                4: 4,
+                                5: 5,
+                                6: 6,
+                                7: 7
+                            }
+                        }
+                    }
                     _0x17edbf.on('end', function(_0x27f006, _0x1fb527) {
-                        _0x378b5c.syncInput(0x0, 0x4, 0x0), _0x378b5c.syncInput(0x0, 0x5, 0x0), _0x378b5c.syncInput(0x0, 0x6, 0x0), _0x378b5c.syncInput(0x0, 0x7, 0x0);
+                        _0x378b5c.syncInput(0, inputs[4], 0);
+                        _0x378b5c.syncInput(0, inputs[5], 0);
+                        _0x378b5c.syncInput(0, inputs[6], 0);
+                        _0x378b5c.syncInput(0, inputs[7], 0);
                     });
                     _0x17edbf.on('move', function(_0x1b060e, _0x4ae7d6) {
                         var _0x2c1832 = _0x4ae7d6.angle.degree;
-                        _0x2c1832 >= 0x1e && _0x2c1832 < 0x96 ? _0x378b5c.syncInput(0x0, 0x4, 0x1) : window.setTimeout(function() {
-                            _0x378b5c.syncInput(0x0, 0x4, 0x0);
-                        }, 0x1e), _0x2c1832 >= 0xd2 && _0x2c1832 < 0x14a ? _0x378b5c.syncInput(0x0, 0x5, 0x1) : window.setTimeout(function() {
-                            _0x378b5c.syncInput(0x0, 0x5, 0x0);
-                        }, 0x1e), _0x2c1832 >= 0x78 && _0x2c1832 < 0xf0 ? _0x378b5c.syncInput(0x0, 0x6, 0x1) : window.setTimeout(function() {
-                            _0x378b5c.syncInput(0x0, 0x6, 0x0);
-                        }, 0x1e), _0x2c1832 >= 0x12c || _0x2c1832 >= 0x0 && _0x2c1832 < 0x3c ? _0x378b5c.syncInput(0x0, 0x7, 0x1) : window.setTimeout(function() {
-                            _0x378b5c.syncInput(0x0, 0x7, 0x0);
+                        _0x2c1832 >= 0x1e && _0x2c1832 < 0x96 ? _0x378b5c.syncInput(0, inputs()[4], inputs().downVal) : window.setTimeout(function() {
+                            _0x378b5c.syncInput(0, inputs()[4], 0);
+                        }, 0x1e);
+                        _0x2c1832 >= 0xd2 && _0x2c1832 < 0x14a ? _0x378b5c.syncInput(0, inputs()[5], inputs().downVal) : window.setTimeout(function() {
+                            _0x378b5c.syncInput(0, inputs()[5], 0);
+                        }, 0x1e);
+                        _0x2c1832 >= 0x78 && _0x2c1832 < 0xf0 ? _0x378b5c.syncInput(0, inputs()[6], inputs().downVal) : window.setTimeout(function() {
+                            _0x378b5c.syncInput(0, inputs()[6], 0);
+                        }, 0x1e);
+                        _0x2c1832 >= 0x12c || _0x2c1832 >= 0x0 && _0x2c1832 < 0x3c ? _0x378b5c.syncInput(0, inputs()[7], inputs().downVal) : window.setTimeout(function() {
+                            _0x378b5c.syncInput(0, inputs()[7], 0);
                         }, 0x1e);
                     });
                     var _0x2c1832 = _0x449eac({
@@ -3741,58 +3849,109 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                     }
                     _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
                         'b_a': true
-                    }))), 'touchstart touchend', function(_0x185083) {
-                        'touchend' === _0x185083.type ? (_0x3a8e2f(_0x185083.target, _0x2ec721, !0x1), window.setTimeout(function() {
+                    }))), 'touchstart touchend mousedown mouseup mouseout', function(_0x185083) {
+                        ['touchend', 'mouseup', 'mouseout'].includes(_0x185083.type) ? (_0x3a8e2f(_0x185083.target, _0x2ec721, !0x1), window.setTimeout(function() {
                             _0x378b5c.syncInput(0x0, 0x8, 0x0);
                         }, 0x1e)) : (_0x3a8e2f(_0x185083.target, _0x2ec721, true), _0x378b5c.syncInput(0x0, 0x8, 0x1)), _0x185083.stopPropagation();
                     });
                     _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
                         'b_b': true
-                    }))), 'touchstart touchend', function(_0x213c3d) {
-                        'touchend' === _0x213c3d.type ? (_0x3a8e2f(_0x213c3d.target, _0x2ec721, !0x1), window.setTimeout(function() {
+                    }))), 'touchstart touchend mousedown mouseup mouseout', function(_0x213c3d) {
+                        ['touchend', 'mouseup', 'mouseout'].includes(_0x213c3d.type) ? (_0x3a8e2f(_0x213c3d.target, _0x2ec721, !0x1), window.setTimeout(function() {
                             _0x378b5c.syncInput(0x0, 0x0, 0x0);
                         }, 0x1e)) : (_0x3a8e2f(_0x213c3d.target, _0x2ec721, true), _0x378b5c.syncInput(0x0, 0x0, 0x1)), _0x213c3d.stopPropagation();
-                    }), _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
+                    });
+                    _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
                         'b_x': true
-                    }))), 'touchstart touchend', function(_0x5ce708) {
-                        'touchend' === _0x5ce708.type ? (_0x3a8e2f(_0x5ce708.target, _0x2ec721, !0x1), window.setTimeout(function() {
+                    }))), 'touchstart touchend mousedown mouseup mouseout', function(_0x5ce708) {
+                        ['touchend', 'mouseup', 'mouseout'].includes(_0x5ce708.type) ? (_0x3a8e2f(_0x5ce708.target, _0x2ec721, !0x1), window.setTimeout(function() {
                             _0x378b5c.syncInput(0x0, 0x9, 0x0);
                         }, 0x1e)) : (_0x3a8e2f(_0x5ce708.target, _0x2ec721, true), _0x378b5c.syncInput(0x0, 0x9, 0x1)), _0x5ce708.stopPropagation();
-                    }), _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
+                    });
+                    _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
                         'b_y': true
-                    }))), 'touchstart touchend', function(_0x1cfae6) {
-                        'touchend' === _0x1cfae6.type ? (_0x3a8e2f(_0x1cfae6.target, _0x2ec721, !0x1), window.setTimeout(function() {
+                    }))), 'touchstart touchend mousedown mouseup mouseout', function(_0x1cfae6) {
+                        ['touchend', 'mouseup', 'mouseout'].includes(_0x1cfae6.type) ? (_0x3a8e2f(_0x1cfae6.target, _0x2ec721, !0x1), window.setTimeout(function() {
                             _0x378b5c.syncInput(0x0, 0x1, 0x0);
                         }, 0x1e)) : (_0x3a8e2f(_0x1cfae6.target, _0x2ec721, true), _0x378b5c.syncInput(0x0, 0x1, 0x1)), _0x1cfae6.stopPropagation();
-                    }), _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
+                    });
+                    _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
                         'b_l': true
-                    }))), 'touchstart touchend', function(_0x1a50ab) {
-                        'touchend' === _0x1a50ab.type ? (_0x3a8e2f(_0x1a50ab.target, _0x2ec721, !0x1), window.setTimeout(function() {
+                    }))), 'touchstart touchend mousedown mouseup mouseout', function(_0x1a50ab) {
+                        ['touchend', 'mouseup', 'mouseout'].includes(_0x1a50ab.type) ? (_0x3a8e2f(_0x1a50ab.target, _0x2ec721, !0x1), window.setTimeout(function() {
                             _0x378b5c.syncInput(0x0, 0xa, 0x0);
                         }, 0x1e)) : (_0x3a8e2f(_0x1a50ab.target, _0x2ec721, true), _0x378b5c.syncInput(0x0, 0xa, 0x1)), _0x1a50ab.stopPropagation();
-                    }), _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
+                    });
+                    _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
+                        'b_z': true
+                    }))), 'touchstart touchend mousedown mouseup mouseout', function(_0x1a50ab) {
+                        ['touchend', 'mouseup', 'mouseout'].includes(_0x1a50ab.type) ? (_0x3a8e2f(_0x1a50ab.target, _0x2ec721, !0x1), window.setTimeout(function() {
+                            _0x378b5c.syncInput(0x0, 12, 0x0);
+                        }, 0x1e)) : (_0x3a8e2f(_0x1a50ab.target, _0x2ec721, true), _0x378b5c.syncInput(0x0, 12, 0x1)), _0x1a50ab.stopPropagation();
+                    });
+                    _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
                         'b_r': true
-                    }))), 'touchstart touchend', function(_0x3b8139) {
-                        'touchend' === _0x3b8139.type ? (_0x3a8e2f(_0x3b8139.target, _0x2ec721, !0x1), window.setTimeout(function() {
+                    }))), 'touchstart touchend mousedown mouseup mouseout', function(_0x3b8139) {
+                        ['touchend', 'mouseup', 'mouseout'].includes(_0x3b8139.type) ? (_0x3a8e2f(_0x3b8139.target, _0x2ec721, !0x1), window.setTimeout(function() {
                             _0x378b5c.syncInput(0x0, 0xb, 0x0);
                         }, 0x1e)) : (_0x3a8e2f(_0x3b8139.target, _0x2ec721, true), _0x378b5c.syncInput(0x0, 0xb, 0x1)), _0x3b8139.stopPropagation();
-                    }), _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
+                    });
+                    _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
                         'b_start': true
-                    }))), 'touchstart touchend', function(_0x47af91) {
-                        'touchend' === _0x47af91.type ? (_0x3a8e2f(_0x47af91.target, _0x2ec721, !0x1), window.setTimeout(function() {
+                    }))), 'touchstart touchend mousedown mouseup mouseout', function(_0x47af91) {
+                        ['touchend', 'mouseup', 'mouseout'].includes(_0x47af91.type) ? (_0x3a8e2f(_0x47af91.target, _0x2ec721, !0x1), window.setTimeout(function() {
                             _0x378b5c.syncInput(0x0, 0x3, 0x0);
                         }, 0x1e)) : (_0x3a8e2f(_0x47af91.target, _0x2ec721, true), _0x378b5c.syncInput(0x0, 0x3, 0x1)), _0x47af91.stopPropagation();
-                    }), _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
+                    });
+                    
+                    _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
+                        'b_cu': true
+                    }))), 'touchstart touchend mousedown mouseup mouseout', function(_0x47af91) {
+                        ['touchend', 'mouseup', 'mouseout'].includes(_0x47af91.type) ? (_0x3a8e2f(_0x47af91.target, _0x2ec721, !0x1), window.setTimeout(function() {
+                            _0x378b5c.syncInput(0, 23, 0);
+                        }, 0x1e)) : (_0x3a8e2f(_0x47af91.target, _0x2ec721, true), _0x378b5c.syncInput(0, 23, 0x7fff)), _0x47af91.stopPropagation();
+                    });
+                    _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
+                        'b_cd': true
+                    }))), 'touchstart touchend mousedown mouseup mouseout', function(_0x47af91) {
+                        ['touchend', 'mouseup', 'mouseout'].includes(_0x47af91.type) ? (_0x3a8e2f(_0x47af91.target, _0x2ec721, !0x1), window.setTimeout(function() {
+                            _0x378b5c.syncInput(0, 22, 0);
+                        }, 0x1e)) : (_0x3a8e2f(_0x47af91.target, _0x2ec721, true), _0x378b5c.syncInput(0, 22, 0x7fff)), _0x47af91.stopPropagation();
+                    });
+                    _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
+                        'b_cl': true
+                    }))), 'touchstart touchend mousedown mouseup mouseout', function(_0x47af91) {
+                        ['touchend', 'mouseup', 'mouseout'].includes(_0x47af91.type) ? (_0x3a8e2f(_0x47af91.target, _0x2ec721, !0x1), window.setTimeout(function() {
+                            _0x378b5c.syncInput(0, 21, 0);
+                        }, 0x1e)) : (_0x3a8e2f(_0x47af91.target, _0x2ec721, true), _0x378b5c.syncInput(0, 21, 0x7fff)), _0x47af91.stopPropagation();
+                    });
+                    _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
+                        'b_cr': true
+                    }))), 'touchstart touchend mousedown mouseup mouseout', function(_0x47af91) {
+                        ['touchend', 'mouseup', 'mouseout'].includes(_0x47af91.type) ? (_0x3a8e2f(_0x47af91.target, _0x2ec721, !0x1), window.setTimeout(function() {
+                            _0x378b5c.syncInput(0, 20, 0);
+                        }, 0x1e)) : (_0x3a8e2f(_0x47af91.target, _0x2ec721, true), _0x378b5c.syncInput(0, 20, 0x7fff)), _0x47af91.stopPropagation();
+                    });
+                    
+                    var hideTimeout;
+                    _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
                         'b_c': true
-                    }))), 'touchstart touchend', function(_0x47af91) {
-                        _0x5ab74d.toggleControls.call(_0xa88a13, true);
-                        setTimeout(function() {
-                            _0x5ab74d.toggleControls.call(_0xa88a13, false);
-                        }, 5000)
-                    }), _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
+                    }))), 'touchstart touchend mousedown mouseup mouseout', function(_0x47af91) {
+                        if (['touchend', 'mouseup', 'mouseout'].includes(_0x47af91.type)) {
+                            _0x3a8e2f(_0x47af91.target, _0x2ec721, false);
+                        } else {
+                            _0x3a8e2f(_0x47af91.target, _0x2ec721, true);
+                            clearTimeout(hideTimeout);
+                            _0x5ab74d.toggleControls.call(_0xa88a13, true);
+                            hideTimeout = setTimeout(function() {
+                                _0x5ab74d.toggleControls.call(_0xa88a13, false);
+                            }, 5000)
+                        }
+                    });
+                    _0x1093f4.call(this, _0x530042.call(this, '.' .concat(_0x2c1832, ' .').concat(_0x449eac({
                         'b_select': true
-                    }))), 'touchstart touchend', function(_0x37f594) {
-                        'touchend' === _0x37f594.type ? (_0x3a8e2f(_0x37f594.target, _0x2ec721, !0x1), window.setTimeout(function() {
+                    }))), 'touchstart touchend mousedown mouseup mouseout', function(_0x37f594) {
+                        ['touchend', 'mouseup', 'mouseout'].includes(_0x37f594.type) ? (_0x3a8e2f(_0x37f594.target, _0x2ec721, !0x1), window.setTimeout(function() {
                             _0x378b5c.syncInput(0x0, 0x2, 0x0);
                         }, 0x1e)) : (_0x3a8e2f(_0x37f594.target, _0x2ec721, true), _0x378b5c.syncInput(0x0, 0x2, 0x1)), _0x37f594.stopPropagation();
                     });
@@ -4026,19 +4185,22 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                 'key': _0x480d05,
                                 'status': _0x50f784,
                                 'frame': _0x52e1f4
-                            }), _0x378b5c.simulateInputFn(_0xf1bb97, _0x480d05, _0x50f784)) : _0x378b5c.connection.send(JSON.stringify({
+                            }),_0x378b5c.simulateInputFn(_0xf1bb97, _0x480d05, _0x50f784)) : _0x378b5c.connection.send(JSON.stringify({
                                 'act': 'sync-control',
                                 'value': ['' .concat(_0xf1bb97, '|').concat(_0x480d05, '|').concat(_0x50f784, '|').concat(_0x52e1f4)]
                             }), _0x378b5c.roomMaster)), _0x2c63cc[_0x480d05] = _0x50f784);
                         }
                     } else _0x378b5c.disableInput || _0x378b5c.simulateInputFn(_0x249751, _0x480d05, _0x50f784);
                 }, _0x378b5c.syncInput = _0x378b5c.simulateInput;
+                window.simulateInput = _0x378b5c.simulateInput;
                 var _0x762355 = _0x27f4c4.Module.cwrap('shader_enable', 'null', ['number']);
                 _0x378b5c.toggleShader = function(_0x433182) {
                     return _0x762355(_0x433182);
                 }
                 _0x378b5c.getStateInfo = _0x27f4c4.Module.cwrap('get_state_info', 'string', []);
-                _0x378b5c.saveStateToFile = _0x27f4c4.Module.cwrap('cmd_save_state', 'null', []);
+                if (_0xa88a13.coreVer === 2) {
+                    _0x378b5c.saveStateToFile = _0x27f4c4.Module.cwrap('cmd_save_state', 'null', []);
+                }
                 _0x378b5c.saveState = function() {
                     if (_0xa88a13.coreVer === 2) {
                         _0x378b5c.saveStateToFile();
@@ -5657,7 +5819,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 if (false) {
                     return 2;
                 }
-                var supportedCores = ['nes'];
+                var supportedCores = ['nes', 'snes'];
                 return supportedCores.includes(core) ? 2 : 1;
             }(this.config.system); // 2 = beta cores, 1 = old cores
             this.lightgun = this.config.lightgun;
