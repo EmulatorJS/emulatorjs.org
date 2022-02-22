@@ -455,7 +455,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
             'wasm': 'undefined' != typeof WebAssembly && _0x1e2c68.object(WebAssembly),
             'audioContext': 'undefined' != typeof AudioContext
         };
-
+    
     function _0x55cbbe(_0x43ca9d, _0x1fbf80, _0x332d13) {
         return _0x1fbf80 in _0x43ca9d ? Object.defineProperty(_0x43ca9d, _0x1fbf80, {
             'value': _0x332d13,
@@ -1813,9 +1813,32 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         _0x4d7024.loading.querySelector('.' .concat(_0x4fce24.p1)).innerHTML = 'Game Core ready';
                         var _0x17edbf = _0xa88a13.config.biosUrl,
                             _0x2c1832 = _0xa88a13;
-                        _0xdcec2a.bindFunction.call(_0xa88a13), _0xdcec2a.setGamepadDialog.call(_0xa88a13), _0xdcec2a.setCacheDialog.call(_0xa88a13), _0xdcec2a.setLoadingDialog.call(_0xa88a13), _0xdcec2a.setNetplayDialog.call(_0xa88a13), _0xdcec2a.setCheatDialog.call(_0xa88a13), _0xdcec2a.initGamepad.call(_0xa88a13), _0xdcec2a.initKeyboard.call(_0xa88a13), _0xdcec2a.listeners.call(_0xa88a13), _0x4d7024._FS.createFolder('/', 'etc', true, true), _0x4d7024.FS.mkdir('/data'), _0x4d7024.FS.mkdir('/data/saves'), 'undefined' != typeof IDBFS ? _0x4d7024.FS.mount(IDBFS, {}, '/data/saves') : _0x4d7024.FS.mount(_0x4d7024.FS.filesystems.IDBFS, {}, '/data/saves'), _0x4d7024.FS.mkdir('/shader'), _0x4d7024.FS.syncfs(true, function(_0x1a8f12) {}), _0xdcec2a.initShaders();
+                        _0xdcec2a.bindFunction.call(_0xa88a13);
+                        _0xdcec2a.setGamepadDialog.call(_0xa88a13);
+                        _0xdcec2a.setCacheDialog.call(_0xa88a13);
+                        _0xdcec2a.setLoadingDialog.call(_0xa88a13);
+                        _0xdcec2a.setNetplayDialog.call(_0xa88a13);
+                        _0xdcec2a.setCheatDialog.call(_0xa88a13);
+                        _0xdcec2a.initGamepad.call(_0xa88a13);
+                        _0xdcec2a.initKeyboard.call(_0xa88a13);
+                        _0xdcec2a.listeners.call(_0xa88a13);
+                        _0x4d7024._FS.createFolder('/', 'etc', true, true);
+                        _0x4d7024.FS.mkdir('/data');
+                        _0x4d7024.FS.mkdir('/data/saves');
+                        'undefined' != typeof IDBFS ? _0x4d7024.FS.mount(IDBFS, {}, '/data/saves') : _0x4d7024.FS.mount(_0x4d7024.FS.filesystems.IDBFS, {}, '/data/saves');
+                        _0x4d7024.FS.mkdir('/shader');
+                        _0x4d7024.FS.syncfs(true, function(_0x1a8f12) {});
+                        _0xdcec2a.initShaders();
                         var _0x14d39f = '';
-                        _0x14d39f += 'savefile_directory = /data/saves\n', _0x14d39f += 'video_vsync = true\n', _0x14d39f += 'screenshot_directory = /\n', _0x14d39f += 'video_shader = /shader/shader.glslp\n', _0x14d39f += 'video_shader_enable = true\n', _0x14d39f += 'video_font_enable = false\n', _0x14d39f += 'video_scale = 1.0\n', _0x14d39f += 'video_gpu_screenshot = false\n', _0x14d39f += 'audio_latency = 96\n';
+                        _0x14d39f += 'savefile_directory = /data/saves\n';
+                        _0x14d39f += 'video_vsync = true\n';
+                        _0x14d39f += 'screenshot_directory = /\n';
+                        _0x14d39f += 'video_shader = /shader/shader.glslp\n';
+                        _0x14d39f += 'video_shader_enable = true\n';
+                        _0x14d39f += 'video_font_enable = false\n';
+                        _0x14d39f += 'video_scale = 1.0\n';
+                        _0x14d39f += 'video_gpu_screenshot = false\n';
+                        _0x14d39f += 'audio_latency = 96\n';
                         var _0x36edb7 = _0x2593da.defaultCoreOptionsValues.call(_0xa88a13);
                         _0x2c1832.lightgun && ('nes' === _0xa88a13.system && (_0x14d39f += 'input_libretro_device_p2 = "258"\n'), 'segaMS' !== _0xa88a13.system && 'segaMD' !== _0xa88a13.system && 'segaCD' !== _0xa88a13.system || (_0x36edb7.genesis_plus_gx_gun_cursor = 'yes', _0x36edb7.genesis_plus_gx_invert_mouse = 'yes', _0x36edb7.genesis_plus_gx_bram = 'per game', _0x14d39f += 'input_libretro_device_p2 = "260"\n'), 'snes' === _0xa88a13.system && (_0x14d39f += 'input_libretro_device_p2 = "260"\n'), ['snes2002', 'snes2005', 'snes2010', 'snesnext'].includes(_0xa88a13.system) && (_0x14d39f += 'input_libretro_device_p2 = "260"\n')), _0x2c1832.mouse && ('snes' === _0xa88a13.system && (_0x14d39f += 'input_libretro_device_p1 = 2\n'), ['snes2002', 'snes2005', 'snes2010', 'snesnext'].includes(_0xa88a13.system) && (_0x14d39f += 'input_libretro_device_p1 = 2\n')), _0x2c1832.multitap && ('snes' === _0xa88a13.system && (_0x14d39f += 'input_libretro_device_p2 = 257\n'), ['snes2002', 'snes2005', 'snes2010', 'snesnext'].includes(_0xa88a13.system) && (_0x14d39f += 'input_libretro_device_p2 = 257\n')), 'n64' === _0xa88a13.system && (_0x14d39f += 'input_libretro_device_p1 = 5\n'), _0x2c1832.system, _0x14d39f += 'fastforward_ratio = 1.0\n', _0x14d39f += 'video_smooth = false\n';
                         var _0x55117c = _0x5dc0c0(_0x36edb7, _0x2593da.storage.get('core-options') || {}),
@@ -2082,7 +2105,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                             }
                                             'undefined' != typeof EJS_CUSTOM_COREFILE && (_0x2458d5 = EJS_CUSTOM_COREFILE);
                                             _0x24de8d.db ? _0x24de8d.get(_0x2458d5, function(_0x47a6fd) {
-                                                if (_0x47a6fd && _0x47a6fd.version === _0x124167 && false) {
+                                                if (_0x47a6fd && _0x47a6fd.version === _0x124167 && !('undefined' != typeof EJS_DEBUG_XX && true === EJS_DEBUG_XX)) {
                                                     if (_0xc6823.coreVer === 2) {
                                                         _0x4f0fcc(_0x47a6fd.data);
                                                     } else {
@@ -2093,19 +2116,20 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                                 } else _0x3641d6(_0x2458d5, _0x124167);
                                             }) : _0x3641d6(_0x2458d5, _0x124167);
                                         }
-                                        _0x1e2c68.element(_0x2c1832.elements.buttons.netplay) && _0x132da7(_0x2c1832.elements.buttons.netplay, true);
-                                        _0x1e2c68.element(_0x2c1832.elements.buttons.cheat) && _0x132da7(_0x2c1832.elements.buttons.cheat, true);
-                                        _0x1e2c68.element(_0x2c1832.elements.buttons.gamepad) && _0x132da7(_0x2c1832.elements.buttons.gamepad, true);
-                                        _0x1e2c68.element(_0x2c1832.elements.buttons.mute) && _0x132da7(_0x2c1832.elements.buttons.mute, true);
-                                        _0x1e2c68.element(_0x2c1832.elements.inputs.volume) && _0x132da7(_0x2c1832.elements.inputs.volume, true);
-                                        if (Array.isArray(_0x2c1832.elements.buttons.play)) {
-                                            for (var i=0; i<_0x2c1832.elements.buttons.play.length; i++) {
-                                                _0x1e2c68.element(_0x2c1832.elements.buttons.play[i]) && _0x132da7(_0x2c1832.elements.buttons.play[i], true);
+                                        if (_0x2c1832.coreVer === 2) {
+                                            _0x1e2c68.element(_0x2c1832.elements.buttons.cheat) && _0x132da7(_0x2c1832.elements.buttons.cheat, true);
+                                            _0x1e2c68.element(_0x2c1832.elements.buttons.gamepad) && _0x132da7(_0x2c1832.elements.buttons.gamepad, true);
+                                            _0x1e2c68.element(_0x2c1832.elements.buttons.mute) && _0x132da7(_0x2c1832.elements.buttons.mute, true);
+                                            _0x1e2c68.element(_0x2c1832.elements.inputs.volume) && _0x132da7(_0x2c1832.elements.inputs.volume, true);
+                                            if (Array.isArray(_0x2c1832.elements.buttons.play)) {
+                                                for (var i=0; i<_0x2c1832.elements.buttons.play.length; i++) {
+                                                    _0x1e2c68.element(_0x2c1832.elements.buttons.play[i]) && _0x132da7(_0x2c1832.elements.buttons.play[i], true);
+                                                }
+                                            } else {
+                                                _0x1e2c68.element(_0x2c1832.elements.buttons.play) && _0x132da7(_0x2c1832.elements.buttons.play, true);
                                             }
-                                        } else {
-                                            _0x1e2c68.element(_0x2c1832.elements.buttons.play) && _0x132da7(_0x2c1832.elements.buttons.play, true);
                                         }
-                                        _0x1e2c68.element(_0x2c1832.elements.buttons.saveState) && _0x132da7(_0x2c1832.elements.buttons.saveState, !_0x5b1dcd), _0x1e2c68.element(_0x2c1832.elements.buttons.loadState) && _0x132da7(_0x2c1832.elements.buttons.loadState, !_0x5b1dcd), _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(0x2), !_0x5b1dcd), _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(0x3), !_0x5b1dcd);
+                                        _0x254bc2 || _0x1e2c68.element(_0x2c1832.elements.buttons.netplay) && _0x132da7(_0x2c1832.elements.buttons.netplay, true), _0x1e2c68.element(_0x2c1832.elements.buttons.saveState) && _0x132da7(_0x2c1832.elements.buttons.saveState, !_0x5b1dcd), _0x1e2c68.element(_0x2c1832.elements.buttons.loadState) && _0x132da7(_0x2c1832.elements.buttons.loadState, !_0x5b1dcd), _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(0x2), !_0x5b1dcd), _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(0x3), !_0x5b1dcd);
                                         _0xc6823.setStatesSupported(_0x5b1dcd);
                                     }).catch(function(_0x2d06a9) {
                                         _0x3787ba.innerHTML = '<strong style="color:#f00;text-shadow: 0px 0px 3px;">'+_0x2c1832.localization('Network Error')+'</strong>';
@@ -2541,14 +2565,8 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         }
                         if (type === 'save') {
                             try {
-                                if (this.coreVer === 2) {
-                                    _0x378b5c.saveState().then(function(data) {
-                                        _0x378b5c.saveLoaddbDB.put(key, data);
-                                    })
-                                } else {
-                                    var data = _0x378b5c.saveState();
-                                    _0x378b5c.saveLoaddbDB.put(key, data);
-                                }
+                                var data = _0x378b5c.saveState();
+                                _0x378b5c.saveLoaddbDB.put(key, data);
                             } catch(e) {return false;};
                         } else {
                             _0x378b5c.saveLoaddbDB.get(key).then(function(data) {
@@ -3816,10 +3834,10 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         }
                     }
                     _0x17edbf.on('end', function(_0x27f006, _0x1fb527) {
-                        _0x378b5c.syncInput(0, inputs[4], 0);
-                        _0x378b5c.syncInput(0, inputs[5], 0);
-                        _0x378b5c.syncInput(0, inputs[6], 0);
-                        _0x378b5c.syncInput(0, inputs[7], 0);
+                        _0x378b5c.syncInput(0, inputs()[4], 0);
+                        _0x378b5c.syncInput(0, inputs()[5], 0);
+                        _0x378b5c.syncInput(0, inputs()[6], 0);
+                        _0x378b5c.syncInput(0, inputs()[7], 0);
                     });
                     _0x17edbf.on('move', function(_0x1b060e, _0x4ae7d6) {
                         var _0x2c1832 = _0x4ae7d6.angle.degree;
@@ -4050,8 +4068,8 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                             var options = {};
                         }
                         _0xa88a13.recordData.stream = _0x27f4c4.Module.canvas.captureStream(30);
+                        //_0xa88a13.recordData.stream.addTrack(); // TODO - find audio element
                         _0xa88a13.recordData.recorder = new MediaRecorder(_0xa88a13.recordData.stream, options);
-                        //_0xa88a13.recordData.recorder.addTrack() // TODO - find audio element
                         _0xa88a13.recordData.recorder.ondataavailable = function(e) {
                             if (e.data.size > 0) {
                                 _0xa88a13.recordData.data.push(e.data)
@@ -4059,7 +4077,10 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                             if (_0xa88a13.recordData.stopped) {
                                 var a = document.createElement("a")
                                 a.href = window.URL.createObjectURL(new Blob(_0xa88a13.recordData.data, {type: "video/webm"}))
-                                a.download = 'record.webm'
+                                if (typeof _0xa88a13.gameName == 'string') {
+                                    var aname = _0xa88a13.gameName
+                                }
+                                a.download = aname ? '' .concat(aname, '-recording.webm') : 'record.webm';
                                 a.click()
                                 window.URL.revokeObjectURL(a.href)
                                 delete _0xa88a13.recordData
@@ -4198,82 +4219,48 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                     return _0x762355(_0x433182);
                 }
                 _0x378b5c.getStateInfo = _0x27f4c4.Module.cwrap('get_state_info', 'string', []);
-                if (_0xa88a13.coreVer === 2) {
-                    _0x378b5c.saveStateToFile = _0x27f4c4.Module.cwrap('cmd_save_state', 'null', []);
-                }
                 _0x378b5c.saveState = function() {
-                    if (_0xa88a13.coreVer === 2) {
-                        _0x378b5c.saveStateToFile();
-                        return new Promise(function(resolve, reject) {
-                            var a = setInterval(function() {
-                                try {
-                                    var data = _0x27f4c4.FS.readFile('save.state');
-                                } catch(e) {return;}
-                                clearInterval(a);
-                                _0x27f4c4.FS.unlink('save.state');
-                                resolve(data);
-                            }, 100)
-                            })
-                    } else {
-                        var _0xa88a14, _0x17edbf = _0x378b5c.getStateInfo().split('|'),
-                            _0x2c1832 = _0x17edbf[0x0] >> 0x0;
-                        if (_0x2c1832 > 0x0) {
-                            _0xa88a14 = new Uint8Array(_0x2c1832);
-                            for (var _0x2ef6be = _0x17edbf[0x1] >> 0x0, _0x3cc34b = 0x0; _0x3cc34b < _0x2c1832; _0x3cc34b++) _0xa88a14[_0x3cc34b] = _0x27f4c4.Module.getValue(_0x2ef6be + _0x3cc34b);
-                        }
-                        return _0xa88a14;
+                    var _0xa88a14, _0x17edbf = _0x378b5c.getStateInfo().split('|'),
+                        _0x2c1832 = _0x17edbf[0x0] >> 0x0;
+                    if (_0x2c1832 > 0x0) {
+                        _0xa88a14 = new Uint8Array(_0x2c1832);
+                        for (var _0x2ef6be = _0x17edbf[0x1] >> 0x0, _0x3cc34b = 0x0; _0x3cc34b < _0x2c1832; _0x3cc34b++) _0xa88a14[_0x3cc34b] = _0x27f4c4.Module.getValue(_0x2ef6be + _0x3cc34b);
                     }
+                    return _0xa88a14;
                 };
                 var _0x25a7a2 = _0x27f4c4.Module.cwrap('load_state', 'number', ['string', 'number']);
                 _0x378b5c.loadState = function(_0x4389ae, _0x1d4918) {
                     var _0x91cd69;
                     _0x91cd69 = _0x4389ae;
+                    try {
+                        _0x27f4c4.FS.unlink('game.state');
+                    } catch(e){}
                     _0x27f4c4._FS.createDataFile('/', 'game.state', _0x91cd69, true, true);
                     null === _0x1d4918 && (_0x1d4918 = 0);
-                    if ('arcade' === _0x17edbf && _0xa88a13.coreVer !== 2) {
+                    if ('arcade' === _0x17edbf) {
                         setTimeout(function() {
                             _0x378b5c.getStateInfo();
                             _0x25a7a2('game.state', _0x1d4918);
                             _0x27f4c4.FS.unlink('game.state');
                         }, 0xa)
-                    } else if (_0xa88a13.coreVer === 2) {
-                        setTimeout(function() {
-                            _0x25a7a2('game.state', _0x1d4918);
-                            setTimeout(function() {
-                                _0x27f4c4.FS.unlink('game.state');
-                            }, 100)
-                        }, 10)
                     } else {
                         _0x25a7a2('game.state', _0x1d4918);
-                        _0x27f4c4.FS.unlink('game.state');
+                        setTimeout(function() {
+                            _0x27f4c4.FS.unlink('game.state');
+                        }, 100)
                     }
-                    if (_0xa88a13.coreVer === 2) {
-                        if (_0x378b5c.connected && _0x378b5c.connection.isInitiator) {
-                            var _0x227419 = new File([_0x91cd69], '0-game.state', {
-                                'type': '',
-                                'lastModified': new Date()
-                            });
-                            _0x378b5c.connection.shareFile(_0x227419);
-                            _0x378b5c.inputsData = {};
-                            _0x378b5c.wait = true;
-                            _0x378b5c.systemPause(0x1);
-                            _0x27f4c4.Module.pauseMainLoop();
-                            _0x378b5c.disableControl(true);
-                        }
-                    } else {
-                        if (_0x378b5c.connected && _0x378b5c.connection.isInitiator) {
-                            for (var _0x54607c = _0x378b5c.getStateInfo().split('|'), _0x1ab9c9 = _0x54607c[0x0] >> 0x0, _0xce58ec = (_0x54607c[0x2], new Uint8Array(_0x1ab9c9)), _0x4aff4f = _0x54607c[0x1] >> 0x0, _0x3bfae0 = 0x0; _0x3bfae0 < _0x1ab9c9; _0x3bfae0 += 0x1) _0xce58ec[_0x3bfae0] = _0x27f4c4.Module.getValue(_0x4aff4f + _0x3bfae0);
-                            var _0x227419 = new File([_0xce58ec], '0-game.state', {
-                                'type': '',
-                                'lastModified': new Date()
-                            });
-                            _0x378b5c.connection.shareFile(_0x227419);
-                            _0x378b5c.inputsData = {};
-                            _0x378b5c.wait = true;
-                            _0x378b5c.systemPause(0x1);
-                            _0x27f4c4.Module.pauseMainLoop();
-                            _0x378b5c.disableControl(true);
-                        }
+                    if (_0x378b5c.connected && _0x378b5c.connection.isInitiator) {
+                        for (var _0x54607c = _0x378b5c.getStateInfo().split('|'), _0x1ab9c9 = _0x54607c[0x0] >> 0x0, _0xce58ec = (_0x54607c[0x2], new Uint8Array(_0x1ab9c9)), _0x4aff4f = _0x54607c[0x1] >> 0x0, _0x3bfae0 = 0x0; _0x3bfae0 < _0x1ab9c9; _0x3bfae0 += 0x1) _0xce58ec[_0x3bfae0] = _0x27f4c4.Module.getValue(_0x4aff4f + _0x3bfae0);
+                        var _0x227419 = new File([_0xce58ec], '0-game.state', {
+                            'type': '',
+                            'lastModified': new Date()
+                        });
+                        _0x378b5c.connection.shareFile(_0x227419);
+                        _0x378b5c.inputsData = {};
+                        _0x378b5c.wait = true;
+                        _0x378b5c.systemPause(0x1);
+                        _0x27f4c4.Module.pauseMainLoop();
+                        _0x378b5c.disableControl(true);
                     }
                     _0xa88a13.elements.container.focus();
                 };
@@ -4301,28 +4288,21 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         try {
                             _0x27f4c4.FS.unlink(name);
                         } catch (_0x4b4d4c) {}
-                        var success = true;
                         try {
-                            if (_0xa88a13.coreVer === 2) {
-                                _0x378b5c.saveState().then(function(data) {
-                                    _0x27f4c4._FS.createDataFile('/', name, data, true, true);
-                                });
-                            } else {
-                                var _0x17edbf = _0x378b5c.saveState();
-                                _0x27f4c4._FS.createDataFile('/', name, _0x17edbf, true, true);
-                            }
-                        } catch(e) {
-                            success = false;
-                        }
-                        if (! success) {
-                            _0xa88a13.elements.widgets.stateInfoDiv.innerHTML = 'FAILED TO SAVE STATE TO SLOT ' + slot;
-                        } else {
+                            var _0x17edbf = _0x378b5c.saveState();
+                            _0x27f4c4._FS.createDataFile('/', name, _0x17edbf, true, true);
                             _0xa88a13.elements.widgets.stateInfoDiv.innerHTML = 'STATE SAVED TO SLOT ' + slot;
+                            clearTimeout(_0x378b5c.saveMsgTransitions);
+                            _0x378b5c.saveMsgTransitions = setTimeout(function() {
+                                _0xa88a13.elements.widgets.stateInfoDiv.innerHTML = '';
+                            }, 1500)
+                        } catch(e) {
+                            _0xa88a13.elements.widgets.stateInfoDiv.innerHTML = 'FAILED TO SAVE STATE TO SLOT ' + slot;
+                            clearTimeout(_0x378b5c.saveMsgTransitions);
+                            _0x378b5c.saveMsgTransitions = setTimeout(function() {
+                                _0xa88a13.elements.widgets.stateInfoDiv.innerHTML = '';
+                            }, 1500)
                         }
-                        clearTimeout(_0x378b5c.saveMsgTransitions);
-                        _0x378b5c.saveMsgTransitions = setTimeout(function() {
-                            _0xa88a13.elements.widgets.stateInfoDiv.innerHTML = '';
-                        }, 1500)
                     }
                 };
                 _0x378b5c.saveMsgTransitions = null;
@@ -4347,19 +4327,8 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         var name = slot + '-quick.state';
                         var success = true;
                         try {
-                            if (_0xa88a13.coreVer === 2) {
-                                var data = _0x27f4c4.FS.readFile(name);
-                                _0x27f4c4.FS.writeFile('/game.state', data);
-                                setTimeout(function() {
-                                    _0x25a7a2(name, 0);
-                                    setTimeout(function() {
-                                        _0x27f4c4.FS.unlink('game.state');
-                                    }, 100)
-                                }, 10)
-                            } else {
-                                _0x25a7a2(name, 0);
-                            }
-                            if ('arcade' === _0x17edbf && _0xa88a13.coreVer !== 2) {
+                            _0x25a7a2(name, 0);
+                            if ('arcade' === _0x17edbf) {
                                 setTimeout(function() {
                                     _0x378b5c.getStateInfo();
                                     _0x25a7a2(name, 0x0);
@@ -4460,6 +4429,18 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
             'coreOptionsValues': {},
             'contextMenu': null,
             'normalOptions': {
+                'shader': {
+                    'label': 'Shader',
+                    'options': {
+                        'disabled': 'Disabled',
+                        '2xScaleHQ.glslp': '2xScaleHQ',
+                        '4xScaleHQ.glslp': '4xScaleHQ',
+                        'crt-easymode.glslp': 'CRT easymode',
+                        'crt-aperture.glslp': 'CRT aperture',
+                        'crt-geom.glslp': 'CRT geom'
+                    },
+                    'default': 'disabled'
+                },
                 'virtual-gamepad': {
                     'label': 'Virtual Gamepad',
                     'options': {
@@ -4498,6 +4479,503 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
             },
             'getCoreOptions': function() {
                 var _0xa88a13 = {};
+                switch (this.system) {
+                    case 'nes':
+                        _0xa88a13.fceumm_palette = {
+                            'label': this.localization('Color Palette'),
+                            'options': {
+                                'default': this.localization('Default'),
+                                'asqrealc': 'asqrealc',
+                                'nintendo-vc': 'nintendo-vc',
+                                'rgb': 'rgb',
+                                'yuv-v3': 'yuv-v3',
+                                'unsaturated-final': 'unsaturated-final',
+                                'sony-cxa2025as-us': 'sony-cxa2025as-us',
+                                'pal': 'pal',
+                                'bmf-final2': 'bmf-final2',
+                                'bmf-final3': 'bmf-final3',
+                                'smooth-fbx': 'smooth-fbx',
+                                'composite-direct-fbx': 'composite-direct-fbx',
+                                'pvm-style-d93-fbx': 'pvm-style-d93-fbx',
+                                'nescap': 'nescap',
+                                'ntsc-hardware-fbx': 'ntsc-hardware-fbx',
+                                'nes-classic-fbx-fs': 'nes-classic-fbx-fs',
+                                'wavebeam': 'wavebeam'
+                            },
+                            'default': 'default'
+                        }, _0xa88a13.fceumm_nospritelimit = {
+                            'label': this.localization('No Sprite Limit'),
+                            'options': {
+                                'enabled': this.localization('Enabled'),
+                                'disabled': this.localization('Disabled')
+                            },
+                            'default': 'disabled'
+                        }, _0xa88a13.fceumm_sndquality = {
+                            'label': this.localization('Sound Quality'),
+                            'options': {
+                                'Low': this.localization('Low'),
+                                'High': this.localization('High'),
+                                'Very High': this.localization('Very High')
+                            },
+                            'default': 'Low'
+                        }, this.lightgun || (_0xa88a13.system_type = {
+                            'label': this.localization('4 Players Support'),
+                            'options': {
+                                'nes': 'NES',
+                                'famicom': 'Famicom'
+                            },
+                            'default': 'nes',
+                            'netplay': true
+                        }), _0xa88a13.fceumm_turbo_enable = {
+                            'label': this.localization('Turbo Enable'),
+                            'options': {
+                                'None': this.localization('None'),
+                                'Player 1': this.localization('Player 1'),
+                                'Player 2': this.localization('Player 2'),
+                                'Both': this.localization('Both')
+                            },
+                            'default': 'None',
+                            'netplay': true
+                        }, _0xa88a13.fceumm_region = {
+                            'label': this.localization('Region'),
+                            'options': {
+                                'Auto': this.localization('Auto'),
+                                'NTSC': 'NTSC',
+                                'PAL': 'PAL',
+                                'Dendy': 'Dendy'},
+                            'default': 'Auto',
+                            'netplay': true
+                        };
+                        break;
+                    case 'snes':
+                        _0xa88a13 = {
+                            'snes9x_next_overclock': {
+                                'label': this.localization('SuperFX Overclock'),
+                                'options': {
+                                    'disabled': this.localization('Disabled')+'(10MHz)',
+                                    '40MHz': '40MHz',
+                                    '60MHz': '60MHz',
+                                    '80MHz': '80MHz',
+                                    '100MHz': '100MHz'
+                                },
+                                'default': 'disabled',
+                                'netplay': true
+                            }
+                        };
+                        break;
+                    case 'snes2002':
+                    case 'snes2005':
+                    case 'snes2010':
+                        _0xa88a13 = {};
+                        break;
+                    case 'gb':
+                        _0xa88a13 = {
+                            'gambatte_gb_colorization': {
+                                'label': this.localization('GB Colorization'),
+                                'options': {
+                                    'disabled': this.localization('Disabled'),
+                                    'auto': this.localization('auto'),
+                                    'internal': this.localization('internal')
+                                },
+                                'default': 'disabled'
+                            },
+                            'gambatte_gb_internal_palette': {
+                                'label': this.localization('Internal Palette'),
+                                'options': {
+                                    'GBC - Blue': this.localization('GBC - Blue'),
+                                    'GBC - Brown': this.localization('GBC - Brown'),
+                                    'GBC - Dark Blue': this.localization('GBC - Dark Blue'),
+                                    'GBC - Dark Brown': this.localization('GBC - Dark Brown'),
+                                    'GBC - Dark Green': this.localization('GBC - Dark Green'),
+                                    'GBC - Grayscale': this.localization('GBC - Grayscale'),
+                                    'GBC - Green': this.localization('GBC - Green'),
+                                    'GBC - Inverted': this.localization('GBC - Inverted'),
+                                    'GBC - Orange': this.localization('GBC - Orange'),
+                                    'GBC - Pastel Mix': this.localization('GBC - Pastel Mix'),
+                                    'GBC - Red': this.localization('GBC - Red'),
+                                    'GBC - Yellow': this.localization('GBC - Yellow')
+                                },
+                                'default': 'GBC - Blue'
+                            }
+                        };
+                        break;
+                    case 'gba':
+                        _0xa88a13 = {
+                            'mgba_solar_sensor_level': {
+                                'label': this.localization('Solar sensor level'),
+                                'options': ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+                                'default': '0'
+                            },
+                            'mgba_frameskip': {
+                                'label': this.localization('Frameskip'),
+                                'options': ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+                                'default': '0'
+                            }
+                        };
+                        break;
+                    case 'vbanext':
+                        _0xa88a13 = {
+                            'vbanext_turboenable': {
+                                'label': this.localization('Enable Turbo Buttons'),
+                                'options': {
+                                    'disabled': this.localization('disabled'),
+                                    'enabled': this.localization('enabled')
+                                },
+                                'default': 'disabled'
+                            },
+                            'vbanext_turbodelay': {
+                                'label': this.localization('Turbo Delay in frames'),
+                                'options': ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15'],
+                                'default': '2'
+                            }
+                        };
+                        break;
+                    case 'n64':
+                        _0xa88a13 = {
+                            'glupen64-aspect': {
+                                'label': this.localization('Aspect Ratio (Need to refresh page)'),
+                                'options': ['4:3', '16:9'],
+                                'default': '4:3'
+                            },
+                            'glupen64-43screensize': {
+                                'label': this.localization('4:3 Resolution'),
+                                'options': ['320x240', '640x480', '960x720', '1280x960'],
+                                'default': '320x240'
+                            },
+                            'glupen64-169screensize': {
+                                'label': this.localization('16:9 Resolution'),
+                                'options': ['640x360', '960x540', '1280x720'],
+                                'default': '640x360'
+                            },
+                            'glupen64-pak1': {
+                                'label': this.localization('Player 1 Pak'),
+                                'options': {
+                                    'none': this.localization('none'),
+                                    'memory': this.localization('memory'),
+                                    'rumble': this.localization('rumble')
+                                },
+                                'default': 'none',
+                                'netplay': true
+                            },
+                            'glupen64-pak2': {
+                                'label': this.localization('Player 2 Pak'),
+                                'options': {
+                                    'none': this.localization('none'),
+                                    'memory': this.localization('memory'),
+                                    'rumble': this.localization('rumble')
+                                },
+                                'default': 'none',
+                                'netplay': true
+                            },
+                            'glupen64-pak3': {
+                                'label': this.localization('Player 3 Pak'),
+                                'options': {
+                                    'none': this.localization('none'),
+                                    'memory': this.localization('memory'),
+                                    'rumble': this.localization('rumble')
+                                },
+                                'default': 'none',
+                                'netplay': true
+                            },
+                            'glupen64-pak4': {
+                                'label': this.localization('Player 4 Pak'),
+                                'options': {
+                                    'none': this.localization('none'),
+                                    'memory': this.localization('memory'),
+                                    'rumble': this.localization('rumble')
+                                },
+                                'default': 'none',
+                                'netplay': true
+                            },
+                        };
+                        if (_0xdcec2a && (_0xdcec2a.virtualGamepadContainer != 'undefined' || _0xdcec2a.virtualGamepadContainer !== null)) {
+
+                            _0xa88a13['joystick-input'] = {
+                                'label': this.localization('Joystick input keys'),
+                                'options': {
+                                    'd-pad': this.localization('d-pad'),
+                                    'analog-stick': this.localization('Analog Stick')
+                                },
+                                'default': 'analog-stick',
+                                'netplay': true
+                            }
+                        }
+                        break;
+                    case 'nds':
+                        _0xa88a13 = {
+                            'desmume_screens_layout': {
+                                'label': this.localization('Screen layout'),
+                                'options': {
+                                    'top/bottom': this.localization('top/bottom'),
+                                    'bottom/top': this.localization('bottom/top'),
+                                    'left/right': this.localization('left/right'),
+                                    'right/left': this.localization('right/left'),
+                                    'top only': this.localization('top only'),
+                                    'bottom only': this.localization('bottom only'),
+                                    'quick switch': this.localization('quick switch'),
+                                    'hybrid/top': this.localization('hybrid/top'),
+                                    'hybrid/bottom': this.localization('hybrid/bottom')
+                                },
+                                'default': 'top/bottom'
+                            },
+                            'screen_rotation': {
+                                'label': this.localization('Screen Rotation'),
+                                'options': {
+                                    0: '0°',
+                                    90: '90°',
+                                    180: '180°',
+                                    270: '270°'
+                                },
+                                'default': 0
+                            },
+                            'desmume_frameskip': {
+                                'label': this.localization('Frameskip'),
+                                'options': ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+                                'default': '0'
+                            }
+                        }, _0x2d904a.wasm || delete _0xa88a13.screen_rotation;
+                        break;
+                    case 'vb':
+                    case 'pce':
+                        _0xa88a13 = {};
+                        break;
+                    case 'segaMS':
+                    case 'segaGG':
+                    case 'segaMD':
+                    case 'segaCD':
+                        _0xa88a13 = {
+                            'genesis_plus_gx_no_sprite_limit': {
+                                'label': this.localization('No Sprite Limit'),
+                                'options': {
+                                    'disabled': this.localization('disabled'),
+                                    'enabled': this.localization('enabled')
+                                },
+                                'default': 'disabled'
+                            },
+                            'genesis_plus_gx_overclock': {
+                                'label': this.localization('CPU speed'),
+                                'options': ['100%', '125%', '150%', '175%', '200%'],
+                                'default': '100%',
+                                'netplay': true
+                            },
+                            'genesis_plus_gx_sound_output': {
+                                'label': this.localization('Sound output'),
+                                'options': {
+                                    'stereo': this.localization('stereo'),
+                                    'mono': this.localization('mono')
+                                },
+                                'default': 'stereo'
+                            }
+                        };
+                        break;
+                    case 'sega32x':
+                        _0xa88a13 = {
+                            'picodrive_sprlim': {
+                                'label': this.localization('No sprite limit'),
+                                'options': {
+                                    'disabled': this.localization('disabled'),
+                                    'enabled': this.localization('enabled')
+                                },
+                                'default': 'disabled'
+                            }
+                        };
+                        break;
+                    case 'segaSaturn':
+                        _0xa88a13 = {
+                            'yabause_frameskip': {
+                                'label': this.localization('Frameskip'),
+                                'options': {
+                                    'disabled': this.localization('disabled'),
+                                    'enabled': this.localization('enabled')
+                                },
+                                'default': 'disabled'
+                            }
+                        };
+                        break;
+                    case 'msx':
+                        _0xa88a13 = {
+                            'bluemsx_nospritelimits': {
+                                'label': this.localization('No Sprite Limit'),
+                                'options': {
+                                    'OFF': this.localization('OFF'),
+                                    'ON': this.localization('ON')
+                                },
+                                'default': 'OFF'
+                            }
+                        };
+                        break;
+                    case 'ws':
+                    case 'ngp':
+                        _0xa88a13 = {};
+                        break;
+                    case 'jaguar':
+                        _0xa88a13 = {
+                            'virtualjaguar_usefastblitter': {
+                                'label': this.localization('Fast Blitter'),
+                                'options': {
+                                    'disabled': this.localization('disabled'),
+                                    'enabled': this.localization('enabled')
+                                },
+                                'default': 'disabled'
+                            },
+                            'virtualjaguar_bios': {
+                                'label': this.localization('Bios'),
+                                'options': {
+                                    'disabled': this.localization('disabled'),
+                                    'enabled': this.localization('enabled')
+                                },
+                                'default': 'disabled'
+                            }
+                        };
+                        break;
+                    case 'psx':
+                        _0xa88a13 = {
+                            'pcsx_rearmed_frameskip': {
+                                'label': this.localization('Frameskip'),
+                                'options': [0, 1, 2, 3],
+                                'default': 0,
+                                'netplay': true
+                            },
+                            'pcsx_rearmed_memcard2': {
+                                'label': this.localization('Enable second memory card'),
+                                'options': {
+                                    'disabled': this.localization('disabled'),
+                                    'enabled': this.localization('enabled')
+                                },
+                                'default': 'enabled',
+                                'netplay': true
+                            },
+                            'pcsx_rearmed_pad1type': {
+                                'label': this.localization('Pad 1 Type'),
+                                'options': {
+                                    'default': this.localization('default'),
+                                    'none': this.localization('none'),
+                                    'standard': this.localization('standard'),
+                                    'analog': this.localization('analog'),
+                                    'negcon': this.localization('negcon')
+                                },
+                                'default': 'default',
+                                'netplay': true
+                            },
+                            'pcsx_rearmed_pad2type': {
+                                'label': this.localization('Pad 2 Type'),
+                                'options': {
+                                    'default': this.localization('default'),
+                                    'none': this.localization('none'),
+                                    'standard': this.localization('standard'),
+                                    'analog': this.localization('analog'),
+                                    'negcon': this.localization('negcon')
+                                },
+                                'default': 'default',
+                                'netplay': true
+                            },
+                            'pcsx_rearmed_pad3type': {
+                                'label': this.localization('Pad 3 Type'),
+                                'options': {
+                                    'default': this.localization('default'),
+                                    'none': this.localization('none'),
+                                    'standard': this.localization('standard'),
+                                    'analog': this.localization('analog'),
+                                    'negcon': this.localization('negcon')
+                                },
+                                'default': 'default',
+                                'netplay': true
+                            },
+                            'pcsx_rearmed_pad4type': {
+                                'label': this.localization('Pad 4 Type'),
+                                'options': {
+                                    'default': this.localization('default'),
+                                    'none': this.localization('none'),
+                                    'standard': this.localization('standard'),
+                                    'analog': this.localization('analog'),
+                                    'negcon': this.localization('negcon')
+                                },
+                                'default': 'default',
+                                'netplay': true
+                            },
+                            'pcsx_rearmed_vibration': {
+                                'label': this.localization('Enable Vibration'),
+                                'options': {
+                                    'disabled': this.localization('disabled'),
+                                    'enabled': this.localization('enabled')
+                                },
+                                'default': 'enabled',
+                                'netplay': true
+                            },
+                            'pcsx_rearmed_neon_interlace_enable': {
+                                'label': this.localization('Enable interlacing mode(s)'),
+                                'options': {
+                                    'disabled': this.localization('disabled'),
+                                    'enabled': this.localization('enabled')
+                                },
+                                'default': 'disabled',
+                                'netplay': true
+                            },
+                            'pcsx_rearmed_neon_enhancement_enable': {
+                                'label': this.localization('Enhanced resolution (slow)'),
+                                'options': {
+                                    'disabled': this.localization('disabled'),
+                                    'enabled': this.localization('enabled')
+                                },
+                                'default': 'disabled',
+                                'netplay': true
+                            },
+                            'pcsx_rearmed_neon_enhancement_no_main': {
+                                'label': this.localization('Enhanced resolution speed hack'),
+                                'options': {
+                                    'disabled': this.localization('disabled'),
+                                    'enabled': this.localization('enabled')
+                                },
+                                'default': 'disabled',
+                                'netplay': true
+                            }
+                        };
+                        break;
+                    case 'arcade':
+                    case 'fba0.2.97.29':
+                        _0xa88a13 = {
+                            'fba-aspect': {
+                                'label': this.localization('Aspect ratio'),
+                                'options': ['DAR', 'PAR'],
+                                'default': 'DAR'
+                            },
+                            'fba-frameskip': {
+                                'label': this.localization('Frameskip'),
+                                'options': ['0', '1', '2', '3', '4', '5'],
+                                'default': '0',
+                                'netplay': true
+                            },
+                            'fba-cpu-speed-adjust': {
+                                'label': this.localization('CPU overclock'),
+                                'options': ['100', '110', '120', '130', '140', '150', '160', '170', '180', '190', '200'],
+                                'default': '100',
+                                'netplay': true
+                            },
+                            'fba-diagnostic-input': {
+                                'label': this.localization('Diagnostic Input'),
+                                'options': ['None', 'Hold Start', 'Start + A + B', 'Hold Start + A + B', 'Start + L + R', 'Hold Start + L + R', 'Hold Select', 'Select + A + B', 'Hold Select + A + B', 'Select + L + R', 'Hold Select + L + R'],
+                                'default': 'None',
+                                'netplay': true
+                            },
+                            'fba-neogeo-mode': {
+                                'label': this.localization('Force Neo Geo mode'),
+                                'options': ['MVS', 'AES', 'UNIBIOS', 'DIPSWITCH'],
+                                'default': 'MVS',
+                                'netplay': true
+                            }
+                        };
+                        break;
+                    case 'mame2003':
+                    case 'mame2010':
+                    case 'mame':
+                        _0xa88a13 = {};
+                        break;
+                    default:
+                        _0xa88a13 = {}, console.warn('Unsupported emulator');
+                }
+                if (this.coreVer === 2) {
+                    _0xa88a13 = {};
+                }
                 if (this.statesSupported === true) {
                     _0xa88a13['save-state-slot'] = {
                         'label': this.localization('Save State Slot'),
@@ -5105,7 +5583,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                 var _0x14264d = _0x428003('li', {});
                                 _0x14264d.appendChild(_0x428003('a', {
                                     'target': '_blank',
-                                    'href': 'https://github.com/ethanaobrien/emulatorjs/pull/109'
+                                    'href': 'https://github.com/ethanaobrien/emulatorjs'
                                 }, 'EmulatorJS v' .concat(this.version))), _0x2a1dda.appendChild(_0x14264d), _0x2a1dda.setAttribute('menu', '');
                             }
                             _0x2c1832 && clearTimeout(_0x2c1832), _0x2c1832 = setTimeout(function() {}, 0xfa0), _0x7f9f36.contextMenu.timer = _0x2c1832;
@@ -5140,7 +5618,11 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 }
                 addContextHtml(_0xa88a13.localization('Take Screenshot'), false, function(_0x20faaa) {
                     var _0x4e898a = _0x378b5c.getScreenData();
-                    _0x4e4ca6()(new Blob([_0x4e898a]), 'game.png');
+                    if (typeof _0xa88a13.gameName == 'string') {
+                       var gamep = _0xa88a13.gameName
+                    }
+                    var gamepng = gamep ? '' .concat(gamep, '-screenshot.png') : 'game.png';
+                    _0x4e4ca6()(new Blob([_0x4e898a]), gamepng);
                     return false;
                 })
                 addContextHtml(_0xa88a13.localization('Cache Manage'), true, function(_0x275730) {
@@ -5653,12 +6135,11 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         _0x5ab74d.toggleControls.call(_0x17edbf, !0x1), _0x132da7(_0x2c1832.dialogs.gamepad, !0x1);
                     }, 'mute'), this.bind(_0x2c1832.buttons.saveState, 'click', function() {
                         _0xbae705.call(_0x17edbf, _0x17edbf.elements.container, 'savestate-start', !0x1, {});
-                        _0xdcec2a.saveState().then(function(_0x31e271) {
-                            var _0x2c1832 = _0xdcec2a.getScreenData();
-                            _0xbae705.call(_0x17edbf, _0x17edbf.elements.container, 'savestate', !0x1, {
-                                'state': _0x31e271,
-                                'screenshot': _0x2c1832
-                            });
+                        var _0x31e271 = _0xdcec2a.saveState(),
+                            _0x2c1832 = _0xdcec2a.getScreenData();
+                        _0xbae705.call(_0x17edbf, _0x17edbf.elements.container, 'savestate', !0x1, {
+                            'state': _0x31e271,
+                            'screenshot': _0x2c1832
                         });
                     }, 'mute'), this.bind(_0x2c1832.buttons.loadState, 'click', function() {
                         _0xbae705.call(_0x17edbf, _0x17edbf.elements.container, 'loadstate', !0x1, {});
@@ -5789,14 +6270,12 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
             var a = function(_0x154660, _0x15626f) {
                 if (!(_0x154660 instanceof _0x15626f)) throw new TypeError('Cannot call a class as a function');
             }(this, _0x6954aa);
-            this.version = '1.0-beta';
+            this.version = '1.1.0';
             this.system = '';
             this.adUrl = null;
             this.gameName = null;
             this.loadStateOnStart = false;
             this.statesSupported = true;
-            this.listUrl = 'https://ws.emulatorjs.com/';
-            this.socketUrl = 'wss://ws.emulatorjs.com/';
             this.mameCore = null;
             this.startOnLoad = false;
             this.dataPath = '';
@@ -5815,13 +6294,15 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
             this.game = this.game;
             this.game.innerHTML = '';
             this.config = _0x5dc0c0({}, _0x39ca5e, _0x6954aa.defaults, _0x2ba0e6 || {});
-            this.coreVer = function(core) {
-                if (false) {
-                    return 2;
+            this.coreVer = function(core, useBeta) {
+                if (useBeta === true) {
+                    if (window.WebAssembly) {
+                        var supportedCores = ['nes', 'snes'];
+                        return supportedCores.includes(core) ? 2 : 1;
+                    }
                 }
-                var supportedCores = ['nes', 'snes'];
-                return supportedCores.includes(core) ? 2 : 1;
-            }(this.config.system); // 2 = beta cores, 1 = old cores
+                return 1;
+            }(this.config.system, this.config.useBeta); // 2 = beta cores, 1 = old cores
             this.lightgun = this.config.lightgun;
             this.loadStateOnStart = this.config.loadStateOnStart || false;
             this.adUrl = this.config.adUrl || null;
@@ -5830,8 +6311,17 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
             this.multitap = this.config.multitap;
             this.cheats = this.config.cheats;
             this.cheats || (this.cheats = []);
-            this.listUrl = this.config.netplayUrl || 'https://ws.emulatorjs.com/';
-            this.socketUrl = this.config.netplayUrl || 'wss://ws.emulatorjs.com/';
+            var u = function(a, b) {
+                if (typeof b === 'string') {
+                    return b;
+                } else if (a === true) {
+                    return 'https://ws.emulatorjs.com/'
+                } else {
+                    return 'https://emulatorjs.herokuapp.com/';
+                }
+            }(this.config.oldNetplayServer, this.config.netplayUrl);
+            this.listUrl = u;
+            this.socketUrl = u;
             this.mameCore = this.config.mameCore || null;
             this.color = this.config.color;
             this.startOnLoad = this.config.startOnLoad || false;
@@ -5878,8 +6368,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         _0x39ca5e.i18n = localJson.i18n;
                         _0x7f9f36.normalOptions = localJson.normalOptions;
                     } catch(e) {
-                        console.error(e);
-                        console.warn('error setting localization');
+                        console.warn('error setting localization', e);
                     }
                 }
                 return function(engText) {
