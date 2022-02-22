@@ -91,7 +91,7 @@
                     a.appendChild(b);
                     document.body.appendChild(a);
                     var script = document.createElement('script');
-                    script.innerHTML = "EJS_player = '#game'; EJS_gameName = '" + gameName + "'; EJS_biosUrl = ''; EJS_gameUrl = '" + gameUrl + "'; EJS_core = '" + core + "'; EJS_pathtodata = 'data/'; ";
+                    script.innerHTML = "EJS_BETA = true; EJS_player = '#game'; EJS_gameName = '" + gameName + "'; EJS_biosUrl = ''; EJS_gameUrl = '" + gameUrl + "'; EJS_core = '" + core + "'; EJS_pathtodata = 'data/'; ";
                     document.body.appendChild(script);
                     var script = document.createElement('script');
                     script.src = 'data/loader.js';
