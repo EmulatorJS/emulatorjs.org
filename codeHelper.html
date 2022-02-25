@@ -1,6 +1,8 @@
 <html>
     <head>
-        <link rel="stylesheet" href="main.css">
+		 <title>Emulatorjs | Code Helper</title>
+        <link rel="stylesheet" href="css/main.css">
+		 <link rel="icon" type="image/png" href="img/Emulatorjs Logo.png">
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-R87E52EEFR"></script>
         <script>
@@ -13,22 +15,21 @@
     </head>
     <body>
         <nav class="navMenu"> <!-- Navigation bar -->
-            <a href="/" class="blockA">Home</a>
+			  <a href="/">Home</a>
+			  <a href="/systems.html">Systems</a>
+			  <a href="/demo/">Demo</a>
+			  <a class="active" href="/codeHelper.html">Code Creater</a>
             <a href="/download.html" class="blockA">Download</a>
-            <a href="/beta/" class="blockA">Try Beta</a>
-            <a href="https://github.com/ethanaobrien/emulatorjs" class="blockA">View on github</a>
-            <div class="dropdown">
-                <button class="dropbtn">Systems</button>
-                <div class="dropdown-content">
-                    <!-- In progress -->
-                </div>
-            </div>
+            <a href="/beta/">Try Beta</a>
+            <a href="https://github.com/ethanaobrien/emulatorjs">View on github</a>
         </nav>
         <noscript>
             <h2>To use the code creator, please enable javascript</h2>
         </noscript>
+		 <h1 id="startti" style="margin-left: 20px;">You can start creating games here!</h1>
         <br>
-        <a class="blockB" id="start">Start Creating</a>
+        <a style="margin-left: 30px;" class="blockB" id="start">Start Creating</a>
+		 <div class="main">
         <ul id="systemSelect" style="display:none;">
             <h1>Select System</h1>
             <ul id="radioContainer"></ul>
@@ -126,10 +127,18 @@
             <p id="zs2"></p>
         </ul>
         <ul id="downloadScreen" style="display:none;">
-            <p>FINISHED: <a id="outLink">Click to download.</a></p>
+			   <h1 style="margin-left: 20px;">All Done!</h1>
+            <p>FINISHED: <a class="coollink" id="outLink">Click to download.</a></p>
         </ul>
-        <script src="systems.js"></script>
-        <script src="jszip.js"></script>
+		 </div>
+		 <br><br><br><br>
+		  <div style="text-align:center;" class="footer">
+                <h4>This website was made by: <a href="https://github.com/ethanaobrien">Ethan O'Brien</a> & <a href="https://github.com/allancoding">Allancoding</a></h4>
+			 <p>© <a href="https://github.com/ethanaobrien/emulatorjs">EmulatorJS</a></p>
+                <br>
+		 </div>
+        <script src="js/systems.js"></script>
+        <script src="js/jszip.js"></script>
         <script>
             window.addEventListener('load', function() {
                 var radioContainer = document.getElementById('radioContainer')
@@ -145,6 +154,7 @@
             document.getElementById('start').addEventListener('click', function(e) {
                 startBtn.style = "display:none;"
                 systemSelect.style = "display:block;"
+				 document.getElementById('startti').style.display = "none";
             })
             document.getElementById('p2d').addEventListener('change', function(e) {
                 document.getElementById('ptwod').style = (document.getElementById('p2d').checked ? 'display:block;' : 'display:none');
