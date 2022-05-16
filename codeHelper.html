@@ -1,8 +1,8 @@
 <html>
     <head>
-		 <title>Emulatorjs | Code Helper</title>
+        <title>Emulatorjs | Code Helper</title>
         <link rel="stylesheet" href="css/main.css">
-		 <link rel="icon" type="image/png" href="img/Emulatorjs Logo.png">
+        <link rel="icon" type="image/png" href="img/Emulatorjs Logo.png">
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-R87E52EEFR"></script>
         <script>
@@ -15,10 +15,10 @@
     </head>
     <body>
         <nav class="navMenu"> <!-- Navigation bar -->
-			  <a href="/">Home</a>
-			  <a href="/systems.html">Systems</a>
-			  <a href="/demo/">Demo</a>
-			  <a class="active" href="/codeHelper.html">Code Creater</a>
+            <a href="/">Home</a>
+            <a href="/systems.html">Systems</a>
+            <a href="/demo/">Demo</a>
+            <a class="active" href="/codeHelper.html">Code Creater</a>
             <a href="/download.html" class="blockA">Download</a>
             <a href="/beta/">Try Beta</a>
             <a href="https://github.com/ethanaobrien/emulatorjs">View on github</a>
@@ -26,122 +26,151 @@
         <noscript>
             <h2>To use the code creator, please enable javascript</h2>
         </noscript>
-		 <h1 id="startti" style="margin-left: 20px;">You can start creating games here!</h1>
+        <h1 id="startti" style="margin-left: 20px;">You can start creating games here!</h1>
         <br>
         <a style="margin-left: 30px;" class="blockB" id="start">Start Creating</a>
-		 <div class="main">
-        <ul id="systemSelect" style="display:none;">
-            <h1>Select System</h1>
-            <ul id="radioContainer"></ul>
-            <a class="blockB" id="systemSelected" style="float:right;margin:20px;">Next ></a>
-        </ul>
-        <ul id="select2" style="display:none;">
-            <ul>
-                <label class="textBox">Game Rom:
-                    <input type="file" id="gameRom">
-                </label>
-                <br>
-                <label class="container" id="sgol">Start Game On Page Load
-                    <input type="checkbox" id="startOnLoad">
-                    <span class="checkmark2"></span>
-                </label>
-                <label class="container" style="display:none;" id="sm">SNES Mouse
-                    <input type="checkbox" id="snesMouse">
-                    <span class="checkmark2"></span>
-                </label>
-                <label class="container" style="display:none;" id="smt">SNES Multitap
-                    <input type="checkbox" id="snesMultiTap">
-                    <span class="checkmark2"></span>
-                </label>
-                <label class="container" style="display:none;" id="lg">Lightgun
-                    <input type="checkbox" id="lightgun">
-                    <span class="checkmark2"></span>
-                </label>
-                <div id="np" style="display:none;">
-                    <label class="container">Netplay
-                        <input type="checkbox" id="netplay">
+        <div class="main">
+            <ul id="systemSelect" style="display:none;">
+                <h1>Select System</h1>
+                <ul id="radioContainer"></ul>
+                <a class="blockB" id="systemSelected" style="float:right;margin:20px;">Next ></a>
+            </ul>
+            <ul id="select2" style="display:none;">
+                <ul>
+                    <label class="textBox">Game Rom:
+                        <input type="file" id="gameRom">
+                    </label>
+                    <br>
+                    <label class="container" id="sgol">Start Game On Page Load
+                        <input type="checkbox" id="startOnLoad">
+                        <span class="checkmark2"></span>
+                    </label>
+                    <label class="container" style="display:none;">SNES Mouse
+                        <input type="checkbox" id="snesMouse">
+                        <span class="checkmark2"></span>
+                    </label>
+                    <label class="container" style="display:none;">SNES Multitap
+                        <input type="checkbox" id="snesMultiTap">
+                        <span class="checkmark2"></span>
+                    </label>
+                    <label class="container" style="display:none;">Lightgun
+                        <input type="checkbox" id="lightgun">
+                        <span class="checkmark2"></span>
+                    </label>
+                    <label class="container" style="display:none;">Use Beta Cores
+                        <input type="checkbox" id="beta">
+                        <span class="checkmark2"></span>
+                    </label>
+                    <div style="display:none;">
+                        <label class="container">Netplay
+                            <input type="checkbox" id="netplay">
+                            <span class="checkmark2"></span>
+                        </label>
+                        <ul style="display:none;">
+                            <label class="textBox" id="npgid">Game Id
+                                <input type="number" id="npGameId">
+                            </label>
+                            <label class="container" id="nps">Use Custom Netplay Server
+                                <input type="checkbox" id="netplayServer">
+                                <span class="checkmark2"></span>
+                            </label>
+                            <ul>
+                                <label class="textBox" id="npurl" style="display:none;">Enter server URL
+                                    <input type="text" id="npServerURL">
+                                </label>
+                            </ul>
+                        </ul>
+                    </div>
+                    <label class="container">Make it work without web server (not recommended)
+                        <input type="checkbox" id="offline">
                         <span class="checkmark2"></span>
                     </label>
                     <ul>
-                        <label class="textBox" style="display:none;" id="npgid">Game Id
-                            <input type="number" id="npGameId">
+                        <label class="container" id="singleFile" style="display:none;">Pack into single file
+                            <input type="checkbox" id="offlinePack">
+                            <span class="checkmark2"></span>
                         </label>
-                        <label class="container" style="display:none;" id="nps">Use Custom Netplay Server
-                            <input type="checkbox" id="netplayServer">
+                    </ul>
+                    <div id="pathToData">
+                        <label class="container">Use Local path to Data
+                            <input type="checkbox" id="p2d">
                             <span class="checkmark2"></span>
                         </label>
                         <ul>
-                            <label class="textBox" style="display:none;" id="npurl">Enter server URL
-                                <input type="text" id="npServerURL">
+                            <label class="textBox" style="display:none;" id="ptwod">Path To Data Folder (on your server)
+                                <input type="text" id="path2Data">
                             </label>
                         </ul>
-                    </ul>
-                </div>
-                <label class="container">Make it work without web server (not recommended)
-                    <input type="checkbox" id="offline">
-                    <span class="checkmark2"></span>
-                </label>
-                <ul>
-                    <label class="container" id="singleFile" style="display:none;">Pack into single file
-                        <input type="checkbox" id="offlinePack">
-                        <span class="checkmark2"></span>
+                    </div>
+                    <br>
+                    <label class="textBox">Name Of Game (for save files)
+                        <input type="text" id="nameOfGame">
                     </label>
+                    <label class="textBox">Ad Url
+                        <input type="text" id="adUrl">
+                    </label>
+                    <label class="textBox">Hex Color theme
+                        <input type="text" id="ejsColor">
+                    </label>
+                    <br>
+                    <label class="textBox" style="display:none;">Bios File:
+                        <input type="file" id="biosFile">
+                    </label>
+                    <br>
+                    <label class="textBox" id="ss">Save state (to be loaded on start)
+                        <input type="file" id="stateOnLoad">
+                    </label>
+                    <div id="errors"></div>
                 </ul>
-                <div id="pathToData">
-                    <label class="container">Use Local path to Data
-                        <input type="checkbox" id="p2d">
-                        <span class="checkmark2"></span>
-                    </label>
-                    <ul>
-                        <label class="textBox" style="display:none;" id="ptwod">Path To Data Folder (on your server)
-                            <input type="text" id="path2Data">
-                        </label>
-                    </ul>
-                </div>
-                <br>
-                <label class="textBox">Name Of Game (for save files)
-                    <input type="text" id="nameOfGame">
-                </label>
-                <label class="textBox">Ad Url
-                    <input type="text" id="adUrl">
-                </label>
-                <label class="textBox">Hex Color theme
-                    <input type="text" id="ejsColor">
-                </label>
-                <br>
-                <label class="textBox" style="display:none;" id="bf">Bios File:
-                    <input type="file" id="biosFile">
-                </label>
-                <br>
-                <label class="textBox" id="ss">Save state (to be loaded on start)
-                    <input type="file" id="stateOnLoad">
-                </label>
-                <div id="errors"></div>
+                <a class="blockB" id="generateFile" style="float:right;margin:20px;">Generate Out File</a>
             </ul>
-            <a class="blockB" id="generateFile" style="float:right;margin:20px;">Generate Out File</a>
-        </ul>
-        <ul id="zipStatus" style="display:none;">
-            <label for="zs1">Zipping</label>
-            <progress id="zs1" value="0" max="100"> 0% </progress>
-            <br>
-            <p id="zs2"></p>
-        </ul>
-        <ul id="downloadScreen" style="display:none;">
-			   <h1 style="margin-left: 20px;">All Done!</h1>
-            <p>FINISHED: <a class="coollink" id="outLink">Click to download.</a></p>
-        </ul>
-		 </div>
-		 <br><br><br><br>
-		  <div style="text-align:center;" class="footer">
-                <h4>This website was made by: <a href="https://github.com/ethanaobrien">Ethan O'Brien</a> & <a href="https://github.com/allancoding">Allancoding</a></h4>
-			 <p>© <a href="https://github.com/ethanaobrien/emulatorjs">EmulatorJS</a></p>
+            <ul id="zipStatus" style="display:none;">
+                <label for="zs1">Zipping</label>
+                <progress id="zs1" value="0" max="100"> 0% </progress>
                 <br>
-		 </div>
+                <p id="zs2"></p>
+            </ul>
+            <ul id="downloadScreen" style="display:none;">
+                <h1 style="margin-left: 20px;">All Done!</h1>
+                <p>FINISHED: <a class="coollink" id="outLink">Click to download.</a></p>
+            </ul>
+        </div>
+        <br><br><br><br>
+        <div style="text-align:center;" class="footer">
+            <h4>This website was made by: <a href="https://github.com/ethanaobrien">Ethan O'Brien</a> & <a href="https://github.com/allancoding">Allancoding</a></h4>
+            <p>© <a href="https://github.com/ethanaobrien/emulatorjs">EmulatorJS</a></p>
+            <br>
+        </div>
         <script src="js/systems.js"></script>
         <script src="js/jszip.js"></script>
         <script>
+            function isChecked(id) {
+                var elm = document.getElementById(id);
+                if (!elm) return false;
+                return elm.checked;
+            }
+            function styleListener(id1, id2, viewOnChecked, parent1, parent2) {
+                id1 = document.getElementById(id1);
+                id2 = document.getElementById(id2);
+                if (parent1) id1 = id1.parentElement;
+                if (parent2) id2 = id2.parentElement;
+                id1.addEventListener('change', function(e) {
+                    if (viewOnChecked) {
+                        id2.style = (id1.checked ? 'display:block;' : 'display:none');
+                    } else {
+                        id2.style = (id1.checked ? 'display:none;' : 'display:block');
+                    }
+                })
+            }
             window.addEventListener('load', function() {
-                var radioContainer = document.getElementById('radioContainer')
+                styleListener('p2d', 'ptwod', true);
+                styleListener('netplayServer', 'npurl', true);
+                styleListener('netplay', 'npgid', true, false, true);
+                styleListener('offline', 'pathToData', false);
+                styleListener('offline', 'singleFile', true);
+                styleListener('offline', 'biosFile', false, false, true);
+                styleListener('offline', 'ss', false);
+                var radioContainer = document.getElementById('radioContainer');
                 var labelHTML = '';
                 for (var i=0; i<systems.length; i++) {
                     labelHTML += '<label class="container">'+systems[i].name+'\n<input type="radio" name="systemSelect" value='+systems[i].core+'>\n<span class="checkmark"></span>\n</label>'
@@ -154,24 +183,7 @@
             document.getElementById('start').addEventListener('click', function(e) {
                 startBtn.style = "display:none;"
                 systemSelect.style = "display:block;"
-				 document.getElementById('startti').style.display = "none";
-            })
-            document.getElementById('p2d').addEventListener('change', function(e) {
-                document.getElementById('ptwod').style = (document.getElementById('p2d').checked ? 'display:block;' : 'display:none');
-            })
-            document.getElementById('netplayServer').addEventListener('change', function(e) {
-                document.getElementById('npurl').style = (document.getElementById('netplayServer').checked ? 'display:block;' : 'display:none');
-            })
-            document.getElementById('netplay').addEventListener('change', function(e) {
-                document.getElementById('npgid').style = (document.getElementById('netplay').checked ? 'display:block;' : 'display:none');
-                document.getElementById('nps').style = (document.getElementById('netplay').checked ? 'display:block;' : 'display:none');
-                document.getElementById('npurl').style = (document.getElementById('netplay').checked ? (document.getElementById('netplayServer').checked ? 'display:block;' : 'display:none') : 'display:none');
-            })
-            document.getElementById('offline').addEventListener('change', function(e) {
-                document.getElementById('pathToData').style = (document.getElementById('offline').checked ? 'display:none;' : 'display:block');
-                document.getElementById('singleFile').style = (document.getElementById('offline').checked ? 'display:block;' : 'display:none');
-                document.getElementById('bf').style = (document.getElementById('offline').checked ? 'display:none;' : 'display:block');
-                document.getElementById('ss').style = (document.getElementById('offline').checked ? 'display:none;' : 'display:block');
+                document.getElementById('startti').style.display = "none";
             })
             document.getElementById('systemSelected').addEventListener('click', function(e) {
                 var q = null;
@@ -190,19 +202,22 @@
                     }
                 }
                 if (q.netplay) {
-                    document.getElementById('np').style = "display:block;"
+                    document.getElementById('netplay').parentElement.parentElement.style = "display:block;";
+                }
+                if (q.beta) {
+                    document.getElementById('beta').parentElement.style = "display:block;";
                 }
                 if (q.lightgun) {
-                    document.getElementById('lg').style = "display:block;"
+                    document.getElementById('lightgun').parentElement.style = "display:block;";
                 }
                 if (q.bios) {
-                    document.getElementById('bf').style = "display:block;"
+                    document.getElementById('biosFile').parentElement.style = "display:block;";
                 }
                 if (q.mouse) {
-                    document.getElementById('sm').style = "display:block;"
+                    document.getElementById('snesMouse').parentElement.style = "display:block;";
                 }
                 if (q.multitap) {
-                    document.getElementById('smt').style = "display:block;"
+                    document.getElementById('snesMultiTap').parentElement.style = "display:block;";
                 }
                 window.selectedCoreData = q;
                 window.scrollTo(0, 0);
@@ -212,14 +227,14 @@
             document.getElementById('generateFile').addEventListener('click', async function(e) {
                 var data = {}
                 var zip = new JSZip();
-                var file = document.getElementById('gameRom').files[0]
-                var ejsColor = document.getElementById('ejsColor')
-                var errors = document.getElementById('errors')
-                var npGameId = document.getElementById('npGameId')
-                var path2Data = document.getElementById('path2Data')
-                var biosFile = document.getElementById('biosFile')
-                var offline = document.getElementById('offline')
-                var stateOnLoad = document.getElementById('stateOnLoad')
+                var file = document.getElementById('gameRom').files[0];
+                var ejsColor = document.getElementById('ejsColor');
+                var errors = document.getElementById('errors');
+                var npGameId = document.getElementById('npGameId');
+                var path2Data = document.getElementById('path2Data');
+                var biosFile = document.getElementById('biosFile');
+                var offline = document.getElementById('offline');
+                var stateOnLoad = document.getElementById('stateOnLoad');
                 if (ejsColor.value && ejsColor.value.trim() !== '') {
                     if (!/^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/.test(ejsColor.value)) {
                         errors.innerHTML = '<p><span style="color:red;font-size:25px;">An error occured When Generating</span></p><ul><li>Color theme is not hex value</li></ul>'
@@ -233,10 +248,13 @@
                 var gameName = (document.getElementById('nameOfGame').value && document.getElementById('nameOfGame').value.trim() !== '') ? document.getElementById('nameOfGame').value : file.name;
                 data['EJS_player'] = '#game';
                 data['EJS_core'] = window.selectedCoreData.core;
-                if (document.getElementById('snesMouse').checked) {
+                if (isChecked('snesMouse')) {
                     data['EJS_mouse'] = true;
                 }
-                if (document.getElementById('snesMultiTap').checked) {
+                if (isChecked('beta')) {
+                    data['EJS_BETA'] = true;
+                }
+                if (isChecked('snesMultiTap')) {
                     data['EJS_multitap'] = true;
                 }
                 if (document.getElementById('nameOfGame').value && document.getElementById('nameOfGame').value.trim() !== '') {
@@ -248,13 +266,13 @@
                 if (ejsColor.value && ejsColor.value.trim() !== '') {
                     data['EJS_color'] = ejsColor.value;
                 }
-                if (document.getElementById('startOnLoad').checked) {
+                if (isChecked('startOnLoad')) {
                     data['EJS_startOnLoaded'] = true;
                 }
-                if (document.getElementById('netplay').checked && npGameId.value && npGameId.value.trim() !== '') {
+                if (isChecked('netplay') && npGameId.value && npGameId.value.trim() !== '') {
                     data['EJS_gameID'] = npGameId.value;
                 }
-                if (document.getElementById('p2d').checked && path2Data.value && path2Data.value.trim() !== '') {
+                if (isChecked('p2d') && path2Data.value && path2Data.value.trim() !== '') {
                     data['EJS_pathtodata'] = path2Data.value;
                     if (! data['EJS_pathtodata'].endsWith('/')) {
                         data['EJS_pathtodata'] += '/';
@@ -262,7 +280,7 @@
                 } else {
                     data['EJS_pathtodata'] = 'https://rawcdn.githack.com/ethanaobrien/emulatorjs/main/data/';
                 }
-                if (document.getElementById('netplay').checked && document.getElementById('netplayServer').checked && document.getElementById('npServerURL').value && document.getElementById('npServerURL').value.trim() !== '') {
+                if (isChecked('netplay') && isChecked('netplayServer') && document.getElementById('npServerURL').value && document.getElementById('npServerURL').value.trim() !== '') {
                     data['EJS_netplayUrl'] = document.getElementById('npServerURL').value;
                 }
                 var zipOut = true;
@@ -317,7 +335,7 @@
                         }
                     }
                     fileData += '        </scr'+'ipt>\n        <script src="'+data['EJS_pathtodata']+'loader.js"></scr'+'ipt>\n    </body>\n</html>';
-                    
+
                 }
                 if (zipOut === false) {
                     document.getElementById('select2').style = "display:none;";

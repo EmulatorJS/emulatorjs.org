@@ -6,7 +6,8 @@ window.systems = [
         "core": "nes",
         "bios": true,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": true
     },
     {
         "name": "SNES",
@@ -15,7 +16,8 @@ window.systems = [
         "core": "snes",
         "bios": false,
         "mouse": true,
-        "multitap": true
+        "multitap": true,
+        "beta": true
     },
     {
         "name": "Gameboy | Color",
@@ -24,7 +26,8 @@ window.systems = [
         "core": "gb",
         "bios": true,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": true
     },
     {
         "name": "Game Boy Advance",
@@ -33,7 +36,8 @@ window.systems = [
         "core": "gba",
         "bios": true,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "Virtual Boy",
@@ -42,7 +46,8 @@ window.systems = [
         "core": "vb",
         "bios": false,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "Nintendo 64",
@@ -51,7 +56,8 @@ window.systems = [
         "core": "n64",
         "bios": false,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "Nintendo DS",
@@ -60,7 +66,8 @@ window.systems = [
         "core": "nds",
         "bios": false,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": true
     },
     {
         "name": "Sega Master System",
@@ -69,7 +76,8 @@ window.systems = [
         "core": "segaMS",
         "bios": false,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "Sega Game Gear",
@@ -78,7 +86,8 @@ window.systems = [
         "core": "segaGG",
         "bios": false,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "Sega Mega Drive",
@@ -87,7 +96,8 @@ window.systems = [
         "core": "segaMD",
         "bios": false,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "Sega 32X",
@@ -96,7 +106,8 @@ window.systems = [
         "core": "sega32x",
         "bios": false,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "Sega Saturn",
@@ -105,7 +116,8 @@ window.systems = [
         "core": "segaSaturn",
         "bios": true,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "Sega CD",
@@ -114,7 +126,8 @@ window.systems = [
         "core": "segaCD",
         "bios": true,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "Atari 2600",
@@ -123,7 +136,8 @@ window.systems = [
         "core": "atari2600",
         "bios": false,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "Atari 7800",
@@ -132,7 +146,8 @@ window.systems = [
         "core": "atari7800",
         "bios": false,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "Atari Lynx",
@@ -141,7 +156,8 @@ window.systems = [
         "core": "lynx",
         "bios": false,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "Atari Jaguar",
@@ -150,7 +166,8 @@ window.systems = [
         "core": "jaguar",
         "bios": false,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "Wanderswan | Color",
@@ -159,7 +176,8 @@ window.systems = [
         "core": "ws",
         "bios": true,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "MSX",
@@ -168,7 +186,8 @@ window.systems = [
         "core": "msx",
         "bios": true,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "Neo Geo Poket",
@@ -177,7 +196,8 @@ window.systems = [
         "core": "ngp",
         "bios": false,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "TurboGrafs-16 | PC Engine",
@@ -186,7 +206,8 @@ window.systems = [
         "core": "pce",
         "bios": true,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "3DO",
@@ -195,7 +216,8 @@ window.systems = [
         "core": "3do",
         "bios": true,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "Playstation",
@@ -204,7 +226,8 @@ window.systems = [
         "core": "psx",
         "bios": true,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     },
     {
         "name": "Arcade",
@@ -213,7 +236,8 @@ window.systems = [
         "core": "arcade",
         "bios": true,
         "mouse": false,
-        "multitap": false
+        "multitap": false,
+        "beta": false
     }
 ]
 systems.sort(function(a, b) {
