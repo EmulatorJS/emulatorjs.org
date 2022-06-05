@@ -1,0 +1,19 @@
+{
+  "name": "emu-site-2.0",
+  "version": "0.0.1",
+  "description": "Site for emulatorjs",
+  "main": "index.js",
+  "authors": {
+    "name": "Ethan O'Brien",
+    "email": "ethan.a.obrien@gmail.com"
+  },
+  "repository": "https://github.com/ethanaobrien/emu-site//emu-site-2.0",
+  "scripts": {
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress dev src",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
