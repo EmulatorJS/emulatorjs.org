@@ -8,7 +8,7 @@ actionLink: /editor.html
 features:
 - title: Customizable
   details: Made to be easy to customize
-- title: Embedable
+- title: Embeddable
   details: Easily embed into any website
 - title: Secure
   details: Only reaches out to resources you tell it to
