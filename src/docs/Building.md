@@ -26,6 +26,47 @@ sudo apt install -y         \
 <br>
 <br>
 
+### LibRetro
+
+1. **Clone** the repository.
+
+    ```sh
+    git clone https://github.com/libretro/libretro-fceumm.git
+    ```
+
+<br>
+
+2. The next steps depend on whether or not you have a `Makefile.libretro` file.
+   
+   <br>
+   
+   - Navigate to the folder with the makefile. If it is not in the base directory, look for a folder named libretro.
+   
+   #### With
+   
+   - Build with:
+   
+       ```sh
+       emmake make -f Makefile.libretro platform=emscripten
+       ```
+   
+   <br>
+   
+   #### Without
+   
+   - Build with:
+   
+       ```sh
+       emmake make platform=emscripten
+       ```
+
+<br>
+
+3. Copy the `.bc` file to the RetroArch `/dist-cores/` directory and continue to build the wasm files.
+
+<br>
+<br>
+
 ### WASM
 
 1. **Clone** the repository.
@@ -45,49 +86,6 @@ sudo apt install -y         \
     ```sh
     emmake ./dist-cores.sh emscripten
     ```
-
-<br>
-<br>
-
-### LibRetro
-
-1. **Clone** the repository.
-
-    ```sh
-    git clone https://github.com/libretro/libretro-fceumm.git
-    ```
-
-<br>
-
-2. The next steps depend on whether or not you have a `Makefile.libretro` file.
-   
-   <br>
-   
-   #### With
-   
-   - Navigate to the folder with the makefile.
-   
-   - Build with:
-   
-       ```sh
-       emmake make -f Makefile.libretro platform=emscripten
-       ```
-   
-   <br>
-   
-   #### Without
-   
-   - Stay in the base directory of the project.
-   
-   - Build with:
-   
-       ```sh
-       emmake make platform=emscripten
-       ```
-
-<br>
-
-3. Copy the `.bc` file to the `/dist-cores/` folder.
 
 <br>
 

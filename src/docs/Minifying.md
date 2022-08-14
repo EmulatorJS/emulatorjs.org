@@ -23,7 +23,7 @@ Before pushing the script files onto your production server it is recommended to
 3. Start the minification with:
 
     ```sh
-    node index.js
+    npm run build
     ```
 
 
