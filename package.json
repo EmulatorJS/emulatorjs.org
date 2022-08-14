@@ -7,7 +7,7 @@
     "name": "Ethan O'Brien",
     "email": "ethan.a.obrien@gmail.com"
   },
-  "repository": "https://github.com/ethanaobrien/emu-site//emu-site-2.0",
+  "repository": "https://github.com/ethanaobrien/emu-site/emu-site-2.0",
   "scripts": {
     "dev": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress dev src",
     "build": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress build src"

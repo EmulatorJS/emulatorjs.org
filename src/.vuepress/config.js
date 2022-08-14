@@ -52,7 +52,8 @@ module.exports = {
             'intro',
             'Building',
             'Control Mapping',
-            'Minifying'
+            'Minifying',
+            'Cores'
           ]
         }
       ],
