@@ -152,6 +152,12 @@ EJS_Settings = {
 }
 ```
 
+## `EJS_VirtualGamepadSettings`
+Sets the location of what buttons. More information about the virual gamepad button customization is located [here](Virutal%20Gamepad%20Settings).
+
+- Type: `object`
+- Default: 
+
 ## `EJS_Buttons`
 Shows/hides buttons.
 
