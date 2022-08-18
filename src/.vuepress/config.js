@@ -52,6 +52,7 @@ module.exports = {
             'intro',
             'Building',
             'Control Mapping',
+            'Virutal Gamepad Settings',
             'Minifying',
             'Cores'
           ]
