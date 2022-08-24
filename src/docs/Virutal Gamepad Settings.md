@@ -9,21 +9,41 @@ Example:
 EJS_VirtualGamepadSettings = [
     {
         type: "button",
+        text: "Y",
+        id: "y",
+        location: "right",
+        left: 40,
+        bold: true,
+        input_value: 9
+    },
+    {
+        type: "button",
+        text: "X",
+        id: "X",
+        location: "right",
+        top: 40,
+        bold: true,
+        input_value: 1
+    },
+    {
+        type: "button",
         text: "B",
         id: "b",
         location: "right",
-        left: -10,
-        top: 70,
-        input_value: 0
+        left: 81,
+        top: 40,
+        bold: true,
+        input_value: 8
     },
     {
         type: "button",
         text: "A",
         id: "a",
         location: "right",
-        left: 60,
-        top: 70,
-        input_value: 8
+        left: 40,
+        top: 80,
+        bold: true,
+        input_value: 0
     },
     {
         type: "zone",
@@ -37,6 +57,8 @@ EJS_VirtualGamepadSettings = [
         id: "start",
         location: "center",
         left: 60,
+        fontSize: 15,
+        block: true,
         input_value: 3
     },
     {
@@ -45,6 +67,8 @@ EJS_VirtualGamepadSettings = [
         id: "select",
         location: "center",
         left: -5,
+        fontSize: 15,
+        block: true,
         input_value: 2
     }
 ]
@@ -84,6 +108,10 @@ Types:
 `right` (optional): the css right value. Must be a number. Value is in `px`.
 
 `top` (optional): the css top value. Must be a number. Value is in `px`.
+
+`bold` (default: `false`): Will set the text in the button to be bold. Value is in `px`.
+
+`fontSize` (default: `30`): Will set the text size of the button text. Value is in `px`.
 
 `id`: The ID of the button. Must be unique.
 
