@@ -1,11 +1,17 @@
 document.getElementById('systemJS').addEventListener('load', function() {
+    loadsystems();
+})
+document.getElementById('start').addEventListener('click', function() {
+    loadsystems();
+})
+function loadsystems(){
     var radioContainer = document.getElementById('radioContainer')
     var labelHTML = '';
     for (var i=0; i<systems.length; i++) {
         labelHTML += '<label class="container">'+systems[i].name+'\n<input type="radio" name="systemSelect" value='+systems[i].core+'>\n<span class="checkmark"></span>\n</label>'
     }
     radioContainer.innerHTML = labelHTML
-})
+}
 var startBtn = document.getElementById('start');
 var systemSelect = document.getElementById('systemSelect');
 var select2 = document.getElementById('select2');
