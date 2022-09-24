@@ -49,7 +49,18 @@ EJS_VirtualGamepadSettings = [
         type: "zone",
         location: "left",
         left: "50%",
-        top: "50%"
+        top: "50%",
+        joystickInput: true,
+        inputValues: [16, 17, 18, 19]
+    },
+    //Note- the dpad and the zone will overlap in this example, this is just to show what it should look like.
+    {
+    	type: "dpad"
+        location: "left",
+        left": "50%,
+        right": "50%,
+        joystickInput: false,
+        inputValues: [4, 5, 6, 7]
     },
     {
         type: "button",
@@ -76,7 +87,9 @@ EJS_VirtualGamepadSettings = [
 
 Types:
 
-`zone`: the gamepad joystick.
+`zone`: The gamepad joystick.
+
+`d-pad`: A d-pad object.
 
 `button`: just a button.
 
@@ -84,13 +97,32 @@ Types:
 
 ## Values needed for `zone`
 
-`type` must be set to `zone`.
+`type` Must be set to `zone`.
 
 `location`: The area to place the joystick. Must be `top`, `left`, `center`, or `right`.
 
-`left`: the css left value.
+`left`: The css left value (must be in a percentage).
 
-`right`: the css right value.
+`right`: The css right value (must be in a percentage).
+
+`joystickInput`: Set this to true if the input values are `[16, 17, 18, 19]`. This should only be set to true for analog inputs.
+
+`inputValues`: The values to input into the emulator. Normally either `[16, 17, 18, 19]` or `[4, 5, 6, 7]`.
+
+
+## Values needed for `dpad`
+
+`type` must be set to `dpad`.
+
+`location`: The area to place the dpad. Must be `top`, `left`, `center`, or `right`.
+
+`left`: the css left value (must be in a percentage).
+
+`right`: the css right value (must be in a percentage).
+
+`joystickInput`: Set this to true if the input values are `[16, 17, 18, 19]`. This should only be set to true for analog inputs. Note that the dpad does not support analog values and the buttons are either down or up.
+
+`inputValues`: The values to input into the emulator. Normally either `[16, 17, 18, 19]` or `[4, 5, 6, 7]`.
 
 
 ## Values needed for `button`
@@ -103,11 +135,11 @@ Types:
 
 `block`: Will make the button appear as a block.
 
-`left` (optional): the css left value. Must be a number. Value is in `px`.
+`left` (optional): The css left value. Must be a number. Value is in `px`.
 
-`right` (optional): the css right value. Must be a number. Value is in `px`.
+`right` (optional): The css right value. Must be a number. Value is in `px`.
 
-`top` (optional): the css top value. Must be a number. Value is in `px`.
+`top` (optional): The css top value. Must be a number. Value is in `px`.
 
 `bold` (default: `false`): Will set the text in the button to be bold. Value is in `px`.
 
@@ -118,3 +150,4 @@ Types:
 `input_value`: The input value. Available options can be found [here](https://github.com/ethanaobrien/emulatorjs/blob/018c39d4065b866487f8f18ca88c9488eab69a6d/data/emu-main.js#L2998).
 
 `input_new_cores`: The input value for new cores. Available options can be found [here](https://github.com/ethanaobrien/emulatorjs/blob/018c39d4065b866487f8f18ca88c9488eab69a6d/data/emu-main.js#L2998).
+
