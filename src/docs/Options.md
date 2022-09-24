@@ -120,6 +120,13 @@ Emulator hex color theme.
 - Default: 
 - Example: `EJS_pathtodata = '#00FF80'`
 
+## `EJS_CacheLimit`
+The limit to game cache (per rom) in bytes
+
+- Type: `number`
+- Default: `1073741824` (`1 GB`)
+- Example: `EJS_CacheLimit = 1024`
+
 ## `EJS_cheats`
 Default cheats to be stored in the cheat manager screen.
 
@@ -181,6 +188,21 @@ EJS_Buttons = {
     quickLoad: false,
     screenshot: false,
     cacheManage: false
+}
+```
+
+## `EJS_defaultOptions`
+Sets the default settings menu options.
+
+- Type: `object`
+- Default: 
+- Note: Available options and values will be logged when the emulator is started. Load the emulator page with `EJS_DEBUG_XX` on, click the play button, then on load there should be a log in the console `supported menu options`. If you use the one that logs on page load, not all options will be available and not all options will be supported.
+- Example:
+```
+EJS_defaultOptions = {
+    'shader':'crt-mattias.glslp',
+    'save-state-slot': 4,
+    'save-state-location': 'keep in browser'
 }
 ```
 
