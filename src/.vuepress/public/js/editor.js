@@ -123,7 +123,7 @@ document.getElementById('generateFile').addEventListener('click', async function
             data['EJS_pathtodata'] += '/';
         }
     } else {
-        data['EJS_pathtodata'] = 'https://rawcdn.githack.com/ethanaobrien/emulatorjs/main/data/';
+        data['EJS_pathtodata'] = 'https://rawcdn.githack.com/EmulatorJS/EmulatorJS/main/data/';
     }
     if (document.getElementById('netplay').checked && document.getElementById('netplayServer').checked && document.getElementById('npServerURL').value && document.getElementById('npServerURL').value.trim() !== '') {
         data['EJS_netplayUrl'] = document.getElementById('npServerURL').value;
@@ -141,7 +141,7 @@ document.getElementById('generateFile').addEventListener('click', async function
             zip.file(biosFile.files[0].name, new Blob([biosFile.files[0]]));
         }
         var spaces = '            ';
-        var fileData = '<html>\n    <head>\n        <!--HTML file auto generated using emulatorjs codehelper-->\n    </head>\n    <body>\n        <div style="width:640px;height:480px;max-width:100%">\n            <div id="game"></div>\n        </div>\n        <script>\n';
+        var fileData = '<html>\n    <head>\n        <!--HTML file auto generated using EmulatorJS codehelper-->\n    </head>\n    <body>\n        <div style="width:640px;height:480px;max-width:100%">\n            <div id="game"></div>\n        </div>\n        <script>\n';
         for (var k in data) {
             if (data[k] === true || data[k] === false) {
                 fileData += (spaces + k + ' = ' + data[k] + ';\n');
@@ -155,7 +155,7 @@ document.getElementById('generateFile').addEventListener('click', async function
         var b = JSON.stringify(Array.from(new Uint8Array(await (new Blob([file])).arrayBuffer())));
         var spaces = '            ';
         var a = spaces + 'window.gameData = '+b+';\n';
-        var fileData = '<html>\n    <head>\n        <!--HTML file auto generated using emulatorjs codehelper-->\n    </head>\n    <body>\n        <div style="width:640px;height:480px;max-width:100%">\n            <div id="game"></div>\n        </div>\n        <script>\n';
+        var fileData = '<html>\n    <head>\n        <!--HTML file auto generated using EmulatorJS codehelper-->\n    </head>\n    <body>\n        <div style="width:640px;height:480px;max-width:100%">\n            <div id="game"></div>\n        </div>\n        <script>\n';
         fileData += a;
         for (var k in data) {
             if (data[k] === true || data[k] === false || k === 'EJS_gameUrl') {
@@ -171,7 +171,7 @@ document.getElementById('generateFile').addEventListener('click', async function
         var b = JSON.stringify(Array.from(new Uint8Array(await (new Blob([file])).arrayBuffer())));
         zip.file('gameData.js', 'window.gameData = '+b+'\n');
         var spaces = '            ';
-        var fileData = '<html>\n    <head>\n        <!--HTML file auto generated using emulatorjs codehelper-->\n    </head>\n    <body>\n        <div style="width:640px;height:480px;max-width:100%">\n            <div id="game"></div>\n        </div>\n        <script src=\'gameData.js\'></scr'+'ipt>\n        <script>\n';
+        var fileData = '<html>\n    <head>\n        <!--HTML file auto generated using EmulatorJS codehelper-->\n    </head>\n    <body>\n        <div style="width:640px;height:480px;max-width:100%">\n            <div id="game"></div>\n        </div>\n        <script src=\'gameData.js\'></scr'+'ipt>\n        <script>\n';
         for (var k in data) {
             if (data[k] === true || data[k] === false || k === 'EJS_gameUrl') {
                 fileData += (spaces + k + ' = ' + data[k] + ';\n');
