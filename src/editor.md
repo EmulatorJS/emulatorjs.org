@@ -28,6 +28,7 @@
             <input type="checkbox" id="lightgun">
             <span class="checkmark2"></span>
         </label>
+        <!--
         <div id="np" style="display:none;">
             <label class="container">Netplay
                 <input type="checkbox" id="netplay">
@@ -48,6 +49,7 @@
                 </ul>
             </ul>
         </div>
+        -->
         <label class="container">Make it work without web server (not recommended)
             <input type="checkbox" id="offline">
             <span class="checkmark2"></span>
@@ -76,8 +78,9 @@
         <label class="textBox">Ad Url
             <input type="text" id="adUrl">
         </label>
+        <br>
         <label class="textBox">Hex Color theme
-            <input type="text" id="ejsColor">
+            <input type="color" id="ejsColor" value="#0064ff">
         </label>
         <br>
         <label class="textBox" style="display:none;" id="bf">Bios File:

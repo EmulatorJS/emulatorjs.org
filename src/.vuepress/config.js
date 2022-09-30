@@ -32,7 +32,7 @@ module.exports = {
       },
       {
         text: 'EmulatorJS',
-        link: 'https://github.com/ethanaobrien/emulatorjs'
+        link: 'https://github.com/EmulatorJS/EmulatorJS'
       }
     ],
     sidebar: {
