@@ -22,6 +22,7 @@ document.getElementById('start').addEventListener('click', function(e) {
 document.getElementById('p2d').addEventListener('change', function(e) {
     document.getElementById('ptwod').style = (document.getElementById('p2d').checked ? 'display:block;' : 'display:none');
 })
+/*
 document.getElementById('netplayServer').addEventListener('change', function(e) {
     document.getElementById('npurl').style = (document.getElementById('netplayServer').checked ? 'display:block;' : 'display:none');
 })
@@ -30,6 +31,7 @@ document.getElementById('netplay').addEventListener('change', function(e) {
     document.getElementById('nps').style = (document.getElementById('netplay').checked ? 'display:block;' : 'display:none');
     document.getElementById('npurl').style = (document.getElementById('netplay').checked ? (document.getElementById('netplayServer').checked ? 'display:block;' : 'display:none') : 'display:none');
 })
+*/
 document.getElementById('offline').addEventListener('change', function(e) {
     document.getElementById('pathToData').style = (document.getElementById('offline').checked ? 'display:none;' : 'display:block');
     document.getElementById('singleFile').style = (document.getElementById('offline').checked ? 'display:block;' : 'display:none');
@@ -53,7 +55,7 @@ document.getElementById('systemSelected').addEventListener('click', function(e) 
         }
     }
     if (q.netplay) {
-        document.getElementById('np').style = "display:block;"
+        //document.getElementById('np').style = "display:block;"
     }
     if (q.lightgun) {
         document.getElementById('lg').style = "display:block;"
@@ -78,7 +80,7 @@ document.getElementById('generateFile').addEventListener('click', async function
     var file = document.getElementById('gameRom').files[0]
     var ejsColor = document.getElementById('ejsColor')
     var errors = document.getElementById('errors')
-    var npGameId = document.getElementById('npGameId')
+    //var npGameId = document.getElementById('npGameId')
     var path2Data = document.getElementById('path2Data')
     var biosFile = document.getElementById('biosFile')
     var offline = document.getElementById('offline')
@@ -114,9 +116,9 @@ document.getElementById('generateFile').addEventListener('click', async function
     if (document.getElementById('startOnLoad').checked) {
         data['EJS_startOnLoaded'] = true;
     }
-    if (document.getElementById('netplay').checked && npGameId.value && npGameId.value.trim() !== '') {
-        data['EJS_gameID'] = npGameId.value;
-    }
+    //if (document.getElementById('netplay').checked && npGameId.value && npGameId.value.trim() !== '') {
+    //    data['EJS_gameID'] = npGameId.value;
+    //}
     if (document.getElementById('p2d').checked && path2Data.value && path2Data.value.trim() !== '') {
         data['EJS_pathtodata'] = path2Data.value;
         if (! data['EJS_pathtodata'].endsWith('/')) {
@@ -125,10 +127,12 @@ document.getElementById('generateFile').addEventListener('click', async function
     } else {
         data['EJS_pathtodata'] = 'https://rawcdn.githack.com/EmulatorJS/EmulatorJS/main/data/';
     }
-    if (document.getElementById('netplay').checked && document.getElementById('netplayServer').checked && document.getElementById('npServerURL').value && document.getElementById('npServerURL').value.trim() !== '') {
-        data['EJS_netplayUrl'] = document.getElementById('npServerURL').value;
-    }
+    //if (document.getElementById('netplay').checked && document.getElementById('netplayServer').checked && document.getElementById('npServerURL').value && document.getElementById('npServerURL').value.trim() !== '') {
+    //    data['EJS_netplayUrl'] = document.getElementById('npServerURL').value;
+    //}
     var zipOut = true;
+    let fileData = '<html>\n    <head>\n        <!--HTML file auto generated using EmulatorJS codehelper-->\n    </head>\n    <body>\n        <div style="width:640px;height:480px;max-width:100%">\n            <div id="game"></div>\n        </div>\n        <script>\n';
+    const spaces = '            ';
     if (! offline.checked) {
         if (stateOnLoad.files[0]) {
             data['EJS_loadStateURL'] = stateOnLoad.files[0].name;
@@ -140,8 +144,6 @@ document.getElementById('generateFile').addEventListener('click', async function
             data['EJS_biosUrl'] = biosFile.files[0].name;
             zip.file(biosFile.files[0].name, new Blob([biosFile.files[0]]));
         }
-        var spaces = '            ';
-        var fileData = '<html>\n    <head>\n        <!--HTML file auto generated using EmulatorJS codehelper-->\n    </head>\n    <body>\n        <div style="width:640px;height:480px;max-width:100%">\n            <div id="game"></div>\n        </div>\n        <script>\n';
         for (var k in data) {
             if (data[k] === true || data[k] === false) {
                 fileData += (spaces + k + ' = ' + data[k] + ';\n');
@@ -153,9 +155,7 @@ document.getElementById('generateFile').addEventListener('click', async function
     } else if (document.getElementById('offlinePack').checked) {
         data['EJS_gameUrl'] = 'URL.createObjectURL(new Blob([Uint8Array.from(window.gameData)]))';
         var b = JSON.stringify(Array.from(new Uint8Array(await (new Blob([file])).arrayBuffer())));
-        var spaces = '            ';
         var a = spaces + 'window.gameData = '+b+';\n';
-        var fileData = '<html>\n    <head>\n        <!--HTML file auto generated using EmulatorJS codehelper-->\n    </head>\n    <body>\n        <div style="width:640px;height:480px;max-width:100%">\n            <div id="game"></div>\n        </div>\n        <script>\n';
         fileData += a;
         for (var k in data) {
             if (data[k] === true || data[k] === false || k === 'EJS_gameUrl') {
@@ -170,8 +170,6 @@ document.getElementById('generateFile').addEventListener('click', async function
         data['EJS_gameUrl'] = 'URL.createObjectURL(new Blob([Uint8Array.from(window.gameData)]))';
         var b = JSON.stringify(Array.from(new Uint8Array(await (new Blob([file])).arrayBuffer())));
         zip.file('gameData.js', 'window.gameData = '+b+'\n');
-        var spaces = '            ';
-        var fileData = '<html>\n    <head>\n        <!--HTML file auto generated using EmulatorJS codehelper-->\n    </head>\n    <body>\n        <div style="width:640px;height:480px;max-width:100%">\n            <div id="game"></div>\n        </div>\n        <script src=\'gameData.js\'></scr'+'ipt>\n        <script>\n';
         for (var k in data) {
             if (data[k] === true || data[k] === false || k === 'EJS_gameUrl') {
                 fileData += (spaces + k + ' = ' + data[k] + ';\n');

@@ -58,7 +58,7 @@ window.systems = [
         "netplay": false,
         "lightgun": false,
         "core": "nds",
-        "bios": false,
+        "bios": true,
         "mouse": false,
         "multitap": false
     },
