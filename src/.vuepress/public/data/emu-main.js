@@ -1858,6 +1858,17 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                     },
                     _0x10b71a = function() {
                         _0x4d7024.loading.querySelector('.' .concat(_0x4fce24.p1)).innerHTML = 'Game Core ready';
+                        _0x4d7024.Module._supports_states && (_0x378b5c.statesSupported = _0x4d7024.Module.cwrap('supports_states', 'number', []));
+                        if (_0xdcec2a.statesSupported) {
+                            try {
+                                _this.statesSupported = !!_0xdcec2a.statesSupported();
+                                _0x1e2c68.element(_this.elements.buttons.netplay) && _0x132da7(_this.elements.buttons.netplay, !_0x7f9f36.supportNetPlay.call(_this));
+                                _0x1e2c68.element(_this.elements.buttons.saveState) && _0x132da7(_this.elements.buttons.saveState, !_this.statesSupported);
+                                _0x1e2c68.element(_this.elements.buttons.loadState) && _0x132da7(_this.elements.buttons.loadState, !_this.statesSupported);
+                                _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(2), !_this.statesSupported);
+                                _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(3), !_this.statesSupported);
+                            }catch(e){}
+                        }
                         let _0x17edbf = _this.config.biosUrl;
                         _0xdcec2a.bindFunction.call(_this);
                         _0xdcec2a.setGamepadDialog.call(_this);
@@ -2112,7 +2123,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                                 _0x28ee7f = e.data;
 
                             let status = _0x4d7024.loading.querySelector('.' .concat(_0x4fce24.p1));
-                            if (!(_this.config.oldCores === true && _0x28ee7f.oldCores[_this.system]) && _0x28ee7f.newCores[getSystem(_this.system)] && (_0x2d904a.wasm || Boolean(_0x28ee7f.newCores[getSystem(_this.system)].asmjs))) {
+                            if (!(_this.config.oldCores === true && _0x28ee7f.oldCores[_this.system]) && _0x28ee7f.newCores[getSystem(_this.system)] && (_0x2d904a.wasm || Boolean(_0x28ee7f.newCores[getSystem(_this.system)].asmjs)) && !_0x59aa33.isIos) {
                                 _this.coreVer = 2;
                                 delete Module.readAsync;
                                 Module.INITIAL_MEMORY = Module.TOTAL_MEMORY;
@@ -2222,6 +2233,11 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                             _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(2), !_0x5b1dcd);
                             _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(3), !_0x5b1dcd);
                             _this.statesSupported = _0x5b1dcd;
+                            if (window.innerWidth < 400) {
+                                _0x1e2c68.element(_this.elements.inputs.volume) && _0x132da7(_this.elements.inputs.volume, true);
+                                _0x1e2c68.element(_this.elements.buttons.mute) && _0x132da7(_this.elements.buttons.mute, true);
+                                _0x1e2c68.element(_this.elements.buttons.cheat) && _0x132da7(_this.elements.buttons.cheat, true);
+                            }
                             
                             if (_this.config.buttons) {
                                 if (_this.config.buttons.playPause === false) {
@@ -2644,7 +2660,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
             'saveLoadDB': function(type) {
                 try {
                     if (!_0x378b5c.saveLoaddbDB.db) return false;
-                    if (_0x2593da && typeof _0x2593da.getCoreOptionsValue == 'function') {
+                    if (_0x2593da && typeof _0x2593da.getCoreOptionsValue === 'function') {
                         let location = _0x2593da.getCoreOptionsValue('save-state-location');
                         if (!location || location === 'download') {
                             return false;
@@ -4749,6 +4765,9 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         }
                     }, 0x1e);
                 };
+                window.EJS_saveState = function() {
+                    return _0x378b5c.saveState();
+                }
                 let _0x840cf4 = _0x27f4c4.Module.cwrap('cmd_take_screenshot', '', []);
                 _0x378b5c.getScreenData = function() {
                     _0x840cf4();
@@ -4758,7 +4777,6 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 _0x378b5c.currentFrameNum = _0x27f4c4.Module.cwrap('get_current_frame_count', '', []);
                 _0x378b5c.saveSavFiles = _0x27f4c4.Module.cwrap('cmd_savefiles', '', []);
                 _0x27f4c4.Module._get_core_options && (_0x378b5c.getGameCoreOptions = _0x27f4c4.Module.cwrap('get_core_options', 'string', []));
-                _0x27f4c4.Module._supports_states && (_0x378b5c.statesSupported = _0x27f4c4.Module.cwrap('supports_states', 'number', []));
                 _0x378b5c.systemPause = function(e) {
                     return false;
                 };
@@ -5327,16 +5345,6 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                         _0xa88a13 = {};
                 }
                 const _this = this;
-                try {
-                    if (_0xdcec2a.statesSupported) {
-                        _this.statesSupported = !!_0xdcec2a.statesSupported();
-                        _0x1e2c68.element(_this.elements.buttons.netplay) && _0x132da7(_this.elements.buttons.netplay, !_0x7f9f36.supportNetPlay.call(_this));
-                        _0x1e2c68.element(_this.elements.buttons.saveState) && _0x132da7(_this.elements.buttons.saveState, !_this.statesSupported);
-                        _0x1e2c68.element(_this.elements.buttons.loadState) && _0x132da7(_this.elements.buttons.loadState, !_this.statesSupported);
-                        _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(2), !_this.statesSupported);
-                        _0x132da7(_0x2593da.contextMenu.querySelectorAll('ul li').item(3), !_this.statesSupported);
-                    }
-                } catch(e){console.warn(e)}
                 if (this.coreVer === 2) {
                     _0xa88a13 = {};
                     _0xa88a13['fps'] = {
@@ -5884,7 +5892,7 @@ window.EJS_main = function(_0xa88a13, _0x17edbf, _0x2c1832) {
                 this.elements.dialogs.loadState = _0x2c1832;
             },
             'setScreenRecord': function(_0x4c3fdd, _0x289259) {
-                if (! window.MediaRecorder) {
+                if (!window.MediaRecorder) {
                     return;
                 };
                 let _0x2c1832 = _0x7f9f36.createButton.call(this, 'screen-record', {
