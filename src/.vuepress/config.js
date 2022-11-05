@@ -28,7 +28,7 @@ module.exports = {
       },
       {
         text: 'Demo',
-        link: '/demo.html'
+        link: 'https://demo.emulatorjs.org/'
       },
       {
         text: 'EmulatorJS',
