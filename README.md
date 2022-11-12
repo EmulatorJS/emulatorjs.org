@@ -34,3 +34,5 @@ Lastly, run the following to spin up and webhost the project
 yarn dev_new
 ```
 It can now be reached at http://localhost:8080/.
+
+NOTE: Whenever you make any changes to the vuepres "config.js" file, close the running node program and re-reun 'yard dev_new'

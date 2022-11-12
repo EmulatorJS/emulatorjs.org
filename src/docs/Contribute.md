@@ -6,7 +6,5 @@ There are several ways to contribute, be it directly to helping develop features
 
 * Documentation [github page](https://github.com/EmulatorJS/emu-site).
 
-* To help with art assets, head on over [here](https://github.com/linuxserver/emulatorjs).
-
 Just wanna donate? That'd help too!
 [libretro](https://retroarch.com/index.php?page=donate)

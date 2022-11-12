@@ -1,34 +1,22 @@
 # Features
-EmulatorJS has been developed by gamers for gamers. As such, we know what we want. Have a look at our features and feel free to submit further feature requests [here](https://github.com/EmulatorJS/EmulatorJS/issues) and title it "Feature Request: ".
+EmulatorJS has been developed by gamers for gamers. As such, we know what we want. Have a look at our features and feel free to submit further feature requests by opening a new issue [here](https://github.com/EmulatorJS/EmulatorJS/issues) and use an appropriate [label](https://github.com/EmulatorJS/EmulatorJS/labels).
+
+Before opening a new issue, please search through current and previous issues to see if it has already been addressed.
 
 ## User Features
-* User Accounts
-  * After the admin creates a username and password, an individual can login and have their own persistent configs & save data which could be downloaded from the website & uploaded to a different computer, or have the option to push your save directly to the server and pull it down again after logging in to another computer.
-* Drag-&-Drop saves right onto the running emulator to load from where you left off.
-
-### File Browser
-The file browser can be accessed via the folder icon on the top left corner of the play screen. Clicking on it, the player has the option to login to their profile and pull their profile from the server and pickup where they left off in their save files, or push their latest saves to the server.
-
-Here, we are also given the option to download or upload a full backup of our profile to take on the go.
-
-Lastly, we have "Backup to IPFS". (wip) This is a decentralized storage system.
-
-## Admin Features
-* Rom Management:
-  * Able to scan games and scrape their information from online soucres.
-* Media Managemment:
-  * Uses the scraped ROM data to download artwork and videos for each console and ROM added.
-* Config Management:
-  * Edit the config file for each system including defining what emulator to use.
-* File Management:
-  * Download and upload files remotely
-* Profile Management:
-  * Add or delete users/profiles
-* Custom Metadata:
-  * When you identify roms or upload custom artwork from the rom management interface, all of that data is stored as custom metadata in your server. Any uploaded custom art assets are added to the local IPFS server running in this the EmulatorJS server. To share this data with the world, you will need to forward port 4001 to a public IP address.
+* A demo page via the included "index.html" file
+  * Drag-&-Drop to upload a game ROM, select which system its for then click "Load Game" to play
+* Emulator controls such as "Pause" or "Restart"
+* Save state that downloads to your device
+* Load state from a save state you previously downloaded
+  * Drag-&-Drop saves right onto the running emulator to load from where you left off!
+* Screen recording for sharing with friends
+* Cache manager to access or clear any local game data saved to the web browser cache
+* Control settings to map keyboard/controller button binds for up to 4 players
+* Cheats menu to add cheat codes (if you're into that)
 
 ## Extensions
-Our friend [Ramaerel](https://github.com/Ramaerel/emulatorjs-GameLibrary) developed the EmulatorJS GameLibrary Extension.
+Our friend [Ramaerel](https://github.com/Ramaerel/emulatorjs-GameLibrary) is developing the EmulatorJS GameLibrary Extension.
 * This add-on reads the contents of your ROM folders and uses it to display the games library. ROMs with common endings (like .iso, .bin or .zip), must also include the applicable extension before it. A list is included in this readme with the additional extensions, and will be updated as I go.
 ```
 Example: [game].[system].[file extension]
