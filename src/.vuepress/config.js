@@ -42,6 +42,7 @@ module.exports = {
         path: '/docs/',
         collapsable: false,
         children: [
+          ['/docs/News', 'News'],
           ['/docs/Getting Started', 'Getting Started'],
           ['/docs/Features', 'Features'],
           ['/docs/Options', 'Options'],
