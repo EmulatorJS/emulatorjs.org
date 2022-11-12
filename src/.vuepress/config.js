@@ -19,7 +19,7 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Docs',
+        text: 'Documentation',
         link: '/docs/',
       },
       {
@@ -35,30 +35,36 @@ module.exports = {
         link: 'https://github.com/EmulatorJS/EmulatorJS'
       }
     ],
-    sidebar: {
-      '/docs/': [
-        {
-          title: 'Docs',
-          collapsable: false,
-          children: [
-            'Introduction',
-            'Options'
-          ]
-        },
-        {
-          title: 'Developers',
-          collapsable: false,
-          children: [
-            'intro',
-            'Building',
-            'Control Mapping',
-            'Virutal Gamepad Settings',
-            'Minifying',
-            'Cores'
-          ]
-        }
-      ],
-    }
+    sidebarDepth: 2,
+    sidebar: [
+      {
+        title: 'Docs',
+        path: '/docs/',
+        collapsable: false,
+        children: [
+          ['/docs/Getting Started', 'Getting Started'],
+          ['/docs/Features', 'Features'],
+          ['/docs/Options', 'Options'],
+          ['/docs/Languages', 'Languages'],
+          ['/docs/Roadmap', 'Roadmap'],
+          ['https://github.com/EmulatorJS/EmulatorJS/blob/main/CHANGES.md', 'Changelog'],
+          ['/docs/Contribute', 'Contribute']
+        ]
+      },
+      {
+        title: 'For Developers',
+        path: '/docs4devs/',
+        collapsable: false,
+        children: [
+          ['/docs4devs/Building', 'Building EmulatorJS'],
+          ['/docs4devs/BuildingRAW', 'Building RetroArch-Web'],
+          ['/docs4devs/Control Mapping', 'Control Mapping'],
+          ['/docs4devs/Virutal Gamepad Settings', 'Virutal Gamepad Settings'],
+          ['/docs4devs/Minifying', 'Minifying'],
+          ['/docs4devs/Cores', 'Cores']
+        ]
+      }
+    ]
   },
   plugins: [
     '@vuepress/plugin-back-to-top',
