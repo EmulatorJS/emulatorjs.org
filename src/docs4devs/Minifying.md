@@ -2,13 +2,9 @@
 
 Before pushing the script files onto your production server it is recommended to minify them to save on load times as well as bandwidth.
 
-<br>
-
 ## Requirements
 
 - **[NodeJS]**
-
-<br>
 
 ## Steps
 
@@ -25,7 +21,6 @@ Before pushing the script files onto your production server it is recommended to
     ```sh
     npm run build
     ```
-
 
 <!----------------------------------------------------------------------------->
 

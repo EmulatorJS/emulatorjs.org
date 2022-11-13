@@ -1,13 +1,18 @@
 {
   "name": "emu-site-2.0",
-  "version": "0.0.1",
-  "description": "Site for emulatorjs",
+  "version": "0.0.2",
+  "description": "A website for EmulatorJS",
   "main": "index.js",
-  "authors": {
+  "author": {
     "name": "Ethan O'Brien",
-    "email": "ethan.a.obrien@gmail.com"
+    "email": "ethan.a.obrien@gmail.com",
+    "url": "https://github.com/ethanaobrien"
   },
-  "repository": "https://github.com/ethanaobrien/emu-site/emu-site-2.0",
+  "contributors": [
+    "Isaiah Koontz <isaiah.koontz@gmail.com> (https://github.com/KingIzzymon)",
+    "Allan Niles (https://github.com/allancoding)"
+  ],
+  "repository": "https://github.com/EmulatorJS/emu-site",
   "scripts": {
     "dev_new": "vuepress dev src",
     "build_new": "vuepress build src",
@@ -16,6 +21,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.5.3"
+    "vuepress": "^1.9.7"
   }
 }

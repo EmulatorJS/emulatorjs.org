@@ -1,7 +1,8 @@
-# Building
+# Building RetroArch-Web
 
 *Instructions have only been confirmed working for **Ubuntu**.*
 
+* For simplicity, you can execute [this script.](https://github.com/KingIzzymon/retroarch-web/blob/main/compileretroarchweb.sh)
 <br>
 
 ### Dependencies

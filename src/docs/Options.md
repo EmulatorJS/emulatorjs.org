@@ -1,27 +1,31 @@
 # Config
 
 ## `EJS_biosUrl`
+
 URL to bios file.
 
 - Type: `string`
-- Default: 
+- Default:
 - Example: `EJS_biosUrl = 'someFile.bin'`
 
 ## `EJS_gamePatchUrl`
+
 URL to game patch file.
 
 - Type: `string`
-- Default: 
+- Default:
 - Example: `EJS_gamePatchUrl = 'someFile.patch'`
 
 ## `EJS_AdUrl`
+
 URL to ad page. Will show this page when the page is loaded.
 
 - Type: `string`
-- Default: 
+- Default:
 - Example: `EJS_AdUrl = 'ad.html'`
 
 ## `EJS_startOnLoaded`
+
 Set to true to start the game when the page is loaded.
 
 - Type: `boolean`
@@ -29,20 +33,23 @@ Set to true to start the game when the page is loaded.
 - Example: `EJS_startOnLoaded = true`
 
 ## `EJS_core`
+
 Desired target system.
 
 - Type: `string`
-- Default: 
+- Default:
 - Example: `EJS_core = 'nes'`
 
 ## `EJS_loadStateURL`
+
 URL to save state. To be loaded on game start. There may be a small delay in load.
 
 - Type: `string`
-- Default: 
+- Default:
 - Example: `EJS_loadStateURL = 'save.state'`
 
 ## `EJS_noAutoCloseAd`
+
 Will not auto-close ad iframe when `play now` button pressed.
 
 - Type: `boolean`
@@ -50,6 +57,7 @@ Will not auto-close ad iframe when `play now` button pressed.
 - Example: `EJS_noAutoCloseAd = true`
 
 ## `EJS_oldCore`
+
 Will force using the old cores.
 
 - Type: `boolean`
@@ -57,21 +65,24 @@ Will force using the old cores.
 - Example: `EJS_oldCore = true`
 
 ## `EJS_onSaveState`
+
 Function to be called when save state button pressed.
 
 - Type: `function`
-- Default: 
+- Default:
 - Call Arguments: An array containing a screenshot and a save state
 - Example: `EJS_onSaveState = function(e) {console.log("save state button pressed!")}`
 
 ## `EJS_onLoadState`
+
 Function to be called when load state button pressed.
 
 - Type: `function`
-- Default: 
+- Default:
 - Example: `EJS_onLoadState = function(e) {console.log("load state button pressed!")}`
 
 ## `EJS_lightgun`
+
 When true, will enable nes/famicom lightgun.
 
 - Type: `boolean`
@@ -79,6 +90,7 @@ When true, will enable nes/famicom lightgun.
 - Example: `EJS_lightgun = true`
 
 ## `EJS_mouse`
+
 When true, will enable snes mouse.
 
 - Type: `boolean`
@@ -86,6 +98,7 @@ When true, will enable snes mouse.
 - Example: `EJS_mouse = true`
 
 ## `EJS_multitap`
+
 When true, will enable snes multitap.
 
 - Type: `boolean`
@@ -93,13 +106,15 @@ When true, will enable snes multitap.
 - Example: `EJS_multitap = true`
 
 ## `EJS_gameName`
+
 Set this to the title of the game. This will be used when saving states and taking screenshots.
 
 - Type: `string`
-- Default: 
+- Default:
 - Example: `EJS_loadStateURL = 'pong'`
 
 ## `EJS_pathtodata`
+
 The path to the data folder.
 
 - Type: `string`
@@ -107,20 +122,23 @@ The path to the data folder.
 - Example: `EJS_pathtodata = '/data/'`
 
 ## `EJS_onGameStart`
+
 Function to be called when game is started.
 
 - Type: `function`
-- Default: 
+- Default:
 - Example: `EJS_onGameStart = function(e) {console.log("The game has started!")}`
 
 ## `EJS_color`
+
 Emulator hex color theme.
 
 - Type: `string`
-- Default: 
+- Default:
 - Example: `EJS_pathtodata = '#00FF80'`
 
 ## `EJS_CacheLimit`
+
 The limit to game cache (per rom) in bytes
 
 - Type: `number`
@@ -128,11 +146,13 @@ The limit to game cache (per rom) in bytes
 - Example: `EJS_CacheLimit = 1024`
 
 ## `EJS_cheats`
+
 Default cheats to be stored in the cheat manager screen.
 
 - Type: `array`
-- Default: 
+- Default:
 - Example:
+
 ```js
 EJS_cheats = [
     ["name", "value"],
@@ -141,17 +161,20 @@ EJS_cheats = [
 ```
 
 ## `EJS_language`
+
 Set the emulator UI to a certian language. More information available [here](Lang).
 
 - Type: `string`
 - Default: `en-US`
 
 ## `EJS_Settings`
+
 Sets the default Volume and controller settings for the emulator. More information about controller mapping is located [here](Control%20Mapping).
 
 - Type: `object`
-- Default: 
-- Example: 
+- Default:
+- Example:
+
 ```js
 EJS_Settings = {
     volume: 0.75,
@@ -160,17 +183,20 @@ EJS_Settings = {
 ```
 
 ## `EJS_VirtualGamepadSettings`
+
 Sets the location of what buttons. More information about the virual gamepad button customization is located [here](Virutal%20Gamepad%20Settings).
 
 - Type: `object`
-- Default: 
+- Default:
 
 ## `EJS_Buttons`
+
 Shows/hides buttons.
 
 - Type: `object`
-- Default: 
+- Default:
 - Example: The following example will hide all the buttons except for the volume slider and fullscreen button.
+
 ```js
 EJS_Buttons = {
     playPause: false,
@@ -192,19 +218,20 @@ EJS_Buttons = {
 ```
 
 ## `EJS_defaultOptions`
+
 Sets the default settings menu options.
 
 - Type: `object`
-- Default: 
+- Default:
 - Note: Available options and values will be logged when the emulator is started. Load the emulator page with `EJS_DEBUG_XX` on, click the play button, then on load there should be a log in the console `supported menu options`. If you use the one that logs on page load, not all options will be available and not all options will be supported.
 - Example:
-```
+
+```js
 EJS_defaultOptions = {
     'shader':'crt-mattias.glslp',
     'save-state-slot': 4,
     'save-state-location': 'keep in browser'
 }
 ```
-
 
 <!-- EJS_paths, EJS_gameParentUrl -->
