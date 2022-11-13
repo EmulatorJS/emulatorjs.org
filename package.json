@@ -1,7 +1,7 @@
 {
-  "name": "emu-site-2.0",
+  "name": "emulatorjs.org-2.1",
   "version": "0.0.2",
-  "description": "A website for EmulatorJS",
+  "description": "The EmulatorJS Website",
   "main": "index.js",
   "author": {
     "name": "Ethan O'Brien",
@@ -12,7 +12,7 @@
     "Isaiah Koontz <isaiah.koontz@gmail.com> (https://github.com/KingIzzymon)",
     "Allan Niles (https://github.com/allancoding)"
   ],
-  "repository": "https://github.com/EmulatorJS/emu-site",
+  "repository": "https://github.com/EmulatorJS/emulatorjs.org",
   "scripts": {
     "dev_new": "vuepress dev src",
     "build_new": "vuepress build src",
