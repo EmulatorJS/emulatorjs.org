@@ -5,6 +5,8 @@ Here you will find information on any prerequisites needed, installation & setup
 
 Note: This website is built upon vuepress.
 
+Made with ❤️ by [@ethanaobrien](https://github.com/ethanaobrien) & not affiliated with [linuxserver/emulatorjs](https://github.com/linuxserver/emulatorjs)
+
 # Contributing
 
 In order to contribute, you will need the following:
