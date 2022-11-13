@@ -2,39 +2,37 @@
 
 Supported languages
 
-`en-US` - English US<br>
-`pt-BR` - Portuguese Brasil<br>
-`es-ES` - Spanish<br>
-`el-GR` - Greek<br>
-`ja-JA` - Japanese<br>
-`chi-CHI` - Chinese<br>
-`hi-HI` - Hindi<br>
-`ar-AR` - Arabic<br>
-`jv-JV` - Javanese<br>
-`ben-BEN` - Bengali<br>
-`ru-RU` - Russian<br>
-`de-GER` - German<br>
-`ko-KO` - Korean<br>
-`af-FR` - French<br>
+* `en-US` - English US
+* `pt-BR` - Portuguese Brasil
+* `es-ES` - Spanish
+* `el-GR` - Greek
+* `ja-JA` - Japanese
+* `chi-CHI` - Chinese
+* `hi-HI` - Hindi
+* `ar-AR` - Arabic
+* `jv-JV` - Javanese
+* `ben-BEN` - Bengali
+* `ru-RU` - Russian
+* `de-GER` - German
+* `ko-KO` - Korean
+* `af-FR` - French
 
 default: `en-US`
 
-
 Add the line to your code to use
 
-```
+```txt
 EJS_language = ''; //language
 ```
 
 If the language file is not found or no translation exists, the emulator will default to english.
 
-
 ## Credits
 
-Translated for `pt-BR` by [@cesarcristianodeoliveira](https://github.com/cesarcristianodeoliveira) <br>
-Translated for `es-ES` by [@cesarcristianodeoliveira](https://github.com/cesarcristianodeoliveira) <br>
-Translated for `el-GR` by [@imneckro](https://github.com/imneckro) <br>
-Translated for `ja-JA`, `chi-CHI`, `hi-HI`, `ar-AR`, `jv-JV`, `ben-BEN`, `ru-RU`, `de-GER`, `ko-KO`, `af-FR` by [@allancoding](https://github.com/allancoding) <br>
+* Translated for `pt-BR` by [@cesarcristianodeoliveira](https://github.com/cesarcristianodeoliveira)
+* Translated for `es-ES` by [@cesarcristianodeoliveira](https://github.com/cesarcristianodeoliveira)
+* Translated for `el-GR` by [@imneckro](https://github.com/imneckro)
+* Translated for `ja-JA`, `chi-CHI`, `hi-HI`, `ar-AR`, `jv-JV`, `ben-BEN`, `ru-RU`, `de-GER`, `ko-KO`, `af-FR` by [@allancoding](https://github.com/allancoding)
 
 ## Contributing
 

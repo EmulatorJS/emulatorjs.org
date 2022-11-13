@@ -55,10 +55,10 @@ EJS_VirtualGamepadSettings = [
     },
     //Note- the dpad and the zone will overlap in this example, this is just to show what it should look like.
     {
-    	type: "dpad"
+        type: "dpad"
         location: "left",
-        left": "50%,
-        right": "50%,
+        left: "50%",
+        right: "50%",
         joystickInput: false,
         inputValues: [4, 5, 6, 7]
     },
@@ -93,8 +93,6 @@ Types:
 
 `button`: just a button.
 
-
-
 ## Values needed for `zone`
 
 `type` Must be set to `zone`.
@@ -109,7 +107,6 @@ Types:
 
 `inputValues`: The values to input into the emulator. Normally either `[16, 17, 18, 19]` or `[4, 5, 6, 7]`.
 
-
 ## Values needed for `dpad`
 
 `type` must be set to `dpad`.
@@ -123,7 +120,6 @@ Types:
 `joystickInput`: Set this to true if the input values are `[16, 17, 18, 19]`. This should only be set to true for analog inputs. Note that the dpad does not support analog values and the buttons are either down or up.
 
 `inputValues`: The values to input into the emulator. Normally either `[16, 17, 18, 19]` or `[4, 5, 6, 7]`.
-
 
 ## Values needed for `button`
 
@@ -150,4 +146,3 @@ Types:
 `input_value`: The input value. Available options can be found [here](https://github.com/ethanaobrien/emulatorjs/blob/018c39d4065b866487f8f18ca88c9488eab69a6d/data/emu-main.js#L2998).
 
 `input_new_cores`: The input value for new cores. Available options can be found [here](https://github.com/ethanaobrien/emulatorjs/blob/018c39d4065b866487f8f18ca88c9488eab69a6d/data/emu-main.js#L2998).
-

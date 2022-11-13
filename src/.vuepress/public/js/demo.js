@@ -38,7 +38,7 @@ document.getElementById('input').addEventListener('change', async function() {
                          "Sega Game Gear": "segaGG",
                          "Sega Saturn": "segaSaturn",
                          "Atari 7800": "atari7800",
-                         "Atari 2600": "atari2600"
+                         "Atari 2600": "atari2600",
                          "Atari 5200": "atari5200"};
             var a = ce('div');
             a.style = 'padding: 50px;';
