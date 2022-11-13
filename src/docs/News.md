@@ -8,8 +8,7 @@ Both [Ethan O'Brien's EmulatorJS](https://github.com/EmulatorJS/EmulatorJS) and 
 
 * LinuxServer on the other hand, took things a different route. Their organization's goal is to containerize applications, and in this case, they built a front end (inspired by [HyperSpin](https://hyperspin-fe.com/)) to automate creating the website and a backend ROM management system to automatically download and share artwork and media as well as update the ROM hash database for better, more accurate ROM-database linking.
 
-<br />
-<br />
+***
 
 Sources:
 
