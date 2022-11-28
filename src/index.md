@@ -10,8 +10,8 @@ features:
   details: Made to be easy to customize
 - title: Embeddable
   details: Can easily embed into any website
-- title: Secure
-  details: Only reaches out to resources you tell it to
+- title: Netplay support
+  details: Try out netplay [here](https://demo.emulatorjs.org/demos/netplay.html)
 ---
 
 <div class="home_footer">
