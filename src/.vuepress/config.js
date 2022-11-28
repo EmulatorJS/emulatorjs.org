@@ -58,11 +58,12 @@ module.exports = {
         collapsable: false,
         children: [
           ['/docs4devs/Building', 'Building EmulatorJS'],
-          ['/docs4devs/BuildingRAW', 'Building RetroArch-Web'],
+          ['/docs4devs/BuildingRAW', 'Building RetroArch Cores'],
           ['/docs4devs/Control Mapping', 'Control Mapping'],
           ['/docs4devs/Virutal Gamepad Settings', 'Virutal Gamepad Settings'],
           ['/docs4devs/Minifying', 'Minifying'],
-          ['/docs4devs/Cores', 'Cores']
+          ['/docs4devs/Cores', 'Cores'],
+          ['/docs4devs/Netplay', 'Netplay']
         ]
       }
     ]
