@@ -8,3 +8,4 @@ There are several ways to contribute, be it directly to helping develop features
 
 Just wanna donate? That'd help too!
 [libretro](https://retroarch.com/index.php?page=donate)
+[EmulatorJS](https://www.patreon.com/EmulatorJS)
