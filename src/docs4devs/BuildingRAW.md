@@ -73,7 +73,7 @@ sudo apt install -y         \
 1. **Clone** the repository.
 
     ```sh
-    git clone https://github.com/ethanaobrien/RetroArch.git
+    git clone https://github.com/EmulatorJS/RetroArch.git
     ```
     
 <br>    
@@ -94,7 +94,7 @@ sudo apt install -y         \
 <!----------------------------------------------------------------------------->
 
 [RetroArch]: https://github.com/libretro/RetroArch
-[Fork]: https://github.com/ethanaobrien/RetroArch
+[Fork]: https://github.com/EmulatorJS/RetroArch
 
 [GPLv3]: cores/LICENSE
 
