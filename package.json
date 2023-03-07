@@ -1,6 +1,6 @@
 {
   "name": "emulatorjs.org",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "The EmulatorJS Website",
   "main": "index.js",
   "author": {
