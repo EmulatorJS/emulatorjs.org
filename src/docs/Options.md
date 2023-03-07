@@ -213,7 +213,7 @@ EJS_Buttons = {
     quickSave: false,
     quickLoad: false,
     screenshot: false,
-    cacheManage: false
+    cacheManager: false
 }
 ```
 
