@@ -2,8 +2,6 @@
 
 This page will tell you the backend emulator for each core.
 
-*Please note that the documentation is not and will not be available for the old cores.*
-
 ## Available Cores
 
 - `fceumm`: default `nes` core
@@ -19,7 +17,15 @@ This page will tell you the backend emulator for each core.
 - `fbalpha2012_cps1`: default `arcade` core
 - `fbalpha2012_cps2`: `arcade` core
 - `mednafen_psx_hw`: default `psx` core
-- `mednafen_psx`: `psx` core
+- `virtualjaguar`: default `jaguar` core
+- `handy`: default `lynx` core
+- `yabause`: default `segaSaturn` core
+- `genesis_plus_gx`: default `segaMS`, `segaMD`, `segaGG`, and `segaCD` core
+- `mupen64plus_next`: default `n64` core
+- `opera`: default `3do` core
+- `prosystem`: default `atari7800` core
+- `stella2014`: default `atari2600` core
+
 
 ## Description
 

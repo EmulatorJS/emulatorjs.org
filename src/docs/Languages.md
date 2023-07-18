@@ -21,11 +21,13 @@ default: `en-US`
 
 Add the line to your code to use
 
-```txt
+```js
 EJS_language = ''; //language
 ```
 
 If the language file is not found or no translation exists, the emulator will default to english.
+
+**Please Note:** EmulatorJS version 4.0 changed a lot. It is extremely likely that localization files are broken. Fixes to these files are extremely welcome.
 
 ## Credits
 
