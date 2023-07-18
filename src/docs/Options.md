@@ -26,7 +26,7 @@ URL to ad page. Will show this page when the page is loaded.
 
 ## `EJS_startOnLoaded`
 
-Set to true to start the game when the page is loaded.
+Set to true to start the game when the page is loaded. Note that if the user has not interacted with the page, the emulator will freeze until they have done so.
 
 - Type: `boolean`
 - Default: `false`
@@ -42,27 +42,19 @@ Desired target system.
 
 ## `EJS_loadStateURL`
 
-URL to save state. To be loaded on game start. There may be a small delay in load.
+URL to save state. To be loaded on game start.
 
 - Type: `string`
 - Default:
 - Example: `EJS_loadStateURL = 'save.state'`
 
-## `EJS_noAutoCloseAd`
+## `EJS_AdTimer`
 
-Will not auto-close ad iframe when `play now` button pressed.
+Duration (in milliseconds) the ad iframe will stay before it automatically closes. Setting to `0` will disable auto-close.
 
-- Type: `boolean`
-- Default: `false`
-- Example: `EJS_noAutoCloseAd = true`
-
-## `EJS_oldCore`
-
-Will force using the old cores.
-
-- Type: `boolean`
-- Default: `false`
-- Example: `EJS_oldCore = true`
+- Type: `number`
+- Default: `10000`
+- Example: `EJS_AdTimer = 1000`
 
 ## `EJS_onSaveState`
 
@@ -81,30 +73,6 @@ Function to be called when load state button pressed.
 - Default:
 - Example: `EJS_onLoadState = function(e) {console.log("load state button pressed!")}`
 
-## `EJS_lightgun`
-
-When true, will enable nes/famicom lightgun.
-
-- Type: `boolean`
-- Default: `false`
-- Example: `EJS_lightgun = true`
-
-## `EJS_mouse`
-
-When true, will enable snes mouse.
-
-- Type: `boolean`
-- Default: `false`
-- Example: `EJS_mouse = true`
-
-## `EJS_multitap`
-
-When true, will enable snes multitap.
-
-- Type: `boolean`
-- Default: `false`
-- Example: `EJS_multitap = true`
-
 ## `EJS_gameName`
 
 Set this to the title of the game. This will be used when saving states and taking screenshots.
@@ -115,7 +83,7 @@ Set this to the title of the game. This will be used when saving states and taki
 
 ## `EJS_pathtodata`
 
-The path to the data folder.
+The path to the data folder. Version 4.0 and up will set this to the same path to the folder your loader.js file is in if not specified.
 
 - Type: `string`
 - Default: `data/`
@@ -210,6 +178,8 @@ EJS_Buttons = {
     gamepad: false,
     cheat: false,
     volume: true,
+    saveSavFiles: true,
+    loadSavFiles: true
     quickSave: false,
     quickLoad: false,
     screenshot: false,

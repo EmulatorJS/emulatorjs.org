@@ -1,7 +1,6 @@
 # Netplay
 
-
-Netplay has been officially supported since version 3.1.5. Released November 27, 2022.
+**Please Note:** Netplay is currently being worked on, to make it better and more reliable. If you follow these instructions you need a version of EmulatorJS before 4.0.
 
 ## To add to your site
 
@@ -24,7 +23,7 @@ EJS_oldCores = true;
 
 1. Clone the EmulatorJS-netplay repository
 ```sh
-git clone https://github.com/EmulatorJS/EmulatorJS-netplay.git
+git clone https://github.com/EmulatorJS/EmulatorJS-netplay-old.git
 ```
 
 2. Install nodejs dependencies
