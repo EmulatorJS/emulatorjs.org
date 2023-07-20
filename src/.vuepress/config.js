@@ -1,6 +1,12 @@
-const { description } = require('../../package')
+import { description } from '../../package.json'
+import { defaultTheme } from '@vuepress/theme-default'
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
+import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
+import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
+import path from 'path'
 
-module.exports = {
+export default {
   title: 'EmulatorJS',
   description: description,
   head: [
@@ -9,16 +15,15 @@ module.exports = {
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
     ['meta', { rel: 'icon', href: '/favicon.ico', sizes: '16x16 32x32 48x48 64x64', type: 'image/vnd.microsoft.icon' }],
     ['script', { src: '/log.js', content: '' }],
-    ['script', { async:true, src: 'https://www.googletagmanager.com/gtag/js?id=G-R87E52EEFR', content: '' }],
     ['script', { content: "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-R87E52EEFR');'" }]
   ],
-  themeConfig: {
-    repo: '',
-    editLinks: false,
-    docsDir: '',
-    editLinkText: '',
-    lastUpdated: false,
-    nav: [
+  theme: defaultTheme({
+    logo: '/favicon.ico',
+    repo: 'https://github.com/EmulatorJS/EmulatorJS',
+    repoLabel: 'EmulatorJS',
+    accentColor: '#0098C5',
+    editLink: false,
+    navbar: [
       {
         text: 'Documentation',
         link: '/docs/',
@@ -30,47 +35,96 @@ module.exports = {
       {
         text: 'Demo',
         link: 'https://demo.emulatorjs.org/'
-      },
-      {
-        text: 'EmulatorJS',
-        link: 'https://github.com/EmulatorJS/EmulatorJS'
       }
     ],
-    sidebarDepth: 2,
     sidebar: [
-      {
-        title: 'Docs',
-        path: '/docs/',
+    {
+        text: 'Docs',
+        link: '/docs/',
         collapsable: false,
         children: [
-          ['/docs/News', 'News'],
-          ['/docs/Getting Started', 'Getting Started'],
-          ['/docs/Features', 'Features'],
-          ['/docs/Options', 'Options'],
-          ['/docs/Languages', 'Languages'],
-          ['/docs/Roadmap', 'Roadmap'],
-          ['https://github.com/EmulatorJS/EmulatorJS/blob/main/CHANGES.md', 'Changelog'],
-          ['/docs/Contribute', 'Contribute']
+          {
+            text: 'News',
+            link: '/docs/News',
+          },
+          {
+            text: 'Getting Started',
+            link: '/docs/Getting Started',
+          },
+          {
+            text: 'Features',
+            link: '/docs/Features',
+          },
+          {
+            text: 'Options',
+            link: '/docs/Options',
+          },
+          {
+            text: 'Languages',
+            link: '/docs/Languages',
+          },
+          {
+            text: 'Roadmap',
+            link: '/docs/Roadmap',
+          },
+          {
+            text: 'Changelog',
+            link: 'https://github.com/EmulatorJS/EmulatorJS/blob/main/CHANGES.md',
+          },
+          {
+            text: 'Contribute',
+            link: '/docs/Contribute',
+          }
         ]
       },
       {
-        title: 'For Developers',
-        path: '/docs4devs/',
+        text: 'For Developers',
+        link: '/docs4devs/',
         collapsable: false,
         children: [
-          ['/docs4devs/Building', 'Building EmulatorJS'],
-          ['/docs4devs/BuildingRAW', 'Building RetroArch Cores'],
-          ['/docs4devs/Control Mapping', 'Control Mapping'],
-          ['/docs4devs/Virutal Gamepad Settings', 'Virutal Gamepad Settings'],
-          ['/docs4devs/Minifying', 'Minifying'],
-          ['/docs4devs/Cores', 'Cores'],
-          ['/docs4devs/Netplay', 'Netplay']
+          {
+            text: 'Building EmulatorJS',
+            link: '/docs4devs/Building',
+          },
+          {
+            text: 'Building RetroArch Cores',
+            link: '/docs4devs/BuildingRAW',
+          },
+          {
+            text: 'Control Mapping',
+            link: '/docs4devs/Control Mapping',
+          },
+          {
+            text: 'Virutal Gamepad Settings',
+            link: '/docs4devs/Virutal Gamepad Settings',
+          },
+          {
+            text: 'Minifying',
+            link: '/docs4devs/Minifying',
+          },
+          {
+            text: 'Cores',
+            link: '/docs4devs/Cores',
+          },
+          {
+            text: 'Netplay',
+            link: '/docs4devs/Netplay',
+          }
         ]
       }
     ]
-  },
+  }),
   plugins: [
-    '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
+    backToTopPlugin(),
+    mediumZoomPlugin(),
+    registerComponentsPlugin({
+      components: {
+        AddScript: path.resolve(__dirname, './components/AddScript.vue'),
+      },
+    }),
+    googleAnalyticsPlugin({
+      id: 'G-R87E52EEFR',
+      debug: true
+    }),
   ]
 }

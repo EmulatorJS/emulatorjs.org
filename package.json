@@ -3,11 +3,7 @@
   "version": "0.1.0",
   "description": "The EmulatorJS Website",
   "main": "index.js",
-  "author": {
-    "name": "Ethan O'Brien",
-    "email": "ethan.a.obrien@gmail.com",
-    "url": "https://github.com/ethanaobrien"
-  },
+  "author": "Ethan O'Brien <ethan.a.obrien@gmail.com> (https://github.com/ethanaobrien)",
   "contributors": [
     "Isaiah Koontz <isaiah.koontz@gmail.com> (https://github.com/KingIzzymon)",
     "Allan Niles (https://github.com/allancoding)"
@@ -16,11 +12,15 @@
   "scripts": {
     "dev_new": "vuepress dev src",
     "build_new": "vuepress build src",
-    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress dev src",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress build src"
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && export NODE_OPTIONS=--openssl-legacy-provider && vuepress dev src",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && export NODE_OPTIONS=--openssl-legacy-provider && vuepress build src"
   },
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.9.9"
+    "@vuepress/plugin-back-to-top": "^2.0.0-beta.66",
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.66",
+    "@vuepress/plugin-medium-zoom": "^2.0.0-beta.66",
+    "@vuepress/plugin-register-components": "^2.0.0-beta.66",
+    "vuepress": "^2.0.0-beta.66"
   }
 }
