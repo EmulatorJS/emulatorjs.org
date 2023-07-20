@@ -5,7 +5,7 @@
 URL to bios file.
 
 - Type: `string`
-- Default: `undefined`
+- Default: `''`
 - Example: `EJS_biosUrl = 'someFile.bin'`
 
 ## `EJS_gamePatchUrl`
@@ -13,7 +13,7 @@ URL to bios file.
 URL to game patch file.
 
 - Type: `string`
-- Default: `undefined`
+- Default: `''`
 - Example: `EJS_gamePatchUrl = 'someFile.patch'`
 
 ## `EJS_AdUrl`
@@ -21,7 +21,7 @@ URL to game patch file.
 URL to ad page. Will show this page when the page is loaded.
 
 - Type: `string`
-- Default: `undefined`
+- Default: `''`
 - Example: `EJS_AdUrl = 'ad.html'`
 
 ## `EJS_startOnLoaded`
@@ -45,7 +45,7 @@ Desired target system.
 URL to save state. To be loaded on game start.
 
 - Type: `string`
-- Default: `undefined`
+- Default: `''`
 - Example: `EJS_loadStateURL = 'save.state'`
 
 ## `EJS_AdTimer`
@@ -61,7 +61,7 @@ Duration (in milliseconds) the ad iframe will stay before it automatically close
 Function to be called when save state button pressed.
 
 - Type: `function`
-- Default: `undefined`
+- Default: ``
 - Call Arguments: An array containing a screenshot and a save state
 - Example: `EJS_onSaveState = function(e) {console.log("save state button pressed!")}`
 
@@ -70,7 +70,7 @@ Function to be called when save state button pressed.
 Function to be called when load state button pressed.
 
 - Type: `function`
-- Default: `undefined`
+- Default: ``
 - Example: `EJS_onLoadState = function(e) {console.log("load state button pressed!")}`
 
 ## `EJS_gameName`
@@ -86,7 +86,7 @@ Set this to the title of the game. This will be used when saving states and taki
 Url to a file you want to have as the background at the "Play Now" screen.
 
 - Type: `string`
-- Default: `undefined`
+- Default: `Play Now`
 - Example: `EJS_backgroundImage = 'loadScreen.png'`
 
 ## `EJS_pathtodata`
@@ -102,7 +102,7 @@ The path to the data folder. Version 4.0 and up will set this to the same path t
 Function to be called when game is started.
 
 - Type: `function`
-- Default: `undefined`
+- Default: ``
 - Example: `EJS_onGameStart = function(e) {console.log("The game has started!")}`
 
 ## `EJS_color`
@@ -148,7 +148,7 @@ Set the emulator UI to a certian language. More information available [here](Lan
 Sets the default controller mapping. More information about controller mapping is located [here](Control%20Mapping).
 
 - Type: `object`
-- Default: `undefined`
+- Default: `{"0":{"0":{"value":"x"},"1":{"value":"s"},"2":{"value":"v"},"3":{"value":"enter"},"4":{"value":"arrowup"},"5":{"value":"arrowdown"},"6":{"value":"arrowleft"},"7":{"value":"arrowright"},"8":{"value":"z"},"9":{"value":"a"},"10":{"value":"q"},"11":{"value":"e"},"12":{"value":"e"},"13":{"value":"w"},"14":{},"15":{},"16":{"value":"h"},"17":{"value":"f"},"18":{"value":"g"},"19":{"value":"t"},"20":{"value":"l"},"21":{"value":"j"},"22":{"value":"k"},"23":{"value":"i"},"24":{},"25":{},"26":{}},"1":{},"2":{},"3":{}}`
 - Example:
 
 ```js
