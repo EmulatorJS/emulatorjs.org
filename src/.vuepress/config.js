@@ -4,6 +4,7 @@ import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
 import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
+import { searchPlugin } from '@vuepress/plugin-search'
 import path from 'path'
 
 export default {
@@ -49,7 +50,7 @@ export default {
           },
           {
             text: 'Getting Started',
-            link: '/docs/Getting Started',
+            link: '/docs/Getting Started.html',
           },
           {
             text: 'Features',
@@ -96,11 +97,11 @@ export default {
           },
           {
             text: 'Control Mapping',
-            link: '/docs4devs/Control Mapping',
+            link: '/docs4devs/Control Mapping.html',
           },
           {
             text: 'Virutal Gamepad Settings',
-            link: '/docs4devs/Virutal Gamepad Settings',
+            link: '/docs4devs/Virutal Gamepad Settings.html',
           },
           {
             text: 'Minifying',
@@ -121,6 +122,16 @@ export default {
   plugins: [
     backToTopPlugin(),
     mediumZoomPlugin(),
+    searchPlugin({
+      maxSuggestions: 10,
+      isSearchable: (page) => page.path !== '/',
+      getExtraFields: (page) => page.frontmatter.tags ?? [],
+      locales: {
+        '/': {
+          placeholder: 'Search',
+        }
+      }
+    }),
     registerComponentsPlugin({
       components: {
         AddScript: path.resolve(__dirname, './components/AddScript.vue'),
