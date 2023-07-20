@@ -1,5 +1,22 @@
 # Config
 
+## `EJS_player`
+
+The selector of the element you want the emulator to be placed in.
+
+- Type: `string`
+- Default:&nbsp;` `
+- Example: `EJS_player = '#game'`
+
+## `EJS_gameUrl`
+
+URL to ROM file.
+
+- Type: `string`
+- Default:&nbsp;` `
+- Example: `EJS_gameUrl = 'someFile.nes'`
+
+
 ## `EJS_biosUrl`
 
 URL to bios file.
@@ -37,7 +54,7 @@ Set to true to start the game when the page is loaded. Note that if the user has
 Desired target system.
 
 - Type: `string`
-- Required: `true`
+- Default:&nbsp;` `
 - Example: `EJS_core = 'nes'`
 
 ## `EJS_loadStateURL`
@@ -61,7 +78,7 @@ Duration (in milliseconds) the ad iframe will stay before it automatically close
 Function to be called when save state button pressed.
 
 - Type: `function`
-- Default: ``
+- Default:&nbsp;` `
 - Call Arguments: An array containing a screenshot and a save state
 - Example: `EJS_onSaveState = function(e) {console.log("save state button pressed!")}`
 
@@ -70,7 +87,7 @@ Function to be called when save state button pressed.
 Function to be called when load state button pressed.
 
 - Type: `function`
-- Default: ``
+- Default:&nbsp;` `
 - Example: `EJS_onLoadState = function(e) {console.log("load state button pressed!")}`
 
 ## `EJS_gameName`
@@ -86,7 +103,7 @@ Set this to the title of the game. This will be used when saving states and taki
 Url to a file you want to have as the background at the "Play Now" screen.
 
 - Type: `string`
-- Default: `Play Now`
+- Default:&nbsp;` `
 - Example: `EJS_backgroundImage = 'loadScreen.png'`
 
 ## `EJS_pathtodata`
@@ -102,7 +119,7 @@ The path to the data folder. Version 4.0 and up will set this to the same path t
 Function to be called when game is started.
 
 - Type: `function`
-- Default: ``
+- Default:&nbsp;` `
 - Example: `EJS_onGameStart = function(e) {console.log("The game has started!")}`
 
 ## `EJS_color`
