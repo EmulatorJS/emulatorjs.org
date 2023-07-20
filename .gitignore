@@ -1,3 +1,6 @@
 node_modules/
 src/.vuepress/dist/
 yarn-error.log
+node_modules
+.temp
+.cache
