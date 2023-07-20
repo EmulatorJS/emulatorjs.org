@@ -1,0 +1,32 @@
+//Custom Styles here.
+
+.home .hero img {
+  max-width: 450px !important;
+}
+
+.home_footer {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.home_footer div {
+  font-size: 17px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+:root {
+  scroll-behavior: smooth;
+  --back-to-top-z-index: 5;
+  --back-to-top-color: #0098C5;
+  --back-to-top-color-hover: #006888;
+  --c-brand: #0098C5;
+  --c-brand-light: #00afe4;
+  --c-tip: #0098C5;
+}
+
+html.dark {
+  --c-brand: #0098C5;
+  --c-brand-light: #00afe4;
+  --c-tip: #0098C5;
+}

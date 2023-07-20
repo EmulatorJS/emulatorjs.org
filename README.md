@@ -5,7 +5,7 @@ Here you will find information on any prerequisites needed, installation & setup
 
 Note: This website is built upon vuepress.
 
-Made with ❤️ by [@ethanaobrien](https://github.com/ethanaobrien)
+Made with ❤️ by [@ethanaobrien](https://github.com/ethanaobrien) & [@allancoding](https://github.com/allancoding)
 
 This project is not affiliated with [linuxserver/emulatorjs](https://github.com/linuxserver/emulatorjs)
 
@@ -18,27 +18,13 @@ In order to contribute, you will need the following:
 * Vuepress
 * A code editor like Visual Studio Code
 
-## Installation
-
-In this example, we will be using Visual Studio Code with the [yarn](gamunu.vscode-yarn) extension.
-Clone the repository and make it your working directory.
-
-* Install the yarn plugin from the Extensions store in Visual Studio Code
-* Use the "Source Control" menu to pull/clone the repository (download to your computer).
-
-### Vuepress
+### Development
 
 Run the following commands one after the other.
-The first command will take you through the initiation process where you can edit the project information and add your info as a contributing author.
+Install Dependencies
 
 ```sh
-yarn init
-```
-
-Next, install vuepress locally.
-
-```sh
-yarn add -D vuepress
+yarn install
 ```
 
 Lastly, run the following to spin up and webhost the project
