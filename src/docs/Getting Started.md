@@ -57,7 +57,7 @@ It will then give you the download link for a zip folder that will include the r
 ## Client Installation
 
 Because this software uses WebAssembly (WASM) applications, it can be ran within a modern browser so there is **no installation necessary.**
-Only Safari for Apple devices and Chromium based browsers (Google Chrome, Edge, Brave, etc.) are supported. Other browsers might work, but have not been tested and likely never will be. Gamepads do not function on Firefox (yet!).
+All major browsers are currently supported! Firefox gamepad support was recently fixed
 
 * To make things a little more seamless, we can create a shortcut file to act as a launcher.
   * In the below examples, we will use http://192.168.1.120/ as the address for the webserver hosted on port 80.
