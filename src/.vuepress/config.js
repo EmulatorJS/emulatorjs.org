@@ -74,6 +74,10 @@ export default {
           {
             text: 'Contribute',
             link: '/docs/Contribute',
+          },
+          {
+            text: 'FAQ',
+            link: '/docs/FAQ',
           }
         ]
       },
