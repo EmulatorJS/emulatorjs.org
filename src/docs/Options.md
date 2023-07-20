@@ -81,6 +81,14 @@ Set this to the title of the game. This will be used when saving states and taki
 - Default:
 - Example: `EJS_loadStateURL = 'pong'`
 
+## `EJS_backgroundImage`
+
+Url to a file you want to have as the background at the "Play Now" screen.
+
+- Type: `string`
+- Default:
+- Example: `EJS_backgroundImage = 'loadScreen.png'`
+
 ## `EJS_pathtodata`
 
 The path to the data folder. Version 4.0 and up will set this to the same path to the folder your loader.js file is in if not specified.
