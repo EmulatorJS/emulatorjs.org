@@ -1,11 +1,28 @@
 # Config
 
+## `EJS_player`
+
+The selector of the element you want the emulator to be placed in.
+
+- Type: `string`
+- Default:&nbsp;` `
+- Example: `EJS_player = '#game'`
+
+## `EJS_gameUrl`
+
+URL to ROM file.
+
+- Type: `string`
+- Default:&nbsp;` `
+- Example: `EJS_gameUrl = 'someFile.nes'`
+
+
 ## `EJS_biosUrl`
 
 URL to bios file.
 
 - Type: `string`
-- Default:
+- Default: `''`
 - Example: `EJS_biosUrl = 'someFile.bin'`
 
 ## `EJS_gamePatchUrl`
@@ -13,7 +30,7 @@ URL to bios file.
 URL to game patch file.
 
 - Type: `string`
-- Default:
+- Default: `''`
 - Example: `EJS_gamePatchUrl = 'someFile.patch'`
 
 ## `EJS_AdUrl`
@@ -21,7 +38,7 @@ URL to game patch file.
 URL to ad page. Will show this page when the page is loaded.
 
 - Type: `string`
-- Default:
+- Default: `''`
 - Example: `EJS_AdUrl = 'ad.html'`
 
 ## `EJS_startOnLoaded`
@@ -37,7 +54,7 @@ Set to true to start the game when the page is loaded. Note that if the user has
 Desired target system.
 
 - Type: `string`
-- Default:
+- Default:&nbsp;` `
 - Example: `EJS_core = 'nes'`
 
 ## `EJS_loadStateURL`
@@ -45,7 +62,7 @@ Desired target system.
 URL to save state. To be loaded on game start.
 
 - Type: `string`
-- Default:
+- Default: `''`
 - Example: `EJS_loadStateURL = 'save.state'`
 
 ## `EJS_AdTimer`
@@ -61,7 +78,7 @@ Duration (in milliseconds) the ad iframe will stay before it automatically close
 Function to be called when save state button pressed.
 
 - Type: `function`
-- Default:
+- Default:&nbsp;` `
 - Call Arguments: An array containing a screenshot and a save state
 - Example: `EJS_onSaveState = function(e) {console.log("save state button pressed!")}`
 
@@ -70,7 +87,7 @@ Function to be called when save state button pressed.
 Function to be called when load state button pressed.
 
 - Type: `function`
-- Default:
+- Default:&nbsp;` `
 - Example: `EJS_onLoadState = function(e) {console.log("load state button pressed!")}`
 
 ## `EJS_gameName`
@@ -78,7 +95,7 @@ Function to be called when load state button pressed.
 Set this to the title of the game. This will be used when saving states and taking screenshots.
 
 - Type: `string`
-- Default:
+- Default: The name of the ROM file
 - Example: `EJS_loadStateURL = 'pong'`
 
 ## `EJS_backgroundImage`
@@ -86,7 +103,7 @@ Set this to the title of the game. This will be used when saving states and taki
 Url to a file you want to have as the background at the "Play Now" screen.
 
 - Type: `string`
-- Default:
+- Default:&nbsp;` `
 - Example: `EJS_backgroundImage = 'loadScreen.png'`
 
 ## `EJS_pathtodata`
@@ -102,7 +119,7 @@ The path to the data folder. Version 4.0 and up will set this to the same path t
 Function to be called when game is started.
 
 - Type: `function`
-- Default:
+- Default:&nbsp;` `
 - Example: `EJS_onGameStart = function(e) {console.log("The game has started!")}`
 
 ## `EJS_color`
@@ -110,7 +127,7 @@ Function to be called when game is started.
 Emulator hex color theme.
 
 - Type: `string`
-- Default:
+- Default: `#1AAFFF`
 - Example: `EJS_pathtodata = '#00FF80'`
 
 ## `EJS_CacheLimit`
@@ -126,7 +143,7 @@ The limit to game cache (per rom) in bytes
 Default cheats to be stored in the cheat manager screen.
 
 - Type: `array`
-- Default:
+- Default: `[]`
 - Example:
 
 ```js
@@ -148,8 +165,7 @@ Set the emulator UI to a certian language. More information available [here](Lan
 Sets the default controller mapping. More information about controller mapping is located [here](Control%20Mapping).
 
 - Type: `object`
-- Default:
-- Example:
+- Default/Example:
 
 ```js
 EJS_defaultControls = {"0":{"0":{"value":"x"},"1":{"value":"s"},"2":{"value":"v"},"3":{"value":"enter"},"4":{"value":"arrowup"},"5":{"value":"arrowdown"},"6":{"value":"arrowleft"},"7":{"value":"arrowright"},"8":{"value":"z"},"9":{"value":"a"},"10":{"value":"q"},"11":{"value":"e"},"12":{"value":"e"},"13":{"value":"w"},"14":{},"15":{},"16":{"value":"h"},"17":{"value":"f"},"18":{"value":"g"},"19":{"value":"t"},"20":{"value":"l"},"21":{"value":"j"},"22":{"value":"k"},"23":{"value":"i"},"24":{},"25":{},"26":{}},"1":{},"2":{},"3":{}}
@@ -168,14 +184,14 @@ Sets the defauly volume for the emulator. 0=muted, 1=max
 Sets the location of what buttons. More information about the virual gamepad button customization is located [here](Virutal%20Gamepad%20Settings).
 
 - Type: `object`
-- Default:
+- Default: `{}`
 
 ## `EJS_Buttons`
 
 Shows/hides buttons.
 
 - Type: `object`
-- Default:
+- Default: `{}`
 - Example: The following example will hide all the buttons except for the volume slider and fullscreen button.
 
 ```js
@@ -205,7 +221,7 @@ EJS_Buttons = {
 Sets the default settings menu options.
 
 - Type: `object`
-- Default:
+- Default: `{}`
 - Note: Available options and values will be logged when the emulator is started. Load the emulator page with `EJS_DEBUG_XX` on, click the play button, then on load there should be a log in the console `supported menu options`. If you use the one that logs on page load, not all options will be available and not all options will be supported.
 - Example:
 
