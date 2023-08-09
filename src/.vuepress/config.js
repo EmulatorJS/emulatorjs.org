@@ -5,6 +5,7 @@ import { backToTopPlugin } from '@vuepress/plugin-back-to-top'
 import { mediumZoomPlugin } from '@vuepress/plugin-medium-zoom'
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { searchPlugin } from '@vuepress/plugin-search'
+
 import path from 'path'
 
 export default {
@@ -38,11 +39,12 @@ export default {
         link: 'https://demo.emulatorjs.org/'
       }
     ],
+    sidebarDepth: 2,
     sidebar: [
     {
         text: 'Docs',
         link: '/docs/',
-        collapsable: false,
+        collapsible: false,
         children: [
           {
             text: 'News',
@@ -61,6 +63,101 @@ export default {
             link: '/docs/Options',
           },
           {
+            text: 'Systems',
+            path: '/github/docs/Systems/',
+            collapsible: true,
+            children: [
+              {
+                text: '3DO',
+                link: '/github/docs/Systems/3DO',
+              },
+              {
+                text: 'Arcade',
+                link: '/github/docs/Systems/Arcade',
+              },
+              {
+                text: 'Atari 2600',
+                link: '/github/docs/Systems/Atari 2600.html',
+              },
+              {
+                text: 'Atari 5200',
+                link: '/github/docs/Systems/Atari 5200.html',
+              },
+              {
+                text: 'Atari 7800',
+                link: '/github/docs/Systems/Atari 7800.html',
+              },
+              {
+                text: 'Atari Jaguar',
+                link: '/github/docs/Systems/Atari Jaguar.html',
+              },
+              {
+                text: 'Atari Lynx',
+                link: '/github/docs/Systems/Atari Lynx.html',
+              },
+              {
+                text: 'MAME 2003',
+                link: '/github/docs/Systems/MAME 2003.html',
+              },
+              {
+                text: 'NES-Famicom',
+                link: '/github/docs/Systems/NES-Famicom.html',
+              },
+              {
+                text: 'Nintendo 64',
+                link: '/github/docs/Systems/Nintendo 64.html',
+              },
+              {
+                text: 'Nintendo DS',
+                link: '/github/docs/Systems/Nintendo DS.html',
+              },
+              {
+                text: 'Nintendo Game Boy Advance',
+                link: '/github/docs/Systems/Nintendo Game Boy Advance.html',
+              },
+              {
+                text: 'Nintendo Game Boy',
+                link: '/github/docs/Systems/Nintendo Game Boy.html',
+              },
+              {
+                text: 'PlayStation',
+                link: '/github/docs/Systems/PlayStation',
+              },
+              {
+                text: 'Sega 32X',
+                link: '/github/docs/Systems/Sega 32X.html',
+              },
+              {
+                text: 'Sega CD',
+                link: '/github/docs/Systems/Sega CD.html',
+              },
+              {
+                text: 'Sega Game Gear',
+                link: '/github/docs/Systems/Sega Game Gear.html',
+              },
+              {
+                text: 'Sega Master System',
+                link: '/github/docs/Systems/Sega Master System.html',
+              },
+              {
+                text: 'Sega Mega Drive',
+                link: '/github/docs/Systems/Sega Mega Drive.html',
+              },
+              {
+                text: 'Sega Saturn',
+                link: '/github/docs/Systems/Sega Saturn.html',
+              },
+              {
+                text: 'SNES-Super Famicom',
+                link: '/github/docs/Systems/SNES',
+              },
+              {
+                text: 'Virtual Boy',
+                link: '/github/docs/Systems/Virtural Boy.html',
+              }
+            ]
+          },
+          {
             text: 'Languages',
             link: '/docs/Languages',
           },
@@ -70,11 +167,15 @@ export default {
           },
           {
             text: 'Changelog',
-            link: 'https://github.com/EmulatorJS/EmulatorJS/blob/main/CHANGES.md',
+            link: '/github/CHANGES.md',
           },
           {
-            text: 'Contribute',
+            text: 'How To Contribute',
             link: '/docs/Contribute',
+          },
+          {
+            text: 'Contributors',
+            link: '/github/docs/Contributors',
           },
           {
             text: 'FAQ',
@@ -85,7 +186,7 @@ export default {
       {
         text: 'For Developers',
         link: '/docs4devs/',
-        collapsable: false,
+        collapsible: false,
         children: [
           {
             text: 'Building EmulatorJS',
@@ -140,6 +241,6 @@ export default {
     googleAnalyticsPlugin({
       id: 'G-R87E52EEFR',
       debug: true
-    }),
+    })
   ]
 }

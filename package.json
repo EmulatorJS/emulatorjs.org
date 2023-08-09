@@ -10,10 +10,10 @@
   ],
   "repository": "https://github.com/EmulatorJS/emulatorjs.org",
   "scripts": {
-    "dev_new": "vuepress dev src",
-    "build_new": "vuepress build src",
-    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress dev src",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && vuepress build src"
+    "dev_new": "./pullgithub.sh && vuepress dev src",
+    "build_new": "./pullgithub.sh && vuepress build src",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && ./pullgithub.sh && vuepress dev src",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && ./pullgithub.sh && vuepress build src"
   },
   "license": "MIT",
   "devDependencies": {
