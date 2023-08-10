@@ -186,6 +186,12 @@ Sets the location of what buttons. More information about the virual gamepad but
 - Type: `object`
 - Default: `{}`
 
+## `EJS_controlScheme`
+
+Default behaviour (when option is undefined) not changed (core name will be used).
+
+Available control schemes: `nes` `gb`  `gba` `snes` `n64` `gba` `nds` `vb` `segaMD` `segaCD` `sega32x` `segaMS` `segaGG` `segaSaturn` `3do` `atari2600` `atari7800` `lynx` `jaguar` `arcade` `mame`
+
 ## `EJS_Buttons`
 
 Shows/hides buttons.

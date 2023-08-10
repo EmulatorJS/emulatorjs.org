@@ -37,6 +37,10 @@ export default {
       {
         text: 'Demo',
         link: 'https://demo.emulatorjs.org/'
+      },
+      {
+        text: 'Join Discord',
+        link: 'https://discord.gg/6akryGkETU'
       }
     ],
     sidebarDepth: 2,
@@ -64,7 +68,7 @@ export default {
           },
           {
             text: 'Systems',
-            path: '/github/docs/Systems/',
+            link: '/docs/Systems',
             collapsible: true,
             children: [
               {
@@ -167,7 +171,7 @@ export default {
           },
           {
             text: 'Changelog',
-            link: '/github/CHANGES.md',
+            link: '/github/CHANGES',
           },
           {
             text: 'How To Contribute',
@@ -240,7 +244,7 @@ export default {
     }),
     googleAnalyticsPlugin({
       id: 'G-R87E52EEFR',
-      debug: true
+      debug: false
     })
   ]
 }
