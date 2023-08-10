@@ -5,11 +5,12 @@
 * A web server like NGINX or the Apache server included in [XAMPP](https://www.apachefriends.org/)
   * Alternatively, for a simpler server use [this](https://github.com/terreng/simple-web-server)
 * A website behing hosted on that server, or at its most basic, create an empty file named "index.html" (save for later)
+* Or you can use the built-in server [here](#built-in-server-installation-optional)
 
 ## Setup
 
 1) Download the [github project](https://github.com/EmulatorJS/EmulatorJS/archive/refs/heads/main.zip) and unzip it into your webserver hosted folder.
-2) [Choose an emulator](https://github.com/EmulatorJS/EmulatorJS/tree/main/docs/Systems) you want embedded, then copy and paste its code into your "index.html" file and edit the necessary fields. You have the option to edit each of the fields manually or use the [Code Editor](/docs/Getting%20Started.html#code-editor) tool.
+2) [Choose an emulator](Systems.html) you want embedded, then copy and paste its code into your "index.html" file and edit the necessary fields. You have the option to edit each of the fields manually or use the [Code Editor](/docs/Getting%20Started.html#code-editor) tool.
 
 ### Example for NES
 
@@ -53,6 +54,15 @@ A [Code Editor](/editor.html) feature is included on this website. It's a wizard
 3) Generate out file
 
 It will then give you the download link for a zip folder that will include the rom & an index.html file that has your code ready to be copy & pasted into your website.
+
+## Built-in Server Installation (Optional)
+
+After cloning the github project, you can run the built-in server by running the following command in the terminal:
+
+```bash
+npm i
+npm start
+```
 
 ## Client Installation
 
