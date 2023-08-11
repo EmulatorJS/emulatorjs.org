@@ -40,3 +40,4 @@ You can then set your netplay server with the `EJS_netplayUrl` setting.
 ```js
 EJS_netplayUrl = "URL HERE";
 ```
+<!-- EJS_netplayServer -->
