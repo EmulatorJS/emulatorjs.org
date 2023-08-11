@@ -228,9 +228,14 @@ export default {
     backToTopPlugin(),
     mediumZoomPlugin(),
     searchPlugin({
-      maxSuggestions: 10,
+      maxSuggestions: 15,
       isSearchable: (page) => page.path !== '/',
-      getExtraFields: (page) => page.frontmatter.tags ?? [],
+      getExtraFields: (page) => {
+        const tags = page.frontmatter.tags ?? [];
+        const title = page.title ?? ''; 
+        return [...tags, title];
+      },
+      hotKeys: ['s', '/', { key: 'f', ctrl: true }],
       locales: {
         '/': {
           placeholder: 'Search',
