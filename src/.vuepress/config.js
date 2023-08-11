@@ -157,7 +157,7 @@ export default {
               },
               {
                 text: 'Virtual Boy',
-                link: '/github/docs/Systems/Virtural Boy.html',
+                link: '/github/docs/Systems/Virtual Boy.html',
               }
             ]
           },
@@ -228,7 +228,7 @@ export default {
     backToTopPlugin(),
     mediumZoomPlugin(),
     searchPlugin({
-      maxSuggestions: 15,
+      maxSuggestions: 12,
       isSearchable: (page) => page.path !== '/',
       getExtraFields: (page) => {
         const tags = page.frontmatter.tags ?? [];
