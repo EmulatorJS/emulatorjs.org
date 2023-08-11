@@ -114,6 +114,30 @@ The path to the data folder. Version 4.0 and up will set this to the same path t
 - Default: `data/`
 - Example: `EJS_pathtodata = '/data/'`
 
+## `EJS_paths`
+
+You can set the paths to the files used by the emulator. This is useful if you want to host the files in a different why than the default, like a blob or a cdn.
+
+- Type: `object`
+- Default: The default paths are used.
+- Example:
+
+```js
+EJS_paths = {
+    "GameManager.js": "blob:https://emulatorjs.org/0a0a0a0a-0a0a-0a0a-0a0a-0a0a0a0a0a0a",
+    "emulator.min.css": "blob:https://emulatorjs.org/0a0a0a0a-0a0a-0a0a-0a0a-0a0a0a0a0a0a",
+    "emulator.min.js": "https://cdn.emulatorjs.org/emulator.min.js",
+    "gamepad.js": "https://cdn.emulatorjs.org/gamepad.js",
+    "loader.js": "https://cdn.emulatorjs.org/loader.js",
+    "nipplejs.js": "https://cdn.emulatorjs.org/nipplejs.js",
+    "shaders.js": "https://cdn.emulatorjs.org/shaders.js",
+    "socket.io.min.js": "https://cdn.emulatorjs.org/socket.io.min.js",
+    "storage.js": "https://cdn.emulatorjs.org/storage.js",
+    "version.json": "https://cdn.emulatorjs.org/version.json"
+    };
+```
+Note the example above will not work the paths are just for example purposes.
+
 ## `EJS_onGameStart`
 
 Function to be called when game is started.
@@ -188,6 +212,9 @@ Sets the location of what buttons. More information about the virual gamepad but
 
 ## `EJS_controlScheme`
 
+- Type: `string`
+- Default: ``
+
 Default behaviour (when option is undefined) not changed (core name will be used).
 
 Available control schemes: `nes` `gb`  `gba` `snes` `n64` `gba` `nds` `vb` `segaMD` `segaCD` `sega32x` `segaMS` `segaGG` `segaSaturn` `3do` `atari2600` `atari7800` `lynx` `jaguar` `arcade` `mame`
@@ -239,4 +266,8 @@ EJS_defaultOptions = {
 }
 ```
 
-<!-- EJS_paths, EJS_gameParentUrl -->
+## `EJS_DEBUG_XX`
+
+You can set this to `true` to enable debug mode. This will log a lot of information to the console and use the unminified scripts. This is useful for debugging issues with the emulator. And it is recommended to use this when you are contibuting to the project.
+
+<!-- EJS_gameParentUrl -->
