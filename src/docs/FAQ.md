@@ -25,7 +25,11 @@ If the issue still occurs, open an issue containing a screenshot of the network 
 
 #### *Q:* How do I embed this on google sites?
 
-***A:*** As far as I know, google sites does not offer custom html elements, so this is not currently possible.
+***A:*** [Embedding on google sites](Embed.html#google-sites)
+
+#### *Q:* How do I embed this on react?
+
+***A:*** [Embedding in react](Embed.html#react)
 
 #### *Q:* What should I include when I open an issue?
 
