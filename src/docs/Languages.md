@@ -40,7 +40,7 @@ Translated for `zh-CN` originally by [@allancoding](https://github.com/allancodi
 
 Download the default `en.json` file and simply translate all the words that start with the `-` (remove the dash afterwards) then perform a pull request or open an issue with the file uploaded and I will add your work.
 
-The `retroarch.json` are all the setting names for the menu. They will default to english if not found. You can set `EJS_settingsLanguage` to `true` to see the missing retroarch settings names for the current language. You can translate them and add the to the language file. 
+The `retroarch.json` are all the setting names for the menu. They will default to english if not found. You can set `EJS_settingsLanguage` to `true` to see the missing retroarch settings names for the current language. You can translate them and add the to the language file. And the missing ones will be pushed to an array `EJS_missingLang` that you can read from the console.
 
 You can also use the [Translation Helper](https://demo.emulatorjs.org/data/localization/Translate.html) tool to help you translate the file.
 

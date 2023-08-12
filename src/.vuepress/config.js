@@ -59,6 +59,10 @@ export default {
             link: '/docs/Getting Started.html',
           },
           {
+            text: 'How To Embed',
+            link: '/docs/Embed',
+          },
+          {
             text: 'Features',
             link: '/docs/Features',
           },
