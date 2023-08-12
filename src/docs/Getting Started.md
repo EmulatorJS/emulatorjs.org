@@ -14,6 +14,10 @@
 
 ### Example for NES
 
+If your using [react](Embed.html#react) or [google sites](Embed.html#google-sites)
+
+```html
+
 ```html
 <div style='width:640px;height:480px;max-width:100%'>
     <div id='game'></div>
