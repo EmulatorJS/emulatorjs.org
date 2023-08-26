@@ -143,6 +143,15 @@ URL to game patch file.
 - Default: `''`
 - Example: `EJS_gamePatchUrl = 'someFile.patch'`
 
+### `EJS_thread`
+
+Runs the core using threads. This may improve performance. This is only supported in some cores: `pcsx_rearmed`, `mgba`, `mupen64plus`, `opera`, `yabause`, `beetle-psx`, `parallel-n64`.
+
+- Type: `boolean`
+- Default: `false`
+- Example: `EJS_thread = true`
+
+
 ### `EJS_gameParentUrl`
 
 This is a url to the game parent data. For additioal files needed for the game emulation.
