@@ -12,6 +12,7 @@
 - Update your data folder.
 - If using jsDelivr, ensure you have an up-to-date URL.
 - If using Replit, don't. Replit doesn't support this and will block certain files.
+- If using GitHack, try using jsDelivr. Githack will serve outdated resources.
 
 If the issue still occurs, open an issue containing a screenshot of the network tab within dev-tools.
 
@@ -29,7 +30,7 @@ If the issue still occurs, open an issue containing a screenshot of the network 
 
 #### *Q:* How do I embed this on React?
 
-***A:*** [Embedding in React](Embed.html#react)
+***A:*** [Embedding in React](Embed.html#react-single-page-apps)
 
 #### *Q:* I'm encountering CORS errors while trying to run the emulator. How can I resolve this?
 
@@ -37,9 +38,9 @@ If the issue still occurs, open an issue containing a screenshot of the network 
 - Ensure that the server hosting the EmulatorJS resources has proper CORS headers set.
 - Check your server's CORS headers.
 
-#### *Q:* I'm seeing an error that says "Shared Array Buffer is not defined." How do I fix this?
+#### *Q:* I'm seeing an error that says "SharedArrayBuffer is not defined." How do I fix this?
 
-***A:*** The "Shared Array Buffer is not defined" error can occur due to browser security restrictions. Shared Array Buffer is a feature that can be a security risk if not used carefully.
+***A:*** The "SharedArrayBuffer is not defined" error can occur due to browser security restrictions. Shared Array Buffer is a feature that can be a security risk if not used carefully.
 
 To fix this issue, you can:
 - Check if the browser you're using supports Shared Array Buffer.

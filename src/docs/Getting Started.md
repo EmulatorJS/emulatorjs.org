@@ -1,6 +1,6 @@
 # Getting Started
 
-## Prerequisits
+## Prerequisites
 
 * A web server like NGINX or the Apache server included in [XAMPP](https://www.apachefriends.org/)
   * Alternatively, for a simpler server use [this](https://github.com/terreng/simple-web-server)
@@ -14,9 +14,7 @@
 
 ### Example for NES
 
-If your using [react](Embed.html#react) or [google sites](Embed.html#google-sites)
-
-```html
+If you're using [React](Embed.html#react-single-page-apps), [Single page apps](Embed.html#react-single-page-apps), or [google sites](Embed.html#google-sites), see the [Embed page](Embed.html).
 
 ```html
 <div style='width:640px;height:480px;max-width:100%'>
@@ -112,4 +110,4 @@ The process is similar as that of the Windows setup:
 --kiosk "http://192.168.1.120/"
 ```
 
-(example: run --branch=stable --arch=x86_64 --command=/app/bin/chrome --file-forwarding com.google.Chrome @@u @@ --window-size=1024,640 --force-device-scale-factor=1.25 --device-scale-factor=1.25 --kiosk "http://192.168.1.120/")
+(example: `run --branch=stable --arch=x86_64 --command=/app/bin/chrome --file-forwarding com.google.Chrome @@u @@ --window-size=1024,640 --force-device-scale-factor=1.25 --device-scale-factor=1.25 --kiosk "http://192.168.1.120/"`)
