@@ -6,32 +6,9 @@ The [System Page](Systems.html) will have examples for all the supported systems
 
 If you have a http server then the [Get Started Page](Getting%20Started.html#example-for-nes) has a working example for the NES.
 
-## React
-Example:
-```js
-const injectScripts = () => {
-    if (window.EJS_emulator || window.EmulatorJS) return;
-    window.EJS_player = '#game';
-    window.EJS_core = 'nes';
-    window.EJS_gameUrl = 'path_to_rom';
-    window.EJS_pathtodata = 'data/';
-    
-    const script = document.createElement('script');
-    script.src = "data/loader.js";
-    document.body.appendChild(script);
-}
+## React / Single Page Apps
 
-function App() {
-  injectScripts();
-  return (
-    <div style={{width: "640px", height: "480px", maxWidth: "100%"}}>
-        <div id='game'></div>
-    </div>
-  );
-}
-
-export default App;
-```
+To embed within React or a SPA, the only way is to embed an iframe into your page, and run this emulator within that iframe. You **cannot** run it directly on the page. This will break single page apps, and tamper with the DOM.
 
 ## Google Sites
 Here is an example made in google sites: [EmulatorJS Google Sites Example](https://sites.google.com/view/emulatorjs/home)
@@ -43,10 +20,10 @@ Here is the code used in the example game:
 <html>
     <head>
         <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-        }
+            body, html {
+                margin: 0;
+                padding: 0;
+            }
         </style>
     </head>
     <body>

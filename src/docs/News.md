@@ -1,5 +1,9 @@
 # News
 
+## EmulatorJS Version 4.0 Re-write
+
+As of version 4.0, EmulatorJS is no longer a reverse engineered version of [https://www.emulatorjs.com/](https://www.emulatorjs.com/). I ([Ethan](https://github.com/ethanaobrien)) spent several weeks re-writing the program, making it better, faster, fixing audio, iOS/Safari support, and the core quality. The backend is actually worth working on now.
+
 ## EmulatorJS & LinuxServer
 
 Both [Ethan O'Brien's EmulatorJS](https://github.com/EmulatorJS/EmulatorJS) and [LinuxServer's EmulatorJS](https://github.com/linuxserver/emulatorjs) had humble beginnings by seeing the service on the ad ridden [https://www.emulatorjs.com/](https://www.emulatorjs.com/) and thought, 'I could make this better.'

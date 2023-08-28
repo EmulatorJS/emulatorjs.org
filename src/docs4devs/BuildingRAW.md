@@ -1,8 +1,6 @@
 # Building RetroArch-Web
 
-*Instructions have only been confirmed working for **Ubuntu**.*
-
-* For simplicity, you can execute [this script.](https://github.com/KingIzzymon/retroarch-web/blob/main/compileretroarchweb.sh)
+*Instructions have only been confirmed working for **Debian** and **Fedora**.*
 <br>
 
 ### Dependencies
@@ -12,8 +10,11 @@
 - **[BinUtils]**
 - **[Python]**
 - **[Git]**
+- **[Emscripten]**
 
 <br>
+
+*Debian:*
 
 ```sh
 sudo apt install -y         \
@@ -24,10 +25,32 @@ sudo apt install -y         \
     git 
 ```
 
+*Fedora:*
+
+```sh
+sudo dnf groupinstall "Development Tools" "Development Libraries"
+```
+
 <br>
 <br>
 
-### LibRetro
+*To install emscripten, run this command. Note this will only temporarily add emscripten to your path. **Follow the on screen directions when it finishes to make this permanent.***
+
+```sh
+cd; && \
+git clone https://github.com/emscripten-core/emsdk.git .emsdk && \
+cd .emsdk && ./emsdk install latest && ./emsdk activate latest && source ./emsdk_env.sh
+```
+
+<br>
+<br>
+
+*It is **highly recommended** to use [this script](https://github.com/EmulatorJS/build/) to compile the cores. It will compile every core and package them for you.*
+
+<br>
+<br>
+
+### LibRetro "Cores"
 
 1. **Clone** the repository.
 
@@ -105,6 +128,7 @@ sudo apt install -y         \
 [PkgConf]: http://pkgconf.org/
 [Python]: https://www.python.org/
 [Git]: https://git-scm.com/
+[Emscripten]: https://emscripten.org/
 
 <!---------------------------------{ Badges }---------------------------------->
 

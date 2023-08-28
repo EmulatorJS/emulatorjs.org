@@ -145,7 +145,7 @@ URL to game patch file.
 
 ### `EJS_thread`
 
-Runs the core using threads. This may improve performance. This is only supported in some cores: `pcsx_rearmed`, `mgba`, `mupen64plus`, `opera`, `yabause`, `beetle-psx`, `parallel-n64`.
+Runs the core using threads. This may improve performance. This is only supported in some cores: `pcsx_rearmed`, `mgba`, `mupen64plus_next`, `opera`, `yabause`, `mednafen_psx_hw`, `parallel-n64`.
 
 - Type: `boolean`
 - Default: `false`
