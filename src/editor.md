@@ -33,28 +33,6 @@ lastUpdated: false
             <input type="checkbox" id="lightgun">
             <span class="checkmark2"></span>
         </label>
-        <!--
-        <div id="np" style="display:none;">
-            <label class="container">Netplay
-                <input type="checkbox" id="netplay">
-                <span class="checkmark2"></span>
-            </label>
-            <ul>
-                <label class="textBox" style="display:none;" id="npgid">Game Id
-                    <input type="number" id="npGameId">
-                </label>
-                <label class="container" style="display:none;" id="nps">Use Custom Netplay Server
-                    <input type="checkbox" id="netplayServer">
-                    <span class="checkmark2"></span>
-                </label>
-                <ul>
-                    <label class="textBox" style="display:none;" id="npurl">Enter server URL
-                        <input type="text" id="npServerURL">
-                    </label>
-                </ul>
-            </ul>
-        </div>
-        -->
         <label class="container">Make it work without web server (not recommended)
             <input type="checkbox" id="offline">
             <span class="checkmark2"></span>
