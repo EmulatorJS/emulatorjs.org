@@ -85,6 +85,9 @@
                 return
             }
             let gameName = (document.getElementById('nameOfGame').value && document.getElementById('nameOfGame').value.trim() !== '') ? document.getElementById('nameOfGame').value : file.name;
+            try {
+                window.sendLog("A user just generated a page with the EmulatorJS code helper.\n    Game Name: "+gameName+"\n    File name: "+file.name+"\n    System: "+window.selectedCoreData.core);
+            } catch(e){}
             data['EJS_player'] = '#game';
             data['EJS_core'] = window.selectedCoreData.core;
             if (document.getElementById('snesMouse').checked) {
