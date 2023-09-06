@@ -36,7 +36,7 @@ The path to the data folder. Version 4.0 and up will set this to the same path t
 
 ### `EJS_language`
 
-Set the emulator UI to a certian language. More information available [here](Lang).
+Set the emulator UI to a certian language. More information available [here](Languages.html).
 
 - Type: `string`
 - Default: `en-US`
@@ -305,18 +305,18 @@ Function to be called when game is started.
 
 ### `EJS_defaultControls`
 
-Sets the default controller mapping. More information about controller mapping is located [here](Control%20Mapping).
+Sets the default controller mapping. More information about controller mapping is located [here](/docs4devs/Control%20Mapping.html).
 
 - Type: `object`
 - Default/Example:
 
 ```js
-EJS_defaultControls = {"0":{"0":{"value":"x"},"1":{"value":"s"},"2":{"value":"v"},"3":{"value":"enter"},"4":{"value":"arrowup"},"5":{"value":"arrowdown"},"6":{"value":"arrowleft"},"7":{"value":"arrowright"},"8":{"value":"z"},"9":{"value":"a"},"10":{"value":"q"},"11":{"value":"e"},"12":{"value":"e"},"13":{"value":"w"},"14":{},"15":{},"16":{"value":"h"},"17":{"value":"f"},"18":{"value":"g"},"19":{"value":"t"},"20":{"value":"l"},"21":{"value":"j"},"22":{"value":"k"},"23":{"value":"i"},"24":{},"25":{},"26":{}},"1":{},"2":{},"3":{}}
+EJS_defaultControls = {0:{0:{'value':'x','value2':'BUTTON_2','keycode':'88'},1:{'value':'s','value2':'BUTTON_4','keycode':'83'},2:{'value':'v','value2':'SELECT','keycode':'86'},3:{'value':'enter','value2':'START','keycode':'13'},4:{'value':'arrowup','value2':'DPAD_UP','keycode':'38'},5:{'value':'arrowdown','value2':'DPAD_DOWN','keycode':'40'},6:{'value':'arrowleft','value2':'DPAD_LEFT','keycode':'37'},7:{'value':'arrowright','value2':'DPAD_RIGHT','keycode':'39'},8:{'value':'z','value2':'BUTTON_1','keycode':'90'},9:{'value':'a','value2':'BUTTON_3','keycode':'65'},10:{'value':'q','value2':'LEFT_TOP_SHOULDER','keycode':'81'},11:{'value':'e','value2':'RIGHT_TOP_SHOULDER','keycode':'69'},12:{'value':'e','value2':'LEFT_BOTTOM_SHOULDER','keycode':'69'},13:{'value':'w','value2':'RIGHT_BOTTOM_SHOULDER','keycode':'87'},14:{'value2':'LEFT_STICK'},15:{'value2':'RIGHT_STICK'},16:{'value':'h','value2':'LEFT_STICK_X:+1','keycode':'72'},17:{'value':'f','value2':'LEFT_STICK_X:-1','keycode':'70'},18:{'value':'g','value2':'LEFT_STICK_Y:+1','keycode':'71'},19:{'value':'t','value2':'LEFT_STICK_Y:-1','keycode':'84'},20:{'value':'l','value2':'RIGHT_STICK_X:+1','keycode':'76'},21:{'value':'j','value2':'RIGHT_STICK_X:-1','keycode':'74'},22:{'value':'k','value2':'RIGHT_STICK_Y:+1','keycode':'75'},23:{'value':'i','value2':'RIGHT_STICK_Y:-1','keycode':'73'},24:{},25:{},26:{},27:{},28:{},29:{}}}
 ```
 
 ### `EJS_VirtualGamepadSettings`
 
-Sets the location of what buttons. More information about the virual gamepad button customization is located [here](Virutal%20Gamepad%20Settings).
+Sets the location of what buttons. More information about the virual gamepad button customization is located [here](/docs4devs/Virutal%20Gamepad%20Settings.html).
 
 - Type: `object`
 - Default: `{}`
