@@ -13,6 +13,7 @@ This page will tell you the backend emulator for each core.
 - [`melonds`: default `nds` core](../github/docs/Systems/Nintendo%20DS.html)
 - [`desmume2015`: `nds` core](../github/docs/Systems/Nintendo%20DS.html)
 - [`a5200`: default `a5200` core](../github/docs/Systems/Atari%205200.html)
+- [`mame2003_plus`: `mame2003` core](../github/docs/Systems/MAME%202003.html)
 - [`mame2003`: default `mame2003` core](../github/docs/Systems/MAME%202003.html)
 - [`fbneo`: default `arcade` core](../github/docs/Systems/Arcade.html)
 - [`fbalpha2012_cps1`: `arcade` core](../github/docs/Systems/Arcade.html)
@@ -29,3 +30,16 @@ This page will tell you the backend emulator for each core.
 - [`prosystem`: default `atari7800` core](../github/docs/Systems/Atari%207800.html)
 - [`stella2014`: default `atari2600` core](../github/docs/Systems/Atari%202600.html)
 - [`picodrive`: default `sega32x` core](../github/docs/Systems/Sega%2032X.html)
+- `mednafen_pce`: default `pce` core
+- `mednafen_pcfx`: default `pcfx` core
+- `mednafen_ngp`: default `ngp` core
+- `mednafen_wswan`: default `ws` core
+- `gearcoleco`: default `coleco` core
+
+
+## Unavailable cores (that reasons are known)
+- [Citra (3DS)](https://citra-emu.org/). Compiles with patches, but requires OpenGL 3.3, which is not supported by emscripten.
+- [PPSSPP (PSP)](https://www.ppsspp.org/). Compiles with patches. Has issues with mmap and the interpreter that will cause the page to freeze after 2-3 frames.
+- [Dolphin (Wii/Gamecube)](https://dolphin-emu.org/). Uses cmake. Not actually tested, but inferred to have the same issues as ppsspp, since ppsspp and dolphin have the same memory mapping backend.
+
+
