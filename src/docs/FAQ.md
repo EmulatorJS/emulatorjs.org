@@ -4,6 +4,10 @@
 
 ***A:*** Because I don't have the time to personally help every person out there, and your issue is likely documented here.
 
+#### *Q:* How can I embed this using Replit
+
+***A:*** You don't. Replit does not support this.
+
 #### *Q:* I'm getting "Network Error" when trying to play. What do I do?
 
 ***A:*** Try the following:
@@ -22,7 +26,7 @@ If the issue still occurs, open an issue containing a screenshot of the network 
 
 #### *Q:* Is netplay supported? How do I enable netplay?
 
-***A:*** Netplay is not currently supported, but it is hoped to be coming soon. Development is in progress.
+***A:*** Netplay is not currently supported, but it is hoped to be coming soon. Development is in progress. Please ping me (ethanthesleepyone) in the emulatorjs discord server if you have the knowledge to help.
 
 #### *Q:* How do I embed this on Google Sites?
 
@@ -34,22 +38,16 @@ If the issue still occurs, open an issue containing a screenshot of the network 
 
 #### *Q:* I'm encountering CORS errors while trying to run the emulator. How can I resolve this?
 
-***A:*** CORS (Cross-Origin Resource Sharing) errors occur when a web page running in one domain tries to access resources (like scripts or assets) from another domain. To resolve CORS errors, you can:
-- Ensure that the server hosting the EmulatorJS resources has proper CORS headers set.
-- Check your server's CORS headers.
+***A:*** CORS (Cross-Origin Resource Sharing) errors occur when a web page running in one domain tries to access resources (like scripts or assets) from another domain. To resolve CORS errors. Ensure the "Access-Control-Allow-Origin" header is set on the remote server, and is the correct value.
 
 #### *Q:* I'm seeing an error that says "SharedArrayBuffer is not defined." How do I fix this?
 
-***A:*** The "SharedArrayBuffer is not defined" error can occur due to browser security restrictions. Shared Array Buffer is a feature that can be a security risk if not used carefully.
+***A:*** The "SharedArrayBuffer is not defined" error will occur if the following headers are not set. This is because the SharedArrayBuffer feature is very powerful. Ensure you are using https and that your server is sending the headers below.
 
-To fix this issue, you can:
-- Check if the browser you're using supports Shared Array Buffer.
-- Make sure to set the following headers on the server to enable Shared Array Buffer:
 ```
 Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
-These headers manage cross-origin interactions and enable the use of Shared Array Buffer.
 
 #### *Q:* What should I include when I open an issue?
 

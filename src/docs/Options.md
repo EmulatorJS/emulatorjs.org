@@ -145,16 +145,16 @@ URL to game patch file.
 
 ### `EJS_thread`
 
-Runs the core using threads. This may improve performance. This is only supported in some cores: `pcsx_rearmed`, `mgba`, `mupen64plus_next`, `opera`, `yabause`, `mednafen_psx_hw`, `parallel-n64`.
+Runs the core using threads. This may improve performance. This is only supported in some cores: `pcsx_rearmed`, `mgba`, `mupen64plus_next`, `opera`, `yabause`, `mednafen_psx_hw`, `parallel-n64`. Settings this when not supported will cause network errors at the moment.
 
 - Type: `boolean`
 - Default: `false`
-- Example: `EJS_thread = true`
+- Example: `EJS_threads = true`
 
 
 ### `EJS_gameParentUrl`
 
-This is a url to the game parent data. For additioal files needed for the game emulation.
+This is a url to the game parent data. For additional files needed for the game emulation.
 
 - Type: `string`
 - Default:&nbsp;` `
