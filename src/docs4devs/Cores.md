@@ -38,7 +38,7 @@ This page will tell you the backend emulator for each core.
 
 
 ## Unavailable cores (that reasons are known)
-- [Citra (3DS)](https://citra-emu.org/). Compiles with patches, but requires OpenGL 3.3, which is not supported by emscripten.
+- [Citra (3DS)](https://citra-emu.org/). Compiles with patches, but requires hardware rendering.
 - [PPSSPP (PSP)](https://www.ppsspp.org/). Compiles with patches. Has issues with mmap and the interpreter that will cause the page to freeze after 2-3 frames.
 - [Dolphin (Wii/Gamecube)](https://dolphin-emu.org/). Uses cmake. Not actually tested, but inferred to have the same issues as ppsspp, since ppsspp and dolphin have the same memory mapping backend.
 
