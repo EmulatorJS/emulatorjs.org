@@ -55,7 +55,7 @@ EJS_VirtualGamepadSettings = [
     },
     //Note- the dpad and the zone will overlap in this example, this is just to show what it should look like.
     {
-        type: "dpad"
+        type: "dpad",
         location: "left",
         left: "50%",
         right: "50%",
