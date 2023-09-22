@@ -51,7 +51,7 @@ EJS_VirtualGamepadSettings = [
         left: "50%",
         top: "50%",
         joystickInput: true,
-        inputValues: [16, 17, 18, 19]
+        inputValues: [19, 18, 17, 16]
     },
     //Note- the dpad and the zone will overlap in this example, this is just to show what it should look like.
     {
@@ -103,9 +103,9 @@ Types:
 
 `right`: The css right value (must be in a percentage).
 
-`joystickInput`: Set this to true if the input values are `[16, 17, 18, 19]`. This should only be set to true for analog inputs.
+`joystickInput`: Set this to true if the input values are `[19, 18, 17, 16]`. This should only be set to true for analog inputs.
 
-`inputValues`: The values to input into the emulator. Normally either `[16, 17, 18, 19]` or `[4, 5, 6, 7]`.
+`inputValues`: The values to input into the emulator. Normally either `[19, 18, 17, 16]` or `[4, 5, 6, 7]`.
 
 ## Values needed for `dpad`
 
@@ -117,9 +117,9 @@ Types:
 
 `right`: the css right value (must be in a percentage).
 
-`joystickInput`: Set this to true if the input values are `[16, 17, 18, 19]`. This should only be set to true for analog inputs. Note that the dpad does not support analog values and the buttons are either down or up.
+`joystickInput`: Set this to true if the input values are `[19, 18, 17, 16]`. This should only be set to true for analog inputs. Note that the dpad does not support analog values and the buttons are either down or up.
 
-`inputValues`: The values to input into the emulator. Normally either `[16, 17, 18, 19]` or `[4, 5, 6, 7]`.
+`inputValues`: The values to input into the emulator. Normally either `[19, 18, 17, 16]` or `[4, 5, 6, 7]`.
 
 ## Values needed for `button`
 
@@ -144,5 +144,3 @@ Types:
 `id`: The ID of the button. Must be unique.
 
 `input_value`: The input value. Available options can be found [here](https://github.com/ethanaobrien/emulatorjs/blob/018c39d4065b866487f8f18ca88c9488eab69a6d/data/emu-main.js#L2998).
-
-`input_new_cores`: The input value for new cores. Available options can be found [here](https://github.com/ethanaobrien/emulatorjs/blob/018c39d4065b866487f8f18ca88c9488eab69a6d/data/emu-main.js#L2998).
