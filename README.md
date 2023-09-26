@@ -7,20 +7,19 @@ Note: This website is built upon vuepress.
 
 Made with ❤️ by [@ethanaobrien](https://github.com/ethanaobrien) & [@allancoding](https://github.com/allancoding)
 
-This project is not affiliated with [linuxserver/emulatorjs](https://github.com/linuxserver/emulatorjs)
-
 ## Contributing
 
 In order to contribute, you will need the following:
 
 * Node.js 10+
-* Yarn
-* Vuepress
-* A code editor like Visual Studio Code
+* Yarn (not technically required)
+* Vuepress (part of nodejs)
+* A code editor like Visual Studio Code (or notepad++)
 
 ### Development
 
-Run the following commands one after the other.
+Run the following commands one after the other. (run with `npm` instead of `yarn` if you're too lazy to install yarn)
+
 Install Dependencies
 
 ```sh
