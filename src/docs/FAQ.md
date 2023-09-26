@@ -49,6 +49,18 @@ Cross-Origin-Opener-Policy: same-origin
 Cross-Origin-Embedder-Policy: require-corp
 ```
 
+#### *Q:* Is this linuxservers EmulatorJS docker project?
+
+***A:*** No.
+
+#### *Q:* Is there a docker version of this project?
+
+***A:*** The sponsored docker version of this project is the "gaseous" project. You can find the project [here](https://github.com/gaseous-project/gaseous-server) on github, and you can join the gaseous discord server [here](https://discord.gg/WQwRgAWDEM).
+
+#### *Q:* Why is the demo the only official EmulatorJS instance?
+
+***A:*** This project isn't meant to be a website to go to and play games. This project is meant for developers to use to embed into their site to host games. If a feature isn't on the demo that is found in other places of the project, it's because its a **demo**.
+
 #### *Q:* What should I include when I open an issue?
 
 ***A:*** You should include as much as you know. The issue, and logs. If you don't have access to the console, there is likely a reason, and it is likely that reason is also causing an issue with other things.
