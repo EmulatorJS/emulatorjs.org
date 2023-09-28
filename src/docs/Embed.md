@@ -32,11 +32,9 @@ Here is the code used in the example game:
         </div>
         <script>
             EJS_player = "#game";
-            EJS_core = "snes";
-            EJS_gameName = "Secret of Mana";
-            EJS_color = "#0097c4";
+            EJS_core = "CORE_NAME";
             EJS_pathtodata = "https://demo.emulatorjs.org/data/";
-            EJS_gameUrl = "https://allancoding-website-files.on.drv.tw/files/ROMS/Secret of Mana (U) [!].zip";
+            EJS_gameUrl = "https://allancoding-website-files.on.drv.tw/ROM_FILE_NAME_&_PATH.zip";
         </script>
         <script src="https://demo.emulatorjs.org/data/loader.js"></script>
     </body>
