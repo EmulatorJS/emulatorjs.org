@@ -30,3 +30,23 @@ html.dark {
   --c-brand-light: #00afe4;
   --c-tip: #0098C5;
 }
+
+.scrollable-code div[class^="language-"]{
+  max-height: 450px;
+  overflow-y: auto;
+}
+
+.scrollable-code div pre{
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.scrollable-code div .line-numbers{
+  border-right: 1px solid var(--code-hl-bg-color);
+  border-radius: 6px 0 0 6px;
+  padding-bottom: 1.3rem;
+}
+
+.scrollable-code div[class^="language-"]::after {
+  display: none;
+}
