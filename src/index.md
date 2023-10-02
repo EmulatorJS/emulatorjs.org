@@ -3,7 +3,7 @@ home: true
 heroImage: /media/logo.png
 heroImageDark: /media/logo-light.png
 heroText: EmulatorJS
-tagline: An tool to embed an emulator in your website
+tagline: A tool to embed an emulator into your website
 actions:
 - text: Get Started
   link: /docs/
