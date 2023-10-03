@@ -533,3 +533,11 @@ Automatically reset the console after x seconds.
 - Type: `boolean`
 - Default: `false`
 - Example: `EJS_softLoad = true;`
+
+### `EJS_startButtonName`
+
+Custom text for the start button.
+
+- Type: `string`
+- Default: `Start Game`
+- Example: `EJS_startButtonName = "Start {game name}"`
