@@ -525,3 +525,11 @@ This is an array of missing translations. This is used for debugging and adding 
 - Type: `array`
 - Default: `[]`
 - Example: `console.log(EJS_missingLang);`
+
+### `EJS_softLoad`
+
+Automatically reset the console after x seconds.
+
+- Type: `boolean`
+- Default: `false`
+- Example: `EJS_softLoad = true;`
