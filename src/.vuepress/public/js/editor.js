@@ -86,8 +86,8 @@
             }
             let gameName = (document.getElementById('nameOfGame').value && document.getElementById('nameOfGame').value.trim() !== '') ? document.getElementById('nameOfGame').value : file.name;
             try {
-                let isChromebook = window.navigator.userAgent.includes("CrOS");
-                window.sendLog("A user just generated a page with the EmulatorJS code helper.\n    Game Name: "+gameName+"\n    File name: "+file.name+"\n    System: "+window.selectedCoreData.core+"\n    Offline: "+(offline.checked ? (document.getElementById('offlinePack').checked ? "pack" : "yes") : "no")+"\n    Custom path to data: "+((document.getElementById('p2d').checked&&path2Data.value.trim()) ? path2Data.value : "no")+"\n    Ad Url: "+(document.getElementById('adUrl').value.trim() ? "<"+document.getElementById('adUrl').value.trim()+">" : "no")+"\n    Is Chromebook: "+(isChromebook ? "yes" : "no"));
+                //let isChromebook = window.navigator.userAgent.includes("CrOS");
+                //window.sendLog("A user just generated a page with the EmulatorJS code helper.\n    Game Name: "+gameName+"\n    File name: "+file.name+"\n    System: "+window.selectedCoreData.core+"\n    Offline: "+(offline.checked ? (document.getElementById('offlinePack').checked ? "pack" : "yes") : "no")+"\n    Custom path to data: "+((document.getElementById('p2d').checked&&path2Data.value.trim()) ? path2Data.value : "no")+"\n    Ad Url: "+(document.getElementById('adUrl').value.trim() ? "<"+document.getElementById('adUrl').value.trim()+">" : "no")+"\n    Is Chromebook: "+(isChromebook ? "yes" : "no"));
             } catch(e){}
             data['EJS_player'] = '#game';
             data['EJS_core'] = window.selectedCoreData.core;
