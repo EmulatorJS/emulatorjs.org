@@ -143,7 +143,7 @@ URL to game patch file.
 - Default: `''`
 - Example: `EJS_gamePatchUrl = 'someFile.patch'`
 
-### `EJS_thread`
+### `EJS_threads`
 
 Runs the core using threads. This may improve performance. This is only supported in some cores: `pcsx_rearmed`, `mgba`, `mupen64plus_next`, `opera`, `yabause`, `mednafen_psx_hw`, `parallel-n64`. Settings this when not supported will cause network errors at the moment.
 
