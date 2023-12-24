@@ -100,13 +100,13 @@ EJS_cheats = [
 ]
 ```
 
-### `EJS_fullscreenOnLoad`
+### `EJS_fullscreenOnLoaded`
 
 Set to true to start the game in fullscreen mode.
 
 - Type: `boolean`
 - Default: `false`
-- Example: `EJS_fullscreenOnLoad = true`
+- Example: `EJS_fullscreenOnLoaded = true`
 
 ### `EJS_startOnLoaded`
 
