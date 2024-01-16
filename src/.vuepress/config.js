@@ -77,91 +77,91 @@ export default {
             children: [
               {
                 text: '3DO',
-                link: '/github/docs/Systems/3DO',
+                link: '/systems/3DO',
               },
               {
                 text: 'Arcade',
-                link: '/github/docs/Systems/Arcade',
+                link: '/systems/Arcade',
               },
               {
                 text: 'Atari 2600',
-                link: '/github/docs/Systems/Atari 2600.html',
+                link: '/systems/Atari 2600.html',
               },
               {
                 text: 'Atari 5200',
-                link: '/github/docs/Systems/Atari 5200.html',
+                link: '/systems/Atari 5200.html',
               },
               {
                 text: 'Atari 7800',
-                link: '/github/docs/Systems/Atari 7800.html',
+                link: '/systems/Atari 7800.html',
               },
               {
                 text: 'Atari Jaguar',
-                link: '/github/docs/Systems/Atari Jaguar.html',
+                link: '/systems/Atari Jaguar.html',
               },
               {
                 text: 'Atari Lynx',
-                link: '/github/docs/Systems/Atari Lynx.html',
+                link: '/systems/Atari Lynx.html',
               },
               {
                 text: 'MAME 2003',
-                link: '/github/docs/Systems/MAME 2003.html',
+                link: '/systems/MAME 2003.html',
               },
               {
                 text: 'NES-Famicom',
-                link: '/github/docs/Systems/NES-Famicom.html',
+                link: '/systems/NES-Famicom.html',
               },
               {
                 text: 'Nintendo 64',
-                link: '/github/docs/Systems/Nintendo 64.html',
+                link: '/systems/Nintendo 64.html',
               },
               {
                 text: 'Nintendo DS',
-                link: '/github/docs/Systems/Nintendo DS.html',
+                link: '/systems/Nintendo DS.html',
               },
               {
                 text: 'Nintendo Game Boy Advance',
-                link: '/github/docs/Systems/Nintendo Game Boy Advance.html',
+                link: '/systems/Nintendo Game Boy Advance.html',
               },
               {
                 text: 'Nintendo Game Boy',
-                link: '/github/docs/Systems/Nintendo Game Boy.html',
+                link: '/systems/Nintendo Game Boy.html',
               },
               {
                 text: 'PlayStation',
-                link: '/github/docs/Systems/PlayStation',
+                link: '/systems/PlayStation',
               },
               {
                 text: 'Sega 32X',
-                link: '/github/docs/Systems/Sega 32X.html',
+                link: '/systems/Sega 32X.html',
               },
               {
                 text: 'Sega CD',
-                link: '/github/docs/Systems/Sega CD.html',
+                link: '/systems/Sega CD.html',
               },
               {
                 text: 'Sega Game Gear',
-                link: '/github/docs/Systems/Sega Game Gear.html',
+                link: '/systems/Sega Game Gear.html',
               },
               {
                 text: 'Sega Master System',
-                link: '/github/docs/Systems/Sega Master System.html',
+                link: '/systems/Sega Master System.html',
               },
               {
                 text: 'Sega Mega Drive',
-                link: '/github/docs/Systems/Sega Mega Drive.html',
+                link: '/systems/Sega Mega Drive.html',
               },
               {
                 text: 'Sega Saturn',
-                link: '/github/docs/Systems/Sega Saturn.html',
+                link: '/systems/Sega Saturn.html',
               },
               {
                 text: 'SNES-Super Famicom',
-                link: '/github/docs/Systems/SNES',
+                link: '/systems/SNES',
               },
               {
                 text: 'Virtual Boy',
-                link: '/github/docs/Systems/Virtual Boy.html',
+                link: '/systems/Virtual Boy.html',
               }
             ]
           },
