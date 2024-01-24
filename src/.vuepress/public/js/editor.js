@@ -115,7 +115,7 @@
                     data['EJS_pathtodata'] += '/';
                 }
             } else {
-                data['EJS_pathtodata'] = 'https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/';
+                data['EJS_pathtodata'] = 'https://cdn.emulatorjs.org/stable/data/';
             }
             
             let zipOut = true;
