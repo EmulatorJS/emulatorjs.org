@@ -42,6 +42,11 @@ I do not know the file extension limits for this system.
 
 ### CORES
 
+
+::: warning
+This the `picodrive` is currently broken. See [this](https://github.com/EmulatorJS/EmulatorJS/issues/579) github issue
+:::
+
 The *segaCD* system supports 2 cores
 - `genesis_plus_gx`
 - `picodrive`
