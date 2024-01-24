@@ -170,6 +170,10 @@ export default {
             link: '/docs/Languages',
           },
           {
+            text: 'CDN',
+            link: '/docs/CDN',
+          },
+          {
             text: 'Roadmap',
             link: '/docs/Roadmap',
           },

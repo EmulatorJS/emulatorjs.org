@@ -29,7 +29,7 @@ This page will tell you the backend emulator for each core.
 - [`opera`: default `3do` core (Supports threads)](/systems/3DO.html)
 - [`prosystem`: default `atari7800` core](/systems/Atari%207800.html)
 - [`stella2014`: default `atari2600` core](/systems/Atari%202600.html)
-- [`picodrive`: default `sega32x` core](/systems/Sega%2032X.html)
+- [`picodrive`: default `sega32x` core](/systems/Sega%2032X.html) (this core is currently broken. See [this](https://github.com/EmulatorJS/EmulatorJS/issues/579) github issue)
 - `mednafen_pce`: default `pce` core
 - `mednafen_pcfx`: default `pcfx` core
 - `mednafen_ngp`: default `ngp` core

@@ -44,6 +44,11 @@
 
 ### CORES
 
+
+::: warning
+This the `picodrive` is currently broken. See [this](https://github.com/EmulatorJS/EmulatorJS/issues/579) github issue
+:::
+
 The *segaMS* system supports 2 cores
 - `genesis_plus_gx`
 - `picodrive`

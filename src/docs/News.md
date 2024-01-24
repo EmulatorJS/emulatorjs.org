@@ -1,5 +1,13 @@
 # News
 
+## EmulatorJS Version 4.0.9 CDN & Git History Rewrite
+
+As of version 4.0.9 cores and minified files are no longer included in the repository. You will need to get them separately. You can get the from [releases](https://github.com/EmulatorJS/EmulatorJS/releases) or the * new CDN (see [this](#CDN) for more info). There is also a new version system that we will be using. (read [here](CDN.html) for more info).
+
+The history of the project has been rewritten and force pushed. You will likely need to redo any active commits you have. Sorry for the inconvenience.
+
+Cloning the repository is no longer recommended for production use. You should use [releases](https://github.com/EmulatorJS/EmulatorJS/releases) or the [CDN](https://cdn.emulatorjs.org/) instead.
+
 ## EmulatorJS Version 4.0 Re-write
 
 As of version 4.0, EmulatorJS is no longer a reverse engineered version of [https://www.emulatorjs.com/](https://www.emulatorjs.com/). I ([Ethan](https://github.com/ethanaobrien)) spent several weeks re-writing the program, making it better, faster, fixing audio, iOS/Safari support, and the core quality. The backend is actually worth working on now.
