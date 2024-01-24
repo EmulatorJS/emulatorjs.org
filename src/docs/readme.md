@@ -1,6 +1,6 @@
 # Introduction
 
-[EmulatorJS](https://github.com/EmulatorJS/EmulatorJS) is a highly wrapped emulator. The backend is RetroArch compiled to WebAssembly (WASM) via Emscripten.
+[EmulatorJS](https://github.com/EmulatorJS/EmulatorJS) runs RetroArch compiled to webassembly, but focuses on embeddability within websites.
 
 Made with ❤️ by [@ethanaobrien](https://github.com/ethanaobrien) & [@allancoding](https://github.com/allancoding)
 
