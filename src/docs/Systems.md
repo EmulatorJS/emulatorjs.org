@@ -23,4 +23,4 @@
 - [Sega Mega Drive](/systems/Sega%20Mega%20Drive.html)
 - [Sega Saturn](/systems/Sega%20Saturn.html)
 - [SNES-Super Famicom](/systems/SNES.html)
-- [Virtural Boy](/systems/Virtual%20Boy.html)
+- [Virtual Boy](/systems/Virtual%20Boy.html)
