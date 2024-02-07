@@ -83,7 +83,7 @@ Set this to the title of the game. This will be used when saving states and taki
 
 - Type: `string`
 - Default: The name of the ROM file
-- Example: `EJS_loadStateURL = 'pong'`
+- Example: `EJS_gameName = 'pong'`
 
 ### `EJS_cheats`
 
