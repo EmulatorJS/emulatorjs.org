@@ -104,6 +104,34 @@ export default {
                 link: '/systems/Atari Lynx.html',
               },
               {
+                text: 'ColecoVision',
+                link: '/systems/ColecoVision.html',
+              },
+              {
+                text: 'Commodore 64',
+                link: '/systems/Commodore 64.html',
+              },
+              {
+                text: 'Commodore 128',
+                link: '/systems/Commodore 128.html',
+              },
+              {
+                text: 'Commodore Amiga',
+                link: '/systems/Commodore Amiga.html',
+              },
+              {
+                text: 'Commodore PET',
+                link: '/systems/Commodore PET.html',
+              },
+              {
+                text: 'Commodore Plus/4',
+                link: '/systems/Commodore Plus4.html',
+              },
+              {
+                text: 'Commodore VIC-20',
+                link: '/systems/Commodore VIC20.html',
+              },
+              {
                 text: 'MAME 2003',
                 link: '/systems/MAME 2003.html',
               },
