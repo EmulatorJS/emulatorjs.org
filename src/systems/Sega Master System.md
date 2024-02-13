@@ -49,8 +49,9 @@
 This the `picodrive` is currently broken. See [this](https://github.com/EmulatorJS/EmulatorJS/issues/579) github issue
 :::
 
-The *segaMS* system supports 2 cores
+The *segaMS* system supports 3 cores
+- `smsplus`
 - `genesis_plus_gx`
 - `picodrive`
 
-If set to `segaMS`, emulator will use the `genesis_plus_gx` core.
+If set to `segaMS`, emulator will use the `smsplus` core.
