@@ -4,7 +4,6 @@
   "description": "The EmulatorJS Website",
   "main": "index.js",
   "author": "Ethan O'Brien <ethan.a.obrien@gmail.com> (https://github.com/ethanaobrien)",
-  "license": "MIT",
   "contributors": [
     "Isaiah Koontz <isaiah.koontz@gmail.com> (https://github.com/KingIzzymon)",
     "Allan Niles (https://github.com/allancoding)"
@@ -17,13 +16,14 @@
     "preview": "nuxi preview",
     "lint": "eslint ."
   },
+  "license": "MIT",
   "devDependencies": {
-    "@nuxt-themes/docus": "latest",
+    "@nuxt-themes/docus": "^1.15.0",
     "@nuxt/devtools": "^1.0.8",
     "@nuxt/eslint-config": "^0.2.0",
+    "@nuxtjs/plausible": "^0.2.4",
     "@types/node": "^20.11.24",
     "eslint": "^8.57.0",
-    "nuxt": "^3.10.3",
-    "nuxt-custom-elements": "^2.0.0-beta.30"
+    "nuxt": "^3.10.3"
   }
 }

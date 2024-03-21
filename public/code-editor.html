@@ -1,8 +1,3 @@
----
-contributors: false
-sidebar: false
-lastUpdated: false
----
 <br>
 <link rel="stylesheet" href="/css/editor.css">
 <p><a class="blockB" id="start">Start Creating</a></p>
@@ -33,6 +28,28 @@ lastUpdated: false
             <input type="checkbox" id="lightgun">
             <span class="checkmark2"></span>
         </label>
+        <!--
+        <div id="np" style="display:none;">
+            <label class="container">Netplay
+                <input type="checkbox" id="netplay">
+                <span class="checkmark2"></span>
+            </label>
+            <ul>
+                <label class="textBox" style="display:none;" id="npgid">Game Id
+                    <input type="number" id="npGameId">
+                </label>
+                <label class="container" style="display:none;" id="nps">Use Custom Netplay Server
+                    <input type="checkbox" id="netplayServer">
+                    <span class="checkmark2"></span>
+                </label>
+                <ul>
+                    <label class="textBox" style="display:none;" id="npurl">Enter server URL
+                        <input type="text" id="npServerURL">
+                    </label>
+                </ul>
+            </ul>
+        </div>
+        -->
         <label class="container">Make it work without web server (not recommended)
             <input type="checkbox" id="offline">
             <span class="checkmark2"></span>
@@ -86,7 +103,6 @@ lastUpdated: false
 <ul id="downloadScreen" style="display:none;">
     <p>FINISHED: <a id="outLink">Click to download.</a></p>
 </ul>
-
-<AddScript script-url="/js/systems.js"/>
-<AddScript script-url="/js/jszip.js" script-id="systemJS"/>
-<AddScript script-url="/js/editor.js"/>
+<script src="/js/systems.js"></script>
+<script src="/js/jszip.js" id="systemJS"></script>
+<script src="/js/editor.js"></script>
