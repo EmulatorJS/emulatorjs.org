@@ -51,29 +51,25 @@ body, html {
     color: white;
 }
 
-
-
 .blockB {
     margin: 10px;
-    background-color: black;
+    background-color: #222 !important;
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 16px !important;
     text-decoration: none;
     font-size: 17px;
+    border: 0px !important;
 }
 
 .blockB:hover {
     cursor: pointer;
-    background-color: orange;
-    color: black;
+    background-color: #2196F3 !important;
+    color: black !important;
+    text-decoration: underline;
 }
 
-.blockB.active {
-    background-color: #04AA6D;
-    color: white;
-}
 .blockC {
     margin: 10px;
     background-color: black;
@@ -86,7 +82,7 @@ body, html {
 
 .blockC:hover {
     cursor: pointer;
-    background-color: orange;
+    background-color: #2196F3;
     color: black;
 }
 
@@ -95,13 +91,11 @@ body, html {
     color: white;
 }
 
-
-
 .dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn {background-color: #2196F3;}
 
 .textBox {
     display: block;
@@ -117,8 +111,6 @@ body, html {
     user-select: none;
 }
 
-
-/*css from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio*/
 .container {
     display: block;
     position: relative;
@@ -204,10 +196,10 @@ body, html {
   display: none;
 }
 .container input:checked ~ .checkmark2 {
-  background-color: #2196F3;
+  background-color: #2196F3 !important;
 }
 .container:hover input ~ .checkmark2 {
-  background-color: #ccc;
+  background-color: #ccc !important;
 }
 
 input[type=text] {

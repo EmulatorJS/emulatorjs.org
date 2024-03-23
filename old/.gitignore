@@ -1,7 +1,0 @@
-node_modules/
-src/.vuepress/dist/
-src/github/
-yarn-error.log
-node_modules
-.temp
-.cache

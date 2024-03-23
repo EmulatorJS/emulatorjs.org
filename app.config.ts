@@ -1,25 +1,19 @@
 export default defineAppConfig({
   docus: {
     title: 'EmulatorJS',
-
     description: 'A tool to embed an emulator into your website',
-
     url: 'https://emulatorjs.org',
-
-    image: 'https://user-images.githubusercontent.com/904724/185365452-87b7ca7b-6030-4813-a2db-5e65c785bf88.png',
-
+    image: 'https://emulatorjs.org/media/logo.png',
     socials: {
       github: 'EmulatorJS/EmulatorJS',
       discord: {
         lable: 'Join our Discord',
         href: 'https://discord.gg/6akryGkETU',
         icon: 'fa-brands:discord',
-        rel: 'noopener noreferrer'
+        rel: ''
       }
     },
-
     layout: 'default',
-
     header: {
       title: 'EmulatorJS',
       logo: {
@@ -30,7 +24,6 @@ export default defineAppConfig({
       fluid: true,
       exclude: []
     },
-
     navigation: {
       enabled: true,
       links: [
@@ -53,16 +46,14 @@ export default defineAppConfig({
         }
       ],
     },
-
     aside: {
       level: 0,
       collapsed: false,
       exclude: []
     },
-
     footer: {
       credits: {
-        icon: 'IconDocus',
+        icon: 'fa-solid:gamepad',
         text: 'Created By EumlatorJS',
         href: 'https://github.com/EumlatorJS'
       },
@@ -73,7 +64,7 @@ export default defineAppConfig({
 
     github: {
       branch: "main",
-      repo: "EmulatorJS",
+      repo: "emulatorjs.org",
       owner: "EmulatorJS",
       edit: true
     },

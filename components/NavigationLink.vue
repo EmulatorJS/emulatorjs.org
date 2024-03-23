@@ -45,7 +45,7 @@ css({
         },
       },
       '&.router-link-active': {
-        color: '{color.primary.500}'
+        color: '#00afe4'
       }
     }
 
