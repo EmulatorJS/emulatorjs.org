@@ -176,7 +176,7 @@ Emulator hex color theme.
 
 - Type: `string`
 - Default: `#1AAFFF`
-- Example: `EJS_pathtodata = '#00FF80'`
+- Example: `EJS_color = '#00FF80'`
 
 ### `EJS_alignStartButton`
 

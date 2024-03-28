@@ -23,6 +23,11 @@ css({
             color: '{docus.colors.primaryDark}',
         },
     },
+    '@media (max-width: 768px)': {
+      '.nav-link': {
+        display: 'none !important'
+      }
+    },
     '.nav-link + .nav-link': {
         marginLeft: '{docus.space.3}',
     },

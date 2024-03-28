@@ -4,19 +4,17 @@ const execute = (cmd, dir) => {
     return new Promise((res) => {
         exec("cd \""+dir+"\" && "+cmd, (err, stdout, stderr) => {
             res();
-            //console.log(`stdout: ${stdout}`);
-            //console.log(`stderr: ${stderr}`);
         });
     })
 }
-if (!fs.statSync("src/github", {throwIfNoEntry:false})) {
-    fs.mkdirSync("src/github");
+if (!fs.statSync("content/github", {throwIfNoEntry:false})) {
+    fs.mkdirSync("content/github");
 }
 (async() => {
-    await execute("git init", "src/github");
-    await execute("git remote add -f origin https://github.com/EmulatorJS/EmulatorJS.git", "src/github");
-    await execute("git config core.sparseCheckout true", "src/github");
-    fs.writeFileSync("src/github/.git/info/sparse-checkout", "docs/Contributors.md\nCHANGES.md\n");
-    await execute("git pull origin main", "src/github");
+    await execute("git init", "content/github");
+    await execute("git remote add -f origin https://github.com/EmulatorJS/EmulatorJS.git", "content/github");
+    await execute("git config core.sparseCheckout true", "content/github");
+    fs.writeFileSync("content/github/.git/info/sparse-checkout", "content/docs/Contributors.md\nCHANGES.md\n");
+    await execute("git pull origin main", "content/github");
     console.log("done");
 })();

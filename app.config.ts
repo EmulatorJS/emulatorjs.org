@@ -17,8 +17,8 @@ export default defineAppConfig({
     header: {
       title: 'EmulatorJS',
       logo: {
-        light: "favicon.ico",
-        dark: "favicon.ico"
+        light: "/logo/EmulatorJS Header.png",
+        dark: "/logo/EmulatorJS Header Light.png"
       },
       showLinkIcon: true,
       fluid: true,
@@ -54,7 +54,7 @@ export default defineAppConfig({
     footer: {
       credits: {
         icon: 'fa-solid:gamepad',
-        text: 'Created By EumlatorJS',
+        text: 'Made with ❤️ by @ethanaobrien & @allancoding',
         href: 'https://github.com/EumlatorJS'
       },
       textLinks: [],

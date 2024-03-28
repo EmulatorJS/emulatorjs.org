@@ -20,7 +20,7 @@ defineProps({
       </div>
 
       <div class="section center">
-        <AppHeaderLogo v-if="hasDialog" />
+        <AppHeaderLogo v-if="hasDialog" :image="false"/>
         <AppHeaderNavigation />
       </div>
 
