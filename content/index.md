@@ -24,11 +24,12 @@ EmulatorJS
 A tool to embed an emulator into your website
 
 #extra
-  ::list
+  ::list{type="primary"}
   - Fully Customizable
   - Easy to Embed
   - Open Source
   - Works in the Browser
+  - Multiple Languages
   ::
 
 #support
@@ -37,58 +38,51 @@ A tool to embed an emulator into your website
 
 ::card-grid
 #title
-
+Features
 
 #root
 :ellipsis{left=0px width=40rem top=10rem blur=120px}
 
 #default
-  ::card{icon=logos:nuxt-icon}
+  ::card{icon=icomoon-free:embed2}
   #title
-  Nuxt Architecture
+  Embedded
   #description
-  Harness the full power of [Nuxt 3](https://v3.nuxtjs.org) and its [modules](https://modules.nuxtjs.org) ecosystem.
+  Super easy to embed the emulator into your website. Just add a few lines of code and you're good to go. [Learn how to embed](/Embed)
   ::
 
-  ::card{icon=IconNuxtStudio}
-  #title
-  Nuxt Studio ready
-  #description
-  Edit your theme content and appearance with live-preview within [Nuxt Studio](https://nuxt.studio).
-  ::
-
-  ::card{icon=logos:vue}
+  ::card{icon=bx:code-block}
   #title
   Code Editor
   #description
-  Automatically generate embeddable code for EmulatorJS! :br
-  :button-link[Code Editor]{ href="https://stackblitz.com/github/nuxtlabs/docus-starter" blank}
+  Automatically generate embeddable code for EmulatorJS! [Code Editor](/editor)
   ::
 
-  ::card{icon=simple-icons:markdown}
+  ::card{icon=simple-icons:retroarch}
   #title
-  Write Markdown
+  Uses RetroArch
   #description
-  Enjoy the ease and simplicity of Markdown and discover [MDC syntax](https://content.nuxtjs.org/guide/writing/mdc).
+  We use RetroArch's libretro cores to emulate games. Learn how to compile your own cores [here](/Building)
   ::
 
-  ::card{icon=noto:rocket}
+  ::card{icon=ion:language}
   #title
-  Deploy anywhere
+  Multilingual
   #description
-  Zero config on [Vercel](https://vercel.com) or [Netlify](https://netlify.com). Choose between static generation, on-demand rendering (Node) or edge-side rendering on [CloudFlare workers](https://workers.cloudflare.com).
+  EmulatorJS supports multiple languages. You contribute to the translations [here](Languages)
   ::
 
-  ::card{icon=noto:puzzle-piece}
+  ::card{icon=material-symbols:inbox-customize-outline-rounded}
   #title
-  Extensible.
+  Customizable
   #description
-  Customize the whole design, or add components using slots - you can make Docus your own.
+  EmulatorJS is made to be fully customizable. Builtin cutomization options are available [here](/Options)
   ::
-::
-::alert{type="warning"}
-This project is not affiliated with <a href="https://github.com/linuxserver/emulatorjs" target="_blank">linuxserver/emulatorjs</a>.
-::
-::alert{type="info"}
-This site is a work-in-progress. If any information is missing, you can request it by opening an issue on github <a href="https://github.com/EmulatorJS/emulatorjs.org/issues" target="_blank">here</a>.
+
+  ::card{icon=carbon:demo}
+  #title
+  Demo
+  #description
+  You can try EmulatorJS using the demo. <a href="https://demo.emulatorjs.org" target="_blank">Open Demo</a>
+  ::
 ::

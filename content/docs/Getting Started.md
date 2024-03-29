@@ -1,5 +1,13 @@
 # Getting Started
 
+The best way to get started with EmulatorJS is to follow the [Getting Started](/introduction/getting-started) guide. Or you can use the [Code Editor](/editor) to generate the embed code for your website.
+::list{type="warning"}
+- This project is not affiliated with <a href="https://github.com/linuxserver/emulatorjs" target="_blank">linuxserver/emulatorjs</a>.
+::
+::list{type="info"}
+- This site is a work-in-progress. If any information is missing, you can request it by opening an issue on github <a href="https://github.com/EmulatorJS/emulatorjs.org/issues" target="_blank">here</a>.
+::
+
 ## Prerequisites
 
 * A web server like NGINX or the Apache server included in [XAMPP](https://www.apachefriends.org/)

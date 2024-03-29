@@ -14,7 +14,7 @@ if (!fs.statSync("content/github", {throwIfNoEntry:false})) {
     await execute("git init", "content/github");
     await execute("git remote add -f origin https://github.com/EmulatorJS/EmulatorJS.git", "content/github");
     await execute("git config core.sparseCheckout true", "content/github");
-    fs.writeFileSync("content/github/.git/info/sparse-checkout", "content/docs/Contributors.md\nCHANGES.md\n");
+    fs.writeFileSync("content/github/.git/info/sparse-checkout", "docs/Contributors.md\nCHANGES.md\n");
     await execute("git pull origin main", "content/github");
     console.log("done");
 })();

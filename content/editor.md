@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Code Editor
 navigation: false
 layout: page
 main:
