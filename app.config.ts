@@ -33,7 +33,7 @@ export default defineAppConfig({
         },
         {
           text: 'Documentation',
-          href: '/getting-started'
+          href: '/docs'
         },
         {
           text: 'Code Editor',
@@ -61,7 +61,6 @@ export default defineAppConfig({
       iconLinks: [],
       fluid: false
     },
-
     github: {
       branch: "main",
       repo: "emulatorjs.org",

@@ -25,7 +25,7 @@ defineProps({
       </div>
 
       <div class="section right">
-        <NavigationLink v-if="navigationLink" />
+        <NavigationLink v-if="navigationLink" :mobile="false"/>
         <AppDocSearch v-if="hasDocSearch" />
         <AppSearch
           v-else
@@ -95,7 +95,10 @@ css({
         gridColumn: 'span 3 / span 4',
         justifyContent: 'center',
         flex: '1',
-        zIndex: '1'
+        zIndex: '1',
+        '@media (min-width: 1024px)': {
+          display: 'none !important'
+        },
       },
       '&.right': {
         display: 'flex',
@@ -110,7 +113,10 @@ css({
             display: 'flex',
             alignItems: 'center',
           }
-        }
+        },
+        '@media (min-width: 1024px)': {
+          gridColumn: 'span 8 / span 4 !important'
+        },
       }
     }
   }
