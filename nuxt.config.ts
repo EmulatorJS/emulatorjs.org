@@ -45,5 +45,10 @@ export default defineNuxtConfig({
         { src: '/js/main.js'}
       ]
     }
+  },
+  mdc: {
+    highlight: {
+      langs: ['html', 'xml', 'css', 'javascript', 'json', 'markdown', 'http']
+    }
   }
 })

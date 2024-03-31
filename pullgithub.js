@@ -16,7 +16,7 @@ if (!fs.statSync("github", {throwIfNoEntry:false})) {
     await execute("git config core.sparseCheckout true", "github");
     fs.writeFileSync("github/.git/info/sparse-checkout", "docs/Contributors.md\nCHANGES.md\n");
     await execute("git pull origin main", "github");
-    fs.copyFile('github/docs/Contributors.md', 'content/1.introduction/5.contributors.md', (err) => { if (err) throw err; });
-    fs.copyFile('github/CHANGES.md', 'content/1.introduction/6.changelog.md', (err) => { if (err) throw err; });
+    fs.copyFile('github/docs/Contributors.md', 'content/1.docs/12.contributors.md', (err) => { if (err) throw err; });
+    fs.copyFile('github/CHANGES.md', 'content/1.docs/11.changelog.md', (err) => { if (err) throw err; });
     console.log("done");
 })();

@@ -25,7 +25,7 @@ const props = defineProps({
     <div class="nav-links-mobile-space" v-if="props.mobile && hasDialog"></div>
     <nuxt-link
         class="nav-link nav-links"
-        :class="{ active: link.to === $route.path }"
+        :class="{ active: $route.path.startsWith(link.to) }"
         :aria-label="link.text"
         :href="link.href"
         :target="link?.target || '_self'"
