@@ -46,6 +46,9 @@ export default defineAppConfig({
         }
       ],
     },
+    main: {
+      fluid: true
+    },
     aside: {
       level: 0,
       collapsed: false,

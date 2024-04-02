@@ -11,7 +11,7 @@
   ],
   "repository": "https://github.com/EmulatorJS/emulatorjs.org",
   "scripts": {
-    "dev": "node pullgithub.js && nuxi dev",
+    "dev": "node pullgithub.js && nuxi dev --host",
     "build": "node pullgithub.js && nuxi build",
     "generate": "node pullgithub.js && nuxi generate",
     "preview": "nuxi preview --host",
