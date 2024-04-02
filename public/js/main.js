@@ -3,7 +3,7 @@ $(document).ready(function() {
         color: '#00afe4',
         effect: 'fade',
         position: 'bottom right',
-        scrollAnimation: 1000,
+        scrollAnimation: 500,
         theme: 'default',
         width: 35,
     });

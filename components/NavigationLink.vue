@@ -13,7 +13,7 @@ const props = defineProps({
 <template>
     <nuxt-link
         class="nav-link nav-links-mobile"
-        :class="{ active: link.to === $route.path }"
+        :class="{ 'router-link-active': $route.path.startsWith(link.herf) && link.href !== '/'}"
         :aria-label="link.text"
         :href="link.href"
         :target="link?.target || '_self'"
@@ -25,7 +25,7 @@ const props = defineProps({
     <div class="nav-links-mobile-space" v-if="props.mobile && hasDialog"></div>
     <nuxt-link
         class="nav-link nav-links"
-        :class="{ active: $route.path.startsWith(link.to) }"
+        v-bind:class="{ 'router-link-active': $route.path.startsWith(link.href) && link.href !== '/'}"
         :aria-label="link.text"
         :href="link.href"
         :target="link?.target || '_self'"

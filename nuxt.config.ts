@@ -1,12 +1,13 @@
 export default defineNuxtConfig({
   extends: ['@nuxt-themes/docus'],
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   components: [{
     dirs: ['~/components'],
     level: -1
   }],
   modules: [
-    'nuxt-gtag'
+    'nuxt-gtag',
+    'nuxt-anchorscroll',
   ],
   gtag: {
     id: 'G-R87E52EEFR'
@@ -17,14 +18,6 @@ export default defineNuxtConfig({
     },
   },
   app: {
-    pageTransition: {
-      name: 'fade',
-      mode: 'out-in'
-    },
-    layoutTransition: {
-      name: 'slide',
-      mode: 'out-in'
-    },
     head: {
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -44,11 +37,19 @@ export default defineNuxtConfig({
         { src: '/js/backToTop.min.js' },
         { src: '/js/main.js'}
       ]
-    }
+    },
   },
   mdc: {
     highlight: {
       langs: ['html', 'xml', 'css', 'javascript', 'json', 'markdown', 'http']
     }
-  }
+  },
+  experimental: {
+    viewTransition: true
+  },
+  anchorscroll: {
+    hooks: [
+      'page:transition:finish',
+    ],
+  },
 })

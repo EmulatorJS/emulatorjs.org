@@ -15,3 +15,7 @@
 .layout-leave-to {
   filter: grayscale(1);
 }
+.scrollable-code div {
+  max-height: 500px !important;
+  overflow-y: auto !important;
+}
