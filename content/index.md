@@ -2,7 +2,7 @@
 title: Home
 navigation: false
 layout: page
-image: "/logo/EmulatorJS Logo.png"
+image: /logo/EmulatorJS Logo.png
 main:
   fluid: false
 ---

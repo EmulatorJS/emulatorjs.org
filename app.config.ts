@@ -3,7 +3,7 @@ export default defineAppConfig({
     title: 'EmulatorJS',
     description: 'A tool to embed an emulator into your website',
     url: 'https://emulatorjs.org',
-    image: 'https://emulatorjs.org/media/logo.png',
+    image: 'https://emulatorjs.org/logo/EmulatorJS Logo.png',
     socials: {
       github: 'EmulatorJS/EmulatorJS',
       discord: {
