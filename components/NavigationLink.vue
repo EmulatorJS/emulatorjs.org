@@ -68,7 +68,7 @@ css({
       color: '{color.gray.500}',
       truncate: true,
       '@lg': {
-        paddingRight: '{space.3}'
+        paddingRight: '{space.5}'
       },
       '&:not(.router-link-active):hover': {
         color: '{color.gray.900}',
