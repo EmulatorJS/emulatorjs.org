@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   }],
   modules: [
     'nuxt-gtag',
-    'nuxt-anchorscroll',
+    'nuxt-anchorscroll'
   ],
   gtag: {
     id: 'G-R87E52EEFR'

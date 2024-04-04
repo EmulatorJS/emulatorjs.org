@@ -7,10 +7,11 @@ export default defineAppConfig({
     socials: {
       github: 'EmulatorJS/EmulatorJS',
       discord: {
-        lable: 'Join our Discord',
+        label: 'Join our Discord',
         href: 'https://discord.gg/6akryGkETU',
         icon: 'fa-brands:discord',
-        rel: ''
+        rel: '',
+        target: '_blank'
       }
     },
     layout: 'default',
