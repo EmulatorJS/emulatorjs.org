@@ -22,3 +22,8 @@
 .page-body {
   max-width: 1200px !important;
 }
+@media (max-width: 1024px) {
+  .block-hero {
+    padding-top: var(--space-8) !important;
+  }
+}
