@@ -59,7 +59,7 @@ export default defineAppConfig({
       credits: {
         icon: 'fa-solid:gamepad',
         text: 'Made with ❤️ by @ethanaobrien & @allancoding',
-        href: 'https://github.com/EumlatorJS'
+        href: 'https://github.com/EmulatorJS'
       },
       textLinks: [],
       iconLinks: [],
