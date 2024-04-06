@@ -14,9 +14,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Build
         run: |
-          cd /website
-          git clone https://github.com/EmulatorJS/emulatorjs.org.git
-          cd emulatorjs.org
+          cd /website/emulatorjs.org
+          git pull main
           yarn install
           yarn build
       - name: Deploy
