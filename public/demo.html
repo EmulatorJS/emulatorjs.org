@@ -1,0 +1,43 @@
+<title>Flappy Bird Demo</title>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+</style>
+<div style="width:100%; height:100%;">
+    <div id='game'></div>
+</div>
+<script type='text/javascript'>
+    EJS_player = '#game';
+    EJS_core = 'nes';
+    EJS_gameUrl = '/flappybird.nes';
+    EJS_pathtodata = 'https://cdn.emulatorjs.org/latest/data/';
+    EJS_gameName = 'flappybird';
+    EJS_color = '#00afe4';
+    EJS_backgroundImage = window.location.href.substring(0, window.location.href.indexOf('/',  window.location.href.indexOf('//') + 2)) + '/flappybird.png';
+    EJS_backgroundBlur = true;
+    EJS_AdMode = 1;
+    window.EJS_AdUrl = "https://ads.emulatorjs.org/";
+    window.EJS_disableDatabases = true;
+    window.EJS_ready = function() {
+        detectAdBlock("data:text/html;base64,PGh0bWw+PHN0eWxlPiNhZGJsb2Nre2JhY2tncm91bmQtY29sb3I6cmdiYSgwLDAsMCwuOCk7cG9zaXRpb246Zml4ZWQ7d2lkdGg6MTAwJTtoZWlnaHQ6MTAwJTt0b3A6MDtsZWZ0OjA7ei1pbmRleDoxMDAwO3RleHQtYWxpZ246Y2VudGVyO2NvbG9yOiNmZmZ9Ym9keSxodG1se2JhY2tncm91bmQtY29sb3I6dHJhbnNwYXJlbnR9PC9zdHlsZT48Ym9keSBzdHlsZT0ibWFyZ2luOjAiPjxkaXYgaWQ9ImFkYmxvY2siPjxoMT5IaSBBZGJsb2NrIFVzZXIhPC9oMT48cD5BZHMgb24gdGhpcyBwYWdlIG1heSBjb21lIGFuZCBnbyBkZXBlbmRpbmcgb24gaG93IG1hbnkgcGVvcGxlIGFyZSBmdW5kaW5nIHRoaXMgcHJvamVjdC48YnI+WW91IGNhbiBoZWxwIGZ1bmQgdGhpcyBwcm9qZWN0IG9uPGEgaHJlZj0iaHR0cHM6Ly9wYXRyZW9uLmNvbS9FbXVsYXRvckpTIj5wYXRyZW9uPC9hPjwvcD48L2Rpdj48L2JvZHk+PC9odG1sPg==");
+    }
+    function detectAdBlock(url) {
+        let adBlockEnabled = false;
+        try {
+            const adframe = document.querySelector('iframe[src="'+window.EJS_AdUrl+'"]');
+            var adpage = adframe.contentWindow.document;
+            window.EJS_AdUrl = adframe.src;
+            if (!adpage) {
+                adBlockEnabled = true;
+            }
+        } catch (e) {
+            adBlockEnabled = true;
+        }
+        if (adBlockEnabled) {
+            window.EJS_adBlocked(url);    
+        }
+    }
+</script>
+<script src='https://cdn.emulatorjs.org/latest/data/loader.js'></script>
