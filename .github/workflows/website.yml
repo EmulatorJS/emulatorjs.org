@@ -15,7 +15,7 @@ jobs:
       - name: Build
         run: |
           cd /website/emulatorjs.org
-          git pull main
+          git pull
           yarn install
           yarn build
       - name: Deploy
