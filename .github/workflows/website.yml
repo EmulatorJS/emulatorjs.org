@@ -1,0 +1,25 @@
+name: Push Website
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  run:
+    if: github.repository == 'EmulatorJS/emulatorjs.org'
+    runs-on: emulatorjs-server
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Build
+        run: |
+          cd /website
+          git clone https://github.com/EmulatorJS/emulatorjs.org.git
+          cd emulatorjs.org
+          yarn install
+          yarn build
+      - name: Deploy
+        run: |
+          systemctl restart emulatorjs-org
+          

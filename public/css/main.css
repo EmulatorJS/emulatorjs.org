@@ -1,0 +1,29 @@
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+.layout-enter-active,
+.layout-leave-active {
+  transition: all 0.4s;
+}
+.layout-enter-from,
+.layout-leave-to {
+  filter: grayscale(1);
+}
+.scrollable-code div {
+  max-height: 500px !important;
+  overflow-y: auto !important;
+}
+.page-body {
+  max-width: 1200px !important;
+}
+@media (max-width: 1024px) {
+  .block-hero {
+    padding-top: var(--space-8) !important;
+  }
+}

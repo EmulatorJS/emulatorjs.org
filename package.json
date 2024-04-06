@@ -1,27 +1,30 @@
 {
   "name": "emulatorjs.org",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The EmulatorJS Website",
   "main": "index.js",
   "author": "Ethan O'Brien <ethan.a.obrien@gmail.com> (https://github.com/ethanaobrien)",
+  "license": "MIT",
   "contributors": [
     "Isaiah Koontz <isaiah.koontz@gmail.com> (https://github.com/KingIzzymon)",
     "Allan Niles (https://github.com/allancoding)"
   ],
   "repository": "https://github.com/EmulatorJS/emulatorjs.org",
   "scripts": {
-    "dev_new": "node pullgithub.js && vuepress dev src",
-    "build_new": "node pullgithub.js && vuepress build src",
-    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && node pullgithub.js && vuepress dev src",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && node pullgithub.js && vuepress build src"
+    "dev": "node pullgithub.js && nuxi dev --host",
+    "build": "node pullgithub.js && nuxi build",
+    "generate": "node pullgithub.js && nuxi generate",
+    "preview": "nuxi preview --host",
+    "lint": "eslint ."
   },
-  "license": "MIT",
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^2.0.0-beta.66",
-    "@vuepress/plugin-google-analytics": "^2.0.0-beta.66",
-    "@vuepress/plugin-medium-zoom": "^2.0.0-beta.66",
-    "@vuepress/plugin-register-components": "^2.0.0-beta.66",
-    "@vuepress/plugin-search": "^2.0.0-beta.66",
-    "vuepress": "^2.0.0-beta.66"
+    "@nuxt-themes/docus": "latest",
+    "@nuxt/eslint-config": "^0.2.0",
+    "@types/node": "^20.11.24",
+    "eslint": "^8.57.0",
+    "nuxt": "^3.10.3",
+    "nuxt-anchorscroll": "^1.0.3",
+    "nuxt-custom-elements": "^2.0.0-beta.30",
+    "nuxt-gtag": "^2.0.5"
   }
 }
