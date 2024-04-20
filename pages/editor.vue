@@ -7,7 +7,7 @@ useHead({
     title: 'Code Editor',
     meta: [{ name: 'description', content: 'Simple code generator for EmulatorJS' }],
     link: [{ rel: 'stylesheet', href: '/css/editor.css' }],
-    script: [{ src: '/js/editor.js' }, { src: '/js/jszip.js' }, { src: '/js/systems.js', id: 'systemJS'}],
+    script: [{ src: '/js/editor.js' }, { src: '/js/jszip.js' }, { src: '/js/systems.js', onload: 'loadsystems()'}],
 });
 definePageMeta({
   title: 'Code Editor'
@@ -19,7 +19,7 @@ definePageMeta({
         <div class="center">
             <h1>EmulatorJS Code Generator</h1>
             <p>This tool can generate embeddable code for your website.</p>
-            <a class="blockB" id="start">Start Creating</a>
+            <a class="blockB" id="start" onclick="editorMain()">Start Creating</a>
         </div>
         <div class="main">
             <ul id="systemSelect" style="display:none;">
