@@ -1,27 +1,21 @@
-<template></template>
-<script>
-export default {
-  props: {
-    scriptUrl: {
-      type: String,
-      required: true
-    },
-    scriptId: {
-      type: String
-    }
+<script setup lang="ts">
+const props = defineProps({
+  src: {
+    type: String,
+    default: null
   },
-  mounted() {
-    this.loadExternalScript();
-  },
-  methods: {
-    loadExternalScript() {
-        const script = document.createElement('script');
-        script.src = this.scriptUrl;
-        if(this.scriptId){
-            script.id = this.scriptId;
-        }
-        document.body.appendChild(script);
-    }
+  id: {
+    type: String,
+    default: null
   }
-};
+})
+
+onMounted(() => {
+  const script = document.createElement('script');
+  script.src = props.src;
+  if(props.id){
+    script.id = props.id;
+  }
+  document.body.appendChild(script);
+})
 </script>

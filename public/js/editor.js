@@ -1,9 +1,23 @@
 (function() {
     function editorMain() {
         if (!window.systems) {
-            document.getElementById('systemJS').addEventListener('load', loadsystems);
+            try {
+                document.getElementById('systemJS').addEventListener('load', loadsystems);
+            } catch(e) {
+                setTimeout(function(){
+                    editorMain();
+                }, 100);
+                return;
+            }
         }
-        document.getElementById('start').addEventListener('click', loadsystems);
+        try {
+            document.getElementById('start').addEventListener('click', loadsystems);
+        } catch(e) {
+            setTimeout(function(){
+                editorMain();
+            }, 100);
+            return;
+        }
         let loaded = false;
         function loadsystems(){
             if (loaded || !window.systems) return;
@@ -193,6 +207,15 @@
     if (window.document) {
         editorMain();
     } else {
-        window.addEventListener("DOMContentLoaded", editorMain);
+        window.addEventListener("load", editorMain);
     }
+    var target = document.querySelector('title');
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (document.title != 'Code Editor · EmulatorJS') {
+                document.title = 'Code Editor · EmulatorJS';
+            }
+        });
+    });
+    observer.observe(target, config = {childList: true,});
 })();
