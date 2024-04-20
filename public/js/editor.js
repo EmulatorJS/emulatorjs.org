@@ -1,5 +1,8 @@
 let radioContainerHTML;
 function editorMain() {
+    if (!radioContainerHTML) {
+        loadsystems();
+    }
     const radioContainer = document.getElementById('radioContainer');
     radioContainer.innerHTML = radioContainerHTML;
     var startBtn = document.getElementById('start');
