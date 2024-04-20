@@ -212,7 +212,7 @@
     var target = document.querySelector('title');
     var observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
-            if (document.title != 'Code Editor · EmulatorJS') {
+            if (document.title != 'Code Editor · EmulatorJS' && window.location.pathname == '/editor') {
                 document.title = 'Code Editor · EmulatorJS';
             }
         });
