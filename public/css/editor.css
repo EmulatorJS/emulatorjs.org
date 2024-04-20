@@ -54,13 +54,13 @@ body, html {
 .blockB {
     margin: 10px;
     background-color: #222 !important;
-    float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px !important;
     text-decoration: none;
     font-size: 17px;
     border: 0px !important;
+    line-height: 5;
 }
 
 .blockB:hover {
@@ -136,12 +136,12 @@ body, html {
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: #eee;
+    background-color: #ddd;
     border-radius: 50%;
 }
 
 .container:hover input ~ .checkmark {
-    background-color: #ccc;
+    background-color: #bbb;
 }
 
 .container input:checked ~ .checkmark {
@@ -174,7 +174,7 @@ body, html {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: #eee;
+  background-color: #ddd;
 }
 .container .checkmark2:after {
   left: 9px;
@@ -199,18 +199,35 @@ body, html {
   background-color: #2196F3 !important;
 }
 .container:hover input ~ .checkmark2 {
-  background-color: #ccc !important;
-}
+    background-color: #bbb;
+  }
 
 input[type=text] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  background-color: #ddd;
+  color: #000;
+  border: 3px solid #ddd;
 }
+
+input[type=text]:focus {
+    outline: none !important;
+    border: 3px solid #00afe4 !important;
+}
+
 input[type=number] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+}
+
+#outLink {
+    color: #00afe4;
+}
+
+#outLink:hover {
+    text-decoration: underline;
 }

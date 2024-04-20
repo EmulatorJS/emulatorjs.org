@@ -12,11 +12,6 @@ export default defineNuxtConfig({
   gtag: {
     id: 'G-R87E52EEFR'
   },
-  vue: {  
-    compilerOptions: {
-      isCustomElement: (tag) => ['AddScript' || 'ThemeImage'].includes(tag),
-    },
-  },
   app: {
     head: {
       meta: [
