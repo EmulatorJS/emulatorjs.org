@@ -21,7 +21,7 @@ secondary:
 EmulatorJS
 
 #description
-A tool to embed an emulator into your website
+Easily embed an emulator into your website.
 
 #extra
   ::list{type="primary"}
@@ -76,7 +76,7 @@ Features
   #title
   Customizable
   #description
-  EmulatorJS is made to be fully customizable. Builtin cutomization options are available [here](/Options)
+  EmulatorJS is made to be fully customizable. Built-in cutomization options are available [here](/Options)
   ::
 
   ::card{icon=carbon:demo}
