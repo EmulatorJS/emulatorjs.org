@@ -1,24 +1,53 @@
-name: Push Website
+name: Website
 on:
-#  push:
-#    branches: ["main"]
+  push:
+    branches: ["main"]
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
-  run:
+  build:
+    name: Build
     if: github.repository == 'EmulatorJS/emulatorjs.org'
-    runs-on: emulatorjs-server
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Build
         run: |
-          cd /website/emulatorjs.org
           git pull
           yarn install
           yarn build
-      - name: Deploy
+      - name: Zip Website
+        run: |
+          zip -r website.zip .output
+      - name: Upload Website
+        uses: actions/upload-artifact@v4
+        with:
+          name: website
+          path: website.zip
+          retention-days: 1
+  run:
+    name: Deploy
+    needs: build
+    if: github.repository == 'EmulatorJS/emulatorjs.org'
+    runs-on: emulatorjs-server
+    steps:
+      - name: Download a single artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: website
+          path: /website
+      - name: Stop Website
+        run: |
+          systemctl stop emulatorjs-org
+          rm -rf /website/emulatorjs.org
+      - name: Unzip Website
+        run: |
+          unzip -o /website/website.zip -d /website/emulatorjs.org
+          rm /website/website.zip
+      - name: Deploy Website
         run: |
           systemctl restart emulatorjs-org
+      
           
