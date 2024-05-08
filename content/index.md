@@ -48,7 +48,7 @@ Features
   #title
   Embedded
   #description
-  Super easy to embed the emulator into your website. Just add a few lines of code and you're good to go. [Learn how to embed](/Embed)
+  Super easy to embed the emulator into your website. Just add a few lines of code and you're good to go. [Learn how to embed](docs/embed)
   ::
 
   ::card{icon=bx:code-block}
@@ -62,21 +62,21 @@ Features
   #title
   Uses RetroArch
   #description
-  We use RetroArch's libretro cores to emulate games. Learn how to compile your own cores [here](/Building)
+  We use RetroArch's libretro cores to emulate games. Learn how to compile your own cores [here](docs4devs/buildingraw)
   ::
 
   ::card{icon=ion:language}
   #title
   Multilingual
   #description
-  EmulatorJS supports multiple languages. You contribute to the translations [here](Languages)
+  EmulatorJS supports multiple languages. You contribute to the translations [here](docs/languages)
   ::
 
   ::card{icon=material-symbols:inbox-customize-outline-rounded}
   #title
   Customizable
   #description
-  EmulatorJS is made to be fully customizable. Built-in cutomization options are available [here](/Options)
+  EmulatorJS is made to be fully customizable. Built-in cutomization options are available [here](docs/options)
   ::
 
   ::card{icon=carbon:demo}
