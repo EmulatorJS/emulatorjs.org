@@ -6,10 +6,10 @@ export default defineAppConfig({
     image: 'https://emulatorjs.org/logo/EmulatorJS Logo.png',
     socials: {
       github: 'EmulatorJS/EmulatorJS',
-      discord: {
-        label: 'Join our Discord',
-        href: 'https://discord.gg/6akryGkETU',
-        icon: 'fa-brands:discord',
+      matrix: {
+        label: 'Join the Matrix!',
+        href: 'https://matrix.to/#/#emulatorjs:matrix.emulatorjs.org',
+        icon: '',
         rel: '',
         target: '_blank'
       }
