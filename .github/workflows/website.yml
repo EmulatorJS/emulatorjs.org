@@ -41,11 +41,11 @@ jobs:
       - name: Stop Website
         run: |
           systemctl stop emulatorjs-org
-          rm -rf /website/emulatorjs.org
+          rm -rf /mnt/HDD/website/emulatorjs.org
       - name: Unzip Website
         run: |
-          unzip -o /website/website.zip -d /website/emulatorjs.org
-          rm /website/website.zip
+          unzip -o /mnt/HDD/website/website.zip -d /mnt/HDD/website/emulatorjs.org
+          rm /mnt/HDD/website/website.zip
       - name: Deploy Website
         run: |
           systemctl restart emulatorjs-org
