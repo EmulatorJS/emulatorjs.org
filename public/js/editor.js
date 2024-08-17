@@ -107,7 +107,7 @@ function editorMain() {
         }
 
         let zipOut = true;
-        let fileData = '<html>\n    <head>\n        <!--HTML file auto generated using EmulatorJS codehelper-->\n    </head>\n    <body>\n        <div style="width:640px;height:480px;max-width:100%">\n            <div id="game"></div>\n        </div>\n        <script>\n';
+        let fileData = '<html>\n    <head>\n        <!--HTML file auto generated using EmulatorJS codehelper-->\n        <style>\n            body, html {\n                margin: 0;\n                padding: 0;\n            }\n        </style>\n    </head>\n    <body>\n        <div style="width:100%;height:100%;max-width:100%">\n            <div id="game"></div>\n        </div>\n        <script>\n';
         const spaces = '            ';
         if (!offline.checked) {
             if (stateOnLoad.files[0]) {
