@@ -16,8 +16,6 @@ bottom: false
     // Can also be fceumm or nestopia
     EJS_core = 'nes';
     
-    EJS_lightgun = false; // Lightgun
-    
     // URL to BIOS file
     EJS_biosUrl = '';
     
