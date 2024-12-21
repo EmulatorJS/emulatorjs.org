@@ -1,17 +1,21 @@
 export default defineNuxtConfig({
   extends: ['@nuxt-themes/docus'],
   devtools: { enabled: false },
+
   components: [{
     dirs: ['~/components'],
     level: -1
   }],
+
   modules: [
     'nuxt-gtag',
     'nuxt-anchorscroll'
   ],
+
   gtag: {
     id: 'G-R87E52EEFR'
   },
+
   app: {
     head: {
       meta: [
@@ -34,17 +38,22 @@ export default defineNuxtConfig({
       ]
     },
   },
+
   mdc: {
     highlight: {
       langs: ['html', 'xml', 'css', 'javascript', 'json', 'markdown', 'http']
     }
   },
+
   experimental: {
     viewTransition: true
   },
+
   anchorscroll: {
     hooks: [
       'page:transition:finish',
     ],
   },
+
+  compatibilityDate: '2024-12-21',
 })

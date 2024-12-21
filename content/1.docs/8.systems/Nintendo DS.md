@@ -13,7 +13,7 @@ bottom: false
 <script type='text/javascript'>
     EJS_player = '#game';
     
-    // Can also be desmume2015 or melonds
+    // Can also be desmume, desmume2015 or melonds
     EJS_core = 'nds';
     
     // URL to BIOS file
@@ -43,8 +43,9 @@ bottom: false
 
 ### CORES
 
-The *nds* system supports 2 cores
+The *nds* system supports 3 cores
 - `melonds`
+- `desmume`
 - `desmume2015`
 
 If set to `nds`, emulator will use the `melonds` core.
