@@ -1,7 +1,7 @@
 ---
 bottom: false
 ---
-# PSP
+# Playstation Portable (PSP)
 
 ::alert{type="warning"}
   ::list{type="warning"}
@@ -12,6 +12,12 @@ bottom: false
 ::alert{type="warning"}
   ::list{type="warning"}
   - Support will not be given for game compatibility and graphical bugs!
+  ::
+::
+
+::alert{type="info"}
+  ::list{type="info"}
+  - This core requires that `EJS_threads = true` in order to function. Please see the [options](/docs/options#ejs_threads) page for more information.
   ::
 ::
 
