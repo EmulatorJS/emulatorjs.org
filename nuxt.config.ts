@@ -1,3 +1,6 @@
+import { createResolver } from '@nuxt/kit'
+const { resolve: resolvePath } = createResolver(import.meta.url)
+
 export default defineNuxtConfig({
   extends: ['@nuxt-themes/docus'],
   devtools: { enabled: false },
@@ -5,7 +8,8 @@ export default defineNuxtConfig({
   components: [{
     dirs: ['~/components'],
     level: -1
-  }],
+  },
+  { path: resolvePath('components/globals'), global: true, prefix: '' },],
 
   modules: [
     'nuxt-gtag',
@@ -57,3 +61,7 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-12-21',
 })
+
+function resolve(arg0: string): string | undefined {
+  throw new Error("Function not implemented.");
+}
