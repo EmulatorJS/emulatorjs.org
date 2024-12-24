@@ -33,7 +33,7 @@ if (!fs.statSync("github", {throwIfNoEntry:false})) {
         }
         data = data.replace("# Changes\n","");
         const newData = `---\ntoc: false\n---\n# Changes\nGithub has the latest information on <a href="https://github.com/EmulatorJS/EmulatorJS/releases" target="_blank">releases</a>.\n${data}`;
-        fs.writeFile('content/1.docs/12.changelog.md', newData, (err) => {
+        fs.writeFile('content/1.docs/11.changelog.md', newData, (err) => {
           if (err) {
             throw err;
           }
