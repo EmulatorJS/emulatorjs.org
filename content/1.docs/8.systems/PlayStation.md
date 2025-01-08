@@ -43,7 +43,7 @@ bottom: false
 ### CORES
 
 The *psx* system supports 2 cores
-- `mednafen_psx`
+- `mednafen_psx_hw`
 - `pcsx_rearmed`
 
 If set to `psx`, emulator will use the `pcsx_rearmed` core.

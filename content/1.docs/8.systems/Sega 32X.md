@@ -3,9 +3,6 @@ bottom: false
 ---
 # Sega 32X
 
-I do not know the file extension limits for this system. <br>
-There is no bios for this system.
-
 ## Code example
 
 ```html
@@ -37,11 +34,6 @@ There is no bios for this system.
 ```
 
 ### CORES
-
-
-::: warning
-This the `picodrive` is currently broken. See [this](https://github.com/EmulatorJS/EmulatorJS/issues/579) github issue
-:::
 
 The *sega32x* system supports 1 core
 - `picodrive`
