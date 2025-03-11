@@ -20,14 +20,16 @@ jobs:
           yarn build
       - name: Setup SSH
         run: |
-          echo "${{secrets.SSH_CDN_PRIVATE_KEY}}" > ~/.ssh/id_rsa
+          mkdir -p ~/.ssh
+          echo "${{secrets.SSH_CDN_PRIVATE_KEY}}" > ~/.ssh/id_ed25519
           echo "Host ${{ secrets.SSH_HOST }}" > ~/.ssh/config
           echo "  User ${{ secrets.SSH_CDN_USERNAME }}" >> ~/.ssh/config
-          echo "  IdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
-          chmod 600 ~/.ssh/id_rsa
+          echo "  IdentityFile ~/.ssh/id_ed25519" >> ~/.ssh/config
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
       - name: Update Website
         run: |
-          rsync -Pavz --delete -e "ssh -i $HOME/.ssh/id_rsa" .output/ ${{ secrets.SSH_CDN_USERNAME}}@${{secrets.SSH_HOST}}:/mnt/HDD/website/emulatorjs.org/
+          rsync -az --delete -e "ssh -i ~/.ssh/id_ed25519" .output/ ${{ secrets.SSH_CDN_USERNAME}}@${{secrets.SSH_HOST}}:/mnt/HDD/website/emulatorjs.org/
       - name: Restart Website
         run: |
-          ssh -i $HOME/.ssh/id_rsa ${{ secrets.SSH_CDN_USERNAME }}@${{ secrets.SSH_HOST }} "systemctl restart emulatorjs-org"
+          ssh -i ~/.ssh/id_ed25519 ${{ secrets.SSH_CDN_USERNAME }}@${{ secrets.SSH_HOST }} "systemctl restart emulatorjs-org"
