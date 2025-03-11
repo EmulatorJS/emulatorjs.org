@@ -6,8 +6,8 @@ on:
 permissions:
   contents: read
 jobs:
-  run:
-    name: Build & Update Website
+  build:
+    name: Build
     if: github.repository == 'EmulatorJS/emulatorjs.org'
     runs-on: ubuntu-latest
     steps:
@@ -18,18 +18,36 @@ jobs:
           git pull
           yarn install
           yarn build
-      - name: Setup SSH
+      - name: Zip Website
         run: |
-          mkdir -p ~/.ssh
-          echo "${{secrets.SSH_CDN_PRIVATE_KEY}}" > ~/.ssh/id_ed25519
-          echo "Host ${{ secrets.SSH_HOST }}" > ~/.ssh/config
-          echo "  User ${{ secrets.SSH_CDN_USERNAME }}" >> ~/.ssh/config
-          echo "  IdentityFile ~/.ssh/id_ed25519" >> ~/.ssh/config
-          chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+          zip -r website.zip .output/
+      - name: Upload Website
+        uses: actions/upload-artifact@v4
+        with:
+          name: website
+          path: website.zip
+          retention-days: 1
+
+  run:
+    name: Deploy
+    needs: build
+    if: github.repository == 'EmulatorJS/emulatorjs.org'
+    runs-on: emulatorjs-server
+    steps:
+      - name: Download Website
+        uses: actions/download-artifact@v4
+        with:
+          name: website
+      - name: Unzip Website
+        run: |
+          unzip -o website.zip -d output/
       - name: Update Website
         run: |
-          rsync -az --delete -e "ssh -i ~/.ssh/id_ed25519" .output/ ${{ secrets.SSH_CDN_USERNAME}}@${{secrets.SSH_HOST}}:/mnt/HDD/website/emulatorjs.org/
+          rsync -az --delete output/.output/ /mnt/HDD/website/emulatorjs.org/
       - name: Restart Website
         run: |
-          ssh -i ~/.ssh/id_ed25519 ${{ secrets.SSH_CDN_USERNAME }}@${{ secrets.SSH_HOST }} "systemctl restart emulatorjs-org"
+          systemctl restart emulatorjs-org
+      - name: Cleanup
+        run: |
+          rm -rf output/
+          rm -f website.zip
