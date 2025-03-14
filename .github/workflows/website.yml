@@ -43,7 +43,7 @@ jobs:
           unzip -o website.zip -d output/
       - name: Update Website
         run: |
-          rsync -az --delete output/.output/ /mnt/HDD/website/emulatorjs.org/
+          rsync -a --delete output/.output/ /mnt/HDD/website/emulatorjs.org/
       - name: Restart Website
         run: |
           systemctl restart emulatorjs-org
