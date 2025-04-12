@@ -1,6 +1,6 @@
 window.systems = [
     {
-        "name": "NES / Famicon",
+        "name": "NES / Famicom",
         "netplay": true,
         "lightgun": true,
         "core": "nes",
