@@ -1,16 +1,16 @@
 <script setup lang="ts">
 useSeoMeta({
-    title: 'Code Editor',
+    title: 'Code Generator',
     description: 'Simple code generator for EmulatorJS',
 });
 useHead({
-    title: 'Code Editor',
+    title: 'Code Generator',
     meta: [{ name: 'description', content: 'Simple code generator for EmulatorJS' }],
     link: [{ rel: 'stylesheet', href: '/css/editor.css' }],
     script: [{ src: '/js/editor.js' }, { src: '/js/jszip.js' }, { src: '/js/systems.js', onload: 'loadsystems()'}],
 });
 definePageMeta({
-  title: 'Code Editor'
+  title: 'Code Generator'
 });
 </script>
 <template>
@@ -114,6 +114,7 @@ definePageMeta({
                 <a class="blockB" onclick="window.location.reload();" style="margin:20px;">Reset</a>
             </ul>
         </div>
+        <br>
     </div>
 </template>
 <style lang="ts" scoped>
