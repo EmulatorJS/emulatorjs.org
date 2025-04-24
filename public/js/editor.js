@@ -186,3 +186,12 @@ function loadsystems() {
     }
     radioContainerHTML = labelHTML
 }
+const target = document.querySelector('title');
+let observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+        if (document.title !== 'Code Generator · EmulatorJS' && window.location.pathname === '/editor') {
+            document.title = 'Code Generator · EmulatorJS';
+        }
+    });
+});
+observer.observe(target, config = { childList: true, });
