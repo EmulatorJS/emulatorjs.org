@@ -12,9 +12,6 @@ useHead({
 definePageMeta({
   title: 'Translation Tool'
 });
-onMounted(() => {
-    ontranslate();
-});
 </script>
 <template>
     <div class="translate">

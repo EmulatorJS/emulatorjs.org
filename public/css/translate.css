@@ -18,9 +18,9 @@ main, footer {
 
 .translate textarea {
     padding: 12px 20px;
-    border: 2px solid #ccc;
+    border: 2px solid var(--color-gray-500);
     border-radius: 4px;
-    background-color: #f8f8f8;
+    background-color: var(--prose-code-block-backgroundColor);
     height: 50vh;
     font-family: inherit;
 }
@@ -53,7 +53,7 @@ main, footer {
 }
 
 .translate button:hover {
-    background-color: var(--button-secondary);
+    background-color: #47b7da;
 }
 
 .translate .nextBtn {

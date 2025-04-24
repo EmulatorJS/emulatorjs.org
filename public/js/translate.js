@@ -1,23 +1,24 @@
-function ontranslate() {
-    document.getElementById('copyBtn1').addEventListener('click', () => copy('box1'));
-    document.getElementById('nextBtn').addEventListener('click', start);
-    document.getElementById('copyBtn3').addEventListener('click', () => copy('box3'));
+function translate() {
+    try {
+        document.getElementById('copyBtn1').addEventListener('click', () => copy('box1'));
+        document.getElementById('nextBtn').addEventListener('click', start);
+        document.getElementById('copyBtn3').addEventListener('click', () => copy('box3'));
+        fetch('https://cdn.emulatorjs.org/latest/data/localization/en.json')
+        .then(response => response.json())
+        .then(json => {
+            let data1 = '';
+            for (let i = 0; i < Object.keys(json).length; i++) {
+                data1 = data1 + "" + Object.keys(json)[i] + '\n';
+            }
+            data1 = data1.slice(0, -1);
+            document.getElementById('box1').value = data1;
+        })
+        .catch(error => console.error('Error loading en-US.json:', error));
+    } catch (e) {
+        setTimeout(translate, 100);
+    }
 }
-
-let data = {};
-
-fetch('https://cdn.emulatorjs.org/latest/data/localization/en.json')
-    .then(response => response.json())
-    .then(json => {
-        data = json;
-        let data1 = '';
-        for (let i = 0; i < Object.keys(data).length; i++) {
-            data1 = data1 + "" + Object.keys(data)[i] + '\n';
-        }
-        data1 = data1.slice(0, -1);
-        document.getElementById('box1').value = data1;
-    })
-    .catch(error => console.error('Error loading en-US.json:', error));
+translate();
 
 function start() {
     const [box1, box2, box3] = ['box1', 'box2', 'box3'].map(id => document.getElementById(id));
