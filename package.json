@@ -1,6 +1,6 @@
 {
   "name": "emulatorjs.org",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "The EmulatorJS Website",
   "main": "index.js",
   "license": "MIT",
@@ -19,17 +19,17 @@
   },
   "devDependencies": {
     "@nuxt-themes/docus": "^1.15.1",
-    "@nuxt/eslint-config": "^1.2.0",
-    "@types/node": "^22.13.10",
+    "@nuxt/eslint-config": "^1.3.0",
+    "@types/node": "^22.15.0",
     "@vue/compiler-sfc": "^3.5.13",
-    "eslint": "^9.17.0",
-    "nuxt": "^3.16.0",
+    "eslint": "^9.25.1",
+    "nuxt": "^3.16.2",
     "nuxt-anchorscroll": "^1.0.5",
-    "nuxt-custom-elements": "^2.0.0-beta.31",
+    "nuxt-custom-elements": "^2.0.0-beta.32",
     "nuxt-gtag": "^3.0.2",
     "postcss": "^8.5.3",
     "typescript": "^5.8.2",
-    "vite": "^6.2.3",
+    "vite": "^6.3.3",
     "vue": "^3.5.13"
   }
 }
