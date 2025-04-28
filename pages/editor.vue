@@ -7,7 +7,7 @@ useHead({
     title: 'Code Generator',
     meta: [{ name: 'description', content: 'Simple code generator for EmulatorJS' }],
     link: [{ rel: 'stylesheet', href: '/css/editor.css' }],
-    script: [{ src: '/js/editor.js' }, { src: '/js/jszip.js' }, { src: '/js/systems.js', onload: 'loadsystems()'}],
+    script: [{ src: '/js/jszip.js' }, { src: '/js/systems.js', onload: 'loadsystems()'}],
 });
 definePageMeta({
   title: 'Code Generator'

@@ -6,8 +6,7 @@ useSeoMeta({
 useHead({
     title: 'Translation Tool',
     meta: [{ name: 'description', content: 'Translation Helper Tool for EmulatorJS' }],
-    link: [{ rel: 'stylesheet', href: '/css/translate.css' }],
-    script: [{ src: '/js/translate.js' }],
+    link: [{ rel: 'stylesheet', href: '/css/translate.css' }]
 });
 definePageMeta({
   title: 'Translation Tool'
