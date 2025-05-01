@@ -14,9 +14,9 @@ if (!fs.statSync("github", {throwIfNoEntry:false})) {
     await execute("git init", "github");
     await execute("git remote add -f origin https://github.com/EmulatorJS/EmulatorJS.git", "github");
     await execute("git config core.sparseCheckout true", "github");
-    fs.writeFileSync("github/.git/info/sparse-checkout", "docs/Contributors.md\nCHANGES.md\n");
+    fs.writeFileSync("github/.git/info/sparse-checkout", "docs/contributors.md\nCHANGES.md\n");
     await execute("git pull origin main", "github");
-    fs.readFile('github/docs/Contributors.md', 'utf8', (err, data) => {
+    fs.readFile('github/docs/contributors.md', 'utf8', (err, data) => {
         if (err) {
           throw err;
         }
