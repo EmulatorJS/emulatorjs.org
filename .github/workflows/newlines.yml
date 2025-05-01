@@ -17,13 +17,10 @@ jobs:
 
       - name: Check for missing newlines
         run: |
-          files=$(git ls-files)
-
           newline_error=0
 
-          for file in $files; do
+          git ls-files | while IFS= read -r file; do
             if file --mime "$file" | grep -q "binary"; then
-              #echo "Skipping binary file: $file"
               continue
             fi
 
