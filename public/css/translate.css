@@ -1,0 +1,67 @@
+main, footer {
+    background-color: var(--docus-body-backgroundColor);
+}
+
+.translate .header {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.translate textarea {
+    padding: 12px 20px;
+    border: 2px solid var(--color-gray-500);
+    border-radius: 4px;
+    background-color: var(--prose-code-block-backgroundColor);
+    height: 50vh;
+    font-family: inherit;
+}
+
+.translate #box3:not(:placeholder-shown) {
+    color: var(--success);
+}
+
+.translate textarea::placeholder {
+    font-size: 1rem;
+}
+
+.translate textarea:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+}
+
+.translate .box {
+    position: relative;
+}
+
+.translate button {
+    appearance: none;
+    background-color: var(--color-primary-600);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    color: var(--docus-body-color);
+    position: absolute;
+    cursor: pointer;
+}
+
+.translate button:hover {
+    background-color: #47b7da;
+}
+
+.translate .nextBtn {
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.translate .copyBtn {
+    top: 1rem;
+    right: 1rem;
+}

@@ -44,8 +44,12 @@ export default defineAppConfig({
           href: '/docs'
         },
         {
-          text: 'Code Editor',
+          text: 'Code Generator',
           href: '/editor'
+        },
+        {
+          text: 'Translation Tool',
+          href: '/translate'
         },
         {
           text: 'Demo',

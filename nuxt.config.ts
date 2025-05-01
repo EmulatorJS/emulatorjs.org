@@ -61,7 +61,3 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-12-21',
 })
-
-function resolve(arg0: string): string | undefined {
-  throw new Error("Function not implemented.");
-}

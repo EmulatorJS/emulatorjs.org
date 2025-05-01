@@ -1,5 +1,5 @@
-body, html {
-    background-color : transparent;
+main, footer {
+    background-color: var(--docus-body-backgroundColor);
 }
 
 .dropbtn {
