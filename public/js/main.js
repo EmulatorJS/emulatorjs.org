@@ -158,9 +158,9 @@ function editorMain() {
             }
             fileData += '        </scr' + 'ipt>\n        <script src="' + data['EJS_pathtodata'] + 'loader.js"></scr' + 'ipt>\n    </body>\n</html>';
         } else if (document.getElementById('offlinePack').checked) {
-            data['EJS_gameUrl'] = 'new Blob([Uint8Array.from(window.gameData)])';
-            var b = JSON.stringify(Array.from(new Uint8Array(await (new Blob([file])).arrayBuffer())));
-            var a = spaces + 'window.gameData = ' + b + ';\n';
+            data['EJS_gameUrl'] = 'new Blob([Uint8Array.from(atob(window.gameData), (m) => m.codePointAt(0))])';
+            var b = bytesToBase64(new Uint8Array(await (new Blob([file])).arrayBuffer()));
+            var a = spaces + 'window.gameData = `' + b + '`;\n';
             fileData += a;
             for (var k in data) {
                 if (data[k] === true || data[k] === false || k === 'EJS_gameUrl') {
@@ -172,9 +172,9 @@ function editorMain() {
             fileData += '        </scr' + 'ipt>\n        <script src="' + data['EJS_pathtodata'] + 'loader.js"></scr' + 'ipt>\n    </body>\n</html>';
             zipOut = false;
         } else {
-            data['EJS_gameUrl'] = 'new Blob([Uint8Array.from(window.gameData)])';
-            var b = JSON.stringify(Array.from(new Uint8Array(await (new Blob([file])).arrayBuffer())));
-            zip.file('gameData.js', 'window.gameData = ' + b + '\n');
+            data['EJS_gameUrl'] = 'new Blob([Uint8Array.from(atob(window.gameData), (m) => m.codePointAt(0))])';
+            var b = bytesToBase64(new Uint8Array(await (new Blob([file])).arrayBuffer()));
+            zip.file('gameData.js', 'window.gameData = `' + b + '`\n');
             for (var k in data) {
                 if (data[k] === true || data[k] === false || k === 'EJS_gameUrl') {
                     fileData += (spaces + k + ' = ' + data[k] + ';\n');
@@ -264,4 +264,11 @@ function copy(textareaId) {
     let textarea = document.getElementById(textareaId);
     textarea.select();
     document.execCommand('copy');
+}
+
+function bytesToBase64(bytes) {
+    const binString = Array.from(bytes, (byte) =>
+        String.fromCodePoint(byte),
+    ).join("");
+    return btoa(binString);
 }
