@@ -58,12 +58,6 @@ definePageMeta({
                         <input type="checkbox" id="offline">
                         <span class="checkmark2"></span>
                     </label>
-                    <ul>
-                        <label class="container" id="singleFile" style="display:none;">Pack into single file
-                            <input type="checkbox" id="offlinePack">
-                            <span class="checkmark2"></span>
-                        </label>
-                    </ul>
                     <div id="pathToData">
                         <label class="container">Use Local path to Data
                             <input type="checkbox" id="p2d">
