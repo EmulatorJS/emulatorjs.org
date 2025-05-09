@@ -161,8 +161,7 @@ function editorMain() {
             data['EJS_gameUrl'] = 'new Blob([Uint8Array.from(atob(window.gameData), (m) => m.codePointAt(0))])';
             let tempZip = new JSZip();
             tempZip.file(file.name, new Blob([file]));
-            let zippedBlob = await tempZip.generateAsync({ type: 'blob', compression: "DEFLATE"});
-            var b = bytesToBase64(new Uint8Array(await (zippedBlob).arrayBuffer()));
+            var b = await tempZip.generateAsync({ type: 'base64', compression: "DEFLATE"});
             var a = spaces + 'window.gameData = `' + b + '`;\n';
             fileData += a;
             for (var k in data) {
@@ -178,8 +177,7 @@ function editorMain() {
             data['EJS_gameUrl'] = 'new Blob([Uint8Array.from(atob(window.gameData), (m) => m.codePointAt(0))])';
             let tempZip = new JSZip();
             tempZip.file(file.name, new Blob([file]));
-            let zippedBlob = await tempZip.generateAsync({ type: 'blob', compression: "DEFLATE"});
-            var b = bytesToBase64(new Uint8Array(await (zippedBlob).arrayBuffer()));
+            var b = await tempZip.generateAsync({ type: 'base64', compression: "DEFLATE"});
             zip.file('gameData.js', 'window.gameData = `' + b + '`\n');
             for (var k in data) {
                 if (data[k] === true || data[k] === false || k === 'EJS_gameUrl') {
@@ -270,11 +268,4 @@ function copy(textareaId) {
     let textarea = document.getElementById(textareaId);
     textarea.select();
     document.execCommand('copy');
-}
-
-function bytesToBase64(bytes) {
-    const binString = Array.from(bytes, (byte) =>
-        String.fromCodePoint(byte),
-    ).join("");
-    return btoa(binString);
 }
