@@ -159,7 +159,9 @@ function editorMain() {
             fileData += '        </script>\n        <script src="' + data['EJS_pathtodata'] + 'loader.js"></script>\n    </body>\n</html>';
         } else if (document.getElementById('offlinePack').checked) {
             data['EJS_gameUrl'] = 'new Blob([Uint8Array.from(atob(window.gameData), (m) => m.codePointAt(0))])';
-            var b = bytesToBase64(new Uint8Array(await (new Blob([file])).arrayBuffer()));
+            let tempZip = new JSZip();
+            tempZip.file(file.name, new Blob([file]));
+            var b = await tempZip.generateAsync({ type: 'base64', compression: "DEFLATE"});
             var a = spaces + 'window.gameData = `' + b + '`;\n';
             fileData += a;
             for (var k in data) {
@@ -173,7 +175,9 @@ function editorMain() {
             zipOut = false;
         } else {
             data['EJS_gameUrl'] = 'new Blob([Uint8Array.from(atob(window.gameData), (m) => m.codePointAt(0))])';
-            var b = bytesToBase64(new Uint8Array(await (new Blob([file])).arrayBuffer()));
+            let tempZip = new JSZip();
+            tempZip.file(file.name, new Blob([file]));
+            var b = await tempZip.generateAsync({ type: 'base64', compression: "DEFLATE"});
             zip.file('gameData.js', 'window.gameData = `' + b + '`\n');
             for (var k in data) {
                 if (data[k] === true || data[k] === false || k === 'EJS_gameUrl') {
@@ -194,7 +198,7 @@ function editorMain() {
         zip.file('index.html', new Blob([fileData]));
         document.getElementById('select2').style = 'display:none;';
         document.getElementById('zipStatus').style = 'display:block;';
-        zip.generateAsync({ type: 'blob' }, function updateCallback(metadata) {
+        zip.generateAsync({ type: 'blob', compression: "DEFLATE" }, function updateCallback(metadata) {
             var zipStatus = metadata.percent.toFixed(2) + '%';
             document.getElementById('zs1').innerHTML = ' ' + zipStatus + ' ';
             document.getElementById('zs1').value = metadata.percent.toFixed(2);
@@ -264,11 +268,4 @@ function copy(textareaId) {
     let textarea = document.getElementById(textareaId);
     textarea.select();
     document.execCommand('copy');
-}
-
-function bytesToBase64(bytes) {
-    const binString = Array.from(bytes, (byte) =>
-        String.fromCodePoint(byte),
-    ).join("");
-    return btoa(binString);
 }
