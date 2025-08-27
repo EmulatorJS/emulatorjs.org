@@ -12,13 +12,6 @@ export default defineAppConfig({
         icon: 'fa-brands:discord',
         rel: '',
         target: '_blank'
-      },
-      matrix: {
-        label: 'Join the Matrix!',
-        href: 'https://matrix.to/#/#emulatorjs:matrix.emulatorjs.org',
-        icon: 'simple-icons:matrix',
-        rel: '',
-        target: '_blank'
       }
     },
     layout: 'default',
