@@ -43,6 +43,10 @@ export default defineNuxtConfig({
     },
   },
 
+  nitro: {
+    preset: 'github_pages'
+  },
+
   mdc: {
     highlight: {
       langs: ['html', 'xml', 'css', 'javascript', 'json', 'markdown', 'http']
