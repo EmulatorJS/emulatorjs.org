@@ -222,7 +222,7 @@ function translate() {
         document.getElementById('copyBtn1').addEventListener('click', () => copy('box1'));
         document.getElementById('nextBtn').addEventListener('click', startTranslate);
         document.getElementById('copyBtn3').addEventListener('click', () => copy('box3'));
-        fetch('https://cdn.emulatorjs.org/latest/data/localization/en-US.json')
+        fetch('https://cdn.emulatorjs.org/latest/data/localization/en.json')
             .then(response => response.json())
             .then(json => {
                 let data1 = '';

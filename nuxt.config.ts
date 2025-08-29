@@ -33,7 +33,8 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'stylesheet', href: '/css/main.css' },
-        { rel: 'stylesheet', href: '/css/backToTop.min.css' }
+        { rel: 'stylesheet', href: '/css/backToTop.min.css' },
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ],
       script: [
         { src: '/js/jquery.min.js' },
