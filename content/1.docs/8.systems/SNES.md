@@ -13,7 +13,7 @@ bottom: false
 <script type='text/javascript'>
     EJS_player = '#game';
     
-    // Can also be snes9x
+    // Can also be snes9x or bsnes
     EJS_core = 'snes';
     
     //SNES mouse
@@ -43,8 +43,9 @@ bottom: false
 
 ### CORES
 
-The *snes* system supports 1 core
+The *snes* system supports 2 cores
 - `snes9x`
+- `bsnes`
 
 If set to `snes`, emulator will use the `snes9x` core.
 
