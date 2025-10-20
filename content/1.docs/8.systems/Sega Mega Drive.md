@@ -14,7 +14,7 @@ bottom: false
 
     EJS_player = '#game';
     
-    // Can also be genesis_plus_gx or picodrive
+    // Can also be genesis_plus_gx, genesis_plus_gx_wide or picodrive
     EJS_core = 'segaMD';
 
     // URL to Game rom
@@ -47,8 +47,9 @@ bottom: false
 This the `picodrive` is currently broken. See [this](https://github.com/EmulatorJS/EmulatorJS/issues/579) github issue
 :::
 
-The *segaMD* system supports 2 cores
+The *segaMD* system supports 3 cores
 - `genesis_plus_gx`
+- `genesis_plus_gx_wide`
 - `picodrive`
 
 If set to `segaMD`, emulator will use the `genesis_plus_gx` core.

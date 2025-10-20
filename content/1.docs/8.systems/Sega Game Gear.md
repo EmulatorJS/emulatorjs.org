@@ -14,7 +14,7 @@ bottom: false
 
     EJS_player = '#game';
     
-    // Can also be genesis_plus_gx
+    // Can also be genesis_plus_gx or genesis_plus_gx_wide
     EJS_core = 'segaGG';
 
     // URL to Game rom
@@ -41,7 +41,8 @@ bottom: false
 
 ### CORES
 
-The *segaGG* system supports 1 core
+The *segaGG* system supports 2 cores
 - `genesis_plus_gx`
+- `genesis_plus_gx_wide`
 
 If set to `segaGG`, emulator will use the `genesis_plus_gx` core.

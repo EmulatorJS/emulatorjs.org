@@ -16,7 +16,7 @@ I do not know the file extension limits for this system.
 
     EJS_player = '#game';
     
-    // Can also be picodrive or genesis_plus_gx
+    // Can also be picodrive, genesis_plus_gx or genesis_plus_gx_wide
     EJS_core = 'segaCD';
 
     // URL to Game rom
@@ -50,8 +50,9 @@ I do not know the file extension limits for this system.
 This the `picodrive` is currently broken. See [this](https://github.com/EmulatorJS/EmulatorJS/issues/579) github issue
 :::
 
-The *segaCD* system supports 2 cores
+The *segaCD* system supports 3 cores
 - `genesis_plus_gx`
+- `genesis_plus_gx_wide`
 - `picodrive`
 
 If set to `segaCD`, emulator will use the `genesis_plus_gx` core.
