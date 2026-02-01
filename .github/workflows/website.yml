@@ -41,6 +41,9 @@ jobs:
       - name: Unzip Website
         run: |
           unzip -o website.zip -d output/
+      - name: Set Permissions
+        run: |
+          chmod -R 775 /mnt/HDD/emulatorjs.org/
       - name: Update Website
         run: |
           rsync -a --delete output/.output/ /mnt/HDD/emulatorjs.org/
