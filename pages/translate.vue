@@ -33,7 +33,7 @@ definePageMeta({
             </div>
             <div class="box">
                 <textarea id="box2"
-                    placeholder="Copy what is on the left into google translate or any other translation service, then translate it into the language you whant and paste the translation here."
+                    placeholder="Copy what is on the left into google translate or any other translation service, then translate it into the language you want and paste the translation here."
                     rows="39.5" cols="50" spellcheck="false"></textarea>
                 <button class="nextBtn" id="nextBtn">Next</button>
             </div>
