@@ -1,0 +1,13 @@
+diff --git a/node_modules/pinceau/dist/shared/pinceau.aa6b702d.mjs b/node_modules/pinceau/dist/shared/pinceau.aa6b702d.mjs
+index 3a11778..508031d 100644
+--- a/node_modules/pinceau/dist/shared/pinceau.aa6b702d.mjs
++++ b/node_modules/pinceau/dist/shared/pinceau.aa6b702d.mjs
+@@ -794,7 +794,7 @@ function schemaFull(schema) {
+   return result;
+ }
+ const utilsFull = (utils = {}, utilsImports = [], definitions = {}) => {
+-  let result = "import { PinceauTheme, PropertyValue } from 'pinceau'\n";
++  let result = "import type { PinceauTheme, PropertyValue } from 'pinceau'\n";
+   result += utilsImports.filter(Boolean).join("\n");
+   result += `
+ ${stringifyUtils(utils, definitions)}`;

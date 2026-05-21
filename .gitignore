@@ -11,4 +11,3 @@ dist
 sw.*
 .env
 .output
-package-lock.json

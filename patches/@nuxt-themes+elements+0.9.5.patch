@@ -1,0 +1,11 @@
+diff --git a/node_modules/@nuxt-themes/elements/components/globals/ButtonLink.vue b/node_modules/@nuxt-themes/elements/components/globals/ButtonLink.vue
+index fc45744..bfef003 100644
+--- a/node_modules/@nuxt-themes/elements/components/globals/ButtonLink.vue
++++ b/node_modules/@nuxt-themes/elements/components/globals/ButtonLink.vue
+@@ -1,5 +1,5 @@
+ <script setup lang="ts">
+-import { PinceauTheme } from 'pinceau'
++import type { PinceauTheme } from 'pinceau'
+ import { computedStyle } from 'pinceau/runtime'
+ 
+ defineProps({
