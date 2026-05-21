@@ -5,12 +5,6 @@ bottom: false
 
 ::alert{type="warning"}
   ::list{type="warning"}
-  - The PSP core is **unsupported** on Safari!
-  ::
-::
-
-::alert{type="warning"}
-  ::list{type="warning"}
   - Support will not be given for game compatibility and graphical bugs!
   ::
 ::
